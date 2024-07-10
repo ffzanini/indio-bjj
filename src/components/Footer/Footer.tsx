@@ -16,12 +16,14 @@ export function Footer() {
     >
       <div className="px-6 pt-6 lg:pt-0">
         <div className="container flex justify-center">
-          <p className="flex flex-col lg:flex-row">©{yearNow} Fabiano Indio</p>
+          <p className="flex flex-col lg:flex-row">
+            ©{yearNow} Índio Jiu Jitsu
+          </p>
         </div>
       </div>
-      <div className="px-6 ">
+      <div className="px-6">
         <div className="container mb-6 flex justify-center">
-          <div className="flex flex-row gap-3 items-center">
+          <div className="flex flex-row gap-2 items-center">
             {socials.map(({ href, icon: Icon, name }) => (
               <motion.a
                 aria-label={name}

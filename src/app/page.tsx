@@ -30,27 +30,29 @@ export default function PricipalPage() {
       <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-12">
         <div className="flex flex-col items-center justify-center text-center lg:w-7/12 lg:gap-4">
           <h3>Aprenda os segredos da meia guarda com:</h3>
-          <h2 className="pb-4 lg:pb-0">Fabiano Índio</h2>
+          <h2 className="pb-4 lg:pb-0">Fabiano “Índio” Silva de Oliveira</h2>
           <iframe
             className="w-[300px] h-[200px] lg:w-[620px] lg:h-[400px]"
-            src="https://www.youtube.com/embed/mmAx64LKlZQ"
+            src="https://www.youtube.com/embed/mmAx64LKlZQ?autoplay=1"
             title="Como raspar adversário mais pesado na meia guarda"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           />
           <div className="flex flex-col items-center text-center justify-center lg:gap-4">
             <h3>Bem-vindo ao método Inovador de meia guarda</h3>
-            <p className="px-0 lg:px-24 pb-4 lg:pb-0">
-              Apresentado por Fabiano Oliveira, mais conhecido como Índio. Este
-              curso não apenas simplifica, mas transforma sua abordagem para
-              todas as posições críticas, baseando-se na larga experiência de
-              campeonatos e anos como professor da academia JA Índio Jiu Jitsu.
+            <p className="px-0 lg:px-24 pb-4 lg:pb-2">
+              Apresentado por Fabiano “Índio” Silva de Oliveira, este curso não
+              apenas simplifica, como aborda de forma clara e completa todas as
+              posições críticas dessa guarda, baseando-se na larga experiência
+              de campeonatos e anos como professor da academia JA Índio Jiu
+              Jitsu.
             </p>
             <Link
-              href=""
+              href="https://pay.hotmart.com/W94160265J"
+              target="_blank"
               className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
-            dark:bg-white  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
+            dark:bg-error-white-theme  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
             >
-              <p className="text-white dark:text-black px-2 py-2 lg:px-8 lg:py-4">
+              <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
                 SIM, QUERO DOMINAR A MEIA GUARDA
               </p>
             </Link>
@@ -58,24 +60,25 @@ export default function PricipalPage() {
         </div>
         <div className="flex flex-col items-center justify-center lg:pt-0">
           <Image
-            src="/images/instructor_indio.jpg"
-            alt="Profile photo"
-            width={width < 780 ? 280 : 480}
+            src="/images/indio_capa_curso.png"
+            alt="Capa do cursp"
+            width={width < 780 ? 280 : 600}
             height={0}
-            className="border rounded-tr-[150px] rounded-bl-[150px] border-gray-900 dark:border-gray-50"
+            className="border lg:rounded-tr-[150px] lg:rounded-bl-[150px] border-gray-900 dark:border-gray-50"
           />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12 pt-4 lg:pt-16">
+      <div className="bg-white h-[1px] my-8" />
+      <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
         <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-9/12">
-          <h1>
+          <h2>
             NÃO IMPORTA O SEU NÍVEL NO JIU-JITSU, SE PRATICA A ARTE SUAVE, ESTE
             CURSO É PRA VOCÊ!
-          </h1>
-          <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
-            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center">
+          </h2>
+          <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12 pb-4">
+            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center lg:h-60">
               <motion.a
-                aria-label="teste"
+                aria-label="método comum"
                 target="_blank"
                 className="flex justify-center items-center"
               >
@@ -85,13 +88,13 @@ export default function PricipalPage() {
               <p>
                 A maioria dos cursos de Jiu-Jitsu te ensinam posições isoladas
                 sem sequência lógica. O excesso de informação faz você travar, e
-                não aprende corretamente. No fim de tudo você não conseguir
-                aplicar nada do que assistiu.
+                não aprender corretamente. No fim de tudo, você não vai
+                conseguir aplicar nada do que assistiu.
               </p>
             </div>
-            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center">
+            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center lg:h-60">
               <motion.a
-                aria-label="teste"
+                aria-label="método índio"
                 target="_blank"
                 className="flex justify-center items-center"
               >
@@ -107,133 +110,172 @@ export default function PricipalPage() {
             </div>
           </div>
           <Link
-            href=""
+            href="https://pay.hotmart.com/W94160265J"
+            target="_blank"
             className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
-            dark:bg-white  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
+            dark:bg-error-white-theme  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
           >
-            <p className="text-white dark:text-black px-2 py-2 lg:px-8 lg:py-4">
+            <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
               APRENDA COM O MESTRE ÍNDIO
             </p>
           </Link>
         </div>
       </div>
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-center text-center gap-4 lg:gap-12 lg:pt-16 pt-4">
-        <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-9/12">
-          <h1>ESTE TREINAMENTO REALMENTE É PARA MIM?</h1>
-          <h3>Ainda está na dúvida se esse desafio é para você?</h3>
+      <div className="bg-white h-[1px] my-8" />
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
+        <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-11/12">
+          <h2>PORQUE ESCOLHER ESTE CURSO</h2>
           <div>
-            <h3>SE VOCÊ...</h3>
-            <ul>
-              <li>Tem dificuldades de aprender e memorizar as posições</li>
-              <li>Não está conseguindo desenvolver o seu jogo por baixo</li>
-              <li>
-                Não tem tempo para o Jiu-Jitsu hoje e não quer ficar para trás
+            <ul className="flex flex-col items-start gap-2">
+              <li className="flex flex-row items-center justify-center text-center gap-2">
+                <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-1">
+                  <h4 className="flex flex-row font-bold items-center gap-2">
+                    <RiVerifiedBadgeLine size={22} />
+                    Aulas Exclusivas:
+                  </h4>
+                  <p className="items-end">
+                    Conteúdo gravado em alta qualidade com explicações
+                    detalhadas.
+                  </p>
+                </div>
+              </li>
+              <li className="flex flex-row items-center justify-center text-center gap-2">
+                <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-1">
+                  <h4 className="flex flex-row font-bold items-center gap-2">
+                    <RiVerifiedBadgeLine size={22} /> Acesso Vitalício:
+                  </h4>
+                  <p className="items-end">
+                    Estude no seu próprio ritmo com acesso ilimitado ao
+                    conteúdo.
+                  </p>
+                </div>
+              </li>
+              <li className="flex flex-row items-center justify-center text-center gap-2">
+                <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-1">
+                  <h4 className="flex flex-row font-bold items-center gap-2">
+                    <RiVerifiedBadgeLine size={22} />
+                    Suporte Direto:
+                  </h4>
+                  <p className="items-end">
+                    Tire suas dúvidas diretamente com Fabiano Índio e receba
+                    feedback para melhorar ainda mais seu desempenho.
+                  </p>
+                </div>
+              </li>
+              <li className="flex flex-row items-center justify-center text-center gap-2">
+                <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-1">
+                  <h4 className="flex flex-row font-bold items-center gap-2">
+                    <RiVerifiedBadgeLine size={22} />
+                    Garantia de Satisfação:
+                  </h4>
+                  <p className="items-end">
+                    Se não estiver satisfeito, você tem 7 dias para solicitar
+                    reembolso.
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
-          <div>
-            <p>
-              Se você respondeu que SIM pra alguma dessas perguntas, ESTE CURSO
-              É PARA VOCÊ.
-            </p>
-          </div>
-          <p>
-            ENTÃO, APERTE NO BOTÃO E GARANTA SEU ACESSO VITALÍCIO AGORA MESMO.
-          </p>
-          <div className="flex flex-col lg:flex-row">
-            <Link
-              href=""
-              className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
-            dark:bg-white  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
-            >
-              <p className="text-white dark:text-black px-2 py-2 lg:px-8 lg:py-4">
-                QUERO ACESSO VITALICIO AGORA
-              </p>
-            </Link>
-          </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-center text-center gap-4 lg:gap-12 lg:pt-16 pt-4">
-        <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-9/12">
-          <h1>
-            AO ENTRAR NO CURSO MEIA GUARDA COM FABIANO ÍNDIO, VOCÊ RECEBE:
-          </h1>
+      <div className="bg-white h-[1px] my-8" />
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
+        <div className="flex flex-col items-center justify-center text-center gap-4 lg:gap-8 lg:w-9/12">
+          <h2>AO ENTRAR NO CURSO MEIA GUARDA, VOCÊ RECEBE:</h2>
           <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
-            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center">
-              <h3>Módulo 1</h3>
-              <p>Módulo 1</p>
+            <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
+              <h3 className="pb-4">Fundamentos da Meia Guarda</h3>
+              <p>
+                Entenda a base e a importância dessa posição crucial no
+                Jiu-Jitsu
+              </p>
             </div>
-            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center">
-              <h3>Módulo 2</h3>
-              <p>Módulo 2</p>
+            <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
+              <h3 className="pb-4">Variedades de Meia Guarda</h3>
+              <p>
+                Explore diferentes variações, como a meia guarda profunda, Z
+                guard, e muito mais.
+              </p>
             </div>
-            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center">
-              <h3>Módulo 3</h3>
-              <p>Módulo 3</p>
+            <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
+              <h3 className="pb-4">Ataques e Finalizações</h3>
+              <p>
+                Domine uma variedade de ataques e finalizações eficazes a partir
+                da meia guarda.
+              </p>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
-            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center">
-              <h3>Módulo 1</h3>
-              <p>Módulo 1</p>
+            <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
+              <h3 className="pb-4 lg:pt-4">Defesas e Transições</h3>
+              <p>
+                Aprenda a defender e transitar para posições vantajosas com
+                segurança.
+              </p>
             </div>
-            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center">
-              <h3>Módulo 2</h3>
-              <p>Módulo 2</p>
-            </div>
-            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center">
-              <h3>Módulo 3</h3>
-              <p>Módulo 3</p>
+            <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
+              <h3 className="pb-4 lg:pt-4">Treinos Práticos</h3>
+              <p>
+                Exercícios e drills para incorporar essas técnicas no seu jogo
+                diário.
+              </p>
             </div>
           </div>
           <div className="flex flex-col items-center justify-center text-center">
-            <h3>VOCÊ RECEBE TUDO ISSO POR</h3>
-            <p>12x de R$ 12,99</p>
-            <p className="pb-2">ou R$ 147,00 À VISTA.</p>
+            <h3>VOCÊ RECEBE TUDO ISSO</h3>
+            <h3>
+              de <s>R$ 147,00</s>
+            </h3>
+            <h2 className="pb-2 lg:pb-6">por R$ 97,00 À VISTA.</h2>
             <Link
-              href=""
+              href="https://pay.hotmart.com/W94160265J"
+              target="_blank"
               className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
-            dark:bg-white  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
+              dark:bg-error-white-theme  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
             >
-              <p className="text-white dark:text-black px-2 py-2 lg:px-8 lg:py-4">
-                GARANTIR MEU ACESSO
+              <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
+                GARANTIR MEU ACESSO VITALÍCIO
               </p>
             </Link>
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12 lg:pt-16 pt-4">
+      <div className="bg-white h-[1px] my-8" />
+      <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
         <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-9/12">
-          <h1>AINDA TEM ALGUMA DÚVIDA?</h1>
-          <h3>FALE COM A MINHA EQUIPE DE ATENDIMENTO</h3>
+          <h2>AINDA TEM ALGUMA DÚVIDA?</h2>
+          <h3>Fale com a minha equipe de atendimento</h3>
           <div className="flex flex-col lg:flex-row">
             <Link
-              href=""
+              href="https://wa.me/5553981372378"
+              target="_blank"
               className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
-            dark:bg-white  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
+              dark:bg-error-white-theme dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
             >
-              <p className="text-white dark:text-black px-2 py-2 lg:px-8 lg:py-4">
+              <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
                 Atendimento WhastApp
               </p>
             </Link>
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12 lg:pt-16 pt-4">
-        <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:w-9/12">
+      <div className="bg-white h-[1px] my-8" />
+      <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
+        <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-9/12">
           <Image
-            src="/images/instructor_indio.jpg"
+            src="/images/indio-perfil.png"
             alt="Profile photo"
-            width={width < 780 ? 280 : 290}
-            height={0}
+            width={180}
+            height={180}
+            className="rounded-full border border-gray-900 dark:border-gray-50"
           />
-          <div className="flex flex-col items-center justify-center text-center gap-4 lg:gap-12">
-            <h1>Quem é Fabiano Índio:</h1>
+          <div className="flex flex-col items-center justify-center text-center gap-4">
+            <h2>Quem é o professor?</h2>
             <p>
-              Fabiano Índio é professor de Jiu Jitsu a mais de 20 anos e
-              referência quando o assunto é ensino e a criação de campeões.
-              Através de seu vasto conhecimento, todos seus alunos tiveram uma
-              clara mudança e evolução através do seus ensinamentos. Isso se
+              Fabiano “Índio” Silva de Oliveira é fundador da Índio Jiu Jitsu
+              Team e um dos instrutores mais respeitados do Brasil. Com anos de
+              dedicação ao esporte e à formação de campeões, Índio traz uma
+              abordagem única e eficiente para o ensino da meia guarda, isso se
               deve pela sua didática de ensino que engloba os mais variados
               biotipos de alunos. <br /> Não perca tempo e venha também ser um
               aluno!
