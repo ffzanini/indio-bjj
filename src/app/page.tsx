@@ -1,6 +1,10 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { RiCloseCircleLine, RiVerifiedBadgeLine } from 'react-icons/ri'
+import {
+  RiEmotionUnhappyLine,
+  RiEmotionLaughLine,
+  RiVerifiedBadgeLine,
+} from 'react-icons/ri'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -33,9 +37,9 @@ export default function PricipalPage() {
           <h2 className="pb-4 lg:pb-0">Fabiano “Índio” Silva de Oliveira</h2>
           <iframe
             className="w-[300px] h-[200px] lg:w-[620px] lg:h-[400px]"
-            src="https://www.youtube.com/embed/mmAx64LKlZQ?autoplay=1"
-            title="Como raspar adversário mais pesado na meia guarda"
-            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            src="https://www.youtube.com/embed/d5ljtNaK1bQ?autoplay=1&loop=1&rel=0"
+            title="Curso de meia guarda"
+            allow="autoplay; encrypted-media"
           />
           <div className="flex flex-col items-center text-center justify-center lg:gap-4">
             <h3>Bem-vindo ao método Inovador de meia guarda</h3>
@@ -60,11 +64,11 @@ export default function PricipalPage() {
         </div>
         <div className="flex flex-col items-center justify-center lg:pt-0">
           <Image
-            src="/images/indio_capa_curso.png"
-            alt="Capa do cursp"
+            src="/images/indio-curso-meia-guarda.jpeg"
+            alt="Profile photo"
             width={width < 780 ? 280 : 600}
             height={0}
-            className="border lg:rounded-tr-[150px] lg:rounded-bl-[150px] border-gray-900 dark:border-gray-50"
+            className="lg:border lg:rounded-tr-[150px] lg:rounded-bl-[150px] border-gray-900 dark:border-gray-50"
           />
         </div>
       </div>
@@ -82,7 +86,7 @@ export default function PricipalPage() {
                 target="_blank"
                 className="flex justify-center items-center"
               >
-                <RiCloseCircleLine size={50} />
+                <RiEmotionUnhappyLine size={50} />
               </motion.a>
               <h3>Método comun</h3>
               <p>
@@ -98,7 +102,7 @@ export default function PricipalPage() {
                 target="_blank"
                 className="flex justify-center items-center"
               >
-                <RiVerifiedBadgeLine size={50} />
+                <RiEmotionLaughLine size={50} />
               </motion.a>
               <h3>Sistema Índio</h3>
               <p>
@@ -126,7 +130,7 @@ export default function PricipalPage() {
         <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-11/12">
           <h2>PORQUE ESCOLHER ESTE CURSO</h2>
           <div>
-            <ul className="flex flex-col items-start gap-2">
+            <ul className="flex flex-col items-start gap-8 lg:gap-2">
               <li className="flex flex-row items-center justify-center text-center gap-2">
                 <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-1">
                   <h4 className="flex flex-row font-bold items-center gap-2">
@@ -182,7 +186,7 @@ export default function PricipalPage() {
       <div className="flex flex-col-reverse lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
         <div className="flex flex-col items-center justify-center text-center gap-4 lg:gap-8 lg:w-9/12">
           <h2>AO ENTRAR NO CURSO MEIA GUARDA, VOCÊ RECEBE:</h2>
-          <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
+          <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-6 lg:gap-12">
             <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
               <h3 className="pb-4">Fundamentos da Meia Guarda</h3>
               <p>
@@ -198,7 +202,7 @@ export default function PricipalPage() {
               </p>
             </div>
             <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
-              <h3 className="pb-4">Ataques e Finalizações</h3>
+              <h3 className="pb-4">Ataques com as suas Finalizações</h3>
               <p>
                 Domine uma variedade de ataques e finalizações eficazes a partir
                 da meia guarda.
@@ -244,17 +248,16 @@ export default function PricipalPage() {
       <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
         <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-9/12">
           <h2>AINDA TEM ALGUMA DÚVIDA?</h2>
-          <h3>Fale com a minha equipe de atendimento</h3>
+          <h3>Fale com a minha equipe de atendimento no link abaixo</h3>
           <div className="flex flex-col lg:flex-row">
             <Link
               href="https://wa.me/5553981372378"
               target="_blank"
-              className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
-              dark:bg-error-white-theme dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
+              className="w-full lg:w-auto text-center dark:border-b-2   "
             >
-              <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
-                Atendimento WhastApp
-              </p>
+              <h4 className="text-white dark:text-white dark:hover:text-green ">
+                Atendimento via WhastApp
+              </h4>
             </Link>
           </div>
         </div>
