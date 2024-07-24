@@ -146,7 +146,7 @@ export default function PricipalPage() {
               <li className="flex flex-row items-center justify-center text-center gap-2">
                 <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-1">
                   <h4 className="flex flex-row font-bold items-center gap-2">
-                    <RiVerifiedBadgeLine size={22} /> Acesso Vitalício:
+                    <RiVerifiedBadgeLine size={22} /> Acesso Facilitado:
                   </h4>
                   <p className="items-end">
                     Estude no seu próprio ritmo com acesso ilimitado ao
@@ -238,7 +238,7 @@ export default function PricipalPage() {
               dark:bg-error-white-theme  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
             >
               <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
-                GARANTIR MEU ACESSO VITALÍCIO
+                GARANTIR MEU ACESSO
               </p>
             </Link>
           </div>

@@ -104,12 +104,3 @@ input:focus, textarea:focus {
 *::-webkit-scrollbar-thumb{
 	background-color: var(--bg);
 }
-
- /* sections position */
-
-.alter-section:nth-child(even) {
-	flex-direction: row-reverse;
-	@media (max-width: 984px) {
-		flex-direction: column-reverse;
-	}
-}
