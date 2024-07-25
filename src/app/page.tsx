@@ -34,7 +34,7 @@ export default function PricipalPage() {
       <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-12">
         <div className="flex flex-col items-center justify-center text-center lg:w-7/12 lg:gap-4">
           <h3>Aprenda os segredos da meia guarda com:</h3>
-          <h2 className="pb-4 lg:pb-0">Fabiano “Índio” Silva de Oliveira</h2>
+          <h2 className="pb-4 lg:pb-0">Fabiano Índio</h2>
           <iframe
             className="w-[300px] h-[200px] lg:w-[620px] lg:h-[400px]"
             src="https://www.youtube.com/embed/d5ljtNaK1bQ?autoplay=1&loop=1&rel=0"
@@ -44,22 +44,26 @@ export default function PricipalPage() {
           <div className="flex flex-col items-center text-center justify-center lg:gap-4">
             <h3>Bem-vindo ao método Inovador de meia guarda</h3>
             <p className="px-0 lg:px-24 pb-4 lg:pb-2">
-              Apresentado por Fabiano “Índio” Silva de Oliveira, este curso não
-              apenas simplifica, como aborda de forma clara e completa todas as
-              posições críticas dessa guarda, baseando-se na larga experiência
-              de campeonatos e anos como professor da academia JA Índio Jiu
-              Jitsu.
+              Apresentado por Fabiano Índio, este curso não apenas simplifica,
+              como aborda também de forma clara e completa todas as posições
+              críticas dessa guarda, baseando-se na larga experiência de
+              campeonatos e anos como professor da academia Índio Jiu Jitsu
+              Team.
             </p>
-            <Link
+            <motion.a
               href="https://pay.hotmart.com/W94160265J"
               target="_blank"
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.3 },
+              }}
               className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
             dark:bg-error-white-theme  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
             >
               <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
-                SIM, QUERO DOMINAR A MEIA GUARDA
+                QUERO DOMINAR A MEIA GUARDA
               </p>
-            </Link>
+            </motion.a>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center lg:pt-0">
@@ -113,16 +117,20 @@ export default function PricipalPage() {
               </p>
             </div>
           </div>
-          <Link
+          <motion.a
             href="https://pay.hotmart.com/W94160265J"
             target="_blank"
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.3 },
+            }}
             className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
             dark:bg-error-white-theme  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
           >
             <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
               APRENDA COM O MESTRE ÍNDIO
             </p>
-          </Link>
+          </motion.a>
         </div>
       </div>
       <div className="bg-white h-[1px] my-8" />
@@ -230,17 +238,23 @@ export default function PricipalPage() {
             <h3>
               de <s>R$ 147,00</s>
             </h3>
-            <h2 className="pb-2 lg:pb-6">por R$ 97,00 À VISTA.</h2>
-            <Link
+            <h2 className="pb-2 lg:pb-6">
+              por R$ 97,00 À VISTA.<h4>ou 12x de R$ 9,68</h4>
+            </h2>
+            <motion.a
               href="https://pay.hotmart.com/W94160265J"
               target="_blank"
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.3 },
+              }}
               className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
               dark:bg-error-white-theme  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
             >
               <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
                 GARANTIR MEU ACESSO
               </p>
-            </Link>
+            </motion.a>
           </div>
         </div>
       </div>
@@ -275,13 +289,12 @@ export default function PricipalPage() {
           <div className="flex flex-col items-center justify-center text-center gap-4">
             <h2>Quem é o professor?</h2>
             <p>
-              Fabiano “Índio” Silva de Oliveira é fundador da Índio Jiu Jitsu
-              Team e um dos instrutores mais respeitados do Brasil. Com anos de
-              dedicação ao esporte e à formação de campeões, Índio traz uma
-              abordagem única e eficiente para o ensino da meia guarda, isso se
-              deve pela sua didática de ensino que engloba os mais variados
-              biotipos de alunos. <br /> Não perca tempo e venha também ser um
-              aluno!
+              Fabiano Índio é fundador da Índio Jiu Jitsu Team e um dos
+              instrutores mais respeitados do Brasil. Com anos de dedicação ao
+              esporte e à formação de campeões, Índio traz uma abordagem única e
+              eficiente para o ensino da meia guarda, isso se deve pela sua
+              didática de ensino que engloba os mais variados biotipos de
+              alunos. <br /> Não perca tempo e venha também ser um aluno!
             </p>
           </div>
         </div>

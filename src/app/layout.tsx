@@ -7,9 +7,9 @@ import { fontMavenPro } from './fonts'
 
 import './globals.css'
 
-const description = `Aprenda meia guarda com Fabiano Oliveira (Indio)`
+const description = `Aprenda meia guarda com Fabiano Índio`
 export const metadata: Metadata = {
-  title: 'Aprenda meia guarda com Fabiano Oliveira (Indio)',
+  title: 'Aprenda meia guarda com Fabiano Índio',
   description,
 }
 
