@@ -9,7 +9,7 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { ScrollToTopButton, Wrapper } from '@/components'
+import { ScrollToTopButton, WrapperHalfGuard } from '@/components'
 import { motion } from 'framer-motion'
 
 export default function PricipalPage() {
@@ -30,7 +30,7 @@ export default function PricipalPage() {
   })
 
   return (
-    <Wrapper>
+    <WrapperHalfGuard>
       <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-12">
         <div className="flex flex-col items-center justify-center text-center lg:w-7/12 lg:gap-4">
           <h3>Aprenda os segredos da meia guarda com:</h3>
@@ -300,6 +300,6 @@ export default function PricipalPage() {
         </div>
       </div>
       <ScrollToTopButton />
-    </Wrapper>
+    </WrapperHalfGuard>
   )
 }
