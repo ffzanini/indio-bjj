@@ -238,9 +238,8 @@ export default function PricipalPage() {
             <h3>
               de <s>R$ 147,00</s>
             </h3>
-            <h2 className="pb-2 lg:pb-6">
-              por R$ 97,00 À VISTA.<h4>ou 12x de R$ 9,68</h4>
-            </h2>
+            <h2>por R$ 97,00 À VISTA.</h2>
+            <h4 className="pb-2 lg:pb-6">ou 12x de R$ 9,68</h4>
             <motion.a
               href="https://pay.hotmart.com/W94160265J"
               target="_blank"

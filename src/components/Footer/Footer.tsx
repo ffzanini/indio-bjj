@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 
 import { socials } from '@/constants/socials'
+import Link from 'next/link'
 
 export function Footer() {
   const yearNow = new Date().getFullYear()
@@ -17,12 +18,12 @@ export function Footer() {
       <div className="px-6 pt-6 lg:pt-0">
         <div className="container flex justify-center">
           <p className="flex flex-col lg:flex-row">
-            ©{yearNow} Índio Jiu Jitsu
+            © Copyright {yearNow} Índio Jiu Jitsu | Todos os direitos
           </p>
         </div>
       </div>
       <div className="px-6">
-        <div className="container mb-6 flex justify-center">
+        <div className="container mb-1 flex justify-center">
           <div className="flex flex-row gap-2 items-center">
             {socials.map(({ href, icon: Icon, name }) => (
               <motion.a
@@ -40,6 +41,19 @@ export function Footer() {
               </motion.a>
             ))}
           </div>
+        </div>
+      </div>
+      <div className="py-1 bg-gray-800 w-screen justify-center">
+        <div className="container flex flex-col ">
+          <p className="flex flex-col text-base lg:flex-row gap-1 justify-center text-center">
+            <Link
+              href="https://www.ffzanini.dev/"
+              target="_blank"
+              className="text-base"
+            >
+              Website desenvolvido por Felipe Frantz Zanini
+            </Link>
+          </p>
         </div>
       </div>
     </motion.footer>

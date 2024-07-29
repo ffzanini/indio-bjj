@@ -1,5 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+
 import {
   RiEmotionUnhappyLine,
   RiEmotionLaughLine,
@@ -10,10 +12,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { ScrollToTopButton, Wrapper } from '@/components'
-import { motion } from 'framer-motion'
+
+import { initFacebookPixel, trackEvent } from '@/lib/facebookPixel'
 
 export default function PricipalPage() {
   const [width, setWidth] = useState<number>(0)
+
+  useEffect(() => {
+    initFacebookPixel()
+    trackEvent('PageView')
+  }, [])
 
   useEffect(() => {
     function handleResize() {
@@ -32,12 +40,12 @@ export default function PricipalPage() {
   return (
     <Wrapper>
       <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-12">
-        <div className="flex flex-col items-center justify-center text-center lg:w-7/12 lg:gap-4">
+        <div className="flex flex-col items-center justify-center text-center lg:w-7/12 gap-2 lg:gap-4">
           <h3>Aprenda os segredos da meia guarda com:</h3>
-          <h2 className="pb-4 lg:pb-0">Fabiano Índio</h2>
+          <h2>Fabiano Índio</h2>
           <iframe
-            className="w-[300px] h-[200px] lg:w-[620px] lg:h-[400px]"
-            src="https://www.youtube.com/embed/d5ljtNaK1bQ?autoplay=1&loop=1&rel=0"
+            className="w-[360px] h-[240px] lg:w-[620px] lg:h-[400px]"
+            src="https://www.youtube.com/embed/d5ljtNaK1bQ"
             title="Curso de meia guarda"
             allow="autoplay; encrypted-media"
           />
@@ -52,6 +60,9 @@ export default function PricipalPage() {
             </p>
             <motion.a
               href="https://pay.hotmart.com/W94160265J"
+              onClick={() =>
+                trackEvent('ButtonClick', { button: 'PaymentButtonOne' })
+              }
               target="_blank"
               whileHover={{
                 scale: 1.1,
@@ -119,6 +130,9 @@ export default function PricipalPage() {
           </div>
           <motion.a
             href="https://pay.hotmart.com/W94160265J"
+            onClick={() =>
+              trackEvent('ButtonClick', { button: 'PaymentButtonTwo' })
+            }
             target="_blank"
             whileHover={{
               scale: 1.1,
@@ -238,11 +252,13 @@ export default function PricipalPage() {
             <h3>
               de <s>R$ 147,00</s>
             </h3>
-            <h2 className="pb-2 lg:pb-6">
-              por R$ 97,00 À VISTA.<h4>ou 12x de R$ 9,68</h4>
-            </h2>
+            <h2>por R$ 97,00 À VISTA.</h2>
+            <h4 className="pb-2 lg:pb-6">ou 12x de R$ 9,68</h4>
             <motion.a
               href="https://pay.hotmart.com/W94160265J"
+              onClick={() =>
+                trackEvent('ButtonClick', { button: 'PaymentButtonThree' })
+              }
               target="_blank"
               whileHover={{
                 scale: 1.1,
