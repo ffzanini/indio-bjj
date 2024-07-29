@@ -61,7 +61,7 @@ export default function PricipalPage() {
             <motion.a
               href="https://pay.hotmart.com/W94160265J"
               onClick={() =>
-                trackEvent('ButtonClick', { button: 'PaymentButtonOne' })
+                trackEvent('ButtonClick', { button: 'paymentButton' })
               }
               target="_blank"
               whileHover={{
@@ -131,7 +131,7 @@ export default function PricipalPage() {
           <motion.a
             href="https://pay.hotmart.com/W94160265J"
             onClick={() =>
-              trackEvent('ButtonClick', { button: 'PaymentButtonTwo' })
+              trackEvent('ButtonClick', { button: 'paymentButton' })
             }
             target="_blank"
             whileHover={{
@@ -257,7 +257,7 @@ export default function PricipalPage() {
             <motion.a
               href="https://pay.hotmart.com/W94160265J"
               onClick={() =>
-                trackEvent('ButtonClick', { button: 'PaymentButtonThree' })
+                trackEvent('ButtonClick', { button: 'paymentButton' })
               }
               target="_blank"
               whileHover={{
