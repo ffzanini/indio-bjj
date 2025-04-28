@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Índio Courses',
+  title: 'Cursos | Índio Jiu Jitsu',
 }
 
 export default function Layout({

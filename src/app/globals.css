@@ -4,9 +4,9 @@
 
 * {
 	line-height: 1.5;
-	font-family: var(--font-mavenPro);
+	font-family: var(--font-Poppins);
 	text-underline-offset: 4px;
-	color: theme("colors.gray-400");
+	color: #7B7B7B;
 	transition: color 0.1s ease-in-out, background-color 0.2s ease-in-out;
 	box-sizing: content-box;
 }
@@ -16,7 +16,7 @@ html[class="dark"] {
 	--heading-color: theme("colors.primary-color-dark-theme-text");
 	--text-color: theme("colors.opacity-color-dark-theme-text");
 	--text-color-bold: theme("colors.primary-color-dark-theme-text");
-	--text-hover-link: theme("colors.primary-color-300");
+	--text-hover-link: theme("colors.primary-ja-color");
 }
 
 
@@ -25,7 +25,7 @@ html[class="light"] {
 	--heading-color: theme("colors.primary-color-white-theme-text");
 	--text-color: theme("colors.opacity-color-white-theme-text");
 	--text-color-bold: theme("colors.primary-color-white-theme-text");
-	--text-hover-link: theme("colors.primary-color-800");
+	--text-hover-link: theme("colors.primary-ja-color");
 }
 
 html {
@@ -61,7 +61,6 @@ h4 {
 b, a {
 	font-size: theme("fontSize.body");
 	color: var(--text-color-bold);
-	font-weight: bold;
 }
 
 span {
@@ -76,7 +75,7 @@ span {
 
 input, textarea {
 	background-color: transparent;
-	border: 1px solid theme("colors.gray-700");
+	border: 1px solid #3C3C3C;
 	border-left: 0;
 	border-right: 0;
 	border-top: 0;
@@ -91,16 +90,5 @@ a:hover {
 
 input:focus, textarea:focus {
 	outline: none;
-	border-color: theme("colors.primary-color-600");
-}
-
- /* change scroll bars layout */
-
-*::-webkit-scrollbar{
-	width:0.01px;
-	background-color: var(--bg);
-}
-
-*::-webkit-scrollbar-thumb{
-	background-color: var(--bg);
+	border-color: theme("colors.primary-ja-color");
 }

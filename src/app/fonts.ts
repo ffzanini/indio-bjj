@@ -1,7 +1,8 @@
-import { Maven_Pro as mavenPro } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
-export const fontMavenPro = mavenPro({
+export const fontPoppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-mavenPro',
+  variable: '--font-Poppins',
   display: 'swap',
+  weight: '700',
 })

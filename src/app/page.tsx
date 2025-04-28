@@ -1,320 +1,105 @@
 'use client'
-import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 import {
-  RiEmotionUnhappyLine,
-  RiEmotionLaughLine,
-  RiVerifiedBadgeLine,
-} from 'react-icons/ri'
-
-import Image from 'next/image'
-import Link from 'next/link'
-
-import { ScrollToTopButton, Wrapper } from '@/components'
-
-import { initFacebookPixel, trackEvent } from '@/lib/facebookPixel'
+  ScrollToTopButton,
+  ImagesSlider,
+  Wrapper,
+  Carousel,
+} from '@/components/ui'
+import { parallaxImages, ProgramsCarousel } from '@/constants/home'
 
 export default function PricipalPage() {
-  const [width, setWidth] = useState<number>(0)
-
-  useEffect(() => {
-    initFacebookPixel()
-    trackEvent('PageView')
-  }, [])
-
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth)
-    }
-
-    window.addEventListener('resize', handleResize)
-
-    handleResize()
-
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  })
-
   return (
     <Wrapper>
-      <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-12">
-        <div className="flex flex-col items-center justify-center text-center lg:w-7/12 gap-2 lg:gap-4">
-          <h3>Aprenda os segredos da meia guarda com:</h3>
-          <h2>Fabiano Índio</h2>
-          <iframe
-            className="w-[360px] h-[240px] lg:w-[620px] lg:h-[400px]"
-            src="https://www.youtube.com/embed/d5ljtNaK1bQ"
-            title="Curso de meia guarda"
-            allow="autoplay; encrypted-media"
-          />
-          <div className="flex flex-col items-center text-center justify-center lg:gap-4">
-            <h3>Bem-vindo ao método Inovador de meia guarda</h3>
-            <p className="px-0 lg:px-24 pb-4 lg:pb-2">
-              Apresentado por Fabiano Índio, este curso não apenas simplifica,
-              como aborda também de forma clara e completa todas as posições
-              críticas dessa guarda, baseando-se na larga experiência de
-              campeonatos e anos como professor da academia Índio Jiu Jitsu
-              Team.
+      <ImagesSlider className="h-screen" images={parallaxImages}>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: -80,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+          className="z-50 flex flex-col justify-center items-center"
+        >
+          <motion.p className="font-bold text-3xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+            Jiu Jitsu de alta qualidade, <br /> transformando vidas
+          </motion.p>
+          <motion.p className="text-center text-2xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200 py-4">
+            Aulas para todos os níveis e idades. <br /> Marque uma aula
+            experimental e venha fazer parte da família JA Jiu Jitsu
+          </motion.p>
+          <button className="px-4 py-2 backdrop-blur-sm border bg-primary-ja-color/10 border-primary-ja-color/20 text-white mx-auto text-center rounded-full relative mt-4">
+            <span>
+              Agendar uma <b>aula grátis</b> agora
+            </span>
+            <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary-ja-color to-transparent" />
+          </button>
+        </motion.div>
+      </ImagesSlider>
+      <section className="bg-white py-20">
+        <div className="flex flex-col justify-center items-center container">
+          <p className="text-4xl lg:text-5xl text-black">VAMOS MARCAR A SUA</p>
+          <p className="text-5xl lg:text-6xl text-primary-ja-color font-semibold">
+            PRIMEIRA AULA
+          </p>
+          <div className="m-2 lg:w-[900px] flex flex-col items-center text-center py-6 gap-6">
+            <p className="text-xl text-black">
+              O Jiu-Jitsu é muito mais do que somente lutar — é descobrir novas
+              forças dentro de você. Venha fazer sua primeira aula e experimente
+              uma transformação que começa já no primeiro treino. Seu novo
+              caminho pode começar hoje.
             </p>
-            <motion.a
-              href="https://pay.hotmart.com/W94160265J"
-              onClick={() =>
-                trackEvent('ButtonClick', { button: 'paymentButton' })
-              }
-              target="_blank"
-              whileHover={{
-                scale: 1.1,
-                transition: { duration: 0.3 },
-              }}
-              className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
-            dark:bg-error-white-theme  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
-            >
-              <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
-                QUERO DOMINAR A MEIA GUARDA
-              </p>
-            </motion.a>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center lg:pt-0">
-          <Image
-            src="/images/indio-curso-meia-guarda.jpeg"
-            alt="Profile photo"
-            width={width < 780 ? 280 : 600}
-            height={0}
-            className="lg:border lg:rounded-tr-[150px] lg:rounded-bl-[150px] border-gray-900 dark:border-gray-50"
-          />
-        </div>
-      </div>
-      <div className="bg-white h-[1px] my-8" />
-      <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
-        <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-9/12">
-          <h2>
-            NÃO IMPORTA O SEU NÍVEL NO JIU-JITSU, SE PRATICA A ARTE SUAVE, ESTE
-            CURSO É PRA VOCÊ!
-          </h2>
-          <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12 pb-4">
-            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center lg:h-60">
-              <motion.a
-                aria-label="método comum"
-                target="_blank"
-                className="flex justify-center items-center"
-              >
-                <RiEmotionUnhappyLine size={50} />
-              </motion.a>
-              <h3>Método comum</h3>
-              <p>
-                A maioria dos cursos de Jiu-Jitsu te ensinam posições isoladas
-                sem sequência lógica. O excesso de informação faz você travar, e
-                não aprender corretamente. No fim de tudo, você não vai
-                conseguir aplicar nada do que assistiu.
-              </p>
-            </div>
-            <div className="p-12 bg-gray-700 border rounded-xl items-center justify-center text-center lg:h-60">
-              <motion.a
-                aria-label="método índio"
-                target="_blank"
-                className="flex justify-center items-center"
-              >
-                <RiEmotionLaughLine size={50} />
-              </motion.a>
-              <h3>Sistema Índio</h3>
-              <p>
-                Entenda a mentalidade de um professor experiente no momento da
-                execução de posições. Mesmo com um jogo completamente diferente,
-                qualquer pessoa vai conseguir utilizar o que está sendo
-                transmitido.
-              </p>
-            </div>
-          </div>
-          <motion.a
-            href="https://pay.hotmart.com/W94160265J"
-            onClick={() =>
-              trackEvent('ButtonClick', { button: 'paymentButton' })
-            }
-            target="_blank"
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 0.3 },
-            }}
-            className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
-            dark:bg-error-white-theme  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
-          >
-            <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
-              APRENDA COM O MESTRE ÍNDIO
-            </p>
-          </motion.a>
-        </div>
-      </div>
-      <div className="bg-white h-[1px] my-8" />
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
-        <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-11/12">
-          <h2>PORQUE ESCOLHER ESTE CURSO</h2>
-          <div>
-            <ul className="flex flex-col items-start gap-8 lg:gap-2">
-              <li className="flex flex-row items-center justify-center text-center gap-2">
-                <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-1">
-                  <h4 className="flex flex-row font-bold items-center gap-2">
-                    <RiVerifiedBadgeLine size={22} />
-                    Aulas Exclusivas:
-                  </h4>
-                  <p className="items-end">
-                    Conteúdo gravado em alta qualidade com explicações
-                    detalhadas.
-                  </p>
-                </div>
-              </li>
-              <li className="flex flex-row items-center justify-center text-center gap-2">
-                <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-1">
-                  <h4 className="flex flex-row font-bold items-center gap-2">
-                    <RiVerifiedBadgeLine size={22} /> Acesso Facilitado:
-                  </h4>
-                  <p className="items-end">
-                    Estude no seu próprio ritmo com acesso ilimitado ao
-                    conteúdo.
-                  </p>
-                </div>
-              </li>
-              <li className="flex flex-row items-center justify-center text-center gap-2">
-                <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-1">
-                  <h4 className="flex flex-row font-bold items-center gap-2">
-                    <RiVerifiedBadgeLine size={22} />
-                    Suporte Direto:
-                  </h4>
-                  <p className="items-end">
-                    Tire suas dúvidas diretamente com Fabiano Índio e receba
-                    feedback para melhorar ainda mais seu desempenho.
-                  </p>
-                </div>
-              </li>
-              <li className="flex flex-row items-center justify-center text-center gap-2">
-                <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-1">
-                  <h4 className="flex flex-row font-bold items-center gap-2">
-                    <RiVerifiedBadgeLine size={22} />
-                    Garantia de Satisfação:
-                  </h4>
-                  <p className="items-end">
-                    Se não estiver satisfeito, você tem 7 dias para solicitar
-                    reembolso.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className="bg-white h-[1px] my-8" />
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
-        <div className="flex flex-col items-center justify-center text-center gap-4 lg:gap-8 lg:w-9/12">
-          <h2>AO ENTRAR NO CURSO MEIA GUARDA, VOCÊ RECEBE:</h2>
-          <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-6 lg:gap-12">
-            <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
-              <h3 className="pb-4">Fundamentos da Meia Guarda</h3>
-              <p>
-                Entenda a base e a importância dessa posição crucial no
-                Jiu-Jitsu
-              </p>
-            </div>
-            <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
-              <h3 className="pb-4">Variedades de Meia Guarda</h3>
-              <p>
-                Explore diferentes variações, como a meia guarda profunda, Z
-                guard, e muito mais.
-              </p>
-            </div>
-            <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
-              <h3 className="pb-4">Ataques com as suas Finalizações</h3>
-              <p>
-                Domine uma variedade de ataques e finalizações eficazes a partir
-                da meia guarda.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
-            <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
-              <h3 className="pb-4 lg:pt-4">Defesas e Transições</h3>
-              <p>
-                Aprenda a defender e transitar para posições vantajosas com
-                segurança.
-              </p>
-            </div>
-            <div className="p-8 bg-gray-700 border rounded-xl items-center justify-center text-center lg:w-80 lg:h-40">
-              <h3 className="pb-4 lg:pt-4">Treinos Práticos</h3>
-              <p>
-                Exercícios e drills para incorporar essas técnicas no seu jogo
-                diário.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center text-center">
-            <h3>VOCÊ RECEBE TUDO ISSO</h3>
-            <h3>
-              de <s>R$ 147,00</s>
-            </h3>
-            <h2>por R$ 97,00 À VISTA.</h2>
-            <h4 className="pb-2 lg:pb-6">ou 12x de R$ 9,68</h4>
-            <motion.a
-              href="https://pay.hotmart.com/W94160265J"
-              onClick={() =>
-                trackEvent('ButtonClick', { button: 'paymentButton' })
-              }
-              target="_blank"
-              whileHover={{
-                scale: 1.1,
-                transition: { duration: 0.3 },
-              }}
-              className="w-full lg:w-auto text-center rounded-full bg-black hover:bg-primary-color-800 border border-gray-200 
-              dark:bg-error-white-theme  dark:border-gray-600 dark:hover:bg-primary-color-300 dark:hover:border-gray-600"
-            >
-              <p className="text-white dark:text-white dark:hover:text-gray-800 px-2 py-2 lg:px-6 lg:py-4">
-                GARANTIR MEU ACESSO
-              </p>
-            </motion.a>
-          </div>
-        </div>
-      </div>
-      <div className="bg-white h-[1px] my-8" />
-      <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
-        <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-9/12">
-          <h2>AINDA TEM ALGUMA DÚVIDA?</h2>
-          <h3>Fale com a minha equipe de atendimento no link abaixo</h3>
-          <div className="flex flex-col lg:flex-row">
-            <Link
-              href="https://wa.me/5553981372378"
-              target="_blank"
-              className="w-full lg:w-auto text-center dark:border-b-2   "
-            >
-              <h4 className="text-white dark:text-white dark:hover:text-green ">
-                Atendimento via WhastApp
-              </h4>
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div className="bg-white h-[1px] my-8" />
-      <div className="flex flex-col lg:flex-row items-center justify-center text-center gap-4 lg:gap-12">
-        <div className="flex flex-col items-center justify-center text-center gap-4 lg:w-9/12">
-          <Image
-            src="/images/indio-perfil.png"
-            alt="Profile photo"
-            width={180}
-            height={180}
-            className="rounded-full border border-gray-900 dark:border-gray-50"
-          />
-          <div className="flex flex-col items-center justify-center text-center gap-4">
-            <h2>Quem é o professor?</h2>
-            <p>
-              Fabiano Índio é fundador da Índio Jiu Jitsu Team e um dos
-              instrutores mais respeitados do Brasil. Com anos de dedicação ao
-              esporte e à formação de campeões, Índio traz uma abordagem única e
-              eficiente para o ensino da meia guarda, isso se deve pela sua
-              didática de ensino que engloba os mais variados biotipos de
-              alunos. <br /> Não perca tempo e venha também ser um aluno!
+            <p className="text-xl text-black">
+              Clique abaixo e marque sua aula experimental!
             </p>
           </div>
+          <button className="px-4 py-2 backdrop-blur-sm border bg-black border-primary-ja-color/20 text-white mx-auto text-center rounded-full relative mt-4">
+            <span className="text-white font-semibold">Agendar agora</span>
+            <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary-ja-color to-transparent" />
+          </button>
         </div>
-      </div>
+      </section>
+      <section>
+        <div className="flex flex-col justify-center items-center pt-20">
+          <p className="text-5xl">NOSSOS</p>
+          <p className="text-6xl text-primary-ja-color font-semibold">
+            PROGRAMAS
+          </p>
+        </div>
+
+        <div className="relative overflow-hidden w-full h-full pt-10 pb-32">
+          <Carousel slides={ProgramsCarousel} />
+        </div>
+      </section>
+      <section className="bg-white py-20">
+        <div className="flex flex-col justify-center items-center container">
+          <p className="text-4xl lg:text-5xl text-black">VAMOS MARCAR A SUA</p>
+          <p className="text-5xl lg:text-6xl text-primary-ja-color font-semibold">
+            PRIMEIRA AULA
+          </p>
+          <div className="m-2 lg:w-[900px] flex flex-col items-center text-center py-6 gap-6">
+            <p className="text-xl text-black">
+              O Jiu-Jitsu é muito mais do que somente lutar — é descobrir novas
+              forças dentro de você. Venha fazer sua primeira aula e experimente
+              uma transformação que começa já no primeiro treino. Seu novo
+              caminho pode começar hoje.
+            </p>
+            <p className="text-xl text-black">
+              Clique abaixo e marque sua aula experimental!
+            </p>
+          </div>
+          <button className="px-4 py-2 backdrop-blur-sm border bg-black border-primary-ja-color/20 text-white mx-auto text-center rounded-full relative mt-4">
+            <span className="text-white font-semibold">Agendar agora</span>
+            <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary-ja-color to-transparent" />
+          </button>
+        </div>
+      </section>
       <ScrollToTopButton />
     </Wrapper>
   )

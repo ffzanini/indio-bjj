@@ -11,14 +11,14 @@ const config: Config = {
     container: {
       center: true,
       screens: {
-        sm: '600px',
-        md: '728px',
-        lg: '984px',
-        xl: 'calc(1216px + 16px)',
-        '2xl': 'calc(1216px + 16px)',
+        '2xl': 'calc(1480px + 16px)',
       },
     },
-
+    variants: {
+      extend: {
+        rotate: ['data-state'],
+      },
+    },
     extend: {
       fontSize: {
         caption: '1rem',
@@ -32,20 +32,15 @@ const config: Config = {
         'dark-theme-background': '#121212',
         'white-theme-background': '#FFFFFF',
 
-        'primary-color-50': '#fff0f2',
-        'primary-color-100': '#ffe2e7',
-        'primary-color-200': '#ffc9d5',
-        'primary-color-300': '#ff9db3', // dark theme
-        'primary-color-400': '#ff668b',
-        'primary-color-500': '#ff3067',
-        'primary-color-600': '#f32263', // main color
-        'primary-color-700': '#cc0447', // variant color
-        'primary-color-800': '#aa0743', // light theme
-        'primary-color-900': '#920940',
-        'primary-color-950': '#52001e',
+        'open-guard-theme': '#cc3333',
+        'open-guard-theme-light': '#ff6d62',
+        'open-guard-theme-dark': '#8e0007',
 
-        'error-dark-theme': '#CF6679',
-        'error-white-theme': '#B00020',
+        'half-guard-theme': '#CC9933',
+        'half-guard-theme-light': '#FFCF68',
+        'half-guard-theme-dark': '#916600',
+
+        'primary-ja-color': '#d1ff00',
 
         'primary-color-dark-theme-text': '#FFFFFF',
         'opacity-color-dark-theme-text': 'rgba(255,255,255, 0.87)',
@@ -54,17 +49,20 @@ const config: Config = {
         'primary-color-white-theme-text': '#000000',
         'opacity-color-white-theme-text': 'rgba(0,0,0, 0.87)',
         'disable-text-color-white-theme': 'rgba(0,0,0, 0.38)',
-
-        'gray-900': '#121212',
-        'gray-800': '#272727',
-        'gray-700': '#3C3C3C',
-        'gray-600': '#515151',
-        'gray-500': '#666666',
-        'gray-400': '#7B7B7B',
-        'gray-300': '#909090',
-        'gray-200': '#A6A6A6',
-        'gray-100': '#BBBBBB',
-        'gray-50': '#D0D0D0',
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 300ms ease-in-out',
+        'accordion-up': 'accordion-up 300ms ease-in-out',
       },
     },
   },
