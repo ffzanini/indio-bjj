@@ -46,3 +46,15 @@ export const item = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
 }
+
+export const carousel = {
+  enter: (dir: number) => ({
+    x: dir > 0 ? 300 : -300,
+    opacity: 0,
+  }),
+  center: { x: 0, opacity: 1 },
+  exit: (dir: number) => ({
+    x: dir < 0 ? 300 : -300,
+    opacity: 0,
+  }),
+}

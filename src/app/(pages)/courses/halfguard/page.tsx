@@ -44,7 +44,7 @@ export default function HalfGuardPage() {
     <Wrapper>
       <section
         id="hero"
-        className="bg-gradient-to-b from-half-guard-theme-light via-half-guard-theme to-black pt-40 pb-12 lg:pb-20 text-white"
+        className="bg-gradient-to-b from-half-guard-theme-light via-half-guard-theme to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white"
       >
         <div className="container">
           <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 items-center">

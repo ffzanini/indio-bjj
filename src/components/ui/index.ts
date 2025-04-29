@@ -1,5 +1,7 @@
 export * from './Accordion'
 export * from './Avatar'
+export * from './Calendar'
+export * from './Card'
 export * from './Carousel'
 export * from './ScrollToTop'
 export * from './Slider'

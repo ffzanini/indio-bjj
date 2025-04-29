@@ -109,7 +109,7 @@ export function Footer() {
         </div>
       </div>
       <div className="px-6 pt-6 mt-8 gap-4 lg:pt-2 flex flex-col justify-center items-center border-t border-gray-600">
-        <p className="text-lg pt-4">
+        <p className="pt-4 text-center">
           ©{yearNow} Índio Jiu Jitsu | Todos os direitos reservados
         </p>
         <p className="flex flex-col text-base gap-1 justify-center text-center pb-4">

@@ -162,6 +162,7 @@ interface CarouselProps {
 
 export function Carousel({ slides }: CarouselProps) {
   const [current, setCurrent] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
 
   const handlePreviousClick = () => {
     const previous = current - 1
@@ -181,10 +182,22 @@ export function Carousel({ slides }: CarouselProps) {
 
   const id = useId()
 
+  useEffect(() => {
+    if (isPaused) return
+
+    const interval = setInterval(() => {
+      setCurrent((prevCurrent) => (prevCurrent + 1) % slides.length)
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [slides.length, isPaused])
+
   return (
     <div
       className="relative w-[70vmin] h-[70vmin] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
     >
       <ul
         className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"

@@ -41,6 +41,7 @@ const config: Config = {
         'half-guard-theme-dark': '#916600',
 
         'primary-ja-color': '#d1ff00',
+        'primary-ja-color-opacity': 'rgba(209, 255, 0, 0.5)',
 
         'primary-color-dark-theme-text': '#FFFFFF',
         'opacity-color-dark-theme-text': 'rgba(255,255,255, 0.87)',
