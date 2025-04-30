@@ -100,7 +100,7 @@ export default function PricipalPage() {
           </div>
           <button
             onClick={handleWhatsAppClick}
-            className="px-4 py-2 backdrop-blur-sm border bg-black border-primary-ja-color/20 text-white mx-auto text-center rounded-full relative mt-2 hover:-translate-y-1 transition duration-400"
+            className="px-4 py-2 lg:px-6 lg:py-4 backdrop-blur-sm border bg-black border-primary-ja-color/20 text-white mx-auto text-center rounded-full relative mt-2 hover:-translate-y-1 transition duration-400"
           >
             <span className="text-white font-semibold">Agendar agora</span>
             <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary-ja-color to-transparent" />

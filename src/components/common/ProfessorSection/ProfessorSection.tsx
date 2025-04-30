@@ -62,7 +62,7 @@ export function ProfessorSection({ colorName }: { colorName?: string }) {
                 </p>
 
                 <div
-                  className={`bg-white rounded-xl shadow-lg p-6 border-l-4 border-${colorName} text-3xl font-bold mb-4`}
+                  className={`bg-white rounded-xl shadow-lg p-6 border-l-8 border-${colorName} text-3xl font-bold mb-4`}
                 >
                   <p className="italic text-xl text-gray-600">
                     &quot;Minha missão é transmitir não apenas técnicas, mas

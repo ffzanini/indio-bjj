@@ -10,6 +10,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
+  ScrollToTopButton,
   Wrapper,
 } from '@/components'
 import { weeklyClasses } from '@/constants/schedules'
@@ -218,6 +219,7 @@ export default function Schedule() {
           </div>
         </div>
       </section>
+      <ScrollToTopButton />
     </Wrapper>
   )
 }

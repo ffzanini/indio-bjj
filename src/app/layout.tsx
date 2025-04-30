@@ -10,7 +10,7 @@ import { fontPoppins } from './fonts'
 
 import './globals.css'
 
-const description = `JA Jiu Jitsu | Índio Jiu Jitsu`
+const description = `Na JA Jiu-Jitsu, nossos professores experientes e dedicados estão comprometidos em oferecer uma orientação personalizada, promovendo o crescimento técnico e pessoal de cada aluno. Criamos um ambiente acolhedor, respeitoso e motivador, onde praticantes de todos os níveis se sentem parte de uma verdadeira família. Aqui, o Jiu-Jitsu vai além da arte marcial — é uma ferramenta de transformação, disciplina e autoconfiança.`
 export const metadata: Metadata = {
   title: 'JA Jiu Jitsu | Índio Jiu Jitsu',
   description,

@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { motion, useScroll } from 'framer-motion'
-import { RxArrowUp } from 'react-icons/rx'
+import { RiArrowUpLine } from 'react-icons/ri'
 
 export function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false)
@@ -32,12 +32,12 @@ export function ScrollToTopButton() {
 
   return (
     <motion.button
-      className="fixed opacity-70 bottom-36 lg:bottom-24 right-4 p-2 bg-primary-ja-color dark:bg-primary-ja-color rounded-full"
+      className="fixed opacity-70 bottom-12 right-4 p-2 bg-primary-ja-color dark:bg-primary-ja-color rounded-full"
       whileHover={{ scale: 1.1 }}
       style={{ display: isVisible ? 'block' : 'none' }}
       onClick={goTop}
     >
-      <RxArrowUp width={24} height={24} />
+      <RiArrowUpLine width={24} height={24} fill="#111" />
     </motion.button>
   )
 }
