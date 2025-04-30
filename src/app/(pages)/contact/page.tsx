@@ -1,6 +1,6 @@
 'use client'
 import {
-  RiMapLine,
+  RiMapPinLine,
   RiPhoneLine,
   RiMailLine,
   RiTimerLine,
@@ -38,7 +38,7 @@ export default function Contact() {
             <CardContent className="pt-8 pb-6 px-6">
               <div className="flex justify-center mb-4">
                 <div className="p-4 bg-primary-ja-color rounded-full">
-                  <RiMapLine className="w-8 h-8" fill="#111" />
+                  <RiMapPinLine className="w-8 h-8" fill="#111" />
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-center mb-2">

@@ -129,7 +129,7 @@ export default function HalfGuardPage() {
             </div>
 
             <VideoPlayer
-              thumbnailUrl="/images/courses/curso-meia-guarda-thumbnail.jpg"
+              thumbnailUrl="/images/courses/curso-meia-guarda-thumbnail.webp"
               videoUrl="https://www.youtube.com/embed/d5ljtNaK1bQ?autoplay=1&loop=1&rel=0"
               videoTitle="Curso de meia guarda"
               videoDescription="Transforme sua técnica de Meia Guarda"

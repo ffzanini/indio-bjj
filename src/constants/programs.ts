@@ -5,7 +5,7 @@ export const programItems = [
     title: 'Iniciante',
     description:
       'Comece sua jornada no Jiu-Jitsu com uma base sólida e uma didática acessível para todos os níveis.',
-    header: '/images/slider/slider5.jpeg',
+    header: '/images/slider/slider5.webp',
     icon: GiKimono,
     navigation: '/academy/programs/iniciante',
   },
@@ -13,7 +13,7 @@ export const programItems = [
     title: 'Intermediário',
     description:
       'Aprimore suas técnicas e aumente seu repertório com aulas voltadas ao progresso técnico e tático.',
-    header: '/images/slider/slider5.jpeg',
+    header: '/images/slider/slider5.webp',
     icon: GiKimono,
     navigation: '/academy/programs/intermediario',
   },
@@ -21,7 +21,7 @@ export const programItems = [
     title: 'Avançado',
     description:
       'Treinamentos com foco nos detalhes, estratégias de luta e cenários complexos de combate.',
-    header: '/images/slider/slider5.jpeg',
+    header: '/images/slider/slider5.webp',
     icon: GiKimono,
     navigation: '/academy/programs/avancado',
   },
@@ -29,7 +29,7 @@ export const programItems = [
     title: 'Competição',
     description:
       'Preparação específica para campeonatos, com foco em intensidade, regras e combate real.',
-    header: '/images/slider/slider5.jpeg',
+    header: '/images/slider/slider5.webp',
     icon: GiKimono,
     navigation: '/academy/programs/competicao',
   },
@@ -37,7 +37,7 @@ export const programItems = [
     title: 'Baby, Kids e Teen',
     description:
       'Aulas educativas para crianças e adolescentes, com foco na disciplina, coordenação e diversão.',
-    header: '/images/slider/slider5.jpeg',
+    header: '/images/slider/slider5.webp',
     icon: GiKimono,
     navigation: '/academy/programs/baby-kids-teen',
   },
@@ -45,7 +45,7 @@ export const programItems = [
     title: 'Executivo (35+)',
     description:
       'Voltado ao público maduro, com foco em saúde, bem-estar e aprendizado técnico no ritmo certo.',
-    header: '/images/slider/slider5.jpeg',
+    header: '/images/slider/slider5.webp',
     icon: GiKimono,
     navigation: '/academy/programs/executivo',
   },
@@ -53,7 +53,7 @@ export const programItems = [
     title: 'NO GI',
     description:
       'Treinos sem kimono com foco em movimentação e adaptação para lutas sem pano.',
-    header: '/images/slider/slider5.jpeg',
+    header: '/images/slider/slider5.webp',
     icon: GiKimono,
     navigation: '/academy/programs/nogi',
   },
@@ -61,7 +61,7 @@ export const programItems = [
     title: 'Feminino',
     description:
       'Aulas para o público feminino, promovendo autoconfiança, defesa pessoal e performance.',
-    header: '/images/slider/slider5.jpeg',
+    header: '/images/slider/slider5.webp',
     icon: GiKimono,
     navigation: '/academy/programs/feminino',
   },
@@ -69,7 +69,7 @@ export const programItems = [
     title: 'Corujão',
     description:
       'Aulas noturnas para quem prefere ou só pode treinar tarde, com o mesmo foco técnico e qualidade.',
-    header: '/images/slider/slider5.jpeg',
+    header: '/images/slider/slider5.webp',
     icon: GiKimono,
     navigation: '/academy/programs/corujao',
   },
@@ -77,7 +77,7 @@ export const programItems = [
     title: 'Aulas Particulares',
     description:
       'Atenção exclusiva para acelerar seu aprendizado ou focar em objetivos específicos com um professor dedicado.',
-    header: '/images/slider/slider5.jpeg',
+    header: '/images/slider/slider5.webp',
     icon: GiKimono,
     navigation: '/academy/programs/particulares',
   },

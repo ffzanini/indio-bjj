@@ -156,13 +156,13 @@ function Navbar({ className }: { className?: string }) {
               <ProductItem
                 title="Meia Guarda"
                 href="/courses/halfguard"
-                src="/images/courses/indio-curso-meia-guarda.png"
+                src="/images/courses/indio-curso-meia-guarda.webp"
                 description="A especialidade da casa, treine a sua meia guarda como nunca antes."
               />
               <ProductItem
                 title="Guarda Aberta"
                 href="/courses/openguard"
-                src="/images/courses/indio-curso-guarda-aberta.png"
+                src="/images/courses/indio-curso-guarda-aberta.webp"
                 description="Aqui você encontra tudo o que você precisa para sua guarda aberta."
               />
             </div>

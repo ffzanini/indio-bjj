@@ -13,7 +13,7 @@ export const programs: Programs[] = [
   {
     id: 1,
     navigation: 'iniciante',
-    image: '/images/slider/slider5.jpeg',
+    image: '/images/slider/slider5.webp',
     title: 'Fundamentos do Jiu Jitsu',
     description:
       'Os Fundamentos do Jiu-Jitsu representam a espinha dorsal da arte suave. Nesta seção, exploramos os princípios técnicos e conceituais que sustentam toda a prática — como postura, base, equilíbrio, mobilidade no solo, controle de distância, defesa pessoal e noções de alavanca e biomecânica. Cada movimento, posição ou transição avançada nasce da compreensão sólida desses fundamentos. Aqui, você terá acesso a explicações detalhadas, vídeos demonstrativos e dicas práticas que servem tanto para quem está começando quanto para praticantes avançados que desejam refinar sua base. Aprender, revisar e dominar os fundamentos é essencial para evoluir com segurança, inteligência e eficiência no tatame.',
@@ -32,7 +32,7 @@ export const programs: Programs[] = [
   {
     id: 2,
     navigation: 'intermediario',
-    image: '/images/slider/slider5.jpeg',
+    image: '/images/slider/slider5.webp',
     title: 'Intermediário',
     description: 'texto em construção',
     quote: '“frase de efeito” – Índio.',
@@ -42,7 +42,7 @@ export const programs: Programs[] = [
   {
     id: 3,
     navigation: 'avancado',
-    image: '/images/slider/slider5.jpeg',
+    image: '/images/slider/slider5.webp',
     title: 'Avançado',
     description: 'texto em construção',
     quote: '“frase de efeito” – Índio.',
@@ -52,7 +52,7 @@ export const programs: Programs[] = [
   {
     id: 4,
     navigation: 'competicao',
-    image: '/images/slider/slider5.jpeg',
+    image: '/images/slider/slider5.webp',
     title: 'Competição',
     description: 'texto em construção',
     quote: '“frase de efeito” – Índio.',
@@ -62,7 +62,7 @@ export const programs: Programs[] = [
   {
     id: 4,
     navigation: 'baby-kids-teen',
-    image: '/images/slider/slider5.jpeg',
+    image: '/images/slider/slider5.webp',
     title: 'Baby, Kids e Teen',
     description: 'texto em construção',
     quote: '“frase de efeito” – Índio.',
@@ -72,7 +72,7 @@ export const programs: Programs[] = [
   {
     id: 5,
     navigation: 'executivo',
-    image: '/images/slider/slider5.jpeg',
+    image: '/images/slider/slider5.webp',
     title: 'Executivo(35+)',
     description: 'texto em construção',
     quote: '“frase de efeito” – Índio.',
@@ -82,7 +82,7 @@ export const programs: Programs[] = [
   {
     id: 6,
     navigation: 'nogi',
-    image: '/images/slider/slider5.jpeg',
+    image: '/images/slider/slider5.webp',
     title: 'NO GI (sem kimono)',
     description: 'texto em construção',
     quote: '“frase de efeito” – Índio.',
@@ -92,7 +92,7 @@ export const programs: Programs[] = [
   {
     id: 7,
     navigation: 'feminino',
-    image: '/images/slider/slider5.jpeg',
+    image: '/images/slider/slider5.webp',
     title: 'Feminino',
     description: 'texto em construção',
     quote: '“frase de efeito” – Índio.',
@@ -102,7 +102,7 @@ export const programs: Programs[] = [
   {
     id: 8,
     navigation: 'corujao',
-    image: '/images/slider/slider5.jpeg',
+    image: '/images/slider/slider5.webp',
     title: 'Corujão',
     description: 'texto em construção',
     quote: '“frase de efeito” – Índio.',
@@ -112,7 +112,7 @@ export const programs: Programs[] = [
   {
     id: 9,
     navigation: 'particulares',
-    image: '/images/slider/slider5.jpeg',
+    image: '/images/slider/slider5.webp',
     title: 'Aula Particular',
     description: 'texto em construção',
     quote: '“frase de efeito” – Índio.',
@@ -122,7 +122,7 @@ export const programs: Programs[] = [
   {
     id: 9,
     navigation: 'livre',
-    image: '/images/slider/slider5.jpeg',
+    image: '/images/slider/slider5.webp',
     title: 'Treino livre',
     description: 'Aulão com o tatame aberto',
     quote: '“frase de efeito” – Índio.',

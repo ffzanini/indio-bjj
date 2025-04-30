@@ -15,7 +15,7 @@ export function ProfessorSection({ colorName }: { colorName?: string }) {
               <div className="relative">
                 <Avatar className="w-64 h-64 mx-auto">
                   <AvatarImage
-                    src="/images/profile/indio-profile.jpg"
+                    src="/images/profile/indio-profile.webp"
                     alt="Professor de Jiu-Jitsu"
                     className="object-cover"
                   />

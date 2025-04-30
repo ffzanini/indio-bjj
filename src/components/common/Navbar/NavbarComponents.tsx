@@ -135,7 +135,7 @@ export const NavbarLogo = ({
         className="relative z-20 mr-4 flex items-center px-2 py-2 text-sm"
       >
         <Image
-          src="/images/logos/ja-indio-logo.png"
+          src="/images/logos/ja-indio-logo.webp"
           alt="logo"
           width={160}
           height={30}
