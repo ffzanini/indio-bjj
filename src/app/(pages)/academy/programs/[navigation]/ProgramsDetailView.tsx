@@ -54,29 +54,32 @@ export default function ProgramsDetailView({
           <p className="italic text-xl text-gray-600">{program.quote}</p>
         </div>
       </section>
-      <section className="container pb-20">
-        <div className="flex flex-col items-center">
-          <div className="text-center lg:text-left">
-            <h1 className="text-2xl lg:text-4xl font-bold mb-6 lg:mb-8 text-white">
-              Benefícios de se juntar ao programa {program.title}
-            </h1>
+      {program.benefits.length >= 1 && (
+        <section className="container pb-20">
+          <div className="flex flex-col items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-2xl lg:text-4xl font-bold mb-6 lg:mb-8 text-white">
+                Benefícios de se juntar ao programa {program.title}
+              </h1>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+              {program.benefits.map((benefit, index) => (
+                <Card
+                  key={index}
+                  className="rounded-2xl border-primary-ja-color shadow-md bg-white/90 backdrop-blur-sm m-3 lg:m-0"
+                >
+                  <CardContent className="flex rounded-2xl justify-center bg-gradient-to-r from-gray-50 to-white p-14 ">
+                    <p className="text-xl font-bold text-black text-center">
+                      {benefit}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {program.benefits.map((benefit, index) => (
-              <Card
-                key={index}
-                className="rounded-2xl border-primary-ja-color shadow-md bg-white/90 backdrop-blur-sm m-3 lg:m-0"
-              >
-                <CardContent className="flex rounded-2xl justify-center bg-gradient-to-r from-gray-50 to-white p-14 ">
-                  <p className="text-xl font-bold text-black text-center">
-                    {benefit}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
+
       <section className="bg-white py-20">
         <div className="flex flex-col justify-center items-center container">
           <p className="text-3xl lg:text-5xl text-black">

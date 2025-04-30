@@ -39,53 +39,59 @@ export function Footer() {
               </p>
               <div>
                 <p className="text-lg gap-2">
-                  <b className="text-lg">Telefone: </b> (53)99188-6599
+                  <b className="text-lg">Telefone: </b> (53) 99188-6599
                 </p>
                 <p className="text-lg gap-2">
-                  <b className="text-lg">Email: </b>fabianojiu@gmail.com
+                  <b className="text-lg">Email: </b>fabianoindio@hotmail.com
                 </p>
               </div>
             </div>
           </div>
         </div>
         <div className="px-6 pt-8 lg:pt-0">
-          <div className="flex flex-col container mb-1 flex justify-center items-center">
-            <p className="text-xl font-semibold">SIGA NOSSAS REDES SOCIAIS</p>
-            <div className="flex flex-row gap-2 items-center">
-              <p className="font-semibold">Academia:</p>
-              {socialsAcademia.map(({ href, icon: Icon, name }) => (
-                <motion.a
-                  aria-label={name}
-                  target="_blank"
-                  key={href}
-                  href={href}
-                  whileHover={{
-                    scale: 1.2,
-                    transition: { duration: 0.3 },
-                  }}
-                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300"
-                >
-                  <Icon size={32} />
-                </motion.a>
-              ))}
+          <div className="flex flex-col md:gap-10 text-white text-center">
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Redes da Academia</h3>
+              <div className="flex justify-center  gap-4 text-2xl">
+                {socialsAcademia.map(({ href, icon: Icon, name }) => (
+                  <motion.a
+                    aria-label={name}
+                    target="_blank"
+                    key={href}
+                    href={href}
+                    whileHover={{
+                      scale: 1.2,
+                      transition: { duration: 0.3 },
+                    }}
+                    className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300"
+                  >
+                    <Icon size={32} />
+                  </motion.a>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-row gap-2 items-center">
-              <p className="font-semibold">Mestre Índio:</p>
-              {socialsIndio.map(({ href, icon: Icon, name }) => (
-                <motion.a
-                  aria-label={name}
-                  target="_blank"
-                  key={href}
-                  href={href}
-                  whileHover={{
-                    scale: 1.2,
-                    transition: { duration: 0.3 },
-                  }}
-                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300"
-                >
-                  <Icon size={32} />
-                </motion.a>
-              ))}
+
+            <div className="mt-6 md:mt-0">
+              <h3 className="text-lg font-semibold mb-2">
+                Redes do Mestre Índio
+              </h3>
+              <div className="flex justify-center  gap-4 text-2xl">
+                {socialsIndio.map(({ href, icon: Icon, name }) => (
+                  <motion.a
+                    aria-label={name}
+                    target="_blank"
+                    key={href}
+                    href={href}
+                    whileHover={{
+                      scale: 1.2,
+                      transition: { duration: 0.3 },
+                    }}
+                    className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300"
+                  >
+                    <Icon size={32} />
+                  </motion.a>
+                ))}
+              </div>
             </div>
           </div>
         </div>

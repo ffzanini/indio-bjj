@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import useSWR from 'swr'
 import { RiCalendarLine, RiTimerLine } from 'react-icons/ri'
+import Link from 'next/link'
 
 import {
   Calendar,
@@ -165,39 +166,43 @@ export default function Schedule() {
                   {classesForDay.length > 0 ? (
                     <div className="space-y-4">
                       {classesForDay.map((classSession) => (
-                        <div
-                          key={classSession.id}
-                          className={`flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-lg ${
-                            selectedHoliday
-                              ? 'bg-gray-150 hover:bg-gray-200 border border-black'
-                              : 'bg-gray-150 hover:bg-gray-200 border border-black'
-                          } transition-all shadow-sm hover:shadow`}
-                        >
-                          <div className="mb-2 sm:mb-0">
-                            <h3
-                              className={`font-semibold ${selectedHoliday ? 'text-black' : 'text-black'}`}
-                            >
-                              {classSession.subject}
-                            </h3>
-                            <p className="text-sm text-black">
-                              Instrutor(es):{' '}
-                              <b className="text-black text-sm">
-                                {classSession.instructor}
-                              </b>
-                            </p>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <RiTimerLine className="h-5 w-5" fill="#111" />
-                            <p
-                              className={`${
+                        <div key={classSession.id}>
+                          <Link href={classSession.navigation}>
+                            <div
+                              className={`flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-lg ${
                                 selectedHoliday
-                                  ? 'text-gray-800 border-gray-300'
-                                  : 'text-slate-700'
-                              } flex items-center gap-1`}
+                                  ? 'bg-gray-150 hover:bg-gray-200 border border-black'
+                                  : 'bg-gray-150 hover:bg-gray-200 border border-black'
+                              } transition-all shadow-sm hover:shadow`}
                             >
-                              {classSession.startTime} - {classSession.endTime}
-                            </p>
-                          </div>
+                              <div className="mb-2 sm:mb-0">
+                                <h3
+                                  className={`font-semibold ${selectedHoliday ? 'text-black' : 'text-black'}`}
+                                >
+                                  {classSession.subject}
+                                </h3>
+                                <p className="text-sm text-black">
+                                  Instrutor(es):{' '}
+                                  <b className="text-black text-sm">
+                                    {classSession.instructor}
+                                  </b>
+                                </p>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <RiTimerLine className="h-5 w-5" fill="#111" />
+                                <p
+                                  className={`${
+                                    selectedHoliday
+                                      ? 'text-gray-800 border-gray-300'
+                                      : 'text-slate-700'
+                                  } flex items-center gap-1`}
+                                >
+                                  {classSession.startTime} -{' '}
+                                  {classSession.endTime}
+                                </p>
+                              </div>
+                            </div>
+                          </Link>
                         </div>
                       ))}
                     </div>

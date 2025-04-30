@@ -1,4 +1,8 @@
 'use client'
+
+import React from 'react'
+import Link from 'next/link'
+
 import {
   BentoGrid,
   BentoGridItem,
@@ -6,9 +10,6 @@ import {
   Wrapper,
 } from '@/components'
 import { programItems } from '@/constants/programs'
-import Link from 'next/link'
-
-import React from 'react'
 
 export default function AboutUs() {
   return (
@@ -27,8 +28,8 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-      <section className="pb-8 lg:pb-16">
-        <BentoGrid className="max-w-7xl mx-4 lg:mx-auto">
+      <section className="pb-8 lg:pb-16 ">
+        <BentoGrid className="mx-4 lg:mx-auto">
           {programItems.map((item, i) => (
             <Link key={i} href={item.navigation}>
               <BentoGridItem

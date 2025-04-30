@@ -4,6 +4,7 @@ type ClassSession = {
   startTime: string
   endTime: string
   instructor: string
+  navigation: string
 }
 
 type WeeklySchedule = {
@@ -18,6 +19,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '11:00',
       endTime: '12:00',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/livre',
     },
   ],
   Monday: [
@@ -27,6 +29,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '11:00',
       endTime: '12:00',
       instructor: 'Roni Júnior',
+      navigation: '/academy/programs/iniciante',
     },
     {
       id: 3,
@@ -34,6 +37,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '12:00',
       endTime: '13:00',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/competicao',
     },
     {
       id: 4,
@@ -41,6 +45,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '17:30',
       endTime: '18:30',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/intermediario',
     },
     {
       id: 5,
@@ -48,6 +53,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '18:30',
       endTime: '19:30',
       instructor: 'Monique Valadão e Henrique Passos',
+      navigation: '/academy/programs/baby-kids-teen',
     },
     {
       id: 6,
@@ -55,6 +61,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '19:30',
       endTime: '20:30',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/intermediario',
     },
     {
       id: 7,
@@ -62,6 +69,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '22:00',
       endTime: '23:00',
       instructor: 'Matheus Pereira',
+      navigation: '/academy/programs/corujao',
     },
   ],
   Tuesday: [
@@ -71,6 +79,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '11:30',
       endTime: '12:00',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/avancado',
     },
     {
       id: 9,
@@ -78,6 +87,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '12:00',
       endTime: '13:00',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/competicao',
     },
     {
       id: 10,
@@ -85,6 +95,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '18:30',
       endTime: '19:30',
       instructor: 'Monique Valadão',
+      navigation: '/academy/programs/baby-kids-teen',
     },
     {
       id: 11,
@@ -92,6 +103,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '18:30',
       endTime: '19:30',
       instructor: 'Felipe Zanini e Matheus Pereira',
+      navigation: '/academy/programs/feminino',
     },
     {
       id: 12,
@@ -99,6 +111,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '19:30',
       endTime: '20:30',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/executivo',
     },
     {
       id: 13,
@@ -106,6 +119,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '20:30',
       endTime: '21:30',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/intermediario',
     },
     {
       id: 14,
@@ -113,6 +127,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '22:00',
       endTime: '23:00',
       instructor: 'Matheus Pereira',
+      navigation: '/academy/programs/corujao',
     },
   ],
   Wednesday: [
@@ -122,6 +137,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '11:00',
       endTime: '12:00',
       instructor: 'Roni Júnior',
+      navigation: '/academy/programs/iniciante',
     },
     {
       id: 16,
@@ -129,6 +145,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '12:00',
       endTime: '13:00',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/competicao',
     },
     {
       id: 17,
@@ -136,6 +153,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '17:30',
       endTime: '18:30',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/intermediario',
     },
     {
       id: 18,
@@ -143,6 +161,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '18:30',
       endTime: '19:30',
       instructor: 'Monique Valadão e Henrique Passos',
+      navigation: '/academy/programs/baby-kids-teen',
     },
     {
       id: 19,
@@ -150,6 +169,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '19:30',
       endTime: '20:30',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/intermediario',
     },
     {
       id: 20,
@@ -157,6 +177,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '20:30',
       endTime: '21:30',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/nogi',
     },
     {
       id: 21,
@@ -164,6 +185,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '22:00',
       endTime: '23:00',
       instructor: 'Matheus Pereira',
+      navigation: '/academy/programs/corujao',
     },
   ],
   Thursday: [
@@ -173,6 +195,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '11:30',
       endTime: '12:00',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/avancado',
     },
     {
       id: 23,
@@ -180,6 +203,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '12:00',
       endTime: '13:00',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/competicao',
     },
     {
       id: 24,
@@ -187,6 +211,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '18:30',
       endTime: '19:30',
       instructor: 'Monique Valadão',
+      navigation: '/academy/programs/baby-kids-teen',
     },
     {
       id: 25,
@@ -194,6 +219,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '18:30',
       endTime: '19:30',
       instructor: 'Felipe Zanini e Matheus Pereira',
+      navigation: '/academy/programs/feminino',
     },
     {
       id: 26,
@@ -201,6 +227,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '19:30',
       endTime: '20:30',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/executivo',
     },
     {
       id: 27,
@@ -208,6 +235,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '20:30',
       endTime: '21:30',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/intermediario',
     },
   ],
   Friday: [
@@ -217,6 +245,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '11:00',
       endTime: '12:00',
       instructor: 'Roni Júnior',
+      navigation: '/academy/programs/iniciante',
     },
     {
       id: 29,
@@ -224,6 +253,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '12:00',
       endTime: '13:00',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/competicao',
     },
     {
       id: 30,
@@ -231,6 +261,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '17:30',
       endTime: '18:30',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/intermediario',
     },
     {
       id: 31,
@@ -238,6 +269,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '18:30',
       endTime: '19:30',
       instructor: 'Monique Valadão e Henrique Passos',
+      navigation: '/academy/programs/baby-kids-teen',
     },
     {
       id: 32,
@@ -245,6 +277,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '19:30',
       endTime: '20:30',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/nogi',
     },
   ],
   Saturday: [
@@ -254,6 +287,7 @@ export const weeklyClasses: WeeklySchedule = {
       startTime: '11:00',
       endTime: '12:00',
       instructor: 'Fabiano Índio',
+      navigation: '/academy/programs/livre',
     },
   ],
 }
