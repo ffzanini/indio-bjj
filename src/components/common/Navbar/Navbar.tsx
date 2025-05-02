@@ -119,7 +119,11 @@ function Navbar({ className }: { className?: string }) {
               </HoveredLink>
             </div>
           )}
-          <NavbarLink setActive={() => setMobileOpen(false)} href="/contact">
+          <NavbarLink
+            setActive={() => setActive('')}
+            onClick={() => setMobileOpen(false)}
+            href="/contact"
+          >
             Contato
           </NavbarLink>
         </div>
