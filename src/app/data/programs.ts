@@ -27,7 +27,7 @@ export const programs: Programs[] = [
       'Auto-confiança',
       'Se tornar parte da família JA',
     ],
-    professors: 'Fabiano Índio',
+    professors: 'Fabiano Índio, Jeronimo Goulart e Roni Júnior',
   },
   {
     id: 2,
@@ -99,7 +99,7 @@ export const programs: Programs[] = [
       'Saúde física e mental',
       'Iniciação técnica ao Jiu-Jitsu',
     ],
-    professors: 'Monique Valadão',
+    professors: 'Monique Valadão e Henrique Passos',
   },
   {
     id: 6,

@@ -59,7 +59,7 @@ export default function HalfGuardPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mx-2 lg:mx-auto">
                 <motion.a
                   className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-                  href="https://pay.hotmart.com/W94160265J"
+                  href="https://pay.hotmart.com/W94160265J?off=ezsf7gfg"
                   onClick={() =>
                     trackEvent('ButtonClick', { button: 'paymentButton' })
                   }
@@ -181,14 +181,14 @@ export default function HalfGuardPage() {
 
           <div className="mb-8">
             <div className="text-5xl font-bold mb-2 text-white">
-              por R$ 97,00 à vista
+              por R$ 47,00 à vista
             </div>
-            <div className="text-xl text-white">ou 12x R$ 10,03</div>
+            <div className="text-xl text-white">ou 8x R$ 8,82</div>
           </div>
           <div className="mx-2 lg:mx-auto">
             <motion.a
               className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-              href="https://pay.hotmart.com/W94160265J"
+              href="https://pay.hotmart.com/W94160265J?off=ezsf7gfg"
               onClick={() =>
                 trackEvent('ButtonClick', { button: 'paymentButton' })
               }

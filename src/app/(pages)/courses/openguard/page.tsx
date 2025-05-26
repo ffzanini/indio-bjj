@@ -136,7 +136,7 @@ export default function OpenGuardPage() {
 
             <VideoPlayer
               thumbnailUrl=""
-              videoUrl=""
+              videoUrl="https://www.youtube.com/watch?v=pcGp-DzDIkg?autoplay=1&loop=1&rel=0"
               videoTitle="Curso de Guarda Aberta"
               videoDescription="Transforme sua técnica de Guarda Aberta"
             />
@@ -237,9 +237,9 @@ export default function OpenGuardPage() {
 
           <div className="mb-8">
             <div className="text-5xl font-bold mb-2 text-white">
-              por R$ 97,00 à vista
+              por R$ 47,00 à vista
             </div>
-            <div className="text-xl text-white">ou 12x R$ 10,03</div>
+            <div className="text-xl text-white">ou 6x R$ 8,82</div>
           </div>
           <div className="mx-2 lg:mx-auto">
             <motion.a

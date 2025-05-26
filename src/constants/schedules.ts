@@ -40,6 +40,14 @@ export const weeklyClasses: WeeklySchedule = {
       navigation: '/academy/programs/competicao',
     },
     {
+      id: 34,
+      subject: 'Treino Básico',
+      startTime: '14:00',
+      endTime: '15:00',
+      instructor: 'Jeronimo Goulart',
+      navigation: '/academy/programs/iniciante',
+    },
+    {
       id: 4,
       subject: 'Treino Básico/Intermediário',
       startTime: '17:30',
@@ -148,6 +156,14 @@ export const weeklyClasses: WeeklySchedule = {
       navigation: '/academy/programs/competicao',
     },
     {
+      id: 35,
+      subject: 'Treino Básico',
+      startTime: '14:00',
+      endTime: '15:00',
+      instructor: 'Jeronimo Goulart',
+      navigation: '/academy/programs/iniciante',
+    },
+    {
       id: 17,
       subject: 'Treino Básico/Intermediário',
       startTime: '17:30',
@@ -254,6 +270,14 @@ export const weeklyClasses: WeeklySchedule = {
       endTime: '13:00',
       instructor: 'Fabiano Índio',
       navigation: '/academy/programs/competicao',
+    },
+    {
+      id: 34,
+      subject: 'Treino Básico',
+      startTime: '14:00',
+      endTime: '15:00',
+      instructor: 'Jeronimo Goulart',
+      navigation: '/academy/programs/iniciante',
     },
     {
       id: 30,
