@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -14,6 +15,9 @@ const description = `Na JA Jiu-Jitsu, nossos professores experientes e dedicados
 export const metadata: Metadata = {
   title: 'JA Jiu Jitsu | Índio Jiu Jitsu',
   description,
+  other: {
+    google: 'notranslate',
+  },
 }
 
 export default function RootLayout({
@@ -22,9 +26,31 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark" translate="no">
-      <meta name="google" content="notranslate" />
+    <html lang="pt-BR" className="dark" translate="no">
+      <Script
+        id="google-id-openguard"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5J2TP47Q');`,
+        }}
+      />
       <body className={'min-h-screen' + fontPoppins.className}>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-5J2TP47Q"
+              height="0"
+              width="0"
+              style="display:none;visibility:hidden"
+            ></iframe>
+          `,
+          }}
+        />
         <AppProvider>
           <Header />
           <Toaster richColors />

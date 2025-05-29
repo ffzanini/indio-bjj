@@ -32,14 +32,18 @@ export default function Layout({
         }}
       />
 
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5J2TP47Q"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        />
-      </noscript>
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-5J2TP47Q"
+              height="0"
+              width="0"
+              style="display:none;visibility:hidden"
+            ></iframe>
+          `,
+        }}
+      />
 
       {children}
     </>

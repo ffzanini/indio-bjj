@@ -24,6 +24,14 @@ export const weeklyClasses: WeeklySchedule = {
   ],
   Monday: [
     {
+      id: 37,
+      subject: 'Treino Básico',
+      startTime: '7:00',
+      endTime: '8:00',
+      instructor: 'Roni Júnior',
+      navigation: '/academy/programs/iniciante',
+    },
+    {
       id: 2,
       subject: 'Treino Básico',
       startTime: '11:00',
@@ -82,14 +90,6 @@ export const weeklyClasses: WeeklySchedule = {
   ],
   Tuesday: [
     {
-      id: 8,
-      subject: 'Treino Drills',
-      startTime: '11:30',
-      endTime: '12:00',
-      instructor: 'Fabiano Índio',
-      navigation: '/academy/programs/avancado',
-    },
-    {
       id: 9,
       subject: 'Treino Competição',
       startTime: '12:00',
@@ -139,6 +139,14 @@ export const weeklyClasses: WeeklySchedule = {
     },
   ],
   Wednesday: [
+    {
+      id: 38,
+      subject: 'Treino Básico',
+      startTime: '7:00',
+      endTime: '8:00',
+      instructor: 'Roni Júnior',
+      navigation: '/academy/programs/iniciante',
+    },
     {
       id: 15,
       subject: 'Treino Básico',
@@ -206,14 +214,6 @@ export const weeklyClasses: WeeklySchedule = {
   ],
   Thursday: [
     {
-      id: 22,
-      subject: 'Treino Drills',
-      startTime: '11:30',
-      endTime: '12:00',
-      instructor: 'Fabiano Índio',
-      navigation: '/academy/programs/avancado',
-    },
-    {
       id: 23,
       subject: 'Treino Competição',
       startTime: '12:00',
@@ -256,6 +256,14 @@ export const weeklyClasses: WeeklySchedule = {
   ],
   Friday: [
     {
+      id: 39,
+      subject: 'Treino Básico',
+      startTime: '7:00',
+      endTime: '8:00',
+      instructor: 'Roni Júnior',
+      navigation: '/academy/programs/iniciante',
+    },
+    {
       id: 28,
       subject: 'Treino Básico',
       startTime: '11:00',
@@ -272,7 +280,7 @@ export const weeklyClasses: WeeklySchedule = {
       navigation: '/academy/programs/competicao',
     },
     {
-      id: 34,
+      id: 36,
       subject: 'Treino Básico',
       startTime: '14:00',
       endTime: '15:00',

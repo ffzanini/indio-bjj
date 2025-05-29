@@ -195,7 +195,7 @@ export default function Schedule() {
                                     selectedHoliday
                                       ? 'text-gray-800 border-gray-300'
                                       : 'text-slate-700'
-                                  } flex items-center gap-1`}
+                                  } flex items-center gap-1 text-xl`}
                                 >
                                   {classSession.startTime} -{' '}
                                   {classSession.endTime}
