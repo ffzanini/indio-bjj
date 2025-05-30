@@ -135,8 +135,8 @@ export default function OpenGuardPage() {
             </div>
 
             <VideoPlayer
-              thumbnailUrl=""
-              videoUrl="https://www.youtube.com/watch?v=pcGp-DzDIkg?autoplay=1&loop=1&rel=0"
+              thumbnailUrl="/images/courses/curso-guarda-aberta-thumbnail.webp"
+              videoUrl="https://www.youtube.com/embed/u6p5H3yz5yE?autoplay=1&loop=1"
               videoTitle="Curso de Guarda Aberta"
               videoDescription="Transforme sua técnica de Guarda Aberta"
             />
