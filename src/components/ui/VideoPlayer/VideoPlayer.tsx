@@ -52,7 +52,7 @@ export function VideoPlayer({
             src={videoUrl}
             title={videoTitle}
             allow="autoplay; encrypted-media; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            className="absolute top-0 left-0 w-full h-full"
+            className="w-full h-full"
           />
         )}
       </div>
