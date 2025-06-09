@@ -140,7 +140,7 @@ export const programs: Programs[] = [
   {
     id: 8,
     navigation: 'feminino',
-    image: '/images/programs/feminino.webp',
+    image: '/images/programs/feminino-2.webp',
     title: 'Treino Feminino',
     description:
       'Aulas voltadas para o público feminino com um ambiente acolhedor, técnicas adaptadas, foco na autodefesa, condicionamento físico e fortalecimento da autoestima.',
@@ -151,9 +151,10 @@ export const programs: Programs[] = [
       'Ambiente seguro e respeitoso',
       'Empoderamento feminino',
       'Condicionamento físico',
+      'Autoconfiança e foco mental',
       'Integração e apoio entre alunas',
     ],
-    professors: 'Felipe Zanini e Matheus Pereira',
+    professors: 'Monique Valadão, Felipe Zanini e Matheus Pereira',
   },
   {
     id: 9,

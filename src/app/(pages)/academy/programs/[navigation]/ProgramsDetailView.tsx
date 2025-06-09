@@ -35,8 +35,7 @@ export default function ProgramsDetailView({
         <div className="flex flex-col gap-4 pb-4 lg:pb-0">
           <div className="text-white text-2xl">{program.description}</div>
           <div className="text-white text-2xl">
-            Professor Responsável:{' '}
-            <b className="text-2xl">{program.professors}</b>
+            Professor(es): <b className="text-2xl">{program.professors}</b>
           </div>
         </div>
         <Image

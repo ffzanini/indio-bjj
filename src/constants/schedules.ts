@@ -90,6 +90,14 @@ export const weeklyClasses: WeeklySchedule = {
   ],
   Tuesday: [
     {
+      id: 40,
+      subject: 'Treino Feminino',
+      startTime: '10:00',
+      endTime: '11:00',
+      instructor: 'Monique Valadão',
+      navigation: '/academy/programs/feminino',
+    },
+    {
       id: 9,
       subject: 'Treino Competição',
       startTime: '12:00',
@@ -213,6 +221,14 @@ export const weeklyClasses: WeeklySchedule = {
     },
   ],
   Thursday: [
+    {
+      id: 41,
+      subject: 'Treino Feminino',
+      startTime: '10:00',
+      endTime: '11:00',
+      instructor: 'Monique Valadão',
+      navigation: '/academy/programs/feminino',
+    },
     {
       id: 23,
       subject: 'Treino Competição',

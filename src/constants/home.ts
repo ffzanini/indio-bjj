@@ -53,7 +53,7 @@ export const ProgramsCarousel = [
     title: 'Feminino',
     subtitle: 'Jiu Jitsu',
     link: '/academy/programs/feminino',
-    src: '/images/programs/feminino.webp',
+    src: '/images/programs/feminino-2.webp',
   },
   {
     title: 'Corujão',

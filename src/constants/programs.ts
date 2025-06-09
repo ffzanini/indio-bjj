@@ -61,7 +61,7 @@ export const programItems = [
     title: 'Feminino',
     description:
       'Aulas para o público feminino, promovendo autoconfiança, defesa pessoal e performance.',
-    header: '/images/programs/feminino.webp',
+    header: '/images/programs/feminino-2.webp',
     icon: GiKimono,
     navigation: '/academy/programs/feminino',
   },
