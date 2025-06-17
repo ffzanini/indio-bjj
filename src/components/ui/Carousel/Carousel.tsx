@@ -1,71 +1,71 @@
-'use client'
-import { RiArrowRightLine } from 'react-icons/ri'
-import { useState, useRef, useId, useEffect } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+"use client";
+import { RiArrowRightLine } from "react-icons/ri";
+import { useState, useRef, useId, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface SlideData {
-  title: string
-  subtitle: string
-  link: string
-  src: string
+  title: string;
+  subtitle: string;
+  link: string;
+  src: string;
 }
 
 interface SlideProps {
-  slide: SlideData
-  index: number
-  current: number
-  handleSlideClick: (index: number) => void
+  slide: SlideData;
+  index: number;
+  current: number;
+  handleSlideClick: (index: number) => void;
 }
 
 const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
-  const slideRef = useRef<HTMLLIElement>(null)
+  const slideRef = useRef<HTMLLIElement>(null);
 
-  const xRef = useRef(0)
-  const yRef = useRef(0)
-  const frameRef = useRef<number>()
+  const xRef = useRef(0);
+  const yRef = useRef(0);
+  const frameRef = useRef<number | null>(null);
 
   useEffect(() => {
     const animate = () => {
-      if (!slideRef.current) return
+      if (!slideRef.current) return;
 
-      const x = xRef.current
-      const y = yRef.current
+      const x = xRef.current;
+      const y = yRef.current;
 
-      slideRef.current.style.setProperty('--x', `${x}px`)
-      slideRef.current.style.setProperty('--y', `${y}px`)
+      slideRef.current.style.setProperty("--x", `${x}px`);
+      slideRef.current.style.setProperty("--y", `${y}px`);
 
-      frameRef.current = requestAnimationFrame(animate)
-    }
+      frameRef.current = requestAnimationFrame(animate);
+    };
 
-    frameRef.current = requestAnimationFrame(animate)
+    frameRef.current = requestAnimationFrame(animate);
 
     return () => {
       if (frameRef.current) {
-        cancelAnimationFrame(frameRef.current)
+        cancelAnimationFrame(frameRef.current);
       }
-    }
-  }, [])
+    };
+  }, []);
 
   const handleMouseMove = (event: React.MouseEvent) => {
-    const el = slideRef.current
-    if (!el) return
+    const el = slideRef.current;
+    if (!el) return;
 
-    const r = el.getBoundingClientRect()
-    xRef.current = event.clientX - (r.left + Math.floor(r.width / 2))
-    yRef.current = event.clientY - (r.top + Math.floor(r.height / 2))
-  }
+    const r = el.getBoundingClientRect();
+    xRef.current = event.clientX - (r.left + Math.floor(r.width / 2));
+    yRef.current = event.clientY - (r.top + Math.floor(r.height / 2));
+  };
 
   const handleMouseLeave = () => {
-    xRef.current = 0
-    yRef.current = 0
-  }
+    xRef.current = 0;
+    yRef.current = 0;
+  };
 
   const imageLoaded = (event: React.SyntheticEvent<HTMLImageElement>) => {
-    event.currentTarget.style.opacity = '1'
-  }
+    event.currentTarget.style.opacity = "1";
+  };
 
-  const { src, link, title, subtitle } = slide
+  const { src, link, title, subtitle } = slide;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
@@ -78,10 +78,10 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         style={{
           transform:
             current !== index
-              ? 'scale(0.98) rotateX(8deg)'
-              : 'scale(1) rotateX(0deg)',
-          transition: 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-          transformOrigin: 'bottom',
+              ? "scale(0.98) rotateX(8deg)"
+              : "scale(1) rotateX(0deg)",
+          transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+          transformOrigin: "bottom",
         }}
       >
         <div
@@ -89,8 +89,8 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           style={{
             transform:
               current === index
-                ? 'translate3d(calc(var(--x) / 30), calc(var(--y) / 30), 0)'
-                : 'none',
+                ? "translate3d(calc(var(--x) / 30), calc(var(--y) / 30), 0)"
+                : "none",
           }}
         >
           <Image
@@ -113,7 +113,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
 
         <article
           className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${
-            current === index ? 'opacity-100 visible' : 'opacity-0 invisible'
+            current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
           <Link href={link} className="text-white">
@@ -127,13 +127,13 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         </article>
       </li>
     </div>
-  )
-}
+  );
+};
 
 interface CarouselControlProps {
-  type: string
-  title: string
-  handleClick: () => void
+  type: string;
+  title: string;
+  handleClick: () => void;
 }
 
 const CarouselControl = ({
@@ -144,51 +144,51 @@ const CarouselControl = ({
   return (
     <button
       className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
-        type === 'previous' ? 'rotate-180' : ''
+        type === "previous" ? "rotate-180" : ""
       }`}
       title={title}
       onClick={handleClick}
     >
       <RiArrowRightLine className="text-neutral-600 dark:text-neutral-200" />
     </button>
-  )
-}
+  );
+};
 
 interface CarouselProps {
-  slides: SlideData[]
+  slides: SlideData[];
 }
 
 export function Carousel({ slides }: CarouselProps) {
-  const [current, setCurrent] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
+  const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const handlePreviousClick = () => {
-    const previous = current - 1
-    setCurrent(previous < 0 ? slides.length - 1 : previous)
-  }
+    const previous = current - 1;
+    setCurrent(previous < 0 ? slides.length - 1 : previous);
+  };
 
   const handleNextClick = () => {
-    const next = current + 1
-    setCurrent(next === slides.length ? 0 : next)
-  }
+    const next = current + 1;
+    setCurrent(next === slides.length ? 0 : next);
+  };
 
   const handleSlideClick = (index: number) => {
     if (current !== index) {
-      setCurrent(index)
+      setCurrent(index);
     }
-  }
+  };
 
-  const id = useId()
+  const id = useId();
 
   useEffect(() => {
-    if (isPaused) return
+    if (isPaused) return;
 
     const interval = setInterval(() => {
-      setCurrent((prevCurrent) => (prevCurrent + 1) % slides.length)
-    }, 5000)
+      setCurrent((prevCurrent) => (prevCurrent + 1) % slides.length);
+    }, 5000);
 
-    return () => clearInterval(interval)
-  }, [slides.length, isPaused])
+    return () => clearInterval(interval);
+  }, [slides.length, isPaused]);
 
   return (
     <div
@@ -228,5 +228,5 @@ export function Carousel({ slides }: CarouselProps) {
         />
       </div>
     </div>
-  )
+  );
 }

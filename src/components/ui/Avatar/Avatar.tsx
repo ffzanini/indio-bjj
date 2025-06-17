@@ -1,48 +1,62 @@
-import * as React from 'react'
-import * as AvatarPrimitive from '@radix-ui/react-avatar'
+"use client";
 
-import { cn } from '@/lib/utils'
+import React, { useState } from "react";
+import { cn } from "@/libs/cn";
+import Image from "next/image";
 
-const Avatar = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
->(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Root
-    ref={ref}
-    className={cn(
-      'relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full',
-      className,
-    )}
-    {...props}
-  />
-))
-Avatar.displayName = AvatarPrimitive.Root.displayName
+interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
+  src?: string;
+  alt?: string;
+  fallback?: React.ReactNode;
+  size?: number; // opcional, padrão 40px (h-10 w-10)
+}
 
-const AvatarImage = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Image>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
->(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Image
-    ref={ref}
-    className={cn('aspect-square h-full w-full', className)}
-    {...props}
-  />
-))
-AvatarImage.displayName = AvatarPrimitive.Image.displayName
+export function Avatar({
+  src,
+  alt = "Avatar",
+  fallback,
+  size = 40,
+  className,
+  ...props
+}: AvatarProps) {
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
 
-const AvatarFallback = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Fallback>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>
->(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Fallback
-    ref={ref}
-    className={cn(
-      'flex h-full w-full items-center justify-center rounded-full bg-muted',
-      className,
-    )}
-    {...props}
-  />
-))
-AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName
+  const sizeClass = `h-[${size}px] w-[${size}px]`;
 
-export { Avatar, AvatarImage, AvatarFallback }
+  return (
+    <div
+      className={cn(
+        "relative inline-flex shrink-0 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700",
+        sizeClass,
+        className
+      )}
+      {...props}
+    >
+      {src && !error && (
+        <Image
+          src={src}
+          alt={alt}
+          height={size}
+          width={size}
+          onLoad={() => setLoaded(true)}
+          onError={() => setError(true)}
+          className={cn(
+            "object-cover",
+            sizeClass,
+            loaded ? "opacity-100" : "opacity-0"
+          )}
+        />
+      )}
+      {(!src || error || !loaded) && (
+        <div
+          className={cn(
+            "absolute inset-0 flex items-center justify-center text-sm font-medium text-gray-500 dark:text-gray-300"
+          )}
+        >
+          {fallback}
+        </div>
+      )}
+    </div>
+  );
+}

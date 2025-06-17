@@ -1,5 +1,5 @@
-'use client'
-import React, { useState } from 'react'
+"use client";
+import React, { useState } from "react";
 import {
   HoveredLink,
   Menu,
@@ -7,31 +7,36 @@ import {
   NavbarLink,
   NavbarLogo,
   ProductItem,
-} from './NavbarComponents'
+} from "./NavbarComponents";
 
-import { RiCloseFill, RiMenuFill, RiAddFill, RiCloseLine } from 'react-icons/ri'
+import {
+  RiCloseFill,
+  RiMenuFill,
+  RiAddFill,
+  RiCloseLine,
+} from "react-icons/ri";
 
-import { cn } from '@/lib/utils'
+import { cn } from "@/libs/cn";
 
 export function Header() {
   return (
     <div className="relative w-full flex items-center justify-center">
       <Navbar className="top-[0px] lg:top-2" />
     </div>
-  )
+  );
 }
 
 function Navbar({ className }: { className?: string }) {
-  const [active, setActive] = useState<string | null>(null)
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [showAcademia, setShowAcademia] = useState(false)
-  const [showCursos, setShowCursos] = useState(false)
+  const [active, setActive] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [showAcademia, setShowAcademia] = useState(false);
+  const [showCursos, setShowCursos] = useState(false);
 
   return (
-    <div className={cn('fixed left-0 right-0 z-50 bg-black', className)}>
+    <div className={cn("fixed left-0 right-0 z-50 bg-black", className)}>
       {/* Mobile */}
       <div className="flex items-center justify-between pr-4 py-1 lg:hidden">
-        <NavbarLogo setActive={() => setActive('')} />
+        <NavbarLogo setActive={() => setActive("")} />
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="text-black dark:text-white z-50"
@@ -43,7 +48,7 @@ function Navbar({ className }: { className?: string }) {
       {mobileOpen && (
         <div className="lg:hidden bg-black text-white w-full flex flex-col pl-4 py-6 space-y-4 text-left">
           <NavbarLink
-            setActive={() => setActive('')}
+            setActive={() => setActive("")}
             onClick={() => setMobileOpen(false)}
             href="/"
           >
@@ -67,8 +72,8 @@ function Navbar({ className }: { className?: string }) {
               <HoveredLink
                 href="/academy/programs"
                 onClick={() => {
-                  setMobileOpen(false)
-                  setShowAcademia(false)
+                  setMobileOpen(false);
+                  setShowAcademia(false);
                 }}
               >
                 Programas
@@ -76,8 +81,8 @@ function Navbar({ className }: { className?: string }) {
               <HoveredLink
                 href="/academy/schedules"
                 onClick={() => {
-                  setMobileOpen(false)
-                  setShowAcademia(false)
+                  setMobileOpen(false);
+                  setShowAcademia(false);
                 }}
               >
                 Horários
@@ -102,8 +107,8 @@ function Navbar({ className }: { className?: string }) {
               <HoveredLink
                 href="/courses/halfguard"
                 onClick={() => {
-                  setMobileOpen(false)
-                  setShowCursos(false)
+                  setMobileOpen(false);
+                  setShowCursos(false);
                 }}
               >
                 Curso Meia Guarda
@@ -111,8 +116,8 @@ function Navbar({ className }: { className?: string }) {
               <HoveredLink
                 href="/courses/openguard"
                 onClick={() => {
-                  setMobileOpen(false)
-                  setShowCursos(false)
+                  setMobileOpen(false);
+                  setShowCursos(false);
                 }}
               >
                 Curso Guarda Aberta
@@ -120,7 +125,7 @@ function Navbar({ className }: { className?: string }) {
             </div>
           )}
           <NavbarLink
-            setActive={() => setActive('')}
+            setActive={() => setActive("")}
             onClick={() => setMobileOpen(false)}
             href="/contact"
           >
@@ -139,13 +144,13 @@ function Navbar({ className }: { className?: string }) {
             <div className="flex flex-col space-y-4">
               <HoveredLink
                 href="/academy/programs"
-                onClick={() => setActive('')}
+                onClick={() => setActive("")}
               >
                 Programas
               </HoveredLink>
               <HoveredLink
                 href="/academy/schedules"
-                onClick={() => setActive('')}
+                onClick={() => setActive("")}
               >
                 Horários
               </HoveredLink>
@@ -155,7 +160,7 @@ function Navbar({ className }: { className?: string }) {
           <MenuItem setActive={setActive} active={active} item="Cursos">
             <div
               className="text-sm grid grid-cols-2 gap-10 p-4"
-              onClick={() => setActive('')}
+              onClick={() => setActive("")}
             >
               <ProductItem
                 title="Meia Guarda"
@@ -177,5 +182,5 @@ function Navbar({ className }: { className?: string }) {
         </Menu>
       </div>
     </div>
-  )
+  );
 }

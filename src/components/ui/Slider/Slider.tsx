@@ -1,7 +1,7 @@
-'use client'
-import { cn } from '@/lib/utils'
-import { motion, AnimatePresence } from 'framer-motion'
-import React, { useEffect, useState } from 'react'
+"use client";
+import { cn } from "@/libs/cn";
+import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 export const ImagesSlider = ({
   images,
@@ -10,106 +10,75 @@ export const ImagesSlider = ({
   overlayClassName,
   className,
   autoplay = true,
-  direction = 'up',
+  direction = "up",
 }: {
-  images: string[]
-  children: React.ReactNode
-  overlay?: React.ReactNode
-  overlayClassName?: string
-  className?: string
-  autoplay?: boolean
-  direction?: 'up' | 'down'
+  images: string[];
+  children: React.ReactNode;
+  overlay?: React.ReactNode;
+  overlayClassName?: string;
+  className?: string;
+  autoplay?: boolean;
+  direction?: "up" | "down";
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [loadedImages, setLoadedImages] = useState<string[]>([])
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<string[]>([]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + 1 === images.length ? 0 : prevIndex + 1,
-    )
-  }
+      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+    );
+  };
 
   useEffect(() => {
-    loadImages()
-  }, [])
+    loadImages();
+  }, []);
 
   const loadImages = () => {
     const loadPromises = images.map((image) => {
       return new Promise((resolve, reject) => {
-        const img = new Image()
-        img.src = image
-        img.onload = () => resolve(image)
-        img.onerror = reject
-      })
-    })
+        const img = new Image();
+        img.src = image;
+        img.onload = () => resolve(image);
+        img.onerror = reject;
+      });
+    });
 
     Promise.all(loadPromises)
       .then((loadedImages) => {
-        setLoadedImages(loadedImages as string[])
+        setLoadedImages(loadedImages as string[]);
       })
-      .catch((error) => console.error('Falha ao carregas imagens', error))
-  }
+      .catch((error) => console.error("Falha ao carregas imagens", error));
+  };
 
   useEffect(() => {
-    let interval: ReturnType<typeof setInterval>
+    let interval: ReturnType<typeof setInterval>;
     if (autoplay) {
       interval = setInterval(() => {
-        handleNext()
-      }, 5000)
+        handleNext();
+      }, 5000);
     }
 
     return () => {
-      clearInterval(interval)
-    }
-  }, [])
+      clearInterval(interval);
+    };
+  }, []);
 
-  const slideVariants = {
-    initial: {
-      scale: 0,
-      opacity: 0,
-      rotateX: 45,
-    },
-    visible: {
-      scale: 1,
-      rotateX: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.645, 0.045, 0.355, 1.0],
-      },
-    },
-    upExit: {
-      opacity: 1,
-      y: '-150%',
-      transition: {
-        duration: 1,
-      },
-    },
-    downExit: {
-      opacity: 1,
-      y: '150%',
-      transition: {
-        duration: 1,
-      },
-    },
-  }
-
-  const areImagesLoaded = loadedImages.length > 0
+  const areImagesLoaded = loadedImages.length > 0;
 
   return (
     <div
       className={cn(
-        'overflow-hidden h-full w-full relative flex items-center justify-center',
-        className,
+        "overflow-hidden h-full w-full relative flex items-center justify-center",
+        className
       )}
       style={{
-        perspective: '1000px',
+        perspective: "1000px",
       }}
     >
       {areImagesLoaded && children}
       {areImagesLoaded && overlay && (
         <div
-          className={cn('absolute inset-0 bg-black/60 z-40', overlayClassName)}
+          className={cn("absolute inset-0 bg-black/60 z-40", overlayClassName)}
         />
       )}
 
@@ -120,12 +89,11 @@ export const ImagesSlider = ({
             src={loadedImages[currentIndex]}
             initial="initial"
             animate="visible"
-            exit={direction === 'up' ? 'upExit' : 'downExit'}
-            variants={slideVariants}
+            exit={direction === "up" ? "upExit" : "downExit"}
             className="image h-full w-full absolute inset-0 object-cover object-center"
           />
         </AnimatePresence>
       )}
     </div>
-  )
-}
+  );
+};

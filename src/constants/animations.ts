@@ -1,4 +1,8 @@
-import { AnimVariants } from '@/lib/utils'
+export type AnimVariants = {
+  initial?: import("framer-motion").Variant;
+  enter: import("framer-motion").Variant;
+  exit?: import("framer-motion").Variant;
+};
 
 export const indicator = {
   initial: {
@@ -8,7 +12,7 @@ export const indicator = {
     opacity: show ? 1 : 0,
     x: show ? 0 : -10,
   }),
-}
+};
 
 export const contentAnim: AnimVariants = {
   initial: {
@@ -27,10 +31,10 @@ export const contentAnim: AnimVariants = {
     y: -20,
     transition: {
       duration: 0.5,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
-}
+};
 
 export const container = {
   hidden: { opacity: 0 },
@@ -40,12 +44,12 @@ export const container = {
       staggerChildren: 0.5,
     },
   },
-}
+};
 
 export const item = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
-}
+};
 
 export const carousel = {
   enter: (dir: number) => ({
@@ -57,4 +61,4 @@ export const carousel = {
     x: dir < 0 ? 300 : -300,
     opacity: 0,
   }),
-}
+};

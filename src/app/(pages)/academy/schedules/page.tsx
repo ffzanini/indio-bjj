@@ -1,8 +1,8 @@
-'use client'
-import { useState } from 'react'
-import useSWR from 'swr'
-import { RiCalendarLine, RiTimerLine } from 'react-icons/ri'
-import Link from 'next/link'
+"use client";
+import { useState } from "react";
+import useSWR from "swr";
+import { RiCalendarLine, RiTimerLine } from "react-icons/ri";
+import Link from "next/link";
 
 import {
   Calendar,
@@ -13,68 +13,70 @@ import {
   CardTitle,
   ScrollToTopButton,
   Wrapper,
-} from '@/components'
-import { weeklyClasses } from '@/constants/schedules'
+} from "@/components";
+import { weeklyClasses } from "@/constants/schedules";
 
-import { fetchHolidays } from '@/lib/brasilapi'
-import { getWeekDay } from '@/lib/utils'
+import { fetchHolidays } from "@/libs/brasilapi";
+import { getWeekDay } from "@/libs/date";
 
 interface Holiday {
-  date: string
-  name: string
-  type: string
-  level: string
+  date: string;
+  name: string;
+  type: string;
+  level: string;
 }
 
 export default function Schedule() {
-  const { data: holidays = [] } = useSWR('holidays', fetchHolidays)
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date())
+  const { data: holidays = [] } = useSWR("holidays", fetchHolidays);
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(
+    new Date()
+  );
   const dayNames = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-    'Holiday',
-  ]
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Holiday",
+  ];
 
   const selectedDayName = selectedDate
     ? dayNames[selectedDate.getDay()]
-    : 'Monday'
+    : "Monday";
 
   const selectedHoliday = selectedDate
     ? holidays.find((h: Holiday) => {
-        const [year, month, day] = h.date.split('-').map(Number)
-        const holidayDate = new Date(year, month - 1, day)
+        const [year, month, day] = h.date.split("-").map(Number);
+        const holidayDate = new Date(year, month - 1, day);
         return (
           holidayDate.getDate() === selectedDate.getDate() &&
           holidayDate.getMonth() === selectedDate.getMonth() &&
           holidayDate.getFullYear() === selectedDate.getFullYear()
-        )
+        );
       })
-    : undefined
+    : undefined;
 
   const classesForDay = selectedHoliday
     ? weeklyClasses.Holiday
-    : weeklyClasses[selectedDayName] || []
+    : weeklyClasses[selectedDayName] || [];
 
   const modifiersStyles = {
     holiday: {
-      color: 'white',
-      backgroundColor: '#cc3333',
-      fontWeight: 'bold',
+      color: "white",
+      backgroundColor: "#cc3333",
+      fontWeight: "bold",
     },
-  }
+  };
 
   const modifiers = {
     holiday: holidays.map((h: Holiday) => {
-      const [year, month, day] = h.date.split('-').map(Number)
-      const holidayDate = new Date(year, month - 1, day)
-      return holidayDate
+      const [year, month, day] = h.date.split("-").map(Number);
+      const holidayDate = new Date(year, month - 1, day);
+      return holidayDate;
     }),
-  }
+  };
 
   return (
     <Wrapper>
@@ -119,15 +121,15 @@ export default function Schedule() {
               <Card
                 className={
                   selectedHoliday
-                    ? 'rounded-2xl border-2 border-primary-ja-color bg-white/90 backdrop-blur-sm shadow-lg m-2 lg:m-0'
-                    : 'rounded-2xl bg-white/90 backdrop-blur-sm shadow-lg border-black m-2 lg:m-0'
+                    ? "rounded-2xl border-2 border-primary-ja-color bg-white/90 backdrop-blur-sm shadow-lg m-2 lg:m-0"
+                    : "rounded-2xl bg-white/90 backdrop-blur-sm shadow-lg border-black m-2 lg:m-0"
                 }
               >
                 <CardHeader
                   className={
                     selectedHoliday
-                      ? 'rounded-t-2xl border-b border-gray-100 bg-gradient-to-r from-primary-ja-color to-white'
-                      : 'rounded-t-2xl border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white'
+                      ? "rounded-t-2xl border-b border-gray-100 bg-gradient-to-r from-primary-ja-color to-white"
+                      : "rounded-t-2xl border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white"
                   }
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
@@ -144,8 +146,8 @@ export default function Schedule() {
                       )}
                     </CardTitle>
                     <span className="text-sm font-medium px-3 py-1 rounded-full bg-primary-ja-color border border-black text-black">
-                      {classesForDay.length}{' '}
-                      {selectedHoliday ? 'Evento Especial' : 'Aulas'}{' '}
+                      {classesForDay.length}{" "}
+                      {selectedHoliday ? "Evento Especial" : "Aulas"}{" "}
                       Disponíveis
                     </span>
                   </div>
@@ -156,7 +158,7 @@ export default function Schedule() {
                       </div>
                     ) : (
                       <span className="text-black">
-                        Mostrando todas as aulas agendadas para{' '}
+                        Mostrando todas as aulas agendadas para{" "}
                         {getWeekDay(selectedDayName)}
                       </span>
                     )}
@@ -171,18 +173,22 @@ export default function Schedule() {
                             <div
                               className={`flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-lg ${
                                 selectedHoliday
-                                  ? 'bg-gray-150 hover:bg-gray-200 border border-black'
-                                  : 'bg-gray-150 hover:bg-gray-200 border border-black'
+                                  ? "bg-gray-150 hover:bg-gray-200 border border-black"
+                                  : "bg-gray-150 hover:bg-gray-200 border border-black"
                               } transition-all shadow-sm hover:shadow`}
                             >
                               <div className="mb-2 sm:mb-0">
                                 <h3
-                                  className={`font-semibold ${selectedHoliday ? 'text-black' : 'text-black'}`}
+                                  className={`font-semibold ${
+                                    selectedHoliday
+                                      ? "text-black"
+                                      : "text-black"
+                                  }`}
                                 >
                                   {classSession.subject}
                                 </h3>
                                 <p className="text-sm text-black">
-                                  Instrutor(es):{' '}
+                                  Instrutor(es):{" "}
                                   <b className="text-black text-sm">
                                     {classSession.instructor}
                                   </b>
@@ -193,11 +199,11 @@ export default function Schedule() {
                                 <p
                                   className={`${
                                     selectedHoliday
-                                      ? 'text-gray-800 border-gray-300'
-                                      : 'text-slate-700'
+                                      ? "text-gray-800 border-gray-300"
+                                      : "text-slate-700"
                                   } flex items-center gap-1 text-xl`}
                                 >
-                                  {classSession.startTime} -{' '}
+                                  {classSession.startTime} -{" "}
                                   {classSession.endTime}
                                 </p>
                               </div>
@@ -214,7 +220,7 @@ export default function Schedule() {
                       <p className="text-black font-medium mb-3">
                         {selectedHoliday
                           ? `Não há eventos especiais agendados para ${selectedHoliday.name}.`
-                          : 'Não há aulas agendadas para este dia.'}
+                          : "Não há aulas agendadas para este dia."}
                       </p>
                     </div>
                   )}
@@ -226,5 +232,5 @@ export default function Schedule() {
       </section>
       <ScrollToTopButton />
     </Wrapper>
-  )
+  );
 }

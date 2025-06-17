@@ -1,24 +1,24 @@
-import { cn } from '@/lib/utils'
-import Image from 'next/image'
+import { cn } from "@/libs/cn";
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
   children,
 }: {
-  className?: string
-  children?: React.ReactNode
+  className?: string;
+  children?: React.ReactNode;
 }) => {
   return (
     <div
       className={cn(
-        'grid max-w-7xl grid-cols-1 gap-6 md:auto-rows-[21rem] md:grid-cols-4',
-        className,
+        "grid max-w-7xl grid-cols-1 gap-6 md:auto-rows-[21rem] md:grid-cols-4",
+        className
       )}
     >
       {children}
     </div>
-  )
-}
+  );
+};
 
 export const BentoGridItem = ({
   className,
@@ -27,17 +27,17 @@ export const BentoGridItem = ({
   header,
   Icon,
 }: {
-  className?: string
-  title?: string | React.ReactNode
-  description?: string | React.ReactNode
-  header: string
-  Icon?: React.ElementType
+  className?: string;
+  title?: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  header: string;
+  Icon?: React.ElementType;
 }) => {
   return (
     <div
       className={cn(
-        'group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-3 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none',
-        className,
+        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-3 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none",
+        className
       )}
     >
       <Image src={header} width={1280} height={800} alt={header} />
@@ -51,5 +51,5 @@ export const BentoGridItem = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

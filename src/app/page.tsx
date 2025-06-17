@@ -1,50 +1,52 @@
-'use client'
-import { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
-import { RiStarFill } from 'react-icons/ri'
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { RiStarFill } from "react-icons/ri";
 
 import {
   ScrollToTopButton,
   ImagesSlider,
   Wrapper,
   Carousel,
-} from '@/components/ui'
-import { parallaxImages, ProgramsCarousel } from '@/constants/home'
-import { testimonials } from '@/constants/testimonials'
-import { carousel } from '@/constants/animations'
+} from "@/components/ui";
+import { parallaxImages, ProgramsCarousel } from "@/constants/home";
+import { testimonials } from "@/constants/testimonials";
+import { carousel } from "@/constants/animations";
 
 export default function PricipalPage() {
-  const [index, setIndex] = useState(0)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const [index, setIndex] = useState(0);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleSwipe = (direction: 'left' | 'right') => {
-    if (direction === 'left') next()
+  const handleSwipe = (direction: "left" | "right") => {
+    if (direction === "left") next();
     else
-      setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+      setIndex(
+        (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      );
+  };
 
   const next = () => {
-    setIndex((prev) => (prev + 1) % testimonials.length)
-  }
+    setIndex((prev) => (prev + 1) % testimonials.length);
+  };
 
   const resetAutoplay = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current)
-    timeoutRef.current = setTimeout(next, 5000)
-  }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(next, 5000);
+  };
 
   useEffect(() => {
-    resetAutoplay()
+    resetAutoplay();
     return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current)
-    }
-  }, [index])
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [index]);
 
   const handleWhatsAppClick = () => {
     window.open(
-      'https://wa.me/5553991886599?text=Olá!%20Tenho%20interesse%20em%20agendar%20uma%20aula%20experimental!',
-      '_blank',
-    )
-  }
+      "https://wa.me/5553991886599?text=Olá!%20Tenho%20interesse%20em%20agendar%20uma%20aula%20experimental!",
+      "_blank"
+    );
+  };
 
   return (
     <Wrapper>
@@ -141,8 +143,8 @@ export default function PricipalPage() {
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.2}
           onDragEnd={(_, info) => {
-            if (info.offset.x < -100) handleSwipe('left')
-            else if (info.offset.x > 100) handleSwipe('right')
+            if (info.offset.x < -100) handleSwipe("left");
+            else if (info.offset.x > 100) handleSwipe("right");
           }}
           className="flex flex-col md:flex-row gap-6 items-center"
         >
@@ -161,8 +163,8 @@ export default function PricipalPage() {
                       key={i}
                       className={`h-5 w-5 ${
                         i < testimonials[index].rating
-                          ? 'text-yellow-500 fill-yellow-500'
-                          : 'text-gray-300'
+                          ? "text-yellow-500 fill-yellow-500"
+                          : "text-gray-300"
                       }`}
                     />
                   ))}
@@ -177,17 +179,21 @@ export default function PricipalPage() {
           </div>
         </motion.div>
         <div
-          className={`flex justify-center mt-4 gap-1 ${testimonials.length === 1 ? 'hidden' : ''}`}
+          className={`flex justify-center mt-4 gap-1 ${
+            testimonials.length === 1 ? "hidden" : ""
+          }`}
         >
           {testimonials.map((_, i) => (
             <div
               key={i}
-              className={`h-2 w-2 rounded-full ${i === index ? 'bg-black' : 'bg-gray-300'}`}
+              className={`h-2 w-2 rounded-full ${
+                i === index ? "bg-black" : "bg-gray-300"
+              }`}
             />
           ))}
         </div>
       </section>
       <ScrollToTopButton />
     </Wrapper>
-  )
+  );
 }

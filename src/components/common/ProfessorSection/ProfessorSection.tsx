@@ -1,6 +1,6 @@
-import React from 'react'
-import { Avatar, AvatarImage } from '@/components/ui'
-import { RiStarLine } from 'react-icons/ri'
+import React from "react";
+import { Avatar } from "@/components/ui";
+import { RiStarLine } from "react-icons/ri";
 
 export function ProfessorSection({ colorName }: { colorName?: string }) {
   return (
@@ -13,13 +13,14 @@ export function ProfessorSection({ colorName }: { colorName?: string }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-4 text-center">
               <div className="relative">
-                <Avatar className="w-64 h-64 mx-auto">
-                  <AvatarImage
-                    src="/images/profile/indio-profile.webp"
-                    alt="Professor de Jiu-Jitsu"
-                    className="object-cover"
-                  />
-                </Avatar>
+                <Avatar
+                  src="/images/profile/indio-profile.webp"
+                  alt="Professor de Jiu-Jitsu"
+                  fallback="FB"
+                  size={250}
+                  className="object-cover mx-auto"
+                />
+
                 <div
                   className={`absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-black border-2 border-${colorName} text-white px-3 py-2 rounded-full text-sm font-semibold`}
                 >
@@ -42,17 +43,17 @@ export function ProfessorSection({ colorName }: { colorName?: string }) {
 
               <div className="space-y-6">
                 <p className="text-left text-gray-700 leading-relaxed mb-4">
-                  Fundador da escola{' '}
+                  Fundador da escola{" "}
                   <b className="text-gray-600">Índio Jiu Jitsu Team</b> afiliada
                   da <b className="text-gray-600">JA Jiu Jitsu</b>, é também
-                  criador da página{' '}
+                  criador da página{" "}
                   <a
                     className="text-gray-600 font-semibold"
                     href="https://www.instagram.com/indiodrills/"
                     target="_blank"
                   >
                     @indiodrills
-                  </a>{' '}
+                  </a>{" "}
                   e um dos professores mais respeitados do Brasil. Com anos de
                   dedicação ao esporte e à formação de campeões, Índio traz uma
                   abordagem única e eficiente para o ensino de todas as suas
@@ -76,5 +77,5 @@ export function ProfessorSection({ colorName }: { colorName?: string }) {
         </div>
       </div>
     </section>
-  )
+  );
 }

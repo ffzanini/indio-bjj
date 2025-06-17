@@ -1,18 +1,9 @@
-'use client'
-import React, { ComponentProps } from 'react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import Image from 'next/image'
-import { cn } from '@/lib/utils'
-
-const transition = {
-  type: 'spring',
-  mass: 0.5,
-  damping: 11.5,
-  stiffness: 100,
-  restDelta: 0.001,
-  restSpeed: 0.001,
-}
+"use client";
+import React, { ComponentProps } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { cn } from "@/libs/cn";
 
 export const MenuItem = ({
   setActive,
@@ -20,10 +11,10 @@ export const MenuItem = ({
   item,
   children,
 }: {
-  setActive: (item: string) => void
-  active: string | null
-  item: string
-  children?: React.ReactNode
+  setActive: (item: string) => void;
+  active: string | null;
+  item: string;
+  children?: React.ReactNode;
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative">
@@ -37,12 +28,10 @@ export const MenuItem = ({
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={transition}
         >
           {active === item && (
             <div className="absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
-                transition={transition}
                 layoutId="active"
                 className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
               >
@@ -55,15 +44,15 @@ export const MenuItem = ({
         </motion.div>
       )}
     </div>
-  )
-}
+  );
+};
 
 export const Menu = ({
   setActive,
   children,
 }: {
-  setActive: (item: string | null) => void
-  children: React.ReactNode
+  setActive: (item: string | null) => void;
+  children: React.ReactNode;
 }) => {
   return (
     <nav
@@ -72,8 +61,8 @@ export const Menu = ({
     >
       {children}
     </nav>
-  )
-}
+  );
+};
 
 export const ProductItem = ({
   title,
@@ -81,10 +70,10 @@ export const ProductItem = ({
   href,
   src,
 }: {
-  title: string
-  description: string
-  href: string
-  src: string
+  title: string;
+  description: string;
+  href: string;
+  src: string;
 }) => {
   return (
     <Link href={href} className="flex space-x-2">
@@ -104,10 +93,10 @@ export const ProductItem = ({
         </p>
       </div>
     </Link>
-  )
-}
+  );
+};
 
-type HoveredLinkProps = ComponentProps<typeof Link>
+type HoveredLinkProps = ComponentProps<typeof Link>;
 
 export const HoveredLink = ({
   children,
@@ -120,16 +109,16 @@ export const HoveredLink = ({
     >
       {children}
     </Link>
-  )
-}
+  );
+};
 
 export const NavbarLogo = ({
   setActive,
 }: {
-  setActive: (item: string) => void
+  setActive: (item: string) => void;
 }) => {
   return (
-    <div onMouseEnter={() => setActive('')} className="relative text-center">
+    <div onMouseEnter={() => setActive("")} className="relative text-center">
       <Link
         href="/"
         className="relative z-20 mr-4 flex items-center px-2 py-2 text-sm"
@@ -142,8 +131,8 @@ export const NavbarLogo = ({
         />
       </Link>
     </div>
-  )
-}
+  );
+};
 
 export const NavbarLink = ({
   href,
@@ -152,13 +141,13 @@ export const NavbarLink = ({
   setActive,
   ...props
 }: {
-  href: string
-  children: React.ReactNode
-  className?: string
-  setActive: (item: string) => void
-} & React.ComponentPropsWithoutRef<'a'>) => {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+  setActive: (item: string) => void;
+} & React.ComponentPropsWithoutRef<"a">) => {
   const baseStyles =
-    'text-neutral-700 dark:text-neutral-200 hover:text-black cursor-pointer text-black hover:opacity-[0.9] dark:text-white'
+    "text-neutral-700 dark:text-neutral-200 hover:text-black cursor-pointer text-black hover:opacity-[0.9] dark:text-white";
 
   return (
     <div onMouseEnter={() => setActive(href)} className="relative ">
@@ -166,5 +155,5 @@ export const NavbarLink = ({
         {children}
       </Link>
     </div>
-  )
-}
+  );
+};

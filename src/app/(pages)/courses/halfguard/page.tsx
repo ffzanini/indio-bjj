@@ -1,44 +1,44 @@
-'use client'
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
-import { RiWhatsappLine, RiShieldCheckLine } from 'react-icons/ri'
+"use client";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { RiWhatsappLine, RiShieldCheckLine } from "react-icons/ri";
 
-import { ProfessorSection } from '@/components/common'
-import { FAQ, ScrollToTopButton, VideoPlayer, Wrapper } from '@/components/ui'
+import { ProfessorSection } from "@/components/common";
+import { FAQ, ScrollToTopButton, VideoPlayer, Wrapper } from "@/components/ui";
 
-import { halfGuardCourseBenefits } from '@/constants/benefits'
-import { faqHalfGuardItems } from '@/constants/faq'
+import { halfGuardCourseBenefits } from "@/constants/benefits";
+import { faqHalfGuardItems } from "@/constants/faq";
 
-import { initFacebookPixel, trackEvent } from '@/lib/facebookPixel'
+import { initFacebookPixel, trackEvent } from "@/libs/facebookPixel";
 
 export default function HalfGuardPage() {
-  const [width, setWidth] = useState<number>(0)
+  const [width, setWidth] = useState<number>(0);
 
   const handleWhatsAppClick = () => {
     window.open(
-      'https://wa.me/5553981372378?text=Olá!%20Tenho%20dúvidas%20sobre%20o%20curso%20de%20Meia%20Guarda',
-      '_blank',
-    )
-  }
+      "https://wa.me/5553981372378?text=Olá!%20Tenho%20dúvidas%20sobre%20o%20curso%20de%20Meia%20Guarda",
+      "_blank"
+    );
+  };
 
   useEffect(() => {
-    initFacebookPixel()
-    trackEvent('PageView')
-  }, [])
+    initFacebookPixel();
+    trackEvent("PageView");
+  }, []);
 
   useEffect(() => {
     function handleResize() {
-      setWidth(window.innerWidth)
+      setWidth(window.innerWidth);
     }
 
-    window.addEventListener('resize', handleResize)
+    window.addEventListener("resize", handleResize);
 
-    handleResize()
+    handleResize();
 
     return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  })
+      window.removeEventListener("resize", handleResize);
+    };
+  });
 
   return (
     <Wrapper>
@@ -61,7 +61,7 @@ export default function HalfGuardPage() {
                   className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
                   href="https://pay.hotmart.com/W94160265J?off=ezsf7gfg"
                   onClick={() =>
-                    trackEvent('ButtonClick', { button: 'paymentButton' })
+                    trackEvent("ButtonClick", { button: "paymentButton" })
                   }
                   target="_blank"
                   whileHover={{
@@ -190,7 +190,7 @@ export default function HalfGuardPage() {
               className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
               href="https://pay.hotmart.com/W94160265J?off=ezsf7gfg"
               onClick={() =>
-                trackEvent('ButtonClick', { button: 'paymentButton' })
+                trackEvent("ButtonClick", { button: "paymentButton" })
               }
               target="_blank"
               whileHover={{
@@ -249,7 +249,7 @@ export default function HalfGuardPage() {
                   }}
                   transition={{
                     duration: 3,
-                    ease: 'easeInOut',
+                    ease: "easeInOut",
                     repeat: Infinity,
                   }}
                 >
@@ -310,5 +310,5 @@ export default function HalfGuardPage() {
       <ProfessorSection colorName="half-guard-theme" />
       <ScrollToTopButton />
     </Wrapper>
-  )
+  );
 }
