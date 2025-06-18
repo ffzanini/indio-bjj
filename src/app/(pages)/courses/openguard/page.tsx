@@ -10,7 +10,7 @@ import {
 } from "react-icons/ri";
 
 import { ProfessorSection } from "@/components/common";
-import { FAQ, ScrollToTopButton, VideoPlayer, Wrapper } from "@/components/ui";
+import { FAQ, ScrollToTopButton, VideoPlayer } from "@/components/ui";
 
 import { openGuardCourseBenefits } from "@/constants/benefits";
 import { faqHalfGuardItems } from "@/constants/faq";
@@ -47,7 +47,7 @@ export default function OpenGuardPage() {
   });
 
   return (
-    <Wrapper>
+    <div>
       <section
         id="hero"
         className="bg-gradient-to-b from-open-guard-theme-light via-open-guard-theme to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white"
@@ -366,6 +366,6 @@ export default function OpenGuardPage() {
 
       <ProfessorSection colorName="open-guard-theme" />
       <ScrollToTopButton />
-    </Wrapper>
+    </div>
   );
 }

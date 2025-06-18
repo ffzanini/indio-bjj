@@ -1,19 +1,14 @@
-'use client'
+"use client";
 
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
-import {
-  BentoGrid,
-  BentoGridItem,
-  ScrollToTopButton,
-  Wrapper,
-} from '@/components'
-import { programItems } from '@/constants/programs'
+import { BentoGrid, BentoGridItem, ScrollToTopButton } from "@/components";
+import { programItems } from "@/constants/programs";
 
 export default function AboutUs() {
   return (
-    <Wrapper>
+    <div>
       <section className="bg-gradient-to-b from-primary-ja-color via-primary-ja-color to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white">
         <div className="container">
           <div className="flex flex-col-reverse gap-12 items-center">
@@ -43,6 +38,6 @@ export default function AboutUs() {
         </BentoGrid>
       </section>
       <ScrollToTopButton />
-    </Wrapper>
-  )
+    </div>
+  );
 }

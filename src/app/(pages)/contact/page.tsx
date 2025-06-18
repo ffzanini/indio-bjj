@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import {
   RiMapPinLine,
   RiPhoneLine,
@@ -7,14 +7,14 @@ import {
   RiInstagramLine,
   RiFacebookLine,
   RiGoogleLine,
-} from 'react-icons/ri'
+} from "react-icons/ri";
 
-import { Card, CardContent, ScrollToTopButton, Wrapper } from '@/components'
-import { motion } from 'framer-motion'
+import { Card, CardContent, ScrollToTopButton } from "@/components";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <Wrapper>
+    <div>
       <section className="bg-gradient-to-b from-primary-ja-color via-primary-ja-color to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white">
         <div className="container">
           <div className="flex flex-col-reverse gap-12 items-center">
@@ -179,6 +179,6 @@ export default function Contact() {
         </div>
       </section>
       <ScrollToTopButton />
-    </Wrapper>
-  )
+    </div>
+  );
 }

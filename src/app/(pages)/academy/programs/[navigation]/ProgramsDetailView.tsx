@@ -1,11 +1,11 @@
-'use client'
-import { Programs } from '@/app/data/programs'
-import { Card, CardContent, ScrollToTopButton, Wrapper } from '@/components'
-import Image from 'next/image'
-import Link from 'next/link'
+"use client";
+import { Programs } from "@/app/data/programs";
+import { Card, CardContent, ScrollToTopButton } from "@/components";
+import Image from "next/image";
+import Link from "next/link";
 
 interface ProgramsDetailViewProps {
-  program: Programs
+  program: Programs;
 }
 
 export default function ProgramsDetailView({
@@ -13,13 +13,13 @@ export default function ProgramsDetailView({
 }: Readonly<ProgramsDetailViewProps>) {
   const handleWhatsAppClick = () => {
     window.open(
-      'https://wa.me/5553991886599?text=Olá!%20Tenho%20interesse%20em%20agendar%20uma%20aula%20experimental!',
-      '_blank',
-    )
-  }
+      "https://wa.me/5553991886599?text=Olá!%20Tenho%20interesse%20em%20agendar%20uma%20aula%20experimental!",
+      "_blank"
+    );
+  };
 
   return (
-    <Wrapper>
+    <div>
       <section className="bg-gradient-to-b from-primary-ja-color via-primary-ja-color to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white">
         <div className="container">
           <div className="flex flex-col-reverse gap-12 items-center">
@@ -113,6 +113,6 @@ export default function ProgramsDetailView({
         </div>
       </section>
       <ScrollToTopButton />
-    </Wrapper>
-  )
+    </div>
+  );
 }

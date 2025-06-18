@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { RiWhatsappLine, RiShieldCheckLine } from "react-icons/ri";
 
 import { ProfessorSection } from "@/components/common";
-import { FAQ, ScrollToTopButton, VideoPlayer, Wrapper } from "@/components/ui";
+import { FAQ, ScrollToTopButton, VideoPlayer } from "@/components/ui";
 
 import { halfGuardCourseBenefits } from "@/constants/benefits";
 import { faqHalfGuardItems } from "@/constants/faq";
@@ -41,7 +41,7 @@ export default function HalfGuardPage() {
   });
 
   return (
-    <Wrapper>
+    <div>
       <section
         id="hero"
         className="bg-gradient-to-b from-half-guard-theme-light via-half-guard-theme to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white"
@@ -309,6 +309,6 @@ export default function HalfGuardPage() {
       </section>
       <ProfessorSection colorName="half-guard-theme" />
       <ScrollToTopButton />
-    </Wrapper>
+    </div>
   );
 }

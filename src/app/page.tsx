@@ -3,12 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { RiStarFill } from "react-icons/ri";
 
-import {
-  ScrollToTopButton,
-  ImagesSlider,
-  Wrapper,
-  Carousel,
-} from "@/components/ui";
+import { ScrollToTopButton, ImagesSlider, Carousel } from "@/components/ui";
 import { parallaxImages, ProgramsCarousel } from "@/constants/home";
 import { testimonials } from "@/constants/testimonials";
 import { carousel } from "@/constants/animations";
@@ -49,7 +44,7 @@ export default function PricipalPage() {
   };
 
   return (
-    <Wrapper>
+    <div>
       <ImagesSlider className="h-screen" images={parallaxImages}>
         <motion.div
           initial={{
@@ -194,6 +189,6 @@ export default function PricipalPage() {
         </div>
       </section>
       <ScrollToTopButton />
-    </Wrapper>
+    </div>
   );
 }

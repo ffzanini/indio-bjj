@@ -91,6 +91,10 @@ select {
   color: var(--primary);
 }
 
+.rdp-root {
+  --rdp-accent-color: var(--background);
+}
+
 /* change scroll bars layout */
 
 *::-webkit-scrollbar {

@@ -12,7 +12,6 @@ import {
   CardHeader,
   CardTitle,
   ScrollToTopButton,
-  Wrapper,
 } from "@/components";
 import { weeklyClasses } from "@/constants/schedules";
 
@@ -62,14 +61,6 @@ export default function Schedule() {
     ? weeklyClasses.Holiday
     : weeklyClasses[selectedDayName] || [];
 
-  const modifiersStyles = {
-    holiday: {
-      color: "white",
-      backgroundColor: "#cc3333",
-      fontWeight: "bold",
-    },
-  };
-
   const modifiers = {
     holiday: holidays.map((h: Holiday) => {
       const [year, month, day] = h.date.split("-").map(Number);
@@ -79,7 +70,7 @@ export default function Schedule() {
   };
 
   return (
-    <Wrapper>
+    <div>
       <section className="bg-gradient-to-b from-primary-ja-color via-primary-ja-color-opacity to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white">
         <div className="container">
           <h2 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-black">
@@ -112,7 +103,6 @@ export default function Schedule() {
                   onSelect={setSelectedDate}
                   className="rounded-md border shadow-sm pointer-events-auto max-w-fit scale-[1.3] sm:scale-[1.3]"
                   modifiers={modifiers}
-                  modifiersStyles={modifiersStyles}
                 />
               </CardContent>
             </Card>
@@ -231,6 +221,6 @@ export default function Schedule() {
         </div>
       </section>
       <ScrollToTopButton />
-    </Wrapper>
+    </div>
   );
 }
