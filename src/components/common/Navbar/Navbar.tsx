@@ -55,14 +55,14 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
             href="/"
             className="text-left"
           >
-            Início
+            INÍCIO
           </NavbarLink>
           <button
             onClick={() => setShowAcademia(!showAcademia)}
             className="w-full text-left"
           >
             <span className="flex items-center w-screen text-white">
-              Academia
+              ACADEMIA
               {!showAcademia ? (
                 <RiAddFill size={18} className="ml-auto pr-8" />
               ) : (
@@ -79,7 +79,7 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
                   setShowAcademia(false);
                 }}
               >
-                Programas
+                PROGRAMAS
               </HoveredLink>
               <HoveredLink
                 href="/academy/schedules"
@@ -88,7 +88,16 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
                   setShowAcademia(false);
                 }}
               >
-                Horários
+                HORÁRIOS
+              </HoveredLink>
+              <HoveredLink
+                href="/academy/testimonials"
+                onClick={() => {
+                  setMobileOpen(false);
+                  setShowAcademia(false);
+                }}
+              >
+                DEPOIMENTOS
               </HoveredLink>
             </div>
           )}
@@ -97,7 +106,7 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
             className="w-full text-left"
           >
             <span className="flex items-center w-screen text-white">
-              Cursos
+              CURSOS
               {!showCursos ? (
                 <RiAddFill size={18} className="ml-auto pr-8" />
               ) : (
@@ -114,7 +123,7 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
                   setShowCursos(false);
                 }}
               >
-                Curso Meia Guarda
+                CURSO MEIA GUARDA
               </HoveredLink>
               <HoveredLink
                 href="/courses/openguard"
@@ -123,7 +132,7 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
                   setShowCursos(false);
                 }}
               >
-                Curso Guarda Aberta
+                CURSO GUARDA ABERTA
               </HoveredLink>
             </div>
           )}
@@ -132,7 +141,7 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
             onClick={() => setMobileOpen(false)}
             href="/contact"
           >
-            Contato
+            CONTATO
           </NavbarLink>
         </div>
       )}
@@ -156,6 +165,12 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
                 onClick={() => setActive("")}
               >
                 Horários
+              </HoveredLink>
+              <HoveredLink
+                href="/academy/testimonials"
+                onClick={() => setActive("")}
+              >
+                Depoimentos
               </HoveredLink>
             </div>
           </MenuItem>

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ZoomImage } from "@/components";
+import Image from "next/image";
 interface VideoPlayerProps {
   thumbnailUrl: string;
   videoUrl: string;
@@ -24,7 +24,7 @@ export function VideoPlayer({
             className="relative cursor-pointer w-full h-full"
             onClick={() => setIsPlaying(true)}
           >
-            <ZoomImage
+            <Image
               src={thumbnailUrl}
               alt={videoTitle}
               width={1800}
