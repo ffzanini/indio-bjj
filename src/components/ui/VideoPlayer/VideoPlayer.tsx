@@ -1,11 +1,11 @@
-'use client'
-import { useState } from 'react'
-import Image from 'next/image'
+"use client";
+import { useState } from "react";
+import { ZoomImage } from "@/components";
 interface VideoPlayerProps {
-  thumbnailUrl: string
-  videoUrl: string
-  videoDescription: string
-  videoTitle: string
+  thumbnailUrl: string;
+  videoUrl: string;
+  videoDescription: string;
+  videoTitle: string;
 }
 
 export function VideoPlayer({
@@ -13,18 +13,18 @@ export function VideoPlayer({
   videoUrl,
   videoDescription,
   videoTitle,
-}: VideoPlayerProps) {
-  const [isPlaying, setIsPlaying] = useState(false)
+}: Readonly<VideoPlayerProps>) {
+  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <div className="mx-6 border-4 border-white/10 shadow-2xl rounded-xl lg:mx-0">
       <div className="relative rounded-xl overflow-hidden w-full max-w-3xl aspect-video">
         {!isPlaying ? (
-          <div
+          <button
             className="relative cursor-pointer w-full h-full"
             onClick={() => setIsPlaying(true)}
           >
-            <Image
+            <ZoomImage
               src={thumbnailUrl}
               alt={videoTitle}
               width={1800}
@@ -46,7 +46,7 @@ export function VideoPlayer({
             <div className="absolute bottom-4 left-4 right-4 text-white font-bold text-lg md:text-xl text-center md:text-left">
               {videoDescription}
             </div>
-          </div>
+          </button>
         ) : (
           <iframe
             src={videoUrl}
@@ -57,5 +57,5 @@ export function VideoPlayer({
         )}
       </div>
     </div>
-  )
+  );
 }

@@ -1,18 +1,14 @@
-'use client'
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from "next-themes";
+import { InternacionalizationProvider } from "@/context/internacionalization-context";
 
 export function AppProvider({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="dark"
-      disableTransitionOnChange
-    >
-      {children}
+    <ThemeProvider attribute="class" defaultTheme="dark">
+      <InternacionalizationProvider>{children}</InternacionalizationProvider>
     </ThemeProvider>
-  )
+  );
 }
 
-export default AppProvider
+export default AppProvider;

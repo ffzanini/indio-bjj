@@ -1,65 +1,49 @@
-'use client'
-import * as React from 'react'
-import { ptBR } from 'date-fns/locale'
-import { RiArrowLeftLine, RiArrowRightLine } from 'react-icons/ri'
-import { DayPicker } from 'react-day-picker'
+"use client";
+import * as React from "react";
+import { DayPicker, getDefaultClassNames } from "react-day-picker";
+import { ptBR } from "date-fns/locale";
+import "react-day-picker/style.css"; // Import necessário para navLayout="around"
 
-import { buttonVariants, cn } from '@/lib/utils'
+export function Calendar(props: React.ComponentProps<typeof DayPicker>) {
+  const defaultClassNames = getDefaultClassNames();
 
-export type CalendarProps = React.ComponentProps<typeof DayPicker>
+  const baseDay =
+    "h-10 w-10 p-0 flex items-center justify-center font-medium rounded-md transition-all duration-200";
 
-function Calendar({
-  className,
-  classNames,
-  showOutsideDays = true,
-  ...props
-}: CalendarProps) {
   return (
     <DayPicker
-      showOutsideDays={showOutsideDays}
+      showOutsideDays
       locale={ptBR}
-      className={cn('p-3 bg-white text-black', className)}
+      navLayout="around"
+      fixedWeeks={true}
       classNames={{
-        months: 'flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0',
-        month: 'space-y-4',
-        caption: 'flex justify-center pt-1 relative items-center',
-        caption_label: 'text-sm font-medium',
-        nav: 'space-x-1 flex items-center',
-        nav_button: cn(
-          buttonVariants({ variant: 'outline' }),
-          'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100 text-black',
-        ),
-        nav_button_previous: 'absolute left-1',
-        nav_button_next: 'absolute right-1',
-        table: 'w-full border-collapse space-y-1',
-        head_row: 'grid grid-cols-7',
-        head_cell:
-          'text-black font-semibold h-9 flex items-center justify-center font-normal text-[1rem]',
-        row: 'grid grid-cols-7 w-full',
-        cell: 'h-9 w-9 text-center text-sm p-0 relative',
-        day: cn(
-          buttonVariants({ variant: 'ghost' }),
-          'h-9 w-9 p-0 font-normal text-black hover:bg-primary-ja-color-opacity aria-selected:bg-primary-ja-color aria-selected:text-black aria-selected:font-semibold',
-        ),
-        day_range_end: 'day-range-end',
-        day_selected:
-          'bg-green-500 text-white hover:bg-green-600 focus:bg-green-600',
-        day_today: 'bg-primary-ja-color-opacity text-black',
-        day_outside:
-          'text-gray-400 opacity-50 aria-selected:bg-green-300 aria-selected:text-white',
-        day_disabled: 'text-gray-300 opacity-50',
-        day_range_middle: 'bg-green-300 text-white',
-        day_hidden: 'invisible',
-        ...classNames,
+        ...defaultClassNames,
+        months: "grid",
+        month: "space-y-1",
+
+        caption: "relative mb-4 flex items-center justify-center",
+        caption_label: "text-lg font-semibold text-gray-800 mt-2 capitalize",
+        nav: "absolute inset-0 flex items-center justify-between px-3",
+        nav_button: "h-10 w-10  rounded-md hover:bg-black/10 transition",
+
+        weekdays: "grid grid-cols-7",
+        weekday:
+          "text-center text-xs md:text-sm font-bold uppercase text-gray-500 py-2",
+
+        week: "grid grid-cols-7",
+        day: "text-sm",
+        day_button: `${baseDay} hover:bg-primary-ja/80 text-black`,
+        today: `${baseDay} bg-primary-ja/75`,
+        selected: `${baseDay} bg-primary-ja text-black hover:bg-primary-ja/90`,
+        range_middle: `${baseDay} bg-primary-ja/60 text-black`,
+        disabled: "text-gray-300 opacity-50",
+        outside: "text-gray-400 opacity-50",
+        hidden: "invisible",
       }}
-      components={{
-        IconLeft: () => <RiArrowLeftLine className="h-4 w-4" fill="#111" />,
-        IconRight: () => <RiArrowRightLine className="h-4 w-4" fill="#111" />,
+      modifiersClassNames={{
+        holiday: `${baseDay} bg-red-600 text-white hover:bg-red-700`,
       }}
       {...props}
     />
-  )
+  );
 }
-Calendar.displayName = 'Calendar'
-
-export { Calendar }

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://indiobjj.com.br/
+
+# Sitemaps
+Sitemap: https://indiobjj.com.br/sitemap.xml

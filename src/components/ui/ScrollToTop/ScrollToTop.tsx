@@ -1,43 +1,43 @@
-'use client'
-import { useEffect, useState } from 'react'
-import { usePathname } from 'next/navigation'
-import { motion, useScroll } from 'framer-motion'
-import { RiArrowUpLine } from 'react-icons/ri'
+"use client";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { motion, useScroll } from "framer-motion";
+import { RiArrowUpLine } from "react-icons/ri";
 
 export function ScrollToTopButton() {
-  const [isVisible, setIsVisible] = useState(false)
-  const { scrollY } = useScroll()
-  const pathname = usePathname()
+  const [isVisible, setIsVisible] = useState(false);
+  const { scrollY } = useScroll();
+  const pathname = usePathname();
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
-        setIsVisible(true)
+        setIsVisible(true);
       } else {
-        setIsVisible(false)
+        setIsVisible(false);
       }
-    })
-  }, [])
+    });
+  }, []);
 
   const goTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
-    scrollY.set(0)
-  }, [pathname, scrollY])
+    scrollY.set(0);
+  }, [pathname, scrollY]);
 
   return (
     <motion.button
-      className="fixed opacity-70 bottom-12 right-4 p-2 bg-primary-ja-color dark:bg-primary-ja-color rounded-full"
+      className="fixed opacity-70 bottom-12 right-4 p-2 bg-primary-ja rounded-full"
       whileHover={{ scale: 1.1 }}
-      style={{ display: isVisible ? 'block' : 'none' }}
+      style={{ display: isVisible ? "block" : "none" }}
       onClick={goTop}
     >
       <RiArrowUpLine width={24} height={24} fill="#111" />
     </motion.button>
-  )
+  );
 }

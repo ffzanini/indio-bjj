@@ -1,18 +1,18 @@
-import type { Metadata } from 'next'
-import Script from 'next/script'
-import Head from 'next/head'
+import type { Metadata } from "next";
+import Script from "next/script";
+import Head from "next/head";
 
-const description = `Aprenda guarda aberta com Fabiano Índio | Índio Jiu Jitsu`
+const description = `Aprenda guarda aberta com Fabiano Índio | Índio Jiu Jitsu`;
 
 export const metadata: Metadata = {
-  title: 'Aprenda guarda aberta com Fabiano Índio | Índio Jiu Jitsu',
+  title: "Aprenda guarda aberta com Fabiano Índio | Índio Jiu Jitsu",
   description,
-}
+};
 
 export default function Layout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <>
@@ -47,5 +47,5 @@ export default function Layout({
 
       {children}
     </>
-  )
+  );
 }

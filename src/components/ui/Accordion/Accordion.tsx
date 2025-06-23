@@ -1,39 +1,57 @@
-import * as Accordion from '@radix-ui/react-accordion'
-import { RiArrowDownLine } from 'react-icons/ri'
+"use client";
+
+import { useState } from "react";
+import { RiArrowDownLine } from "react-icons/ri";
 
 interface FAQItem {
-  question: string
-  answer: string
+  question: string;
+  answer: string;
 }
 
 interface FAQProps {
-  items: FAQItem[]
+  items: FAQItem[];
 }
 
-export function FAQ({ items }: FAQProps) {
+export function FAQ({ items }: Readonly<FAQProps>) {
+  const [openIndexes, setOpenIndexes] = useState<number[]>([]);
+
+  const toggle = (index: number) => {
+    setOpenIndexes((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
+  };
+
   return (
-    <Accordion.Root type="multiple" className="w-full space-y-2">
-      {items.map((item, index) => (
-        <Accordion.Item
-          key={index}
-          value={`item-${index}`}
-          className="border rounded-lg overflow-hidden"
-        >
-          <Accordion.Header>
-            <Accordion.Trigger className="group flex w-full justify-between items-center p-4 font-medium text-left text-gray-600">
+    <div className="bg-white w-full space-y-2">
+      {items.map((item, index) => {
+        const isOpen = openIndexes.includes(index);
+        return (
+          <div
+            key={index}
+            className="border rounded-lg overflow-hidden transition-all duration-300"
+          >
+            <button
+              onClick={() => toggle(index)}
+              className="group flex w-full justify-between items-center p-4 font-medium text-left text-gray-600"
+            >
               <span>{item.question}</span>
               <RiArrowDownLine
                 size={20}
-                fill="#515151"
-                className="transition-transform duration-300 group-data-[state=open]:rotate-180 mr-8 "
+                className={`transition-transform duration-300 ${
+                  isOpen ? "rotate-180" : ""
+                }`}
               />
-            </Accordion.Trigger>
-          </Accordion.Header>
-          <Accordion.Content className="p-4 text-gray-600 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden transition-all duration-300">
-            {item.answer}
-          </Accordion.Content>
-        </Accordion.Item>
-      ))}
-    </Accordion.Root>
-  )
+            </button>
+            <div
+              className={`grid transition-all duration-300 text-gray-600 px-4 overflow-hidden ${
+                isOpen ? "grid-rows-[1fr] py-4" : "grid-rows-[0fr] py-0"
+              }`}
+            >
+              <div className="overflow-hidden">{item.answer}</div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
