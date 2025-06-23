@@ -9,3 +9,4 @@ export * from "./InitialLanguage";
 export * from "./ScrollToTop";
 export * from "./Slider";
 export * from "./VideoPlayer";
+export * from "./ZoomImage";

@@ -12,7 +12,7 @@ interface FAQProps {
   items: FAQItem[];
 }
 
-export function FAQ({ items }: FAQProps) {
+export function FAQ({ items }: Readonly<FAQProps>) {
   const [openIndexes, setOpenIndexes] = useState<number[]>([]);
 
   const toggle = (index: number) => {
@@ -22,7 +22,7 @@ export function FAQ({ items }: FAQProps) {
   };
 
   return (
-    <div className="w-full space-y-2">
+    <div className="bg-white w-full space-y-2">
       {items.map((item, index) => {
         const isOpen = openIndexes.includes(index);
         return (

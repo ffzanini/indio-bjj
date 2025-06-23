@@ -10,7 +10,11 @@ import {
 } from "react-icons/ri";
 
 import { ProfessorSection } from "@/components/common";
-import { FAQ, ScrollToTopButton, VideoPlayer } from "@/components/ui";
+import {
+  FAQ as FaqSection,
+  ScrollToTopButton,
+  VideoPlayer,
+} from "@/components/ui";
 
 import { openGuardCourseBenefits } from "@/constants/benefits";
 import { faqHalfGuardItems } from "@/constants/faq";
@@ -50,15 +54,15 @@ export default function OpenGuardPage() {
     <div>
       <section
         id="hero"
-        className="bg-gradient-to-b from-open-guard-theme-light via-open-guard-theme to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white"
+        className="bg-gradient-to-b from-open-guard-theme-light via-open-guard-theme to-dark-theme pt-40 pb-12 lg:pb-20 text-white-theme"
       >
-        <div className="container">
-          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 items-center">
+        <div className="w-full flex justify-center items-center">
+          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-4 px-4 lg:px-24">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                 Aprenda os segredos da Guarda Aberta e aprimore o seu Jiu Jitsu
               </h1>
-              <p className="text-xl text-white mb-8">
+              <p className="text-xl text-white-theme mb-8">
                 Nesse curto prático você encontra tudo o que irá precisar para
                 transformar sua Guarda Aberta em uma poderosa arma.
               </p>
@@ -76,7 +80,7 @@ export default function OpenGuardPage() {
                   }}
                 >
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#cc3333_0%,#ff6d62_50%,#E2CBFF_100%)]" />
-                  <p className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-open-guard-theme px-4 text-md font-medium text-white backdrop-blur-3xl">
+                  <p className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-open-guard-theme px-4 text-md font-medium text-white-theme backdrop-blur-3xl">
                     QUERO GARANTIR MINHA VAGA
                   </p>
                 </motion.a>
@@ -84,7 +88,7 @@ export default function OpenGuardPage() {
 
               <div className="mt-8 flex flex-wrap gap-6 justify-center lg:justify-start">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-2">
+                  <div className="w-10 h-10 rounded-full bg-white-theme/10 flex items-center justify-center mr-2">
                     <svg
                       className="w-5 h-5"
                       fill="currentColor"
@@ -97,10 +101,12 @@ export default function OpenGuardPage() {
                       />
                     </svg>
                   </div>
-                  <span className="text-white">+100 alunos satisfeitos</span>
+                  <span className="text-white-theme">
+                    +100 alunos satisfeitos
+                  </span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-2">
+                  <div className="w-10 h-10 rounded-full bg-white-theme/10 flex items-center justify-center mr-2">
                     <svg
                       className="w-5 h-5"
                       fill="currentColor"
@@ -113,10 +119,10 @@ export default function OpenGuardPage() {
                       />
                     </svg>
                   </div>
-                  <span className="text-white">Acesso vitalício</span>
+                  <span className="text-white-theme">Acesso vitalício</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-2">
+                  <div className="w-10 h-10 rounded-full bg-white-theme/10 flex items-center justify-center mr-2">
                     <svg
                       className="w-5 h-5"
                       fill="currentColor"
@@ -129,7 +135,7 @@ export default function OpenGuardPage() {
                       />
                     </svg>
                   </div>
-                  <span className="text-white">Garantia de 7 dias</span>
+                  <span className="text-white-theme">Garantia de 7 dias</span>
                 </div>
               </div>
             </div>
@@ -144,58 +150,56 @@ export default function OpenGuardPage() {
         </div>
       </section>
       <section id="benefits" className="py-8 lg:py-16 bg-gray-50">
-        <div className="container ">
-          <h2 className="text-open-guard-theme text-center font-semibold mb-4 lg:mb-12">
-            Não importa seu nível: com este método, você aprende de verdade!
-          </h2>
+        <h2 className="text-3xl text-open-guard-theme text-center font-semibold mb-4 lg:mb-12">
+          Não importa seu nível: com este método, você aprende de verdade!
+        </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-4 lg:mx-auto">
-            <motion.div
-              className="space-y-1.5 p-6 rounded-lg border shadow-sm "
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.3 },
-              }}
-            >
-              <div className="flex text-4xl mb-2 justify-center items-center">
-                <RiEmotionSadLine size={50} fill="#cc3333" />
-              </div>
-              <h3 className="text-2xl text-center font-bold text-open-guard-theme mb-1">
-                Métodos Comuns
-              </h3>
-              <p className="text-gray-600">
-                A maioria dos cursos de Jiu-Jitsu te ensinam posições isoladas
-                sem sequência lógica. O excesso de informação faz você travar, e
-                não aprender corretamente. No fim de tudo, você não vai
-                conseguir aplicar nada do que assistiu.
-              </p>
-            </motion.div>
-            <motion.div
-              className="space-y-1.5 p-6 rounded-lg border shadow-sm "
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.3 },
-              }}
-            >
-              <div className="flex text-4xl mb-2 justify-center items-center">
-                <RiEmotionLine size={50} fill="#cc3333" />
-              </div>
-              <h3 className="text-2xl text-center font-bold text-open-guard-theme mb-1">
-                Sistema Índio
-              </h3>
-              <p className="text-gray-600">
-                Entenda a mentalidade de um professor experiente no momento da
-                execução de posições. Mesmo com um jogo completamente diferente,
-                qualquer pessoa vai conseguir utilizar o que está sendo
-                transmitido.
-              </p>
-            </motion.div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-4 lg:mx-auto">
+          <motion.div
+            className="space-y-1.5 p-6 rounded-lg border shadow-sm "
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <div className="flex text-4xl mb-2 justify-center items-center">
+              <RiEmotionSadLine size={50} fill="#cc3333" />
+            </div>
+            <h3 className="text-2xl text-center font-bold text-open-guard-theme mb-1">
+              Métodos Comuns
+            </h3>
+            <p className="text-gray-600">
+              A maioria dos cursos de Jiu-Jitsu te ensinam posições isoladas sem
+              sequência lógica. O excesso de informação faz você travar, e não
+              aprender corretamente. No fim de tudo, você não vai conseguir
+              aplicar nada do que assistiu.
+            </p>
+          </motion.div>
+          <motion.div
+            className="space-y-1.5 p-6 rounded-lg border shadow-sm "
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <div className="flex text-4xl mb-2 justify-center items-center">
+              <RiEmotionLine size={50} fill="#cc3333" />
+            </div>
+            <h3 className="text-2xl text-center font-bold text-open-guard-theme mb-1">
+              Sistema Índio
+            </h3>
+            <p className="text-gray-600">
+              Entenda a mentalidade de um professor experiente no momento da
+              execução de posições. Mesmo com um jogo completamente diferente,
+              qualquer pessoa vai conseguir utilizar o que está sendo
+              transmitido.
+            </p>
+          </motion.div>
         </div>
       </section>
-      <section id="benefits" className="py-8 lg:py-16 bg-white">
-        <div className="container ">
-          <h2 className="text-open-guard-theme text-center font-semibold">
+      <section id="benefits" className="py-8 lg:py-16 bg-white-theme">
+        <div className=" ">
+          <h2 className="text-3xl text-open-guard-theme text-center font-semibold">
             Benefícios do Curso
           </h2>
           <p className="text-xl text-center text-gray-600 mb-4 lg:mb-12 max-w-3xl mx-auto">
@@ -225,21 +229,22 @@ export default function OpenGuardPage() {
       </section>
       <section
         id="callAction"
-        className="py-8 lg:py-16 bg-open-guard-theme-dark text-white"
+        className="py-8 lg:py-16 bg-open-guard-theme-dark text-white-theme"
       >
-        <div className="container text-center">
+        <div className=" text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Pronto para evoluir sua Guarda Aberta?
           </h2>
           <p className="text-xl lg:text-2xl mb-4 max-w-2xl mx-auto">
-            Você recebe tudo isso de <s className="text-white">R$ 197,00</s>
+            Você recebe tudo isso de{" "}
+            <s className="text-white-theme">R$ 197,00</s>
           </p>
 
           <div className="mb-8">
-            <div className="text-5xl font-bold mb-2 text-white">
+            <div className="text-5xl font-bold mb-2 text-white-theme">
               por R$ 47,00 à vista
             </div>
-            <div className="text-xl text-white">ou 6x R$ 8,82</div>
+            <div className="text-xl text-white-theme">ou 6x R$ 8,82</div>
           </div>
           <div className="mx-2 lg:mx-auto">
             <motion.a
@@ -255,7 +260,7 @@ export default function OpenGuardPage() {
               }}
             >
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#cc3333_0%,#ff6d62_50%,#E2CBFF_100%)]" />
-              <p className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-open-guard-theme px-4 text-md font-medium text-white backdrop-blur-3xl">
+              <p className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-open-guard-theme px-4 text-md font-medium text-white-theme backdrop-blur-3xl">
                 QUERO GARANTIR MINHA VAGA
               </p>
             </motion.a>
@@ -269,7 +274,7 @@ export default function OpenGuardPage() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-white">Acesso vitalício</span>
+              <span className="text-white-theme">Acesso vitalício</span>
             </div>
 
             <div className="flex items-center">
@@ -280,15 +285,15 @@ export default function OpenGuardPage() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-white">Satisfação garantida</span>
+              <span className="text-white-theme">Satisfação garantida</span>
             </div>
           </div>
         </div>
       </section>
       <section id="garantia" className="py-8 lg:py-16 bg-gray-50">
-        <div className="container ">
+        <div className=" ">
           <div className="max-w-4xl mx-4 lg:mx-auto text-center">
-            <h2 className="text-gray-700 font-semibold mb-2">
+            <h2 className="text-3xl text-gray-700 font-semibold mb-2">
               Garantia incondicional de 7 dias
             </h2>
             <p className="text-lg text-gray-600 mb-8">
@@ -296,7 +301,7 @@ export default function OpenGuardPage() {
               devolvemos seu dinheiro
             </p>
 
-            <div className="bg-white rounded-xl shadow-xl p-8 mb-8 border-t-4 border-open-guard-theme-dark">
+            <div className="bg-white-theme/50 rounded-xl shadow-xl p-8 mb-8 border-t-4 border-open-guard-theme-dark">
               <div className="flex flex-col items-center mb-6">
                 <motion.div
                   className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center mb-4"
@@ -334,13 +339,13 @@ export default function OpenGuardPage() {
         </div>
       </section>
       <section id="faq" className="py-8 lg:py-16 bg-white">
-        <div className="container">
+        <div className="">
           <div className="max-w-3xl mx-4 lg:mx-auto">
-            <h2 className="text-open-guard-theme font-semibold text-center mb-8">
+            <h2 className="text-3xl text-open-guard-theme font-semibold text-center mb-8">
               Perguntas Frequentes
             </h2>
 
-            <FAQ items={faqHalfGuardItems} />
+            <FaqSection items={faqHalfGuardItems} />
 
             <div className="text-center mt-8">
               <h3 className="text-xl text-open-guard-theme font-bold mb-2">
@@ -352,11 +357,13 @@ export default function OpenGuardPage() {
               </p>
               <button
                 onClick={handleWhatsAppClick}
-                className="px-12 py-4 rounded-full bg-[#1ED760] font-bold text-white tracking-widest uppercase transform hover:scale-105 hover:bg-[#21e065] transition-colors duration-200"
+                className="px-12 py-4 rounded-full bg-[#1ED760] font-bold text-white-theme tracking-widest uppercase transform hover:scale-105 hover:bg-[#21e065] transition-colors duration-200"
               >
                 <div className="flex flex-row items-center gap-2">
                   <RiWhatsappLine size={width < 780 ? 68 : 26} />
-                  <span className="text-white">Fale Conosco pelo WhatsApp</span>
+                  <span className="text-white-theme">
+                    Fale Conosco pelo WhatsApp
+                  </span>
                 </div>
               </button>
             </div>

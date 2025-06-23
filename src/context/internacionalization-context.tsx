@@ -70,7 +70,7 @@ const InternacionalizationProvider = ({
 
   const objTranslations = useMemo(() => {
     return {
-      location: location || "pt",
+      location: location ?? "pt",
       setLocation,
       translations: getTranslations(),
     };

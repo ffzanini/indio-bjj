@@ -19,7 +19,7 @@ interface SlideProps {
 }
 
 const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
-  const slideRef = useRef<HTMLLIElement>(null);
+  const slideRef = useRef<HTMLButtonElement>(null);
 
   const xRef = useRef(0);
   const yRef = useRef(0);
@@ -69,9 +69,9 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
-      <li
+      <button
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white-theme opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -85,7 +85,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
+          className="absolute top-0 left-0 w-full h-full bg-dark-theme rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
           style={{
             transform:
               current === index
@@ -107,7 +107,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             height={800}
           />
           {current === index && (
-            <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
+            <div className="absolute inset-0 bg-dark-theme/30 transition-all duration-1000" />
           )}
         </div>
 
@@ -116,16 +116,16 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          <Link href={link} className="text-white">
+          <Link href={link} className="text-white-theme">
             <h2 className="text-lg md:text-2xl lg:text-4xl relative">
               {subtitle}
             </h2>
-            <h2 className="text-lg md:text-2xl lg:text-4xl text-primary-ja-color font-semibold  relative">
+            <h2 className="text-lg md:text-2xl lg:text-4xl text-primary-ja font-semibold relative">
               {title}
             </h2>
           </Link>
         </article>
-      </li>
+      </button>
     </div>
   );
 };
@@ -143,7 +143,7 @@ const CarouselControl = ({
 }: CarouselControlProps) => {
   return (
     <button
-      className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
+      className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-800 border-3 border-transparent rounded-full focus:border-primary-ja focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
         type === "previous" ? "rotate-180" : ""
       }`}
       title={title}
@@ -158,7 +158,7 @@ interface CarouselProps {
   slides: SlideData[];
 }
 
-export function Carousel({ slides }: CarouselProps) {
+export function Carousel({ slides }: Readonly<CarouselProps>) {
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -191,12 +191,19 @@ export function Carousel({ slides }: CarouselProps) {
   }, [slides.length, isPaused]);
 
   return (
-    <div
+    <section
       className="relative w-[70vmin] h-[70vmin] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
+      tabIndex={-1} // ou 0 se quiser que seja acessível por Tab
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
     >
+      <h2 id={`carousel-heading-${id}`} className="sr-only">
+        Carousel de imagens
+      </h2>
+
       <ul
         className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
         style={{
@@ -220,13 +227,12 @@ export function Carousel({ slides }: CarouselProps) {
           title="Go to previous slide"
           handleClick={handlePreviousClick}
         />
-
         <CarouselControl
           type="next"
           title="Go to next slide"
           handleClick={handleNextClick}
         />
       </div>
-    </div>
+    </section>
   );
 }

@@ -6,13 +6,13 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import AppProvider from "@/providers/AppProvider";
 import {
+  ClientToaster,
   Footer,
   Header,
-  ClientToaster,
   SetInitialLanguage,
 } from "@/components";
 
-import { fontPoppins } from "./fonts";
+import { fontMontserrat } from "./fonts";
 
 import "./globals.css";
 
@@ -74,7 +74,7 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-5J2TP47Q');`,
         }}
       />
-      <body className={`${fontPoppins.className} antialiased`}>
+      <body className={`${fontMontserrat.className} antialiased`}>
         <noscript
           dangerouslySetInnerHTML={{
             __html: `

@@ -18,7 +18,7 @@ export function Avatar({
   size = 40,
   className,
   ...props
-}: AvatarProps) {
+}: Readonly<AvatarProps>) {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
 

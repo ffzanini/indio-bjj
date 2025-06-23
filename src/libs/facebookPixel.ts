@@ -28,7 +28,7 @@ export const initFacebookPixel = () => {
         ? window.fbq.callMethod(...args)
         : window.fbq.queue?.push(args);
     };
-    if (!window._fbq) window._fbq = window.fbq;
+    window._fbq ??= window.fbq;
     window.fbq.push = window.fbq;
     window.fbq.loaded = true;
     window.fbq.version = "2.0";

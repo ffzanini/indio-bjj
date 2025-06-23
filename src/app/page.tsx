@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { RiStarFill } from "react-icons/ri";
 
@@ -29,7 +29,7 @@ export default function PricipalPage() {
     timeoutRef.current = setTimeout(next, 5000);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     resetAutoplay();
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -44,7 +44,7 @@ export default function PricipalPage() {
   };
 
   return (
-    <div>
+    <main className="min-h-screen">
       <ImagesSlider className="h-screen" images={parallaxImages}>
         <motion.div
           initial={{
@@ -58,7 +58,7 @@ export default function PricipalPage() {
           transition={{
             duration: 0.6,
           }}
-          className="z-50 flex flex-col justify-center items-center"
+          className="z-50 flex flex-col justify-center items-center px-4"
         >
           <motion.p className="font-bold text-3xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
             Jiu Jitsu de alta qualidade, <br /> transformando vidas
@@ -69,70 +69,67 @@ export default function PricipalPage() {
           </motion.p>
           <button
             onClick={handleWhatsAppClick}
-            className="px-4 py-2 backdrop-blur-sm border bg-primary-ja-color/10 border-primary-ja-color/20 text-white mx-auto text-center rounded-full relative mt-4"
+            className="px-4 py-2 backdrop-blur-sm border bg-primary-ja/10 border-primary-ja/20 text-white mx-auto text-center rounded-full relative mt-4"
           >
             <span>
               Agendar uma <b>aula grátis</b> agora
             </span>
-            <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary-ja-color to-transparent" />
+            <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary-ja to-transparent" />
           </button>
         </motion.div>
       </ImagesSlider>
-      <section className="bg-white py-20">
-        <div className="flex flex-col justify-center items-center container">
-          <p className="text-4xl lg:text-5xl text-black">VAMOS MARCAR A SUA</p>
-          <p className="text-5xl lg:text-6xl text-primary-ja-color font-semibold">
+      <section className="bg-white-theme py-8 px-2 xl:px-0">
+        <div className="flex flex-col justify-center items-center">
+          <p className="text-3xl xl:text-5xl text-dark-theme">
+            VAMOS MARCAR A SUA
+          </p>
+          <p className="text-4xl xl:text-6xl text-primary-ja font-semibold tracking-wider text-outline-shadow-black">
             PRIMEIRA AULA
           </p>
-          <div className="m-2 lg:w-[900px] flex flex-col items-center text-center py-6 gap-6">
-            <p className="text-xl text-black">
+          <div className="max-w-7xl flex flex-col items-center text-center py-3">
+            <p className="text-lg text-dark-theme py-6">
               O Jiu-Jitsu é muito mais do que somente lutar — é descobrir novas
               forças dentro de você. Venha fazer sua primeira aula e experimente
               uma transformação que começa já no primeiro treino. Seu novo
               caminho pode começar hoje.
             </p>
-            <p className="text-xl text-black">
+            <p className="text-xl font-semibold text-dark-theme">
               Clique abaixo e marque sua aula experimental!
             </p>
           </div>
           <button
             onClick={handleWhatsAppClick}
-            className="px-4 py-2 lg:px-6 lg:py-4 backdrop-blur-sm border bg-black border-primary-ja-color/20 text-white mx-auto text-center rounded-full relative mt-2 hover:-translate-y-1 transition duration-400"
+            className="w-full lg:w-auto px-4 py-2 xl:px-6 xl:py-4 backdrop-blur-sm border bg-dark-theme border-primary-ja/50 text-white-theme mx-auto text-center rounded-full relative mt-2 hover:-translate-y-1 transition duration-300"
           >
             <span className="text-white font-semibold">Agendar agora</span>
-            <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary-ja-color to-transparent" />
+            <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary-ja to-transparent" />
           </button>
         </div>
       </section>
-      <section>
-        <div className="flex flex-col justify-center items-center pt-20">
-          <p className="text-5xl">NOSSOS</p>
-          <p className="text-6xl text-primary-ja-color font-semibold">
+      <section className="py-8">
+        <div className="flex flex-col justify-center items-center">
+          <p className="text-4xl xl:text-5xl">NOSSOS</p>
+          <p className="text-5xl xl:text-6xl text-primary-ja font-semibold tracking-widest mb-12">
             PROGRAMAS
           </p>
         </div>
 
-        <div className="relative overflow-hidden w-full h-full pt-10 pb-32">
+        <div className="relative overflow-hidden w-full h-full pb-14">
           <Carousel slides={ProgramsCarousel} />
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="px-4">
-          <h2 className="text-2xl lg:text-3xl text-center text-black">
-            Depoimentos dos nossos alunos
-          </h2>
-          <h2 className="text-3xl lg:text-4xl font-bold text-center text-black mb-6">
-            Veja o que falam sobre nós
-          </h2>
-        </div>
+      <section className="flex flex-col justify-center items-center py-8 bg-white-theme px-4 xl:px-0">
+        <h2 className="text-xl xl:text-3xl font-semibold text-center text-dark-theme">
+          Depoimentos dos nossos alunos
+        </h2>
+        <h2 className="text-2xl xl:text-4xl font-bold text-center text-primary-ja tracking-wide text-outline-shadow-black p-1">
+          Veja o que falam sobre nós
+        </h2>
         <motion.div
-          key={index}
           custom={1}
           variants={carousel}
-          initial="enter"
           animate="center"
-          exit="exit"
           transition={{ duration: 0.4 }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -141,18 +138,18 @@ export default function PricipalPage() {
             if (info.offset.x < -100) handleSwipe("left");
             else if (info.offset.x > 100) handleSwipe("right");
           }}
-          className="flex flex-col md:flex-row gap-6 items-center"
+          className="max-w-7xl flex flex-col md:flex-row items-center justify-center"
         >
-          <div className="container bg-white p-4 md:p-12">
-            <div className="flex flex-col md:flex-row">
-              <div className="flex flex-col justify-center md:w-1/6 mb-4 md:mb-0 md:border-r">
-                <h3 className="text-xl text-black font-bold">
+          <div className="bg-white-theme py-8">
+            <div className="flex flex-col lg:flex-row">
+              <div className="flex flex-col justify-center w-full xl:w-1/7 xl:border-r border-dark-theme/20">
+                <h3 className="text-lg text-dark-theme font-bold">
                   {testimonials[index].name}
                 </h3>
-                <p className="text-muted-foreground text-black">
+                <p className="text-base text-dark-theme">
                   {testimonials[index].location}
                 </p>
-                <div className="flex mt-2">
+                <div className="flex my-2">
                   {[...Array(5)].map((_, i) => (
                     <RiStarFill
                       key={i}
@@ -165,8 +162,8 @@ export default function PricipalPage() {
                   ))}
                 </div>
               </div>
-              <div className="md:w-5/6 mr-6 lg:mr-0 lg:pl-6">
-                <p className="italic text-lg text-black">
+              <div className=" xl:w-6/7 xl:pl-6">
+                <p className="italic text-lg text-dark-theme">
                   {testimonials[index].message}
                 </p>
               </div>
@@ -174,7 +171,7 @@ export default function PricipalPage() {
           </div>
         </motion.div>
         <div
-          className={`flex justify-center mt-4 gap-1 ${
+          className={`flex justify-center gap-1 ${
             testimonials.length === 1 ? "hidden" : ""
           }`}
         >
@@ -182,13 +179,13 @@ export default function PricipalPage() {
             <div
               key={i}
               className={`h-2 w-2 rounded-full ${
-                i === index ? "bg-black" : "bg-gray-300"
+                i === index ? "bg-dark-theme" : "bg-gray-300"
               }`}
             />
           ))}
         </div>
       </section>
       <ScrollToTopButton />
-    </div>
+    </main>
   );
 }

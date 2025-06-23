@@ -52,12 +52,12 @@ export const item = {
 };
 
 export const carousel = {
-  enter: (dir: number) => ({
+  enterTestimonial: (dir: number) => ({
     x: dir > 0 ? 300 : -300,
     opacity: 0,
   }),
   center: { x: 0, opacity: 1 },
-  exit: (dir: number) => ({
+  exitTestimonial: (dir: number) => ({
     x: dir < 0 ? 300 : -300,
     opacity: 0,
   }),

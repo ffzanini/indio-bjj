@@ -44,6 +44,11 @@
   .animate-accordion-up {
     animation: accordion-up 300ms ease-in-out;
   }
+
+  .text-outline-shadow-black {
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+      1px 1px 0 black;
+  }
 }
 
 :root {

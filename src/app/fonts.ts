@@ -1,8 +1,7 @@
-import { Poppins } from 'next/font/google'
+import { Montserrat } from "next/font/google";
 
-export const fontPoppins = Poppins({
-  subsets: ['latin'],
-  variable: '--font-Poppins',
-  display: 'swap',
-  weight: '700',
-})
+export const fontMontserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-Montserrat",
+  display: "swap",
+});

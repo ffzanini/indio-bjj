@@ -2,12 +2,14 @@ import React from "react";
 import { Avatar } from "@/components/ui";
 import { RiStarLine } from "react-icons/ri";
 
-export function ProfessorSection({ colorName }: { colorName?: string }) {
+export function ProfessorSection({
+  colorName,
+}: Readonly<{ colorName?: string }>) {
   return (
     <section id="instrutor" className="py-8 lg:py-16 bg-gray-50">
-      <div className="container">
+      <div className="">
         <div className="max-w-5xl mx-4 lg:mx-auto text-center">
-          <h2 className={`text-${colorName} font-semibold mb-8`}>
+          <h2 className={`text-3xl text-${colorName} font-semibold mb-8`}>
             Conheça o Professor
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -22,7 +24,7 @@ export function ProfessorSection({ colorName }: { colorName?: string }) {
                 />
 
                 <div
-                  className={`absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-black border-2 border-${colorName} text-white px-3 py-2 rounded-full text-sm font-semibold`}
+                  className={`absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-dark-theme border-2 border-${colorName} text-white-theme px-3 py-2 rounded-full text-sm font-semibold`}
                 >
                   Faixa Preta 3º Grau
                 </div>
@@ -30,14 +32,16 @@ export function ProfessorSection({ colorName }: { colorName?: string }) {
 
               <div className="mt-12 space-y-4">
                 <div className="flex items-center justify-center font-semibold">
-                  <RiStarLine className="w-6 h-6 mr-2" fill="black" />
-                  <span>20+ Anos de Experiência</span>
+                  <RiStarLine className="w-6 h-6 mr-2" fill="dark-theme" />
+                  <span className="text-dark-theme">
+                    20+ Anos de Experiência
+                  </span>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-8">
-              <h3 className={`text-${colorName} text-3xl font-bold mb-4`}>
+              <h3 className={`text-${colorName} text-2xl font-semibold mb-4`}>
                 Prof. Fabiano Índio
               </h3>
 
@@ -63,9 +67,9 @@ export function ProfessorSection({ colorName }: { colorName?: string }) {
                 </p>
 
                 <div
-                  className={`bg-white rounded-xl shadow-lg p-6 border-l-8 border-${colorName} text-3xl font-bold mb-4`}
+                  className={`bg-white-theme/50 rounded-xl shadow-lg p-6 border-l-8 border-${colorName} text-3xl font-bold mb-4`}
                 >
-                  <p className="italic text-xl text-gray-600">
+                  <p className="italic text-base text-gray-600">
                     &quot;Minha missão é transmitir não apenas técnicas, mas
                     também os valores da arte marcial, preparando os alunos para
                     os desafios da vida.&quot;

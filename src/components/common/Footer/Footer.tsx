@@ -1,12 +1,12 @@
-'use client'
-import { motion } from 'framer-motion'
+"use client";
+import { motion } from "framer-motion";
 
-import { socialsAcademia, socialsIndio } from '@/constants/socials'
-import Link from 'next/link'
-import Image from 'next/image'
+import { socialsAcademia, socialsIndio } from "@/constants/socials";
+import Link from "next/link";
+import { ZoomImage } from "@/components/ui";
 
 export function Footer() {
-  const yearNow = new Date().getFullYear()
+  const yearNow = new Date().getFullYear();
 
   return (
     <motion.footer
@@ -14,15 +14,15 @@ export function Footer() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
-      className="container"
+      className="px-4 sm:px-6 lg:px-8 xl:px-18"
     >
-      <div className="flex flex-col lg:grid lg:grid-cols-3 justify-between items-center">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 xl:grid-cols-3 justify-between items-center">
         <div className="flex flex-col items-center">
           <Link
             href="/"
             className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-2 text-sm font-normal text-black"
           >
-            <Image
+            <ZoomImage
               src="/images/logos/ja-indio-logo.webp"
               alt="logo"
               width={240}
@@ -32,8 +32,8 @@ export function Footer() {
           <p className="text-xl font-semibold lg:pb-4">
             Honra, moral, respeito e lealdade.
           </p>
-          <div className="justify-start items-start">
-            <div className="px-6 pt-6 lg:pt-0 flex flex-col gap-4">
+          <div className="justify-start items-start pt-6 lg:pt-0">
+            <div className="flex flex-col gap-4">
               <p className="text-xl">
                 Rua Doutor Amarante 779, Pelotas, Rio Grande do Sul, Brasil
               </p>
@@ -48,65 +48,65 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="px-6 pt-8 lg:pt-0">
-          <div className="flex flex-col md:gap-10 text-white text-center">
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Redes da Academia</h3>
-              <div className="flex justify-center  gap-4 text-2xl">
-                {socialsAcademia.map(({ href, icon: Icon, name }) => (
-                  <motion.a
-                    aria-label={name}
-                    target="_blank"
-                    key={href}
-                    href={href}
-                    whileHover={{
-                      scale: 1.2,
-                      transition: { duration: 0.3 },
-                    }}
-                    className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300"
-                  >
-                    <Icon size={32} />
-                  </motion.a>
-                ))}
-              </div>
-            </div>
 
-            <div className="mt-6 md:mt-0">
-              <h3 className="text-lg font-semibold mb-2">
-                Redes do Mestre Índio
-              </h3>
-              <div className="flex justify-center  gap-4 text-2xl">
-                {socialsIndio.map(({ href, icon: Icon, name }) => (
-                  <motion.a
-                    aria-label={name}
-                    target="_blank"
-                    key={href}
-                    href={href}
-                    whileHover={{
-                      scale: 1.2,
-                      transition: { duration: 0.3 },
-                    }}
-                    className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300"
-                  >
-                    <Icon size={32} />
-                  </motion.a>
-                ))}
-              </div>
+        <div className="pt-6 lg:pt-0 flex flex-col md:gap-10 text-white text-center">
+          <div>
+            <h3 className="text-lg font-semibold mb-2">Redes da Academia</h3>
+            <div className="flex justify-center  gap-4 text-2xl">
+              {socialsAcademia.map(({ href, icon: Icon, name }) => (
+                <motion.a
+                  aria-label={name}
+                  target="_blank"
+                  key={href}
+                  href={href}
+                  whileHover={{
+                    scale: 1.2,
+                    transition: { duration: 0.3 },
+                  }}
+                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300"
+                >
+                  <Icon size={32} />
+                </motion.a>
+              ))}
+            </div>
+          </div>
+
+          <div className="pt-6 lg:pt-0">
+            <h3 className="text-lg font-semibold mb-2">
+              Redes do Mestre Índio
+            </h3>
+            <div className="flex justify-center  gap-4 text-2xl">
+              {socialsIndio.map(({ href, icon: Icon, name }) => (
+                <motion.a
+                  aria-label={name}
+                  target="_blank"
+                  key={href}
+                  href={href}
+                  whileHover={{
+                    scale: 1.2,
+                    transition: { duration: 0.3 },
+                  }}
+                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300"
+                >
+                  <Icon size={32} />
+                </motion.a>
+              ))}
             </div>
           </div>
         </div>
-        <div className="hidden lg:flex px-6">
-          <div className="flex flex-col container mb-1 flex justify-center items-center">
+
+        <div className="hidden xl:flex">
+          <div className="flex flex-col mb-1 flex justify-center items-center">
             <p className="text-xl font-semibold">Dúvidas sobre onde treinar?</p>
             <p>
-              Acesse o{' '}
+              Acesse o{" "}
               <a
                 className="font-semibold"
                 href="https://www.jajiujitsu.com.br/"
                 target="_blank"
               >
                 site oficial
-              </a>{' '}
+              </a>{" "}
               da nossa matriz e conheça mais sobre a nossa história, serviços e
               academias perto de você! Não perca tempo, venha ser JA você
               também!
@@ -114,7 +114,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="px-6 pt-6 mt-8 gap-4 lg:pt-2 flex flex-col justify-center items-center border-t border-gray-600">
+      <div className="pt-6 mt-8 gap-4 lg:pt-2 flex flex-col justify-center items-center border-t border-gray-600">
         <p className="pt-4 text-center">
           ©{yearNow} Índio Jiu Jitsu | Todos os direitos reservados
         </p>
@@ -129,5 +129,5 @@ export function Footer() {
         </p>
       </div>
     </motion.footer>
-  )
+  );
 }
