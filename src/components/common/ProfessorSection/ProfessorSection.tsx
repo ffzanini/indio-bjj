@@ -49,8 +49,8 @@ export function ProfessorSection({
                 <p className="text-left text-gray-700 leading-relaxed mb-4">
                   Fundador da escola{" "}
                   <b className="text-gray-600">Índio Jiu Jitsu Team</b> afiliada
-                  da <b className="text-gray-600">JA Jiu Jitsu</b>, é também
-                  criador da página{" "}
+                  da <b className="text-gray-600">JA Índio Jiu Jitsu</b>, é
+                  também criador da página{" "}
                   <a
                     className="text-gray-600 font-semibold"
                     href="https://www.instagram.com/indiodrills/"

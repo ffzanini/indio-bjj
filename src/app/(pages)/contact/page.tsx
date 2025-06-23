@@ -19,7 +19,7 @@ export default function Contact() {
         <div className="flex flex-col-reverse gap-12 items-center">
           <div className="text-center lg:text-left max-w-7xl">
             <h1 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-dark-theme">
-              Entre em contato com a JA Jiu Jitsu
+              Entre em contato com a JA Índio Jiu Jitsu
             </h1>
             <p className="text-xl text-center text-dark-theme mb-8 lg:mb-16 mx-4 lg:mx-auto">
               Estamos aqui para ajudar você a fazer parte da nossa família ou

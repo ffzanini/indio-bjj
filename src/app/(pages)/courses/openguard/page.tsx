@@ -57,7 +57,7 @@ export default function OpenGuardPage() {
         className="bg-gradient-to-b from-open-guard-theme-light via-open-guard-theme to-dark-theme pt-40 pb-12 lg:pb-20 text-white-theme"
       >
         <div className="w-full flex justify-center items-center">
-          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-4 px-4 lg:px-24">
+          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-4 px-4 lg:px-48">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                 Aprenda os segredos da Guarda Aberta e aprimore o seu Jiu Jitsu

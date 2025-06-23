@@ -18,37 +18,37 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://indiobjj.com.br"),
-  title: "JA Jiu Jitsu | Índio Jiu Jitsu",
+  title: "JA Índio Jiu Jitsu | Índio Jiu Jitsu",
   description:
-    "Na JA Jiu-Jitsu, nossos professores experientes e dedicados estão comprometidos em oferecer uma orientação personalizada, promovendo o crescimento técnico e pessoal de cada aluno. Criamos um ambiente acolhedor, respeitoso e motivador, onde praticantes de todos os níveis se sentem parte de uma verdadeira família. Aqui, o Jiu-Jitsu vai além da arte marcial — é uma ferramenta de transformação, disciplina e autoconfiança.",
+    "Na JA Índio Jiu-Jitsu, nossos professores experientes e dedicados estão comprometidos em oferecer uma orientação personalizada, promovendo o crescimento técnico e pessoal de cada aluno. Criamos um ambiente acolhedor, respeitoso e motivador, onde praticantes de todos os níveis se sentem parte de uma verdadeira família. Aqui, o Jiu-Jitsu vai além da arte marcial — é uma ferramenta de transformação, disciplina e autoconfiança.",
   icons: "/favicon.ico",
   openGraph: {
     type: "website",
     url: "https://indiobjj.com.br",
-    title: "JA Jiu Jitsu | Índio Jiu Jitsu",
+    title: "JA Índio Jiu Jitsu | Índio Jiu Jitsu",
     description:
-      "Na JA Jiu-Jitsu, nossos professores experientes e dedicados estão comprometidos em oferecer uma orientação personalizada, promovendo o crescimento técnico e pessoal de cada aluno. Criamos um ambiente acolhedor, respeitoso e motivador, onde praticantes de todos os níveis se sentem parte de uma verdadeira família. Aqui, o Jiu-Jitsu vai além da arte marcial — é uma ferramenta de transformação, disciplina e autoconfiança.",
+      "Na JA Índio Jiu-Jitsu, nossos professores experientes e dedicados estão comprometidos em oferecer uma orientação personalizada, promovendo o crescimento técnico e pessoal de cada aluno. Criamos um ambiente acolhedor, respeitoso e motivador, onde praticantes de todos os níveis se sentem parte de uma verdadeira família. Aqui, o Jiu-Jitsu vai além da arte marcial — é uma ferramenta de transformação, disciplina e autoconfiança.",
     images: [
       {
         url: "/images/visit-card.png",
         width: 1120,
         height: 630,
-        alt: "JA Jiu Jitsu | Índio Jiu Jitsu",
+        alt: "JA Índio Jiu Jitsu | Índio Jiu Jitsu",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "JA Jiu Jitsu | Índio Jiu Jitsu",
+    title: "JA Índio Jiu Jitsu | Índio Jiu Jitsu",
     description:
-      "Na JA Jiu-Jitsu, nossos professores experientes e dedicados estão comprometidos em oferecer uma orientação personalizada, promovendo o crescimento técnico e pessoal de cada aluno. Criamos um ambiente acolhedor, respeitoso e motivador, onde praticantes de todos os níveis se sentem parte de uma verdadeira família. Aqui, o Jiu-Jitsu vai além da arte marcial — é uma ferramenta de transformação, disciplina e autoconfiança.",
+      "Na JA Índio Jiu-Jitsu, nossos professores experientes e dedicados estão comprometidos em oferecer uma orientação personalizada, promovendo o crescimento técnico e pessoal de cada aluno. Criamos um ambiente acolhedor, respeitoso e motivador, onde praticantes de todos os níveis se sentem parte de uma verdadeira família. Aqui, o Jiu-Jitsu vai além da arte marcial — é uma ferramenta de transformação, disciplina e autoconfiança.",
     images: ["/images/visit-card.png"],
   },
   other: {
     "script:ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      name: "JA Jiu Jitsu | Índio Jiu Jitsu",
+      name: "JA Índio Jiu Jitsu | Índio Jiu Jitsu",
       url: "https://indiobjj.com.br",
       jobTitle: "Jiu Jitsu",
     }),

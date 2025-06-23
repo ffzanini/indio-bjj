@@ -65,7 +65,7 @@ export default function PricipalPage() {
           </motion.p>
           <motion.p className="text-center text-2xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200 py-4">
             Aulas para todos os níveis e idades. <br /> Marque uma aula
-            experimental e venha fazer parte da família JA Jiu Jitsu
+            experimental e venha fazer parte da família JA Índio Jiu Jitsu
           </motion.p>
           <button
             onClick={handleWhatsAppClick}
@@ -78,6 +78,7 @@ export default function PricipalPage() {
           </button>
         </motion.div>
       </ImagesSlider>
+
       <section className="bg-white-theme py-8 px-2 xl:px-0">
         <div className="flex flex-col justify-center items-center">
           <p className="text-3xl xl:text-5xl text-dark-theme">
