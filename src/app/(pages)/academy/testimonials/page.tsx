@@ -12,7 +12,7 @@ export default function Testimonials() {
         <div className="flex flex-col-reverse gap-12 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-dark-theme">
-              Depois de alunos da JA Índio Jiu Jitsu
+              Depoimentos de alunos da JA Índio Jiu Jitsu
             </h1>
             <p className="text-xl text-center text-dark-theme mb-8 lg:mb-16 mx-4 lg:mx-auto">
               Veja o que nossos alunos tem a dizer!
