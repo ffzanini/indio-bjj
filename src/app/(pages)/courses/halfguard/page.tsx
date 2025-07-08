@@ -303,7 +303,7 @@ export default function HalfGuardPage() {
               </p>
               <button
                 onClick={handleWhatsAppClick}
-                className="px-12 py-4 rounded-full bg-[#1ED760] font-bold text-white-theme tracking-widest uppercase transform hover:scale-105 hover:bg-[#21e065] transition-colors duration-200"
+                className="cursor-pointer px-12 py-4 rounded-full bg-[#1ED760] font-bold text-white-theme tracking-widest uppercase transform hover:scale-105 hover:bg-[#21e065] transition-colors duration-200"
               >
                 <div className="flex flex-row items-center gap-2">
                   <RiWhatsappLine size={width < 780 ? 68 : 26} />
@@ -316,7 +316,7 @@ export default function HalfGuardPage() {
           </div>
         </div>
       </section>
-      <ProfessorSection colorName="half-guard-theme" />
+      <ProfessorSection type="halfGuard" />
       <ScrollToTopButton />
     </main>
   );

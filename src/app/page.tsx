@@ -69,7 +69,7 @@ export default function PricipalPage() {
           </motion.p>
           <button
             onClick={handleWhatsAppClick}
-            className="px-4 py-2 backdrop-blur-sm border bg-primary-ja/10 border-primary-ja/20 text-white mx-auto text-center rounded-full relative mt-4"
+            className="cursor-pointer px-4 py-2 backdrop-blur-sm border bg-primary-ja/10 border-primary-ja/20 text-white mx-auto text-center rounded-full relative mt-4"
           >
             <span>
               Agendar uma <b>aula grátis</b> agora
@@ -100,7 +100,7 @@ export default function PricipalPage() {
           </div>
           <button
             onClick={handleWhatsAppClick}
-            className="w-full lg:w-auto px-4 py-2 xl:px-6 xl:py-4 backdrop-blur-sm border bg-dark-theme border-primary-ja/50 text-white-theme mx-auto text-center rounded-full relative mt-2 hover:-translate-y-1 transition duration-300"
+            className="cursor-pointer w-full lg:w-auto px-4 py-2 xl:px-6 xl:py-4 backdrop-blur-sm border bg-dark-theme border-primary-ja/50 text-white-theme mx-auto text-center rounded-full relative mt-2 hover:-translate-y-1 transition duration-300"
           >
             <span className="text-white font-semibold">Agendar agora</span>
             <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary-ja to-transparent" />

@@ -59,13 +59,9 @@ export function Footer() {
                   target="_blank"
                   key={href}
                   href={href}
-                  whileHover={{
-                    scale: 1.2,
-                    transition: { duration: 0.3 },
-                  }}
-                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300"
+                  className="p-2 flex justify-center items-center transition-all duration-300"
                 >
-                  <Icon size={32} />
+                  <Icon size={32} className="hover:text-primary-ja" />
                 </motion.a>
               ))}
             </div>
@@ -82,13 +78,9 @@ export function Footer() {
                   target="_blank"
                   key={href}
                   href={href}
-                  whileHover={{
-                    scale: 1.2,
-                    transition: { duration: 0.3 },
-                  }}
-                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300"
+                  className="p-2 flex justify-center items-center transition-all duration-300"
                 >
-                  <Icon size={32} />
+                  <Icon size={32} className="hover:text-primary-ja" />
                 </motion.a>
               ))}
             </div>
@@ -101,7 +93,7 @@ export function Footer() {
             <p>
               Acesse o{" "}
               <a
-                className="font-semibold"
+                className="font-semibold hover:text-primary-ja"
                 href="https://www.jajiujitsu.com.br/"
                 target="_blank"
               >
@@ -119,13 +111,16 @@ export function Footer() {
           ©{yearNow} Índio Jiu Jitsu | Todos os direitos reservados
         </p>
         <p className="flex flex-col text-base gap-1 justify-center text-center pb-4">
-          <Link
-            href="https://www.ffzanini.dev/"
-            target="_blank"
-            className="text-md"
-          >
-            Desenvolvido por Felipe Frantz Zanini
-          </Link>
+          <span className="text-md">
+            Desenvolvido por{" "}
+            <Link
+              href="https://www.ffzanini.dev/"
+              target="_blank"
+              className="text-md hover:text-primary-ja"
+            >
+              Felipe Frantz Zanini
+            </Link>
+          </span>
         </p>
       </div>
     </motion.footer>
