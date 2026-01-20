@@ -183,14 +183,14 @@ export default function HalfGuardPage() {
           </h2>
           <p className="text-xl lg:text-2xl mb-4 max-w-2xl mx-auto">
             Você recebe tudo isso de{" "}
-            <s className="text-white-theme">R$ 147,00</s>
+            <s className="text-white-theme">R$ 197,00</s>
           </p>
 
           <div className="mb-8">
             <div className="text-5xl font-bold mb-2 text-white-theme">
-              por R$ 47,00 à vista
+              por R$ 89,90 à vista
             </div>
-            <div className="text-xl text-white-theme">ou 8x R$ 8,82</div>
+            <div className="text-xl text-white-theme">ou 12x R$ 9,30</div>
           </div>
           <div className="mx-2 lg:mx-auto">
             <motion.a
