@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import { RiWhatsappLine, RiShieldCheckLine } from "react-icons/ri";
 
 import { ProfessorSection } from "@/components/common";
-import { FAQ as FaqSection, ScrollToTopButton } from "@/components/ui";
+import {
+  FAQ as FaqSection,
+  ScrollToTopButton,
+  VideoPlayer,
+} from "@/components/ui";
 
 import { drillsCourseBenefits } from "@/constants/benefits";
 import { faqDrillsItems } from "@/constants/faq";
@@ -47,17 +51,17 @@ export default function DrillsPage() {
         className="bg-linear-to-b from-drills-theme-light via-drills-theme to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white-theme"
       >
         <div className="w-full flex justify-center items-center">
-          <div className="max-w-6xl mx-auto px-4 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-4 px-4 lg:px-48">
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                 Melhore seu gás, mobilidade, consciência corporal e velocidade
                 de raciocínio
               </h1>
-              <p className="text-xl md:text-2xl text-white-theme mb-10 max-w-3xl mx-auto">
+              <p className="text-xl text-white-theme mb-8">
                 Construa a base sólida que vai te dar confiança em qualquer
                 situação dentro do tatame.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mx-2 lg:mx-auto">
                 <motion.a
                   className="relative inline-flex h-12 overflow-hidden rounded-full p-px focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
                   href="https://pay.kiwify.com.br/hkR1jY2"
@@ -71,13 +75,13 @@ export default function DrillsPage() {
                   }}
                 >
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#2563eb_0%,#60a5fa_50%,#1e40af_100%)]" />
-                  <p className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-drills-theme px-8 text-md font-medium text-white-theme backdrop-blur-3xl">
+                  <p className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-drills-theme px-4 text-md font-medium text-white-theme backdrop-blur-3xl">
                     QUERO GARANTIR MINHA VAGA
                   </p>
                 </motion.a>
               </div>
 
-              <div className="flex flex-wrap gap-6 justify-center">
+              <div className="mt-8 flex flex-wrap gap-6 justify-center lg:justify-start">
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full bg-white-theme/10 flex items-center justify-center mr-2">
                     <svg
@@ -130,6 +134,13 @@ export default function DrillsPage() {
                 </div>
               </div>
             </div>
+
+            <VideoPlayer
+              thumbnailUrl="/images/courses/curso-drills-thumbnail.webp"
+              videoUrl="https://www.youtube.com/watch?v=oAM3Ls1tdko"
+              videoTitle="Curso de Sequências Drills"
+              videoDescription="Melhore seu gás, mobilidade, consciência corporal e velocidade de raciocínio"
+            />
           </div>
         </div>
       </section>
