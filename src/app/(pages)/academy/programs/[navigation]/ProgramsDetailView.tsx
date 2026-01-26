@@ -13,13 +13,13 @@ export default function ProgramsDetailView({
   const handleWhatsAppClick = () => {
     window.open(
       "https://wa.me/5553991886599?text=Olá!%20Tenho%20interesse%20em%20agendar%20uma%20aula%20experimental!",
-      "_blank"
+      "_blank",
     );
   };
 
   return (
     <main>
-      <section className="bg-gradient-to-b from-primary-ja via-primary-ja to-dark-theme-background pt-42 pb-12 lg:pb-20 text-white-theme mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-linear-to-b from-primary-ja via-primary-ja to-dark-theme-background pt-42 pb-12 lg:pb-20 text-white-theme mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col-reverse gap-12 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-dark-theme">
@@ -70,7 +70,7 @@ export default function ProgramsDetailView({
                   key={index}
                   className="rounded-2xl border-primary-ja shadow-md bg-white-theme/90 backdrop-blur-sm m-3 lg:m-0"
                 >
-                  <CardContent className="flex rounded-2xl justify-center bg-gradient-to-r from-white-theme to-dark-theme/3 p-14 ">
+                  <CardContent className="flex rounded-2xl justify-center bg-linear-to-r from-white-theme to-dark-theme/3 p-14 ">
                     <p className="text-xl font-bold text-dark-theme text-center">
                       {benefit}
                     </p>
@@ -98,7 +98,7 @@ export default function ProgramsDetailView({
             <span className="text-white-theme text-xl lg:text-2xl font-semibold">
               Agendar agora
             </span>
-            <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary-ja to-transparent" />
+            <div className="absolute inset-x-0  h-px -bottom-px bg-linear-to-r w-3/4 mx-auto from-transparent via-primary-ja to-transparent" />
           </button>
         </div>
       </section>
@@ -110,7 +110,7 @@ export default function ProgramsDetailView({
                 Ainda com dúvidas? Clique aqui para ver mais dos nossos
                 programas de treino
               </span>
-              <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary-ja to-transparent" />
+              <div className="absolute inset-x-0  h-px -bottom-px bg-linear-to-r w-3/4 mx-auto from-transparent via-primary-ja to-transparent" />
             </button>
           </Link>
         </div>

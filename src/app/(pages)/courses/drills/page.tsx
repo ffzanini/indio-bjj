@@ -1,32 +1,22 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-import {
-  RiWhatsappLine,
-  RiShieldCheckLine,
-  RiEmotionSadLine,
-  RiEmotionLine,
-} from "react-icons/ri";
+import { RiWhatsappLine, RiShieldCheckLine } from "react-icons/ri";
 
 import { ProfessorSection } from "@/components/common";
-import {
-  FAQ as FaqSection,
-  ScrollToTopButton,
-  VideoPlayer,
-} from "@/components/ui";
+import { FAQ as FaqSection, ScrollToTopButton } from "@/components/ui";
 
-import { openGuardCourseBenefits } from "@/constants/benefits";
-import { faqHalfGuardItems } from "@/constants/faq";
+import { drillsCourseBenefits } from "@/constants/benefits";
+import { faqDrillsItems } from "@/constants/faq";
 
 import { initFacebookPixel, trackEvent } from "@/libs/facebookPixel";
 
-export default function OpenGuardPage() {
+export default function DrillsPage() {
   const [width, setWidth] = useState<number>(0);
 
   const handleWhatsAppClick = () => {
     window.open(
-      "https://wa.me/5553981372378?text=Olá!%20Tenho%20dúvidas%20sobre%20o%20curso%20de%20Guarda%20Aberta",
+      "https://wa.me/5553981372378?text=Olá!%20Tenho%20dúvidas%20sobre%20o%20curso%20de%20Sequencias%20Drills",
       "_blank",
     );
   };
@@ -51,25 +41,26 @@ export default function OpenGuardPage() {
   });
 
   return (
-    <div>
+    <main>
       <section
         id="hero"
-        className="bg-linear-to-b from-open-guard-theme-light via-open-guard-theme to-dark-theme pt-40 pb-12 lg:pb-20 text-white-theme"
+        className="bg-linear-to-b from-drills-theme-light via-drills-theme to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white-theme"
       >
         <div className="w-full flex justify-center items-center">
-          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-4 px-4 lg:px-48">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                Aprenda os segredos da Guarda Aberta e aprimore o seu Jiu Jitsu
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-xl md:text-5xl lg:text-6xl font-bold mb-6">
+                Melhore seu gás, mobilidade, consciência corporal e velocidade
+                de raciocínio
               </h1>
-              <p className="text-xl text-white-theme mb-8">
-                Nesse curto prático você encontra tudo o que irá precisar para
-                transformar sua Guarda Aberta em uma poderosa arma.
+              <p className="text-xl md:text-2xl text-white-theme mb-10 max-w-3xl mx-auto">
+                Construa a base sólida que vai te dar confiança em qualquer
+                situação dentro do tatame.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mx-2 lg:mx-auto">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <motion.a
                   className="relative inline-flex h-12 overflow-hidden rounded-full p-px focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-                  href="https://pay.kiwify.com.br/BJSNRE2"
+                  href="https://pay.kiwify.com.br/hkR1jY2"
                   onClick={() =>
                     trackEvent("ButtonClick", { button: "paymentButton" })
                   }
@@ -79,14 +70,14 @@ export default function OpenGuardPage() {
                     transition: { duration: 0.3 },
                   }}
                 >
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#cc3333_0%,#ff6d62_50%,#E2CBFF_100%)]" />
-                  <p className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-open-guard-theme px-4 text-md font-medium text-white-theme backdrop-blur-3xl">
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#2563eb_0%,#60a5fa_50%,#1e40af_100%)]" />
+                  <p className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-drills-theme px-8 text-md font-medium text-white-theme backdrop-blur-3xl">
                     QUERO GARANTIR MINHA VAGA
                   </p>
                 </motion.a>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-6 justify-center lg:justify-start">
+              <div className="flex flex-wrap gap-6 justify-center">
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full bg-white-theme/10 flex items-center justify-center mr-2">
                     <svg
@@ -102,7 +93,7 @@ export default function OpenGuardPage() {
                     </svg>
                   </div>
                   <span className="text-white-theme">
-                    +100 alunos satisfeitos
+                    +350 alunos satisfeitos
                   </span>
                 </div>
                 <div className="flex items-center">
@@ -139,78 +130,75 @@ export default function OpenGuardPage() {
                 </div>
               </div>
             </div>
-
-            <VideoPlayer
-              thumbnailUrl="/images/courses/curso-guarda-aberta-thumbnail.webp"
-              videoUrl="https://www.youtube.com/embed/u6p5H3yz5yE?autoplay=1&loop=1"
-              videoTitle="Curso de Guarda Aberta"
-              videoDescription="Transforme sua técnica de Guarda Aberta"
-            />
           </div>
         </div>
       </section>
-      <section id="benefits" className="py-8 lg:py-16 bg-gray-50">
+      <section id="problemas" className="py-8 lg:py-16 bg-gray-50">
         <div className="max-w-6xl mx-4 lg:mx-auto">
-          <h2 className="text-3xl text-open-guard-theme text-center font-semibold mb-4 lg:mb-12">
-            Não importa seu nível: com este método, você aprende de verdade!
+          <h2 className="text-3xl text-drills-theme text-center font-semibold mb-4">
+            Talvez você se identifique com isso:
           </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
-          <motion.div
-            className="space-y-1.5 p-6 rounded-lg border shadow-sm "
-            whileHover={{
-              scale: 1.05,
-              transition: { duration: 0.3 },
-            }}
-          >
-            <div className="flex text-4xl mb-2 justify-center items-center">
-              <RiEmotionSadLine size={50} fill="#cc3333" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div className="flex items-start p-4 bg-white-theme/80 backdrop-blur-sm rounded-lg shadow-sm border border-drills-theme/10">
+              <span className="text-2xl mr-3">❌</span>
+              <p className="text-gray-700">
+                Está cansado de assistir vídeos aleatórios na internet e não
+                conseguir aplicar no treino
+              </p>
             </div>
-            <h3 className="text-2xl text-center font-bold text-open-guard-theme mb-1">
-              Métodos Comuns
-            </h3>
-            <p className="text-gray-600">
-              A maioria dos cursos de Jiu-Jitsu te ensinam posições isoladas sem
-              sequência lógica. O excesso de informação faz você travar, e não
-              aprender corretamente. No fim de tudo, você não vai conseguir
-              aplicar nada do que assistiu.
-            </p>
-          </motion.div>
-          <motion.div
-            className="space-y-1.5 p-6 rounded-lg border shadow-sm "
-            whileHover={{
-              scale: 1.05,
-              transition: { duration: 0.3 },
-            }}
-          >
-            <div className="flex text-4xl mb-2 justify-center items-center">
-              <RiEmotionLine size={50} fill="#cc3333" />
+            <div className="flex items-start p-4 bg-white-theme/80 backdrop-blur-sm rounded-lg shadow-sm border border-drills-theme/10">
+              <span className="text-2xl mr-3">❌</span>
+              <p className="text-gray-700">
+                Fica travado durante o rola, sem lembrar o que deveria fazer
+              </p>
             </div>
-            <h3 className="text-2xl text-center font-bold text-open-guard-theme mb-1">
-              Sistema Índio
-            </h3>
-            <p className="text-gray-600">
-              Entenda a mentalidade de um professor experiente no momento da
-              execução de posições. Mesmo com um jogo completamente diferente,
-              qualquer pessoa vai conseguir utilizar o que está sendo
-              transmitido.
+            <div className="flex items-start p-4 bg-white-theme/80 backdrop-blur-sm rounded-lg shadow-sm border border-drills-theme/10">
+              <span className="text-2xl mr-3">❌</span>
+              <p className="text-gray-700">
+                Sente que falta mobilidade, fluidez e segurança nas posições
+              </p>
+            </div>
+            <div className="flex items-start p-4 bg-white-theme/80 backdrop-blur-sm rounded-lg shadow-sm border border-drills-theme/10">
+              <span className="text-2xl mr-3">❌</span>
+              <p className="text-gray-700">
+                É amassado por parceiros menos graduados porque não domina os
+                movimentos básicos
+              </p>
+            </div>
+            <div className="flex items-start p-4 bg-white-theme/80 backdrop-blur-sm rounded-lg shadow-sm border border-drills-theme/10">
+              <span className="text-2xl mr-3">❌</span>
+              <p className="text-gray-700">
+                Tem medo de se lesionar por executar as posições de forma
+                incorreta
+              </p>
+            </div>
+          </div>
+          <div className="text-center bg-drills-theme/15 rounded-xl p-6 border-2 border-drills-theme/30 backdrop-blur-sm">
+            <p className="text-2xl md:text-3xl font-bold text-drills-theme mb-2">
+              Os Drills são a chave para desenvolver fluidez, mobilidade e
+              confiança dentro do tatame.
             </p>
-          </motion.div>
+            <p className="text-lg text-gray-700 mt-4">
+              Com este curso, você vai ter um passo a passo prático, direto ao
+              ponto, para dominar os movimentos essenciais e transformar sua
+              base no Jiu-Jitsu. Nada de firulas. Nada de perder tempo. Apenas o
+              básico que realmente funciona.
+            </p>
           </div>
         </div>
       </section>
       <section id="benefits" className="py-8 lg:py-16 bg-white-theme">
         <div className=" ">
-          <h2 className="text-3xl text-open-guard-theme text-center font-semibold">
-            Benefícios do Curso
+          <h2 className="text-3xl text-drills-theme text-center font-semibold">
+            O que você vai aprender
           </h2>
           <p className="text-xl text-center text-gray-600 mb-4 lg:mb-12 max-w-3xl mx-auto">
-            Transforme sua meia guarda de uma posição defensiva para uma arma
-            ofensiva letal
+            Passo a passo prático, direto ao ponto, para dominar os movimentos
+            essenciais e transformar sua base no Jiu-Jitsu
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-4 lg:mx-auto">
-            {openGuardCourseBenefits.map((benefit, index) => (
+            {drillsCourseBenefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 className="space-y-1.5 p-6 rounded-lg border shadow-sm "
@@ -220,7 +208,7 @@ export default function OpenGuardPage() {
                 }}
               >
                 <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-bold text-open-guard-theme mb-2">
+                <h3 className="text-xl font-bold text-drills-theme mb-2">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600">{benefit.description}</p>
@@ -229,17 +217,75 @@ export default function OpenGuardPage() {
           </div>
         </div>
       </section>
+
+      <section id="beneficios-diretos" className="py-8 lg:py-16 bg-white-theme">
+        <div className="max-w-6xl mx-4 lg:mx-auto">
+          <h2 className="text-3xl text-drills-theme text-center font-semibold mb-8">
+            Benefícios diretos para o aluno
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div className="p-6 bg-white-theme/90 backdrop-blur-sm rounded-lg border border-drills-theme/20 shadow-sm">
+              <div className="text-3xl mb-3">⚡</div>
+              <h3 className="text-lg font-bold text-drills-theme mb-2">
+                Evoluir mais rápido
+              </h3>
+              <p className="text-gray-600">
+                Evolua mais rápido sem precisar decorar centenas de posições.
+                Foque no essencial que realmente funciona.
+              </p>
+            </div>
+            <div className="p-6 bg-white-theme/90 backdrop-blur-sm rounded-lg border border-drills-theme/20 shadow-sm">
+              <div className="text-3xl mb-3">🛡️</div>
+              <h3 className="text-lg font-bold text-drills-theme mb-2">
+                Jogo limpo, seguro e eficiente
+              </h3>
+              <p className="text-gray-600">
+                Tenha um jogo limpo, seguro e eficiente, executando as posições
+                corretamente e evitando lesões.
+              </p>
+            </div>
+            <div className="p-6 bg-white-theme/90 backdrop-blur-sm rounded-lg border border-drills-theme/20 shadow-sm">
+              <div className="text-3xl mb-3">💪</div>
+              <h3 className="text-lg font-bold text-drills-theme mb-2">
+                Mais confiança no tatame
+              </h3>
+              <p className="text-gray-600">
+                Melhore a confiança em qualquer situação dentro do tatame,
+                dominando os movimentos fundamentais.
+              </p>
+            </div>
+            <div className="p-6 bg-white-theme/90 backdrop-blur-sm rounded-lg border border-drills-theme/20 shadow-sm">
+              <div className="text-3xl mb-3">🏃</div>
+              <h3 className="text-lg font-bold text-drills-theme mb-2">
+                Mobilidade e resistência
+              </h3>
+              <p className="text-gray-600">
+                Aumente sua mobilidade e resistência, diminuindo o risco de
+                lesões e melhorando sua performance geral.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section
         id="callAction"
-        className="py-8 lg:py-16 bg-open-guard-theme-dark text-white-theme"
+        className="py-8 lg:py-16 bg-drills-theme-dark text-white-theme"
       >
         <div className=" text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-            Pronto para evoluir sua Guarda Aberta?
+          <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+            Não perca mais tempo sendo amassado no tatame ou travando no meio do
+            rola
           </h2>
+          <p className="text-xl mb-6 max-w-2xl mx-auto">
+            Dê um passo à frente no tatame e construa a base sólida que vai
+            transformar sua fluidez, segurança e confiança nos treinos.
+          </p>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6">
+            Quanto você vai investir na sua evolução no Jiu-Jitsu?
+          </h3>
           <p className="text-xl lg:text-2xl mb-4 max-w-2xl mx-auto">
             Você recebe tudo isso de{" "}
-            <s className="text-white-theme">R$ 197,00</s>
+            <s className="text-white-theme">R$ 297,00</s>
           </p>
 
           <div className="mb-8">
@@ -248,10 +294,15 @@ export default function OpenGuardPage() {
             </div>
             <div className="text-xl text-white-theme">ou 12x R$ 9,30</div>
           </div>
+          <div className="mb-6 max-w-2xl mx-auto">
+            <p className="text-lg text-white-theme mb-2">
+              <strong>Curso completo com mais de 60 aulas práticas</strong>
+            </p>
+          </div>
           <div className="mx-2 lg:mx-auto">
             <motion.a
               className="relative inline-flex h-12 overflow-hidden rounded-full p-px focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-              href="https://pay.kiwify.com.br/BJSNRE2"
+              href="https://pay.kiwify.com.br/hkR1jY2"
               onClick={() =>
                 trackEvent("ButtonClick", { button: "paymentButton" })
               }
@@ -261,8 +312,8 @@ export default function OpenGuardPage() {
                 transition: { duration: 0.3 },
               }}
             >
-              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#cc3333_0%,#ff6d62_50%,#E2CBFF_100%)]" />
-              <p className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-open-guard-theme px-4 text-md font-medium text-white-theme backdrop-blur-3xl">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#2563eb_0%,#60a5fa_50%,#1e40af_100%)]" />
+              <p className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-drills-theme px-4 text-md font-medium text-white-theme backdrop-blur-3xl">
                 QUERO GARANTIR MINHA VAGA
               </p>
             </motion.a>
@@ -303,7 +354,7 @@ export default function OpenGuardPage() {
               devolvemos seu dinheiro
             </p>
 
-            <div className="bg-white-theme/50 rounded-xl shadow-xl p-8 mb-8 border-t-4 border-open-guard-theme-dark">
+            <div className="bg-white-theme/50 rounded-xl shadow-xl p-8 mb-8 border-t-4 border-drills-theme-dark">
               <div className="flex flex-col items-center mb-6">
                 <motion.div
                   className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center mb-4"
@@ -316,7 +367,7 @@ export default function OpenGuardPage() {
                     repeat: Infinity,
                   }}
                 >
-                  <RiShieldCheckLine size={68} fill="#8e0007" />
+                  <RiShieldCheckLine size={68} fill="#2563eb" />
                 </motion.div>
                 <h3 className="text-2xl font-bold text-gray-700">
                   Selo de Garantia
@@ -325,9 +376,9 @@ export default function OpenGuardPage() {
 
               <p className="text-gray-700 leading-relaxed mb-6">
                 Tenha acesso completo ao curso por 7 dias. Assista às aulas,
-                aplique as técnicas, e se você sentir que esse conteúdo não está
-                transformando sua meia guarda, basta solicitar o reembolso
-                diretamente pela plataforma.
+                pratique as sequências de drills, e se você sentir que esse
+                conteúdo não está acelerando sua evolução no Jiu-Jitsu, basta
+                solicitar o reembolso diretamente pela plataforma.
               </p>
 
               <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
@@ -343,14 +394,14 @@ export default function OpenGuardPage() {
       <section id="faq" className="py-8 lg:py-16 bg-white">
         <div className="">
           <div className="max-w-3xl mx-4 lg:mx-auto">
-            <h2 className="text-3xl text-open-guard-theme font-semibold text-center mb-8">
+            <h2 className="text-3xl text-drills-theme font-semibold text-center mb-8">
               Perguntas Frequentes
             </h2>
 
-            <FaqSection items={faqHalfGuardItems} />
+            <FaqSection items={faqDrillsItems} />
 
             <div className="text-center mt-8">
-              <h3 className="text-xl text-open-guard-theme font-bold mb-2">
+              <h3 className="text-xl text-drills-theme font-bold mb-2">
                 Ainda tem dúvidas?
               </h3>
               <p className="text-gray-600 mb-6">
@@ -372,9 +423,8 @@ export default function OpenGuardPage() {
           </div>
         </div>
       </section>
-
-      <ProfessorSection type="openGuard" />
+      <ProfessorSection type="drills" />
       <ScrollToTopButton />
-    </div>
+    </main>
   );
 }

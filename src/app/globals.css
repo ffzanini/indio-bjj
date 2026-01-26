@@ -14,6 +14,14 @@
   --color-half-guard-theme-light: #ffcf68;
   --color-half-guard-theme-dark: #916600;
 
+  --color-drills-theme: #2563eb;
+  --color-drills-theme-light: #60a5fa;
+  --color-drills-theme-dark: #1e40af;
+
+  --color-nogi-theme: #d1ff00;
+  --color-nogi-theme-light: #e8ff66;
+  --color-nogi-theme-dark: #a8cc00;
+
   --color-primary-ja: #d1ff00;
   --color-primary-ja-opacity: rgba(209, 255, 0, 0.5);
 }

@@ -21,7 +21,7 @@ export default function HalfGuardPage() {
   const handleWhatsAppClick = () => {
     window.open(
       "https://wa.me/5553981372378?text=Olá!%20Tenho%20dúvidas%20sobre%20o%20curso%20de%20Meia%20Guarda",
-      "_blank"
+      "_blank",
     );
   };
 
@@ -48,7 +48,7 @@ export default function HalfGuardPage() {
     <main>
       <section
         id="hero"
-        className="bg-gradient-to-b from-half-guard-theme-light via-half-guard-theme to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white-theme"
+        className="bg-linear-to-b from-half-guard-theme-light via-half-guard-theme to-dark-theme-background pt-40 pb-12 lg:pb-20 text-white-theme"
       >
         <div className="w-full flex justify-center items-center">
           <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-4 px-4 lg:px-48">
@@ -62,8 +62,8 @@ export default function HalfGuardPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mx-2 lg:mx-auto">
                 <motion.a
-                  className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-                  href="https://pay.hotmart.com/W94160265J?off=ezsf7gfg"
+                  className="relative inline-flex h-12 overflow-hidden rounded-full p-px focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+                  href="https://pay.kiwify.com.br/T8jqqT5"
                   onClick={() =>
                     trackEvent("ButtonClick", { button: "paymentButton" })
                   }
@@ -194,8 +194,8 @@ export default function HalfGuardPage() {
           </div>
           <div className="mx-2 lg:mx-auto">
             <motion.a
-              className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-              href="https://pay.hotmart.com/W94160265J?off=ezsf7gfg"
+              className="relative inline-flex h-12 overflow-hidden rounded-full p-px focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+              href="https://pay.kiwify.com.br/T8jqqT5"
               onClick={() =>
                 trackEvent("ButtonClick", { button: "paymentButton" })
               }
@@ -238,7 +238,7 @@ export default function HalfGuardPage() {
       </section>
       <section id="garantia" className="py-8 lg:py-16 bg-gray-50">
         <div className=" ">
-          <div className="max-w-4xl mx-4 lg:mx-auto text-center">
+          <div className="max-w-6xl mx-4 lg:mx-auto text-center">
             <h2 className="text-3xl text-gray-700 font-semibold mb-2">
               Garantia incondicional de 7 dias
             </h2>

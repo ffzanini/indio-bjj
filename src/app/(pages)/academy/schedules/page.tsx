@@ -27,7 +27,7 @@ interface Holiday {
 export default function Schedule() {
   const { data: holidays = [] } = useSWR("holidays", fetchHolidays);
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(
-    new Date()
+    new Date(),
   );
   const dayNames = [
     "Sunday",
@@ -77,7 +77,7 @@ export default function Schedule() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary-ja via-primary-ja-opacity to-dark-theme text-white">
+    <div className="min-h-screen bg-linear-to-b from-primary-ja via-primary-ja-opacity to-dark-theme text-white">
       <main className="pt-42 pb-12 lg:pb-20">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-dark-theme">
@@ -94,7 +94,7 @@ export default function Schedule() {
 
           <div className="grid gap-2 lg:gap-8 lg:grid-cols-5">
             <Card className="rounded-2xl col-span-full lg:col-span-2 border-black shadow-md bg-white-theme/95 backdrop-blur-sm m-2 lg:m-0">
-              <CardHeader className="rounded-t-2xl border-b border-gray-100 bg-gradient-to-r from-white-theme to-white-theme/90">
+              <CardHeader className="rounded-t-2xl border-b border-gray-100 bg-linear-to-r from-white-theme to-white-theme/90">
                 <CardTitle className="flex items-center gap-2 text-black">
                   <LuCalendar className="h-5 w-5 text-dark-theme" />
                   Selecione um dia
@@ -128,8 +128,8 @@ export default function Schedule() {
                 <CardHeader
                   className={
                     selectedHoliday
-                      ? "rounded-t-2xl border-b border-gray-100 bg-gradient-to-r from-primary-ja to-white"
-                      : "rounded-t-2xl border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white"
+                      ? "rounded-t-2xl border-b border-gray-100 bg-linear-to-r from-primary-ja to-white"
+                      : "rounded-t-2xl border-b border-gray-100 bg-linear-to-r from-gray-50 to-white"
                   }
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
@@ -210,7 +210,7 @@ export default function Schedule() {
                       <p className="text-dark-theme font-medium mb-3">
                         {selectedHoliday
                           ? `Não há aulas agendadas para ${getWeekDay(
-                              selectedDayName
+                              selectedDayName,
                             )} (${selectedHoliday.name}).`
                           : "Não há aulas agendadas para este dia."}
                       </p>

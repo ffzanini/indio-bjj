@@ -88,7 +88,7 @@ export function Footer() {
         </div>
 
         <div className="hidden xl:flex">
-          <div className="flex flex-col mb-1 flex justify-center items-center">
+          <div className="flex flex-col mb-1 justify-center items-center">
             <p className="text-xl font-semibold">Dúvidas sobre onde treinar?</p>
             <p>
               Acesse o{" "}

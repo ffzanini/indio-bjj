@@ -17,7 +17,7 @@ export function FAQ({ items }: Readonly<FAQProps>) {
 
   const toggle = (index: number) => {
     setOpenIndexes((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
     );
   };
 

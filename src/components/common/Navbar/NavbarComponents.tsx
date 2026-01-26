@@ -15,7 +15,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="w-full relative rounded-full border border-transparent bg-dark-theme border-white-theme/20 shadow-input flex justify-center items-center space-x-8 px-1 py-1 "
+      className="w-full relative rounded-full border bg-dark-theme border-transparent shadow-input flex justify-center items-center space-x-8 px-1 py-1 "
     >
       {children}
     </nav>
@@ -47,7 +47,7 @@ export const MenuItem = ({
           animate={{ opacity: 1, scale: 1, y: 0 }}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2 pt-4">
+            <div className="absolute top-[calc(100%+1.7rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 layoutId="active"
                 className="bg-dark-theme backdrop-blur-sm rounded-2xl overflow-hidden border border-white-theme/20 shadow-xl"
@@ -90,7 +90,7 @@ export const ProductItem = ({
         <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
           {title}
         </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+        <p className="text-neutral-700 text-sm max-w-40 dark:text-neutral-300">
           {description}
         </p>
       </div>

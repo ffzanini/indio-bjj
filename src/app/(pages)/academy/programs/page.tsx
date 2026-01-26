@@ -9,7 +9,7 @@ import { programItems } from "@/constants/programs";
 export default function AboutUs() {
   return (
     <main>
-      <section className="bg-gradient-to-b from-primary-ja via-primary-ja to-dark-theme-background pt-42 pb-12 lg:pb-20 text-white-theme mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-linear-to-b from-primary-ja via-primary-ja to-dark-theme-background pt-42 pb-12 lg:pb-20 text-white-theme mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col-reverse gap-12 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-dark-theme">

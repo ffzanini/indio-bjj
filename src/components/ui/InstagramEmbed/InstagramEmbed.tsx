@@ -43,7 +43,7 @@ export function InstagramEmbed({ url, width = 400 }: InstagramEmbedProps) {
       for (const mutation of mutations) {
         if (
           Array.from(mutation.addedNodes).some(
-            (node) => node.nodeName === "IFRAME"
+            (node) => node.nodeName === "IFRAME",
           )
         ) {
           setIsVisible(true);

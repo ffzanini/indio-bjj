@@ -19,7 +19,7 @@ import { motion } from "framer-motion";
 export function Header() {
   return (
     <div className="relative w-full flex items-center justify-center">
-      <Navbar className="top-[0px] lg:top-2" />
+      <Navbar className="top-0 lg:top-2" />
     </div>
   );
 }
@@ -134,6 +134,24 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
               >
                 CURSO GUARDA ABERTA
               </HoveredLink>
+              <HoveredLink
+                href="/courses/drills"
+                onClick={() => {
+                  setMobileOpen(false);
+                  setShowCursos(false);
+                }}
+              >
+                CURSO SEQUÊNCIAS DRILLS
+              </HoveredLink>
+              <HoveredLink
+                href="/courses/nogi"
+                onClick={() => {
+                  setMobileOpen(false);
+                  setShowCursos(false);
+                }}
+              >
+                CURSO FINALIZAÇÕES NOGI
+              </HoveredLink>
             </div>
           )}
           <NavbarLink
@@ -189,6 +207,20 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
                 href="/courses/openguard"
                 src="/images/courses/indio-curso-guarda-aberta.webp"
                 description="Aqui você encontra tudo o que você precisa para sua guarda aberta."
+                onClick={() => setActive("")}
+              />
+              <ProductItem
+                title="Sequências Drills"
+                href="/courses/drills"
+                src="/images/courses/indio-curso-drills.webp"
+                description="Treine as sequências de drills que com certeza irão ajudar na sua evolução."
+                onClick={() => setActive("")}
+              />
+              <ProductItem
+                title="Finalizações NOGI"
+                href="/courses/nogi"
+                src="/images/courses/indio-curso-nogi.webp"
+                description="Aqui você encontra todas as finalizações NOGI que um dia irá precisar."
                 onClick={() => setActive("")}
               />
             </div>

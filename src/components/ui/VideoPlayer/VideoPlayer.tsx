@@ -16,13 +16,53 @@ export function VideoPlayer({
 }: Readonly<VideoPlayerProps>) {
   const [isPlaying, setIsPlaying] = useState(false);
 
+  // Extrai o ID do vídeo se for uma URL completa do YouTube
+  const getVideoId = (url: string): string | null => {
+    if (url.includes("youtube.com/watch?v=")) {
+      return url.split("v=")[1]?.split("&")[0] || null;
+    }
+    if (url.includes("youtube.com/embed/")) {
+      return url.split("embed/")[1]?.split("?")[0] || null;
+    }
+    if (url.includes("youtu.be/")) {
+      return url.split("youtu.be/")[1]?.split("?")[0] || null;
+    }
+    return null;
+  };
+
+  // Converte URL para formato embed se necessário
+  const getEmbedUrl = (url: string): string => {
+    // Se já for um embed URL, retorna como está
+    if (url.includes("youtube.com/embed/")) {
+      return url;
+    }
+    
+    // Tenta extrair o ID e criar o embed URL
+    const videoId = getVideoId(url);
+    if (videoId) {
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+    }
+    
+    // Se não conseguir, retorna a URL original
+    return url;
+  };
+
+  const embedUrl = getEmbedUrl(videoUrl);
+  const watchUrl = videoUrl.includes("youtube.com/watch") 
+    ? videoUrl 
+    : `https://www.youtube.com/watch?v=${getVideoId(videoUrl) || ""}`;
+
+  const handlePlayClick = () => {
+    setIsPlaying(true);
+  };
+
   return (
-    <div className="mx-6 border-4 border-white/10 shadow-2xl rounded-xl lg:mx-0">
-      <div className="relative rounded-xl overflow-hidden w-full max-w-3xl aspect-video">
+    <div className="mx-6 lg:mx-0">
+      <div className="relative rounded-xl overflow-hidden w-full max-w-3xl aspect-video border-4 border-white/10 shadow-2xl">
         {!isPlaying ? (
           <button
             className="relative cursor-pointer w-full h-full"
-            onClick={() => setIsPlaying(true)}
+            onClick={handlePlayClick}
           >
             <Image
               src={thumbnailUrl}
@@ -43,16 +83,17 @@ export function VideoPlayer({
                 </svg>
               </div>
             </div>
-            <div className="absolute bottom-4 left-4 right-4 text-white font-bold text-lg md:text-xl text-center md:text-left">
+            <div className="absolute bottom-4 left-4 right-4 text-white font-bold text-lg md:text-xl text-center md:text-left text-outline-shadow-black">
               {videoDescription}
             </div>
           </button>
         ) : (
           <iframe
-            src={videoUrl}
+            src={embedUrl}
             title={videoTitle}
             allow="autoplay; encrypted-media; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             className="w-full h-full"
+            allowFullScreen
           />
         )}
       </div>

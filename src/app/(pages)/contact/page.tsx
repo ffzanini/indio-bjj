@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 export default function Contact() {
   return (
     <main>
-      <section className="bg-gradient-to-b from-primary-ja via-primary-ja to-dark-theme-background pt-42 pb-12 lg:pb-20 text-white-theme mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-linear-to-b from-primary-ja via-primary-ja to-dark-theme-background pt-42 pb-12 lg:pb-20 text-white-theme mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col-reverse gap-12 items-center">
           <div className="text-center lg:text-left max-w-7xl">
             <h1 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-dark-theme">
@@ -138,7 +138,7 @@ export default function Contact() {
                     scale: 1.2,
                     transition: { duration: 0.3 },
                   }}
-                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300 bg-primary-ja rounded-full transition-colors"
+                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300 bg-primary-ja rounded-full"
                 >
                   <RiInstagramLine size={32} fill="#111" />
                 </motion.a>
@@ -150,7 +150,7 @@ export default function Contact() {
                     scale: 1.2,
                     transition: { duration: 0.3 },
                   }}
-                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300 bg-primary-ja rounded-full transition-colors"
+                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300 bg-primary-ja rounded-full"
                 >
                   <RiFacebookLine size={32} fill="#111" />
                 </motion.a>
@@ -161,7 +161,7 @@ export default function Contact() {
                     scale: 1.2,
                     transition: { duration: 0.3 },
                   }}
-                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300 bg-primary-ja rounded-full transition-colors"
+                  className="p-2 flex justify-center items-center hover:brightness-250 transition-all duration-300 bg-primary-ja rounded-full"
                 >
                   <RiGoogleLine size={32} fill="#111" />
                 </motion.a>
