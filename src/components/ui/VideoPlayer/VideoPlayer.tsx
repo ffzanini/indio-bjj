@@ -40,7 +40,8 @@ export function VideoPlayer({
     // Tenta extrair o ID e criar o embed URL
     const videoId = getVideoId(url);
     if (videoId) {
-      return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+      const origin = typeof window !== 'undefined' ? window.location.origin : '';
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${origin}&iv_load_policy=3`;
     }
     
     // Se não conseguir, retorna a URL original
@@ -59,10 +60,12 @@ export function VideoPlayer({
   return (
     <div className="mx-6 lg:mx-0">
       <div className="relative rounded-xl overflow-hidden w-full max-w-3xl aspect-video border-4 border-white/10 shadow-2xl">
-        {!isPlaying ? (
+        {!isPlaying && (
           <button
-            className="relative cursor-pointer w-full h-full"
+            className="relative cursor-pointer w-full h-full z-10"
             onClick={handlePlayClick}
+            type="button"
+            aria-label={`Reproduzir vídeo: ${videoTitle}`}
           >
             <Image
               src={thumbnailUrl}
@@ -87,15 +90,25 @@ export function VideoPlayer({
               {videoDescription}
             </div>
           </button>
-        ) : (
-          <iframe
-            src={embedUrl}
-            title={videoTitle}
-            allow="autoplay; encrypted-media; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            className="w-full h-full"
-            allowFullScreen
-          />
         )}
+        <iframe
+          key={`${embedUrl}-${isPlaying}`}
+          src={isPlaying ? embedUrl : undefined}
+          title={videoTitle}
+          allow="autoplay; encrypted-media; accelerometer; clipboard-write; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          playsInline
+          className="w-full h-full absolute inset-0"
+          style={{ 
+            border: 'none',
+            width: '100%',
+            height: '100%',
+            minHeight: '315px',
+            display: isPlaying ? 'block' : 'none'
+          }}
+          loading="lazy"
+          frameBorder="0"
+        />
       </div>
     </div>
   );

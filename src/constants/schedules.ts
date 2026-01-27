@@ -94,7 +94,7 @@ export const weeklyClasses: WeeklySchedule = {
       subject: "Treino Feminino",
       startTime: "11:00",
       endTime: "12:00",
-      instructor: "Fabiano Índio",
+      instructor: "Monique Valadão",
       navigation: "/academy/programs/feminino",
     },
     {
@@ -218,7 +218,7 @@ export const weeklyClasses: WeeklySchedule = {
       subject: "Treino Feminino",
       startTime: "11:00",
       endTime: "12:00",
-      instructor: "Fabiano Índio",
+      instructor: "Monique Valadão",
       navigation: "/academy/programs/feminino",
     },
     {
