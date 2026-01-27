@@ -97,7 +97,6 @@ export function VideoPlayer({
           title={videoTitle}
           allow="autoplay; encrypted-media; accelerometer; clipboard-write; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-          playsInline
           className="w-full h-full absolute inset-0"
           style={{ 
             border: 'none',
