@@ -12,46 +12,94 @@ import {
   SetInitialLanguage,
 } from "@/components";
 
+import { DEFAULT_KEYWORDS_STRING, SITE_NAME, SITE_URL } from "@/constants/seo";
+
 import { fontMontserrat } from "./fonts";
 
 import "./globals.css";
 
+const defaultDescription =
+  "Academia de Jiu Jitsu em Pelotas. JA Índio Jiu Jitsu: aulas e cursos de Jiu-Jitsu para todas as idades e níveis em Pelotas. Cursos de meia guarda, guarda aberta, nogi e drills com Fabiano Índio. Agende sua aula experimental de Jiu Jitsu em Pelotas.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://indiobjj.com.br"),
-  title: "JA Índio Jiu Jitsu | Índio Jiu Jitsu",
-  description:
-    "Na JA Índio Jiu-Jitsu, nossos professores experientes e dedicados estão comprometidos em oferecer uma orientação personalizada, promovendo o crescimento técnico e pessoal de cada aluno. Criamos um ambiente acolhedor, respeitoso e motivador, onde praticantes de todos os níveis se sentem parte de uma verdadeira família. Aqui, o Jiu-Jitsu vai além da arte marcial — é uma ferramenta de transformação, disciplina e autoconfiança.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `Jiu Jitsu em Pelotas | ${SITE_NAME} - Academia de Jiu Jitsu Pelotas`,
+    template: `%s | ${SITE_NAME} - Jiu Jitsu Pelotas`,
+  },
+  description: defaultDescription,
+  keywords: DEFAULT_KEYWORDS_STRING,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  alternates: {
+    canonical: SITE_URL,
+  },
   icons: "/favicon.ico",
   openGraph: {
     type: "website",
-    url: "https://indiobjj.com.br",
-    title: "JA Índio Jiu Jitsu | Índio Jiu Jitsu",
-    description:
-      "Na JA Índio Jiu-Jitsu, nossos professores experientes e dedicados estão comprometidos em oferecer uma orientação personalizada, promovendo o crescimento técnico e pessoal de cada aluno. Criamos um ambiente acolhedor, respeitoso e motivador, onde praticantes de todos os níveis se sentem parte de uma verdadeira família. Aqui, o Jiu-Jitsu vai além da arte marcial — é uma ferramenta de transformação, disciplina e autoconfiança.",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "pt_BR",
+    title: `Jiu Jitsu em Pelotas | ${SITE_NAME} - Academia de Jiu Jitsu Pelotas`,
+    description: defaultDescription,
     images: [
       {
-        url: "/images/visit-card.png",
+        url: `${SITE_URL}/images/visit-card.png`,
         width: 1120,
         height: 630,
-        alt: "JA Índio Jiu Jitsu | Índio Jiu Jitsu",
+        alt: `${SITE_NAME} - Academia de Jiu Jitsu em Pelotas`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "JA Índio Jiu Jitsu | Índio Jiu Jitsu",
-    description:
-      "Na JA Índio Jiu-Jitsu, nossos professores experientes e dedicados estão comprometidos em oferecer uma orientação personalizada, promovendo o crescimento técnico e pessoal de cada aluno. Criamos um ambiente acolhedor, respeitoso e motivador, onde praticantes de todos os níveis se sentem parte de uma verdadeira família. Aqui, o Jiu-Jitsu vai além da arte marcial — é uma ferramenta de transformação, disciplina e autoconfiança.",
-    images: ["/images/visit-card.png"],
+    title: `Jiu Jitsu em Pelotas | ${SITE_NAME} - Academia de Jiu Jitsu Pelotas`,
+    description: defaultDescription,
+    images: [`${SITE_URL}/images/visit-card.png`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  verification: {
+    // Adicione aqui quando tiver: google: "seu-codigo-google-search-console",
   },
   other: {
-    "script:ld+json": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "JA Índio Jiu Jitsu | Índio Jiu Jitsu",
-      url: "https://indiobjj.com.br",
-      jobTitle: "Jiu Jitsu",
-    }),
+    google: "notranslate",
+  },
+};
+
+const jsonLdLocalBusiness = {
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  name: SITE_NAME,
+  description: defaultDescription,
+  url: SITE_URL,
+  image: `${SITE_URL}/images/visit-card.png`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Pelotas",
+    addressRegion: "RS",
+    addressCountry: "BR",
+  },
+  areaServed: {
+    "@type": "City",
+    name: "Pelotas",
+  },
+  sameAs: [],
+  potentialAction: {
+    "@type": "JoinAction",
+    target: {
+      "@type": "EntryPoint",
+      url: "https://wa.me/5553991886599",
+      actionPlatform: ["http://schema.org/WhatsApp"],
+    },
+    name: "Agendar aula experimental de Jiu Jitsu",
   },
 };
 
@@ -61,8 +109,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt" translate="no" suppressHydrationWarning>
-      <meta name="google" content="notranslate" />
+    <html lang="pt-BR" translate="no" suppressHydrationWarning>
       <Script
         id="google-id-openguard"
         strategy="afterInteractive"
@@ -75,6 +122,12 @@ export default function RootLayout({
         }}
       />
       <body className={`${fontMontserrat.className} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdLocalBusiness),
+          }}
+        />
         <noscript
           dangerouslySetInnerHTML={{
             __html: `

@@ -60,9 +60,9 @@ export default function ProgramsDetailView({
         <section className="py-8">
           <div className="flex flex-col items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-2xl lg:text-4xl font-bold mb-6 lg:mb-8 text-white-theme">
+              <h2 className="text-2xl lg:text-4xl font-bold mb-6 lg:mb-8 text-white-theme">
                 Benefícios de se juntar ao programa {program.title}
-              </h1>
+              </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
               {program.benefits.map((benefit, index) => (

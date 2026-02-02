@@ -60,9 +60,9 @@ export default function PricipalPage() {
           }}
           className="z-50 flex flex-col justify-center items-center px-4"
         >
-          <motion.p className="font-bold text-3xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+          <motion.h1 className="font-bold text-3xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
             Jiu Jitsu de alta qualidade, <br /> transformando vidas
-          </motion.p>
+          </motion.h1>
           <motion.p className="text-center text-2xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200 py-4">
             Aulas para todos os níveis e idades. <br /> Marque uma aula
             experimental e venha fazer parte da família JA Índio Jiu Jitsu

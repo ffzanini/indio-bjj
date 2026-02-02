@@ -5,7 +5,13 @@ const config = {
   sitemapSize: 5000,
   changefreq: "monthly",
   priority: 0.7,
-  exclude: [],
+  exclude: [
+    "/opengraph-image*",
+    "/twitter-image*",
+    "/apple-icon*",
+    "/manifest.json",
+    "/favicon.ico",
+  ],
   robotsTxtOptions: {
     policies: [
       {
@@ -15,14 +21,59 @@ const config = {
     ],
   },
   additionalPaths: async (config) => {
+    const transform = config.transform;
     return [
-      await config.transform(config, "/"),
-      await config.transform(config, "/academy/about-us"),
-      await config.transform(config, "/academy/programs"),
-      await config.transform(config, "/academy/schedules"),
-      await config.transform(config, "/contact"),
-      await config.transform(config, "/courses/halfguard"),
-      await config.transform(config, "/courses/openguard"),
+      { ...(await transform(config, "/")), priority: 1, changefreq: "weekly" },
+      {
+        ...(await transform(config, "/academy/about-us")),
+        priority: 0.9,
+        changefreq: "monthly",
+      },
+      {
+        ...(await transform(config, "/academy/programs")),
+        priority: 0.9,
+        changefreq: "monthly",
+      },
+      {
+        ...(await transform(config, "/academy/schedules")),
+        priority: 0.9,
+        changefreq: "monthly",
+      },
+      {
+        ...(await transform(config, "/academy/testimonials")),
+        priority: 0.8,
+        changefreq: "monthly",
+      },
+      {
+        ...(await transform(config, "/contact")),
+        priority: 0.9,
+        changefreq: "monthly",
+      },
+      {
+        ...(await transform(config, "/courses")),
+        priority: 0.9,
+        changefreq: "monthly",
+      },
+      {
+        ...(await transform(config, "/courses/halfguard")),
+        priority: 0.8,
+        changefreq: "monthly",
+      },
+      {
+        ...(await transform(config, "/courses/openguard")),
+        priority: 0.8,
+        changefreq: "monthly",
+      },
+      {
+        ...(await transform(config, "/courses/nogi")),
+        priority: 0.8,
+        changefreq: "monthly",
+      },
+      {
+        ...(await transform(config, "/courses/drills")),
+        priority: 0.8,
+        changefreq: "monthly",
+      },
     ];
   },
 };
