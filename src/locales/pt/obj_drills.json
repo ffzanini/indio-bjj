@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "title": "Melhore seu gás, mobilidade e consciência no tatame",
+    "subtitle": "Construa uma base sólida e sinta confiança em qualquer situação no tatame.",
+    "cta": "QUERO MINHA VAGA",
+    "students": "+1000 alunos",
+    "lifetime": "Acesso vitalício",
+    "guarantee": "Garantia de 7 dias",
+    "videoTitle": "Curso de Sequências Drills",
+    "videoDescription": "Melhore seu gás, mobilidade e consciência no tatame"
+  },
+  "problems": {
+    "title": "Se identificou?",
+    "items": [
+      "Assiste um monte de vídeo e não consegue usar nada no rola",
+      "Trava no meio do rola e esquece o que fazer",
+      "Sente que falta mobilidade, fluidez e segurança nas posições",
+      "Parceiros menos graduados te passam porque sua base ainda não tá lá",
+      "Tem medo de se lesionar fazendo as coisas errado"
+    ],
+    "key": "Drills são o que constroem fluidez, mobilidade e confiança no tatame.",
+    "description": "Curso prático e direto ao ponto. Passo a passo, você domina os movimentos que importam e muda sua base no Jiu-Jitsu. Sem enrolação. Só o que funciona."
+  },
+  "benefits": {
+    "title": "O que você vai aprender",
+    "subtitle": "Passo a passo, sem enrolação — dominar os movimentos que formam sua base no Jiu-Jitsu",
+    "items": [
+      {
+        "icon": "🏃",
+        "title": "Drills de Mobilidade e Performance",
+        "description": "Drills que melhoram mobilidade, performance e ajudam a evitar lesões. Você se move melhor e mais seguro em toda posição."
+      },
+      {
+        "icon": "💡",
+        "title": "Nunca Mais Dar Branco",
+        "description": "A clareza que você precisa pra sempre saber o que fazer no rola."
+      },
+      {
+        "icon": "🌊",
+        "title": "Fluidez e Eficiência",
+        "description": "Aprenda a fluir entre posições com segurança. Sua base vai mudar de nível."
+      },
+      {
+        "icon": "🎯",
+        "title": "Movimentos Fundamentais",
+        "description": "Rolamentos, fuga de quadril, levantada técnica — o que todo lutador precisa, explicado direitinho."
+      },
+      {
+        "icon": "⚔️",
+        "title": "Usar no Rola",
+        "description": "Como levar pro treino e pro campeonato o que você aprende. Teoria vira tatame."
+      },
+      {
+        "icon": "📱",
+        "title": "Acesso Vitalício",
+        "description": "Mais de 60 aulas, passo a passo. Seu pra sempre."
+      }
+    ]
+  },
+  "directBenefits": {
+    "title": "O que você ganha",
+    "evolve": {
+      "title": "Evoluir mais rápido",
+      "desc": "Evolua sem decorar centenas de posições. Foque no que realmente funciona."
+    },
+    "clean": {
+      "title": "Jogo limpo, seguro e eficiente",
+      "desc": "Faça as posições certas, fique seguro e se mova bem. Menos lesão, mais fluidez."
+    },
+    "confidence": {
+      "title": "Mais confiança no tatame",
+      "desc": "Sinta confiança em qualquer situação quando sua base tiver sólida."
+    },
+    "mobility": {
+      "title": "Mobilidade e resistência",
+      "desc": "Movimente-se melhor, aguente mais e reduza o risco de lesão."
+    }
+  },
+  "cta": {
+    "title": "Pare de ser amassado ou travar no meio do rola",
+    "subtitle": "Dê o próximo passo: construa uma base que muda como você se move, como você se sente seguro e como você confia no treino.",
+    "priceTitle": "Quanto vale evoluir seu Jiu-Jitsu?",
+    "from": "Você recebe tudo isso por",
+    "price": "R$ 89,90 à vista",
+    "installments": "ou 12x R$ 9,30",
+    "fullCourse": "Curso completo — mais de 60 aulas",
+    "button": "QUERO MINHA VAGA"
+  },
+  "guarantee": {
+    "title": "Garantia de 7 dias, sem burocracia",
+    "subtitle": "Se não for o investimento certo pro seu Jiu-Jitsu, devolvemos seu dinheiro.",
+    "seal": "Garantia",
+    "description": "Teste o curso inteiro por 7 dias. Assista, treine, e se não estiver ajudando seu jogo, solicite o reembolso pela plataforma. Simples.",
+    "noQuestions": "Sem perguntas. Reembolso total do seu investimento."
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "stillDoubts": "Ainda tem dúvidas?",
+    "description": "Estamos aqui pra ajudar. Pergunte o que quiser sobre o curso.",
+    "whatsapp": "Chama no WhatsApp",
+    "items": [
+      {
+        "question": "O curso é pra iniciantes ou avançados?",
+        "answer": "Os dois. Os drills vão do básico ao mais complexo, então você evolui no seu ritmo."
+      },
+      {
+        "question": "Por quanto tempo tenho acesso?",
+        "answer": "Vitalício. Depois que comprar, é seu — incluindo atualizações futuras."
+      },
+      {
+        "question": "Consigo assistir no celular?",
+        "answer": "Sim. Funciona no computador, tablet ou celular — onde você treinar ou assistir."
+      },
+      {
+        "question": "Como funciona a garantia de 7 dias?",
+        "answer": "Teste por 7 dias. Não gostou? Solicite o reembolso. Sem burocracia."
+      }
+    ]
+  }
+}

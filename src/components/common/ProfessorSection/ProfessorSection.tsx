@@ -1,12 +1,15 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { RiStarLine } from "react-icons/ri";
+import { useTranslation } from "@/context";
 
 interface ProfessorSectionProps {
   type?: "halfGuard" | "openGuard" | "drills" | "nogi" | "neutral";
 }
 
 export function ProfessorSection({ type = "neutral" }: ProfessorSectionProps) {
+  const { translations: t } = useTranslation();
   const typeColors: Record<string, { text: string; border: string }> = {
     halfGuard: {
       border: "border-half-guard-theme",
@@ -25,27 +28,27 @@ export function ProfessorSection({ type = "neutral" }: ProfessorSectionProps) {
       text: "text-nogi-theme",
     },
     neutral: {
-      border: "border-gray-400",
-      text: "text-gray-400",
+      border: "border-muted-foreground",
+      text: "text-muted-foreground",
     },
   };
 
   const { border, text } = typeColors[type] ?? typeColors.neutral;
 
   return (
-    <section id="instrutor" className="py-8 lg:py-16 bg-gray-50">
+    <section id="instrutor" className="py-8 lg:py-16 bg-foreground/5">
       <div className="">
         <div className="max-w-5xl mx-4 lg:mx-auto text-center">
           <h2
             className={`text-3xl ${type === "nogi" ? "text-primary-ja font-semibold tracking-wider text-outline-shadow-black" : `${text} font-semibold`} mb-8`}
           >
-            Conheça o Professor
+            {t.professor.title}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-4 text-center">
               <div className="relative inline-block">
                 <div
-                  className="relative overflow-hidden rounded-full border-4 border-white shadow-xl"
+                  className="relative overflow-hidden rounded-full border-4 border-background shadow-xl"
                   style={{ width: "250px", height: "250px" }}
                 >
                   <Image
@@ -62,17 +65,17 @@ export function ProfessorSection({ type = "neutral" }: ProfessorSectionProps) {
                 </div>
 
                 <div
-                  className={`absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-dark-theme border-2 ${border} text-white-theme px-3 py-2 rounded-full text-sm font-semibold`}
+                  className={`absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-foreground border-2 ${border} text-background px-3 py-2 rounded-full text-sm font-semibold`}
                 >
-                  Faixa Preta 3º Grau
+                  {t.professor.belt}
                 </div>
               </div>
 
               <div className="mt-12 space-y-4">
                 <div className="flex items-center justify-center font-semibold">
-                  <RiStarLine className="w-6 h-6 mr-2" fill="dark-theme" />
-                  <span className="text-dark-theme">
-                    20+ Anos de Experiência
+                  <RiStarLine className="w-6 h-6 mr-2 text-foreground" />
+                  <span className="text-foreground">
+                    {t.professor.experience}
                   </span>
                 </div>
               </div>
@@ -82,37 +85,32 @@ export function ProfessorSection({ type = "neutral" }: ProfessorSectionProps) {
               <h3
                 className={`${type === "nogi" ? "text-primary-ja font-semibold tracking-wider text-outline-shadow-black" : `${text} font-semibold`} text-2xl mb-4`}
               >
-                Prof. Fabiano Índio
+                {t.professor.name}
               </h3>
 
               <div className="space-y-6">
-                <p className="text-left text-gray-700 leading-relaxed mb-4">
-                  Fundador da escola{" "}
-                  <b className="text-gray-600">Índio Jiu Jitsu Team</b> afiliada
-                  da <b className="text-gray-600">JA Índio Jiu Jitsu</b>, é
-                  também criador da página{" "}
+                <p className="text-left text-foreground leading-relaxed mb-4">
+                  {t.professor.bioBeforeLink}
+                  <b className="text-muted-foreground">{t.professor.bioBold1}</b>
+                  {t.professor.bioMiddle}
+                  <b className="text-muted-foreground">{t.professor.bioBold2}</b>
+                  {t.professor.bioLinkText}
                   <a
-                    className="text-gray-600 font-semibold"
+                    className="text-muted-foreground font-semibold"
                     href="https://www.instagram.com/indiodrills/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     @indiodrills
-                  </a>{" "}
-                  e um dos professores mais respeitados do Brasil. Com anos de
-                  dedicação ao esporte e à formação de campeões, Índio traz uma
-                  abordagem única e eficiente para o ensino de todas as suas
-                  técnicas. Isso se deve pela sua didática de ensino que engloba
-                  os mais variados biotipos de alunos. Não perca tempo e venha
-                  também ser um aluno!
+                  </a>
+                  {t.professor.bioAfterLink}
                 </p>
 
                 <div
-                  className={`bg-white-theme/50 rounded-xl shadow-lg p-6 border-l-8 ${border} text-3xl font-bold mb-4`}
+                  className={`bg-card/50 rounded-xl shadow-lg p-6 border-l-8 ${border} text-3xl font-bold mb-4 dark:bg-card/80`}
                 >
-                  <p className="italic text-base text-gray-600">
-                    &quot;Minha missão é transmitir não apenas técnicas, mas
-                    também os valores da arte marcial, preparando os alunos para
-                    os desafios da vida.&quot;
+                  <p className="italic text-base text-foreground/80">
+                    {t.professor.quote}
                   </p>
                 </div>
               </div>

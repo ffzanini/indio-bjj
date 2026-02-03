@@ -22,17 +22,17 @@ export function FAQ({ items }: Readonly<FAQProps>) {
   };
 
   return (
-    <div className="bg-white w-full space-y-2">
+    <div className="bg-card w-full space-y-2">
       {items.map((item, index) => {
         const isOpen = openIndexes.includes(index);
         return (
           <div
             key={index}
-            className="border rounded-lg overflow-hidden transition-all duration-300"
+            className="border border-foreground/20 rounded-lg overflow-hidden transition-all duration-300 bg-card"
           >
             <button
               onClick={() => toggle(index)}
-              className="group flex w-full justify-between items-center p-4 font-medium text-left text-gray-600"
+              className="group flex w-full justify-between items-center p-4 font-medium text-left text-foreground"
             >
               <span>{item.question}</span>
               <RiArrowDownLine
@@ -43,7 +43,7 @@ export function FAQ({ items }: Readonly<FAQProps>) {
               />
             </button>
             <div
-              className={`grid transition-all duration-300 text-gray-600 px-4 overflow-hidden ${
+              className={`grid transition-all duration-300 text-muted-foreground px-4 overflow-hidden ${
                 isOpen ? "grid-rows-[1fr] py-4" : "grid-rows-[0fr] py-0"
               }`}
             >

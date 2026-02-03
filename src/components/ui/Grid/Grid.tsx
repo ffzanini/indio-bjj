@@ -11,8 +11,8 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid max-w-7xl grid-cols-1 gap-6 md:auto-rows-[21rem] md:grid-cols-4",
-        className
+        "grid max-w-7xl grid-cols-1 gap-6 auto-rows-[19rem] md:grid-cols-4",
+        className,
       )}
     >
       {children}
@@ -36,18 +36,28 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-3 transition duration-200 hover:shadow-xl dark:border-white/20 dark:bg-black dark:shadow-none",
-        className
+        "group/bento shadow-input row-span-1 flex h-full min-h-52 flex-col rounded-xl border border-foreground/20 bg-card p-3 transition duration-200 hover:shadow-xl dark:border-white/20 dark:bg-[#1f1f23] dark:shadow-none",
+        className,
       )}
     >
-      <Image src={header} width={1280} height={800} alt={header} />
-      <div className="transition duration-200 group-hover/bento:translate-x-2">
-        <div className="flex flex-row gap-2 items-center justify-start mt-2 mb-2 font-sans text-xl font-bold text-neutral-600 dark:text-neutral-200">
-          {Icon && <Icon />}
-          {title}
+      <div className="relative h-32 w-full shrink-0 overflow-hidden rounded-lg">
+        <Image
+          src={header}
+          width={1280}
+          height={800}
+          alt={header}
+          className="h-full w-full object-cover"
+        />
+      </div>
+      <div className="flex min-h-0 flex-1 flex-col pt-2 transition duration-200 group-hover/bento:translate-x-2 text-left">
+        <div className="flex flex-row gap-2 items-center justify-start font-sans text-xl font-bold text-neutral-600 dark:text-neutral-200 shrink-0">
+          {Icon && <Icon className="shrink-0" />}
+          <span className="line-clamp-2">{title}</span>
         </div>
-        <div className="font-sans text-sm font-normal text-neutral-600 dark:text-neutral-300">
-          {description}
+        <div className="flex flex-1 min-h-0 flex-col justify-center">
+          <p className="font-sans text-sm font-normal text-neutral-600 dark:text-neutral-300 line-clamp-4">
+            {description}
+          </p>
         </div>
       </div>
     </div>

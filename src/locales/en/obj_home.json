@@ -1,3 +1,39 @@
 {
-  "welcome": "Welcome! Nice to meet you."
+  "welcome": "Welcome! Good to have you here.",
+  "hero": {
+    "titleLine1": "Real Jiu-Jitsu,",
+    "titleLine2": "real change",
+    "title": "Real Jiu-Jitsu, real change",
+    "subtitleLine1": "Classes for all levels and ages.",
+    "subtitleLine2": "Book a free trial and join the JA Índio Jiu Jitsu family.",
+    "cta": "Book a",
+    "ctaBold": "free class",
+    "ctaSuffix": "today"
+  },
+  "firstClass": {
+    "title1": "LET'S GET YOU",
+    "title2": "ON THE MAT",
+    "description": "Jiu-Jitsu isn't just fighting — it's finding out what you're made of. Try your first class and feel the difference from day one. Your journey starts here.",
+    "cta": "Book your free trial below!"
+  },
+  "programs": {
+    "title1": "OUR",
+    "title2": "PROGRAMS"
+  },
+  "testimonials": {
+    "title1": "What our students say",
+    "title2": "Hear it from the mat"
+  },
+  "carousel": [
+    { "title": "Beginner", "subtitle": "Jiu Jitsu" },
+    { "title": "Intermediate", "subtitle": "Jiu Jitsu" },
+    { "title": "Advanced", "subtitle": "Jiu Jitsu" },
+    { "title": "Competition", "subtitle": "Jiu Jitsu" },
+    { "title": "Baby, Kids & Teen", "subtitle": "Jiu Jitsu" },
+    { "title": "35+", "subtitle": "Jiu Jitsu" },
+    { "title": "NO GI", "subtitle": "Jiu Jitsu" },
+    { "title": "Women's", "subtitle": "Jiu Jitsu" },
+    { "title": "Night Owl", "subtitle": "Jiu Jitsu" },
+    { "title": "Private Lessons", "subtitle": "Jiu Jitsu" }
+  ]
 }

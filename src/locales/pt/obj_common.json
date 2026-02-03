@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "home": "Início",
+    "academy": "Academia",
+    "programs": "Programas",
+    "schedules": "Horários",
+    "testimonials": "Depoimentos",
+    "courses": "Cursos",
+    "courseHalfGuard": "Curso Meia Guarda",
+    "courseOpenGuard": "Curso Guarda Aberta",
+    "courseDrills": "Curso Sequências Drills",
+    "courseNogi": "Curso Finalizações NOGI",
+    "contact": "Contato",
+    "courseHalfGuardTitle": "Meia Guarda",
+    "courseOpenGuardTitle": "Guarda Aberta",
+    "courseDrillsTitle": "Sequências Drills",
+    "courseNogiTitle": "Finalizações NOGI",
+    "courseHalfGuardDesc": "A especialidade da casa — eleve sua meia guarda como nunca.",
+    "courseOpenGuardDesc": "Tudo o que você precisa para transformar sua guarda aberta em arma.",
+    "courseDrillsDesc": "Sequências de drills que de fato fazem sua evolução andar.",
+    "courseNogiDesc": "Todas as finalizações NO-GI que você precisa, direto ao ponto."
+  },
+  "footer": {
+    "motto": "Honra, moral, respeito e lealdade.",
+    "address": "Rua Doutor Amarante 779, Pelotas, Rio Grande do Sul, Brasil",
+    "phone": "Telefone: ",
+    "email": "Email: ",
+    "academySocials": "Redes da Academia",
+    "indioSocials": "Redes do Mestre Índio",
+    "doubts": "Procurando onde treinar?",
+    "officialSite": "site oficial",
+    "officialSiteBefore": "Acesse o ",
+    "officialSiteAfter": " da nossa matriz e conheça nossa história, programas e unidades perto de você. Não perca tempo — venha treinar com a gente!",
+    "copyright": "©{{year}} Índio Jiu Jitsu | Todos os direitos reservados",
+    "developedBy": "Desenvolvido por "
+  },
+  "buttons": {
+    "scheduleNow": "Agendar agora",
+    "scheduleFreeClass": "Agendar uma aula grátis agora",
+    "backHome": "Voltar pra casa",
+    "learnMore": "Conheça mais →",
+    "backToPrograms": "Não é o que procurava? Voltar aos programas"
+  },
+  "labels": {
+    "professors": "Professor(es):",
+    "availableClasses": "Aulas Disponíveis",
+    "specialEvent": "Evento Especial"
+  },
+  "otherCourses": {
+    "title": "Outros cursos",
+    "subtitle": "Confira nossos outros cursos e encontre o que combina com você."
+  }
+}

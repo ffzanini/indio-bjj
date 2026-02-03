@@ -1,0 +1,61 @@
+{
+  "title": "Our Programs",
+  "subtitle": "Explore our programs and find your place on the mat",
+  "programs": [
+    {
+      "id": 1,
+      "title": "Beginner",
+      "description": "Start your Jiu-Jitsu journey with a solid base. We keep it clear and doable for everyone."
+    },
+    {
+      "id": 2,
+      "title": "Intermediate",
+      "description": "Level up your technique and add more tools. Classes built for real progress."
+    },
+    {
+      "id": 3,
+      "title": "Advanced",
+      "description": "Details, strategy, and complex situations. For when you're ready to go deeper."
+    },
+    {
+      "id": 4,
+      "title": "Competition",
+      "description": "Get competition-ready: intensity, rules, and live rolling. Built for athletes who compete."
+    },
+    {
+      "id": 5,
+      "title": "Baby, Kids & Teen",
+      "description": "Fun, discipline, and coordination for kids and teens. Learning that sticks."
+    },
+    {
+      "id": 6,
+      "title": "Executive (35+)",
+      "description": "For adults who want to train smart: health, technique, and a pace that works for you."
+    },
+    {
+      "id": 7,
+      "title": "NO GI",
+      "description": "No-gi grappling focused on movement and submissions. Adapt and flow."
+    },
+    {
+      "id": 8,
+      "title": "Women's",
+      "description": "A space for women: confidence, self-defense, and performance on the mat."
+    },
+    {
+      "id": 9,
+      "title": "Night Owl",
+      "description": "Late classes for those who train after dark. Same quality, different schedule."
+    },
+    {
+      "id": 10,
+      "title": "Private Lessons",
+      "description": "One-on-one time to speed up your learning or work on specific goals with a dedicated professor."
+    },
+    {
+      "id": 11,
+      "title": "Open mat",
+      "description": "Your time on the mat. Drill, experiment, and build your game your way."
+    }
+  ]
+}

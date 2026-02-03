@@ -2,6 +2,7 @@ import { GiKimono } from "react-icons/gi";
 
 export const programItems = [
   {
+    id: 1,
     title: "Iniciante",
     description:
       "Comece sua jornada no Jiu-Jitsu com uma base sólida e uma didática acessível para todos os níveis.",
@@ -10,6 +11,7 @@ export const programItems = [
     navigation: "/academy/programs/iniciante",
   },
   {
+    id: 2,
     title: "Intermediário",
     description:
       "Aprimore suas técnicas e aumente seu repertório com aulas voltadas ao progresso técnico e tático.",
@@ -18,6 +20,7 @@ export const programItems = [
     navigation: "/academy/programs/intermediario",
   },
   {
+    id: 3,
     title: "Avançado",
     description:
       "Treinamentos com foco nos detalhes, estratégias de luta e cenários complexos de combate.",
@@ -26,6 +29,7 @@ export const programItems = [
     navigation: "/academy/programs/avancado",
   },
   {
+    id: 4,
     title: "Competição",
     description:
       "Preparação específica para campeonatos, com foco em intensidade, regras e combate real.",
@@ -34,6 +38,7 @@ export const programItems = [
     navigation: "/academy/programs/competicao",
   },
   {
+    id: 5,
     title: "Baby, Kids e Teen",
     description:
       "Aulas educativas para crianças e adolescentes, com foco na disciplina, coordenação e diversão.",
@@ -42,6 +47,7 @@ export const programItems = [
     navigation: "/academy/programs/baby-kids-teen",
   },
   {
+    id: 6,
     title: "Executivo (35+)",
     description:
       "Voltado ao público maduro, com foco em saúde, bem-estar e aprendizado técnico no ritmo certo.",
@@ -50,6 +56,7 @@ export const programItems = [
     navigation: "/academy/programs/executivo",
   },
   {
+    id: 7,
     title: "NO GI",
     description:
       "Treinos sem kimono com foco em movimentação e adaptação para lutas sem pano.",
@@ -58,6 +65,7 @@ export const programItems = [
     navigation: "/academy/programs/nogi",
   },
   {
+    id: 8,
     title: "Feminino",
     description:
       "Aulas para o público feminino, promovendo autoconfiança, defesa pessoal e performance.",
@@ -66,6 +74,7 @@ export const programItems = [
     navigation: "/academy/programs/feminino",
   },
   {
+    id: 9,
     title: "Corujão",
     description:
       "Aulas noturnas para quem prefere ou só pode treinar tarde, com o mesmo foco técnico e qualidade.",
@@ -74,11 +83,21 @@ export const programItems = [
     navigation: "/academy/programs/corujao",
   },
   {
+    id: 10,
     title: "Aulas Particulares",
     description:
       "Atenção exclusiva para acelerar seu aprendizado ou focar em objetivos específicos com um professor dedicado.",
     header: "/images/programs/particular.webp",
     icon: GiKimono,
     navigation: "/academy/programs/particulares",
+  },
+  {
+    id: 11,
+    title: "Treino livre",
+    description:
+      "Momento de autonomia e liberdade criativa no tatame. Revise técnicas e desenvolva seu estilo em um ambiente flexível.",
+    header: "/images/programs/livre.webp",
+    icon: GiKimono,
+    navigation: "/academy/programs/livre",
   },
 ];

@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "home": "Home",
+    "academy": "Academy",
+    "programs": "Programs",
+    "schedules": "Schedules",
+    "testimonials": "Testimonials",
+    "courses": "Courses",
+    "courseHalfGuard": "Half Guard Course",
+    "courseOpenGuard": "Open Guard Course",
+    "courseDrills": "Sequences Drills Course",
+    "courseNogi": "NOGI Finishes Course",
+    "contact": "Contact",
+    "courseHalfGuardTitle": "Half Guard",
+    "courseOpenGuardTitle": "Open Guard",
+    "courseDrillsTitle": "Sequences Drills",
+    "courseNogiTitle": "NOGI Finishes",
+    "courseHalfGuardDesc": "Our signature course — level up your half guard like never before.",
+    "courseOpenGuardDesc": "Everything you need to make your open guard a real weapon.",
+    "courseDrillsDesc": "Drill sequences that actually move the needle on your game.",
+    "courseNogiDesc": "All the NO-GI finishes you need, straight to the point."
+  },
+  "footer": {
+    "motto": "Honor, morals, respect and loyalty.",
+    "address": "Rua Doutor Amarante 779, Pelotas, Rio Grande do Sul, Brazil",
+    "phone": "Phone: ",
+    "email": "Email: ",
+    "academySocials": "Academy Social Media",
+    "indioSocials": "Master Índio's Social Media",
+    "doubts": "Looking for a place to train?",
+    "officialSite": "official website",
+    "officialSiteBefore": "Visit our headquarters ",
+    "officialSiteAfter": " and learn more about our history, programs, and locations near you. Don't wait — come train with us!",
+    "copyright": "©{{year}} Índio Jiu Jitsu | All rights reserved",
+    "developedBy": "Developed by "
+  },
+  "buttons": {
+    "scheduleNow": "Schedule now",
+    "scheduleFreeClass": "Schedule a free class now",
+    "backHome": "Back home",
+    "learnMore": "Learn more →",
+    "backToPrograms": "Not what you're looking for? Back to programs"
+  },
+  "labels": {
+    "professors": "Professor(s):",
+    "availableClasses": "Classes Available",
+    "specialEvent": "Special Event"
+  },
+  "otherCourses": {
+    "title": "Other courses",
+    "subtitle": "Check out our other courses and find the one that's right for you."
+  }
+}

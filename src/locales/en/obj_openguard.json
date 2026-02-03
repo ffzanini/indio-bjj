@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "Learn open guard and level up your Jiu-Jitsu",
+    "subtitle": "Everything you need in one place to turn your open guard into a real weapon.",
+    "cta": "I WANT MY SPOT",
+    "students": "+1000 students",
+    "lifetime": "Lifetime access",
+    "guarantee": "7-day guarantee",
+    "satisfaction": "Satisfaction guaranteed",
+    "videoTitle": "Open Guard Course",
+    "videoDescription": "Transform your open guard"
+  },
+  "benefits": {
+    "title": "What you'll get",
+    "subtitle": "Turn your open guard into a real offensive weapon",
+    "items": [
+      {
+        "icon": "🏆",
+        "title": "Quality Lessons",
+        "description": "High-quality videos with clear, detailed explanations."
+      },
+      {
+        "icon": "📊",
+        "title": "Direct Support",
+        "description": "Get your questions answered by Fabiano Índio and feedback to improve your game."
+      },
+      {
+        "icon": "📱",
+        "title": "Lifetime Access",
+        "description": "Watch anytime, anywhere. Yours for life, including updates."
+      }
+    ]
+  },
+  "comparison": {
+    "title": "No matter your level — with this method, you actually learn.",
+    "common": {
+      "title": "How most courses work",
+      "description": "A lot of Jiu-Jitsu courses throw isolated positions at you with no clear order. You get overwhelmed, freeze, and end up not using any of it on the mat."
+    },
+    "indio": {
+      "title": "The Índio way",
+      "description": "You get inside the head of an experienced professor when he's doing the move. Even if your game is totally different, you'll be able to use what's taught."
+    }
+  },
+  "cta": {
+    "title": "Ready to level up your open guard?",
+    "from": "You get all of this for",
+    "price": "R$ 89.90 upfront",
+    "installments": "or 12x R$ 9.30",
+    "button": "I WANT MY SPOT",
+    "lifetime": "Lifetime access",
+    "satisfaction": "Satisfaction guaranteed"
+  },
+  "guarantee": {
+    "title": "7-day guarantee, no hassle",
+    "subtitle": "If it's not the right fit for your Jiu-Jitsu, we'll refund you.",
+    "seal": "Guarantee",
+    "description": "Full access for 7 days. Watch, drill, and if your open guard isn't changing, request a refund through the platform. Simple.",
+    "noQuestions": "No questions asked. Full refund on your investment."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "stillDoubts": "Still got questions?",
+    "description": "We're here to help. Ask us anything about the course.",
+    "whatsapp": "Hit us up on WhatsApp",
+    "items": [
+      {
+        "question": "Is this for beginners or advanced?",
+        "answer": "Both. We go from fundamentals to more advanced so you can progress at your pace."
+      },
+      {
+        "question": "How long do I have access?",
+        "answer": "Lifetime. Once you buy it, it's yours — including future updates."
+      },
+      {
+        "question": "Can I watch on my phone?",
+        "answer": "Yes. Works on computer, tablet, or phone — wherever you are."
+      },
+      {
+        "question": "How does the 7-day guarantee work?",
+        "answer": "Try it for 7 days. Not happy? Request a refund. No hassle."
+      }
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "title": "Better cardio, mobility, and mat awareness",
+    "subtitle": "Build a solid base so you feel confident in any situation on the mat.",
+    "cta": "I WANT MY SPOT",
+    "students": "+1000 students",
+    "lifetime": "Lifetime access",
+    "guarantee": "7-day guarantee",
+    "videoTitle": "Sequences Drills Course",
+    "videoDescription": "Better cardio, mobility, and mat awareness"
+  },
+  "problems": {
+    "title": "Sound familiar?",
+    "items": [
+      "You watch tons of videos but can't use any of it when you roll",
+      "You freeze during rolling and forget what to do",
+      "You feel stiff, clunky, and unsafe in positions",
+      "Less experienced partners dominate you because your basics aren't there yet",
+      "You're worried about getting hurt from doing things wrong"
+    ],
+    "key": "Drills are what build flow, mobility, and confidence on the mat.",
+    "description": "This course is practical and straight to the point. Step-by-step, you'll nail the movements that matter and change your Jiu-Jitsu base. No fluff. Just what actually works."
+  },
+  "benefits": {
+    "title": "What you'll learn",
+    "subtitle": "Step-by-step, no fluff — master the movements that build a real Jiu-Jitsu foundation",
+    "items": [
+      {
+        "icon": "🏃",
+        "title": "Mobility & Performance Drills",
+        "description": "Drills that improve mobility, performance, and help prevent injuries. You'll move better and feel safer in every position."
+      },
+      {
+        "icon": "💡",
+        "title": "Never Blank Out Again",
+        "description": "Get the clarity you need so you always know what to do when you're rolling."
+      },
+      {
+        "icon": "🌊",
+        "title": "Flow & Efficiency",
+        "description": "Learn to move between positions with flow and safety. Your base will feel totally different."
+      },
+      {
+        "icon": "🎯",
+        "title": "Fundamental Movements",
+        "description": "Rolls, hip escape, technical stand-up — the stuff every grappler needs, broken down clearly."
+      },
+      {
+        "icon": "⚔️",
+        "title": "Use It Live",
+        "description": "How to take what you learn into real training and competition. Theory meets the mat."
+      },
+      {
+        "icon": "📱",
+        "title": "Lifetime Access",
+        "description": "60+ lessons, step-by-step. Yours for life."
+      }
+    ]
+  },
+  "directBenefits": {
+    "title": "What's in it for you",
+    "evolve": {
+      "title": "Level up faster",
+      "desc": "Get better without memorizing hundreds of moves. Focus on what actually works."
+    },
+    "clean": {
+      "title": "Clean, safe, efficient game",
+      "desc": "Do positions right, stay safe, and move well. Fewer injuries, better flow."
+    },
+    "confidence": {
+      "title": "More confidence on the mat",
+      "desc": "Feel confident in any situation once your fundamentals are solid."
+    },
+    "mobility": {
+      "title": "Mobility & endurance",
+      "desc": "Move better, last longer, and cut down on injury risk."
+    }
+  },
+  "cta": {
+    "title": "Stop getting dominated or freezing mid-roll",
+    "subtitle": "Take the next step: build a foundation that changes how you move, how safe you feel, and how confident you are.",
+    "priceTitle": "What's it worth to level up your Jiu-Jitsu?",
+    "from": "You get all of this for",
+    "price": "R$ 89.90 upfront",
+    "installments": "or 12x R$ 9.30",
+    "fullCourse": "Full course — 60+ lessons",
+    "button": "I WANT MY SPOT"
+  },
+  "guarantee": {
+    "title": "7-day guarantee, no hassle",
+    "subtitle": "If it's not the right fit for your Jiu-Jitsu, we'll refund you.",
+    "seal": "Guarantee",
+    "description": "Try the full course for 7 days. Watch, drill, and if it's not helping your game, request a refund through the platform. Simple.",
+    "noQuestions": "No questions asked. Full refund on your investment."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "stillDoubts": "Still got questions?",
+    "description": "We're here to help. Ask us anything about the course.",
+    "whatsapp": "Hit us up on WhatsApp",
+    "items": [
+      {
+        "question": "Is this for beginners or advanced?",
+        "answer": "Both. The drills go from basic to more complex, so you can progress at your own pace."
+      },
+      {
+        "question": "How long do I have access?",
+        "answer": "Lifetime. Once you buy it, it's yours — including future updates."
+      },
+      {
+        "question": "Can I watch on my phone?",
+        "answer": "Yes. It works on computer, tablet, or phone — wherever you train or watch."
+      },
+      {
+        "question": "How does the 7-day guarantee work?",
+        "answer": "Try it for 7 days. Not happy? Request a refund. No hassle, no questions."
+      }
+    ]
+  }
+}

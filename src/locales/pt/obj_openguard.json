@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "Aprenda a guarda aberta e evolua seu Jiu-Jitsu",
+    "subtitle": "Nesse curso prático você encontra tudo que precisa pra transformar sua guarda aberta em arma de verdade.",
+    "cta": "QUERO MINHA VAGA",
+    "students": "+1000 alunos",
+    "lifetime": "Acesso vitalício",
+    "guarantee": "Garantia de 7 dias",
+    "satisfaction": "Satisfação garantida",
+    "videoTitle": "Curso de Guarda Aberta",
+    "videoDescription": "Transforme sua técnica de Guarda Aberta"
+  },
+  "benefits": {
+    "title": "O que você leva",
+    "subtitle": "Transforme sua guarda aberta em arma ofensiva de verdade",
+    "items": [
+      {
+        "icon": "🏆",
+        "title": "Aulas de Qualidade",
+        "description": "Conteúdo em alta qualidade com explicações claras e detalhadas."
+      },
+      {
+        "icon": "📊",
+        "title": "Suporte Direto",
+        "description": "Tire dúvidas com Fabiano Índio e receba feedback pra melhorar seu jogo."
+      },
+      {
+        "icon": "📱",
+        "title": "Acesso Vitalício",
+        "description": "Assista quando e onde quiser. Seu pra sempre, com atualizações."
+      }
+    ]
+  },
+  "comparison": {
+    "title": "Não importa seu nível — com esse método, você aprende de verdade.",
+    "common": {
+      "title": "Como a maioria dos cursos funciona",
+      "description": "Muitos cursos jogam posições isoladas sem ordem clara. Você se perde, trava e no fim não usa nada no tatame."
+    },
+    "indio": {
+      "title": "O jeito Índio",
+      "description": "Você entra na cabeça de um professor experiente na hora de executar o movimento. Mesmo com um jogo totalmente diferente, você consegue usar o que é ensinado."
+    }
+  },
+  "cta": {
+    "title": "Pronto pra evoluir sua guarda aberta?",
+    "from": "Você recebe tudo isso por",
+    "price": "R$ 89,90 à vista",
+    "installments": "ou 12x R$ 9,30",
+    "button": "QUERO MINHA VAGA",
+    "lifetime": "Acesso vitalício",
+    "satisfaction": "Satisfação garantida"
+  },
+  "guarantee": {
+    "title": "Garantia de 7 dias, sem burocracia",
+    "subtitle": "Se não for o investimento certo pro seu Jiu-Jitsu, devolvemos seu dinheiro.",
+    "seal": "Garantia",
+    "description": "Acesso completo por 7 dias. Assista, treine, e se sua guarda aberta não mudar, solicite o reembolso pela plataforma. Simples.",
+    "noQuestions": "Sem perguntas. Reembolso total do seu investimento."
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "stillDoubts": "Ainda tem dúvidas?",
+    "description": "Estamos aqui pra ajudar. Pergunte o que quiser sobre o curso.",
+    "whatsapp": "Chama no WhatsApp",
+    "items": [
+      {
+        "question": "O curso é pra iniciantes ou avançados?",
+        "answer": "Os dois. Vamos dos fundamentos ao mais avançado, no seu ritmo."
+      },
+      {
+        "question": "Por quanto tempo tenho acesso?",
+        "answer": "Vitalício. Depois que comprar, é seu — incluindo atualizações."
+      },
+      {
+        "question": "Consigo assistir no celular?",
+        "answer": "Sim. Funciona no computador, tablet ou celular — onde você estiver."
+      },
+      {
+        "question": "Como funciona a garantia de 7 dias?",
+        "answer": "Teste por 7 dias. Não gostou? Solicite o reembolso. Sem burocracia."
+      }
+    ]
+  }
+}

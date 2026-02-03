@@ -1,0 +1,42 @@
+{
+  "title": "Calendário de Aulas",
+  "description": "Confira a grade semanal e organize sua semana. Escolha um dia pra ver as aulas. Feriados nacionais, municipais (Pelotas) e estaduais (RS) aparecem em vermelho. Dúvidas? Fale com a gente.",
+  "selectDay": "Escolha um dia",
+  "selectDayDescription": "Escolha um dia pra ver as aulas. Feriados em vermelho.",
+  "classesFor": "Aulas para",
+  "specialHolidaySchedule": "Horário especial em feriados",
+  "nationalHoliday": "Feriado Nacional",
+  "municipalHoliday": "Feriado Municipal",
+  "regionalHoliday": "Feriado Regional",
+  "showingClasses": "Todas as aulas de",
+  "noClassesDay": "Nenhuma aula neste dia.",
+  "noClassesHoliday": "Nenhuma aula em {{day}} ({{holidayName}}).",
+  "instructor": "Instrutor: ",
+  "professor": "Professor: ",
+  "professora": "Professora: ",
+  "days": {
+    "Sunday": "Domingo",
+    "Monday": "Segunda-feira",
+    "Tuesday": "Terça-feira",
+    "Wednesday": "Quarta-feira",
+    "Thursday": "Quinta-feira",
+    "Friday": "Sexta-feira",
+    "Saturday": "Sábado",
+    "Holiday": "Feriado"
+  },
+  "scheduleSubjects": {
+    "Treino Livre": "Treino Livre",
+    "Treino Básico": "Treino Básico",
+    "Treino Competição": "Treino Competição",
+    "Treino Básico/Intermediário": "Treino Básico/Intermediário",
+    "Treino Infantil": "Treino Infantil",
+    "Treino Corujão": "Treino Corujão",
+    "Treino Feminino": "Treino Feminino",
+    "Treino Executivo (Acima de 35 anos)": "Treino Executivo (Acima de 35 anos)",
+    "Treino Baby 1": "Treino Baby 1",
+    "Treino Baby 2": "Treino Baby 2",
+    "Treino Competição NO GI": "Treino Competição NO GI",
+    "Treino NO GI": "Treino NO GI",
+    "Tatame aberto": "Tatame aberto"
+  }
+}

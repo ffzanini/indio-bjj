@@ -6,6 +6,8 @@ interface VideoPlayerProps {
   videoUrl: string;
   videoDescription: string;
   videoTitle: string;
+  /** Se true, esconde a thumbnail e mostra o player para autoplay ao entrar na página */
+  autoPlay?: boolean;
 }
 
 export function VideoPlayer({
@@ -13,8 +15,9 @@ export function VideoPlayer({
   videoUrl,
   videoDescription,
   videoTitle,
+  autoPlay = false,
 }: Readonly<VideoPlayerProps>) {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
 
   // Extrai o ID do vídeo se for uma URL completa do YouTube
   const getVideoId = (url: string): string | null => {

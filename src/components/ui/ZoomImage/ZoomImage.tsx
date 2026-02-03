@@ -13,6 +13,7 @@ interface ZoomImageProps {
   width?: number;
   height?: number;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export function ZoomImage({
@@ -21,6 +22,7 @@ export function ZoomImage({
   width,
   height,
   className,
+  style,
 }: Readonly<ZoomImageProps>) {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -41,6 +43,7 @@ export function ZoomImage({
           className={`${className} overflow-hidden shadow-md transition-opacity duration-300 ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
+          style={style}
           loading={typeof window === "undefined" ? "eager" : "lazy"}
         />
       </Zoom>

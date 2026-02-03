@@ -8,7 +8,7 @@ export function Calendar(props: React.ComponentProps<typeof DayPicker>) {
   const defaultClassNames = getDefaultClassNames();
 
   const baseDay =
-    "h-10 w-10 p-0 flex items-center justify-center font-medium rounded-md transition-all duration-200";
+    "h-10 w-10 p-0 flex items-center justify-center font-medium rounded-md transition-all duration-200 cursor-pointer";
 
   return (
     <DayPicker
@@ -22,22 +22,22 @@ export function Calendar(props: React.ComponentProps<typeof DayPicker>) {
         month: "space-y-1",
 
         caption: "relative mb-4 flex items-center justify-center",
-        caption_label: "text-lg font-semibold text-gray-800 mt-2 capitalize",
+        caption_label: "text-lg font-semibold text-foreground mt-2 capitalize",
         nav: "absolute inset-0 flex items-center justify-between px-3",
-        nav_button: "h-10 w-10  rounded-md hover:bg-black/10 transition",
+        nav_button: "h-10 w-10 rounded-md hover:bg-foreground/10 transition",
 
         weekdays: "grid grid-cols-7",
         weekday:
-          "text-center text-xs md:text-sm font-bold uppercase text-gray-500 py-2",
+          "text-center text-xs md:text-sm font-bold uppercase text-muted-foreground py-2",
 
         week: "grid grid-cols-7",
         day: "text-sm",
-        day_button: `${baseDay} hover:bg-primary-ja/80 text-black`,
+        day_button: `${baseDay} hover:bg-primary-ja/80`,
         today: `${baseDay} bg-primary-ja/75`,
-        selected: `${baseDay} bg-primary-ja text-black hover:bg-primary-ja/90`,
-        range_middle: `${baseDay} bg-primary-ja/60 text-black`,
-        disabled: "text-gray-300 opacity-50",
-        outside: "text-gray-400 opacity-50",
+        selected: `${baseDay} bg-primary-ja hover:bg-primary-ja/90 text-dark-theme`,
+        range_middle: `${baseDay} bg-primary-ja/60`,
+        disabled: "text-muted-foreground opacity-50",
+        outside: "text-muted-foreground opacity-50",
         hidden: "invisible",
       }}
       modifiersClassNames={{

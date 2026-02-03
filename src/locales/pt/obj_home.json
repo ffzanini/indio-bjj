@@ -1,3 +1,39 @@
 {
-  "welcome": "Bem-vindo! Prazer em te conhecer."
+  "welcome": "Bem-vindo! Que bom ter você aqui.",
+  "hero": {
+    "titleLine1": "Jiu-Jitsu de verdade,",
+    "titleLine2": "mudança de verdade",
+    "title": "Jiu-Jitsu de verdade, mudança de verdade",
+    "subtitleLine1": "Aulas para todos os níveis e idades.",
+    "subtitleLine2": "Agende uma aula grátis e venha fazer parte da família JA Índio Jiu Jitsu.",
+    "cta": "Agendar uma",
+    "ctaBold": "aula grátis",
+    "ctaSuffix": "hoje"
+  },
+  "firstClass": {
+    "title1": "VAMOS TE COLOCAR",
+    "title2": "NO TATAME",
+    "description": "Jiu-Jitsu não é só lutar — é descobrir do que você é capaz. Faça sua primeira aula e sinta a diferença já no primeiro treino. Sua jornada começa aqui.",
+    "cta": "Agende sua aula grátis abaixo!"
+  },
+  "programs": {
+    "title1": "NOSSOS",
+    "title2": "PROGRAMAS"
+  },
+  "testimonials": {
+    "title1": "O que nossos alunos falam",
+    "title2": "Direto do tatame"
+  },
+  "carousel": [
+    { "title": "Iniciante", "subtitle": "Jiu Jitsu" },
+    { "title": "Intermediário", "subtitle": "Jiu Jitsu" },
+    { "title": "Avançado", "subtitle": "Jiu Jitsu" },
+    { "title": "Competição", "subtitle": "Jiu Jitsu" },
+    { "title": "Baby, Kids e Teen", "subtitle": "Jiu Jitsu" },
+    { "title": "35+", "subtitle": "Jiu Jitsu" },
+    { "title": "NO GI", "subtitle": "Jiu Jitsu" },
+    { "title": "Feminino", "subtitle": "Jiu Jitsu" },
+    { "title": "Corujão", "subtitle": "Jiu Jitsu" },
+    { "title": "Aulas Particulares", "subtitle": "Jiu Jitsu" }
+  ]
 }

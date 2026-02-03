@@ -1,0 +1,42 @@
+{
+  "title": "Class Schedule",
+  "description": "Check out our weekly schedule and plan your week. Pick a day to see all classes. National, city (Pelotas), and state (RS) holidays are in red. Questions? Get in touch.",
+  "selectDay": "Pick a day",
+  "selectDayDescription": "Choose a day to see classes. Holidays are in red.",
+  "classesFor": "Classes for",
+  "specialHolidaySchedule": "Special holiday hours",
+  "nationalHoliday": "National Holiday",
+  "municipalHoliday": "Municipal Holiday",
+  "regionalHoliday": "Regional Holiday",
+  "showingClasses": "All classes for",
+  "noClassesDay": "No classes this day.",
+  "noClassesHoliday": "No classes on {{day}} ({{holidayName}}).",
+  "instructor": "Instructor: ",
+  "professor": "Professor: ",
+  "professora": "Instructor: ",
+  "days": {
+    "Sunday": "Sunday",
+    "Monday": "Monday",
+    "Tuesday": "Tuesday",
+    "Wednesday": "Wednesday",
+    "Thursday": "Thursday",
+    "Friday": "Friday",
+    "Saturday": "Saturday",
+    "Holiday": "Holiday"
+  },
+  "scheduleSubjects": {
+    "Treino Livre": "Open Mat",
+    "Treino Básico": "Basic Training",
+    "Treino Competição": "Competition Training",
+    "Treino Básico/Intermediário": "Basic/Intermediate Training",
+    "Treino Infantil": "Kids Training",
+    "Treino Corujão": "Night Owl Training",
+    "Treino Feminino": "Women's Training",
+    "Treino Executivo (Acima de 35 anos)": "Executive Training (35+)",
+    "Treino Baby 1": "Baby 1 Training",
+    "Treino Baby 2": "Baby 2 Training",
+    "Treino Competição NO GI": "NO GI Competition Training",
+    "Treino NO GI": "NO GI Training",
+    "Tatame aberto": "Open mat"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "hero": {
+    "title": "Master NO-GI finishes and end the fight from anywhere",
+    "subtitle": "Build a sharp, efficient game that finishes opponents in any scenario — no relying on points.",
+    "cta": "I WANT MY SPOT",
+    "students": "+1000 students",
+    "lifetime": "Lifetime access",
+    "guarantee": "7-day guarantee",
+    "videoTitle": "NO-GI Finishes Course",
+    "videoDescription": "Master NO-GI finishes and end the fight from any position"
+  },
+  "problems": {
+    "title": "Sound familiar?",
+    "items": [
+      "Your game works but you can't close the deal",
+      "You get to good positions but freeze when it's time to finish",
+      "You burn out in NO-GI point wars",
+      "You're missing the fine-tuning to finish clean",
+      "You miss clear chances because you don't see the openings",
+      "You struggle to finish from both top and bottom"
+    ],
+    "key": "In NO-GI, if you don't finish… you're just surviving. If you finish, you're in control.",
+    "description": "Finishes are what NO-GI is about. No point hunting. No advantages. Just ending the fight."
+  },
+  "benefits": {
+    "title": "What you'll learn",
+    "subtitle": "Clean, precise finishes you can use in real training and competition",
+    "items": [
+      {
+        "icon": "🎯",
+        "title": "Finishes from Top & Bottom",
+        "description": "NO-GI finishes from basic to advanced — from any position."
+      },
+      {
+        "icon": "⚔️",
+        "title": "Attacks from Everywhere",
+        "description": "Guard, mount, back, chokes — clear paths to end the fight."
+      },
+      {
+        "icon": "🔄",
+        "title": "Defense into Attack",
+        "description": "Turn bad spots (like bottom) into real attacking opportunities."
+      },
+      {
+        "icon": "⏱️",
+        "title": "See Openings & Time It Right",
+        "description": "Read when to go and hit the finish at the right moment."
+      },
+      {
+        "icon": "💡",
+        "title": "Get Your Finisher Mindset Back",
+        "description": "Finish with less effort and more efficiency. Think finisher again."
+      },
+      {
+        "icon": "📱",
+        "title": "Lifetime Access",
+        "description": "1+ hour of pure NO-GI finishes. No fluff, just finishes."
+      }
+    ]
+  },
+  "directBenefits": {
+    "title": "What's in it for you",
+    "finish": {
+      "title": "Finish without points",
+      "desc": "End the fight from any position — no advantages, no point hunting."
+    },
+    "energy": {
+      "title": "Save your energy",
+      "desc": "Skip the long wars. Finish clean and save your gas."
+    },
+    "offensive": {
+      "title": "Danger from every position",
+      "desc": "Real finishing options from wherever you are."
+    },
+    "confidence": {
+      "title": "More confidence & bite",
+      "desc": "Roll NO-GI with more confidence and control."
+    },
+    "respected": {
+      "title": "A game people respect",
+      "desc": "Build a game opponents have to take seriously."
+    },
+    "content": {
+      "title": "Straight to the point",
+      "desc": "1+ hour of NO-GI finishes only. No fluff."
+    }
+  },
+  "cta": {
+    "title": "Stop winning on points and losing when it matters",
+    "subtitle": "Take the next step: turn your NO-GI game into a real finishing weapon.",
+    "priceTitle": "What's it worth to become a finisher?",
+    "from": "You get all of this for",
+    "price": "R$ 89.90 upfront",
+    "installments": "or 12x R$ 9.30",
+    "button": "I WANT MY SPOT"
+  },
+  "guarantee": {
+    "title": "7-day guarantee, no hassle",
+    "subtitle": "If it's not the right fit for your Jiu-Jitsu, we'll refund you.",
+    "seal": "Guarantee",
+    "description": "Full access for 7 days. Watch, drill, and if your NO-GI game isn't changing, request a refund through the platform. Simple.",
+    "noQuestions": "No questions asked. Full refund on your investment."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "stillDoubts": "Still got questions?",
+    "description": "We're here to help. Ask us anything about the course.",
+    "whatsapp": "Hit us up on WhatsApp",
+    "items": [
+      {
+        "question": "Is this for beginners or advanced?",
+        "answer": "Both. We go from basic to advanced finishes so you can progress at your pace."
+      },
+      {
+        "question": "How long do I have access?",
+        "answer": "Lifetime. Once you buy it, it's yours — including future updates."
+      },
+      {
+        "question": "Can I watch on my phone?",
+        "answer": "Yes. Works on computer, tablet, or phone — wherever you are."
+      },
+      {
+        "question": "How does the 7-day guarantee work?",
+        "answer": "Try it for 7 days. Not happy? Request a refund through the platform. No hassle."
+      },
+      {
+        "question": "Is it only about finishes?",
+        "answer": "Yes. This course is 100% NO-GI finishes — clean, precise, and usable in training and competition. No point hunting."
+      }
+    ]
+  }
+}

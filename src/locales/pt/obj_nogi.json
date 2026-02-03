@@ -1,0 +1,132 @@
+{
+  "hero": {
+    "title": "Domine as finalizações NO-GI e encerre a luta de qualquer posição",
+    "subtitle": "Construa um jogo afiado e eficiente que finaliza em qualquer cenário — sem depender de pontos.",
+    "cta": "QUERO MINHA VAGA",
+    "students": "+1000 alunos",
+    "lifetime": "Acesso vitalício",
+    "guarantee": "Garantia de 7 dias",
+    "videoTitle": "Curso de Finalizações NO-GI",
+    "videoDescription": "Domine as finalizações NO-GI e encerre a luta de qualquer posição"
+  },
+  "problems": {
+    "title": "Se identificou?",
+    "items": [
+      "Faz o jogo andar, mas não consegue concluir a luta",
+      "Chega em boas posições, mas trava na hora de finalizar",
+      "Se desgasta em guerras de pontuação no NO GI",
+      "Sente que falta ajuste fino para finalizar com eficiência",
+      "Perde oportunidades claras por não reconhecer as brechas certas",
+      "Tem dificuldade em finalizar tanto por cima quanto por baixo"
+    ],
+    "key": "No NO GI, quem não finaliza… sobrevive. Quem finaliza, domina.",
+    "description": "As finalizações são a essência do NO GI. Nada de jogo burocrático. Nada de depender de vantagem ou pontos. Aqui o foco é encerrar a luta."
+  },
+  "benefits": {
+    "title": "O que você vai aprender",
+    "subtitle": "Finalizações limpas, precisas e eficientes que você usa no treino e na competição",
+    "items": [
+      {
+        "icon": "🎯",
+        "title": "Finalizações por Cima e por Baixo",
+        "description": "Aprenda finalizações NO GI do básico ao avançado, aplicáveis em qualquer posição do combate."
+      },
+      {
+        "icon": "⚔️",
+        "title": "Ataques de Múltiplas Posições",
+        "description": "Ataques partindo da guarda, montada, costas e situações de sufoco para encerrar a luta."
+      },
+      {
+        "icon": "🔄",
+        "title": "Transforme Defesa em Ataque",
+        "description": "Como transformar posições defensivas (como o cem quilos) em ataques fatais e letais."
+      },
+      {
+        "icon": "⏱️",
+        "title": "Leitura de Brechas e Timing",
+        "description": "Desenvolva a capacidade de ler brechas e aplicar o golpe final no momento exato."
+      },
+      {
+        "icon": "💡",
+        "title": "Restaurar o Instinto de Finalizador",
+        "description": "Aprenda a restaurar o instinto de finalizador no seu jogo, finalizando com menos força e mais eficiência."
+      },
+      {
+        "icon": "📱",
+        "title": "Acesso Vitalício",
+        "description": "Mais de 1 hora só de finalizações NO GI. Conteúdo direto ao ponto, sem enrolação."
+      }
+    ]
+  },
+  "directBenefits": {
+    "title": "O que você ganha",
+    "finish": {
+      "title": "Finalizar sem pontos",
+      "desc": "Encerre a luta de qualquer posição — sem vantagem, sem caça a pontos."
+    },
+    "energy": {
+      "title": "Economizar energia",
+      "desc": "Evite guerras longas. Finalize limpo e preserve o gás."
+    },
+    "offensive": {
+      "title": "Perigo em toda posição",
+      "desc": "Opções reais de finalização de onde você estiver."
+    },
+    "confidence": {
+      "title": "Mais confiança e mordida",
+      "desc": "Rode NO-GI com mais confiança e controle."
+    },
+    "respected": {
+      "title": "Jogo respeitado",
+      "desc": "Construa um jogo que o adversário tem que levar a sério."
+    },
+    "content": {
+      "title": "Direto ao ponto",
+      "desc": "Mais de 1 hora só de finalizações NO-GI. Sem enrolação."
+    }
+  },
+  "cta": {
+    "title": "Pare de vencer nos pontos e perder quando importa",
+    "subtitle": "Dê o próximo passo: transforme seu jogo NO-GI em arma de finalização de verdade.",
+    "priceTitle": "Quanto vale se tornar finalizador?",
+    "from": "Você recebe tudo isso por",
+    "price": "R$ 89,90 à vista",
+    "installments": "ou 12x R$ 9,30",
+    "button": "QUERO MINHA VAGA"
+  },
+  "guarantee": {
+    "title": "Garantia de 7 dias, sem burocracia",
+    "subtitle": "Se não for o investimento certo pro seu Jiu-Jitsu, devolvemos seu dinheiro.",
+    "seal": "Garantia",
+    "description": "Acesso completo por 7 dias. Assista, treine, e se seu jogo NO-GI não mudar, solicite o reembolso pela plataforma. Simples.",
+    "noQuestions": "Sem perguntas. Reembolso total do seu investimento."
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "stillDoubts": "Ainda tem dúvidas?",
+    "description": "Estamos aqui pra ajudar. Pergunte o que quiser sobre o curso.",
+    "whatsapp": "Chama no WhatsApp",
+    "items": [
+      {
+        "question": "O curso é pra iniciantes ou avançados?",
+        "answer": "Os dois. As finalizações vão do básico ao avançado, no seu ritmo."
+      },
+      {
+        "question": "Por quanto tempo tenho acesso?",
+        "answer": "Vitalício. Depois que comprar, é seu — incluindo atualizações."
+      },
+      {
+        "question": "Consigo assistir no celular?",
+        "answer": "Sim. Funciona no computador, tablet ou celular — onde você estiver."
+      },
+      {
+        "question": "Como funciona a garantia de 7 dias?",
+        "answer": "Teste por 7 dias. Não gostou? Solicite o reembolso pela plataforma. Sem burocracia."
+      },
+      {
+        "question": "O curso foca só em finalizações?",
+        "answer": "Sim. O curso é 100% finalizações NO-GI — limpas, precisas e usáveis no treino e na competição. Sem caça a pontos."
+      }
+    ]
+  }
+}

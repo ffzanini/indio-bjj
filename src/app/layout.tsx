@@ -109,7 +109,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" translate="no" suppressHydrationWarning>
+    <html lang="pt-BR" translate="no" suppressHydrationWarning data-scroll-behavior="smooth">
       <Script
         id="google-id-openguard"
         strategy="afterInteractive"

@@ -1,0 +1,61 @@
+{
+  "title": "Nossos Programas",
+  "subtitle": "Explore nossos programas e encontre o seu lugar no tatame",
+  "programs": [
+    {
+      "id": 1,
+      "title": "Iniciante",
+      "description": "Comece sua jornada no Jiu-Jitsu com base sólida. Didática clara e acessível pra todo mundo."
+    },
+    {
+      "id": 2,
+      "title": "Intermediário",
+      "description": "Evolua na técnica e amplie seu repertório. Aulas pensadas pra você progredir de verdade."
+    },
+    {
+      "id": 3,
+      "title": "Avançado",
+      "description": "Detalhes, estratégia e situações complexas. Pra quando você quer ir mais fundo."
+    },
+    {
+      "id": 4,
+      "title": "Competição",
+      "description": "Foco em competir: intensidade, regras e rola de verdade. Pra quem quer subir no pódio."
+    },
+    {
+      "id": 5,
+      "title": "Baby, Kids e Teen",
+      "description": "Diversão, disciplina e coordenação pra crianças e adolescentes. Aprendizado que fica."
+    },
+    {
+      "id": 6,
+      "title": "Executivo (35+)",
+      "description": "Pra quem quer treinar com inteligência: saúde, técnica e ritmo que respeitam seu corpo."
+    },
+    {
+      "id": 7,
+      "title": "NO GI",
+      "description": "Treino sem kimono: movimentação, adaptação e finalizações. Fluir e se adaptar."
+    },
+    {
+      "id": 8,
+      "title": "Feminino",
+      "description": "Um espaço pra mulheres: autoconfiança, defesa pessoal e performance no tatame."
+    },
+    {
+      "id": 9,
+      "title": "Corujão",
+      "description": "Aulas à noite pra quem treina depois do expediente. Mesma qualidade, outro horário."
+    },
+    {
+      "id": 10,
+      "title": "Aulas Particulares",
+      "description": "Atenção 100% em você. Acelere o aprendizado ou foque em objetivos específicos com um professor só seu."
+    },
+    {
+      "id": 11,
+      "title": "Treino livre",
+      "description": "Seu tempo no tatame. Treinar, experimentar e construir seu jogo do seu jeito."
+    }
+  ]
+}

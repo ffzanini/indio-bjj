@@ -5,6 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/libs/cn";
 
+/** Retorna o segmento "pai" do path para destacar no nav (ex: /academy/programs -> "academy") */
+export function getNavParentPath(pathname: string): string | null {
+  if (pathname === "/" || pathname === "") return "home";
+  if (pathname === "/contact") return "contact";
+  if (pathname.startsWith("/academy")) return "academy";
+  if (pathname.startsWith("/courses")) return "courses";
+  return null;
+}
+
 export const Menu = ({
   setActive,
   children,
@@ -15,7 +24,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="w-full relative rounded-full border bg-dark-theme border-transparent shadow-input flex justify-center items-center space-x-8 px-1 py-1 "
+      className="w-full relative rounded-full border border-foreground/20 bg-background shadow-input flex justify-center items-center space-x-8 px-1 py-1 "
     >
       {children}
     </nav>
@@ -27,17 +36,22 @@ export const MenuItem = ({
   active,
   item,
   children,
+  isActive,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  isActive?: boolean;
 }) => {
   return (
     <button onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="text-white-theme font-medium hover:text-primary-ja cursor-pointer hover:opacity-[0.9]"
+        className={cn(
+          "text-foreground text-xl font-medium hover:text-primary-ja! hover:text-outline-shadow-black cursor-pointer hover:opacity-[0.9]",
+          isActive && "font-bold text-primary-ja! text-outline-shadow-black",
+        )}
       >
         {item}
       </motion.p>
@@ -50,7 +64,7 @@ export const MenuItem = ({
             <div className="absolute top-[calc(100%+1.7rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 layoutId="active"
-                className="bg-dark-theme backdrop-blur-sm rounded-2xl overflow-hidden border border-white-theme/20 shadow-xl"
+                className="bg-card backdrop-blur-sm rounded-2xl overflow-hidden border border-foreground/20 shadow-xl"
               >
                 <motion.div layout className="w-max h-full p-4 text-left">
                   {children}
@@ -85,14 +99,11 @@ export const ProductItem = ({
         height={70}
         alt={title}
         className="shrink-0 rounded-md shadow-2xl"
+        style={{ height: "auto" }}
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
-          {title}
-        </h4>
-        <p className="text-neutral-700 text-sm max-w-40 dark:text-neutral-300">
-          {description}
-        </p>
+        <h4 className="text-xl font-bold mb-1 text-foreground">{title}</h4>
+        <p className="text-foreground/80 text-sm max-w-40">{description}</p>
       </div>
     </Link>
   );
@@ -106,8 +117,9 @@ export const HoveredLink = ({
 }: React.PropsWithChildren<HoveredLinkProps>) => {
   return (
     <Link
+      prefetch={false}
       {...rest}
-      className="text-white-theme font-medium hover:text-primary-ja cursor-pointer hover:opacity-[0.9]"
+      className="text-foreground text-xl font-medium hover:text-primary-ja! hover:text-outline-shadow-black cursor-pointer hover:opacity-[0.9]"
     >
       {children}
     </Link>
@@ -116,13 +128,16 @@ export const HoveredLink = ({
 
 export const NavbarLogo = ({
   setActive,
+  onNavigate,
 }: {
   setActive: (item: string) => void;
+  onNavigate?: () => void;
 }) => {
   return (
     <button onMouseEnter={() => setActive("")} className="relative text-center">
       <Link
         href="/"
+        onClick={onNavigate}
         className="relative z-20 mr-4 flex items-center px-2 py-2 text-sm"
       >
         <Image
@@ -130,6 +145,7 @@ export const NavbarLogo = ({
           alt="logo"
           width={160}
           height={30}
+          style={{ height: "auto" }}
         />
       </Link>
     </button>
@@ -141,22 +157,32 @@ export const NavbarLink = ({
   children,
   className,
   setActive,
+  isActive,
   ...props
 }: {
   href: string;
   children: React.ReactNode;
   className?: string;
   setActive: (item: string) => void;
+  isActive?: boolean;
 } & React.ComponentPropsWithoutRef<"a">) => {
   const baseStyles =
-    "text-white-theme font-medium hover:text-primary-ja cursor-pointer hover:opacity-[0.9]";
+    "text-foreground text-xl font-medium hover:text-primary-ja! hover:text-outline-shadow-black cursor-pointer hover:opacity-[0.9] bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent focus:outline-none focus-visible:outline-none focus-visible:ring-0 rounded-full";
+  const activeStyles = isActive
+    ? "font-bold text-primary-ja! text-outline-shadow-black"
+    : "";
 
   return (
     <button
       onMouseEnter={() => setActive(href)}
-      className="text-left relative "
+      className="text-left relative bg-transparent hover:bg-transparent focus:outline-none focus-visible:outline-none focus-visible:ring-0"
     >
-      <Link href={href} className={cn(baseStyles, className)} {...props}>
+      <Link
+        href={href}
+        prefetch={false}
+        className={cn(baseStyles, activeStyles, className)}
+        {...props}
+      >
         {children}
       </Link>
     </button>

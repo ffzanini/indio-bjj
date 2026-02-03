@@ -68,10 +68,10 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   const { src, link, title, subtitle } = slide;
 
   return (
-    <div className="[perspective:1200px] [transform-style:preserve-3d]">
+    <div className="perspective-distant transform-3d">
       <button
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white-theme opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -101,8 +101,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             alt={title}
             src={src}
             onLoad={imageLoaded}
-            loading="eager"
-            decoding="sync"
+            loading={current === index ? "eager" : "lazy"}
             width={1280}
             height={800}
           />
@@ -116,7 +115,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          <Link href={link} className="text-white-theme">
+          <Link href={link} prefetch={false} className="text-white-theme">
             <h2 className="text-lg md:text-2xl lg:text-4xl relative">
               {subtitle}
             </h2>
@@ -149,7 +148,7 @@ const CarouselControl = ({
       title={title}
       onClick={handleClick}
     >
-      <RiArrowRightLine className="text-neutral-600 dark:text-neutral-200" />
+      <RiArrowRightLine className="text-neutral-200" />
     </button>
   );
 };
