@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "title": "Domine as passagens de guarda e assuma o controle da luta",
+    "subtitle": "Construa um jogo de pressão, precisão e controle para anular qualquer guarda e consolidar o domínio por cima com segurança.",
+    "cta": "GARANTIR MINHA VAGA",
+    "students": "+1000 alunos",
+    "lifetime": "Acesso vitalício",
+    "guarantee": "Garantia de 7 dias",
+    "satisfaction": "Satisfação garantida",
+    "videoTitle": "Curso de Passagens de Guarda",
+    "videoDescription": "Aprenda a passar a guarda com controle real"
+  },
+  "benefits": {
+    "title": "O que você vai aprender",
+    "subtitle": "Um sistema completo de passagens aplicável em qualquer cenário e contra qualquer estilo de jogo.",
+    "items": [
+      {
+        "icon": "🔗",
+        "title": "Conexão entre passagem e progressão ofensiva",
+        "description": "Aprenda a conectar a passagem com ataques às costas e continuidade de domínio."
+      },
+      {
+        "icon": "🧭",
+        "title": "Leitura de guardas modernas",
+        "description": "Neutralize Dela Riva, Laço, 50/50 e outros sistemas sem depender de improviso."
+      },
+      {
+        "icon": "⚙️",
+        "title": "Técnica acima da força",
+        "description": "Use pressão eficiente e alavancas corretas para quebrar a estrutura defensiva."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Controle após a raspagem",
+        "description": "Pare de voltar ao zero: consolide o domínio e dite o ritmo da luta."
+      },
+      {
+        "icon": "📈",
+        "title": "Do básico ao avançado",
+        "description": "Progressão estruturada para evoluir com clareza, consistência e segurança."
+      },
+      {
+        "icon": "🎯",
+        "title": "Defesa de berimbolo e ataques modernos",
+        "description": "Entenda como bloquear entradas e manter o controle contra jogos atuais."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pare de travar na guarda e assuma o controle",
+    "from": "Oferta especial: de R$ 197,00 por",
+    "price": "R$ 89,90 à vista",
+    "installments": "ou 12x de R$ 9,30",
+    "button": "GARANTIR MINHA VAGA",
+    "lifetime": "Acesso vitalício",
+    "satisfaction": "Satisfação garantida"
+  },
+  "guarantee": {
+    "title": "Garantia de satisfação de 7 dias",
+    "subtitle": "Experimente o curso completo e, se não ficar satisfeito, devolvemos 100% do seu investimento.",
+    "seal": "Garantia",
+    "description": "Assista às aulas, aplique no treino e avalie com tranquilidade. Se não fizer sentido para você, solicite o reembolso sem burocracia.",
+    "noQuestions": "Sem complicação. Reembolso total dentro do prazo de garantia."
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "stillDoubts": "Ainda tem dúvidas?",
+    "description": "Nossa equipe está pronta para te ajudar com qualquer pergunta sobre o curso.",
+    "whatsapp": "Chama no WhatsApp",
+    "items": [
+      {
+        "question": "Esse curso serve para iniciantes e avançados?",
+        "answer": "Sim. O conteúdo vai do básico ao avançado, com progressão clara para todos os níveis."
+      },
+      {
+        "question": "Vou aprender a passar guardas modernas?",
+        "answer": "Sim. O curso aborda Dela Riva, Laço, 50/50, defesa de berimbolo e outras situações atuais."
+      },
+      {
+        "question": "Por quanto tempo tenho acesso?",
+        "answer": "O acesso é vitalício. Você pode assistir quando quiser e revisar quantas vezes precisar."
+      },
+      {
+        "question": "Como funciona a garantia de 7 dias?",
+        "answer": "Você testa o curso por 7 dias e, se não ficar satisfeito, pode pedir reembolso total."
+      }
+    ]
+  }
+}

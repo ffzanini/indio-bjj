@@ -15,6 +15,7 @@ import contact from "./obj_contact.json";
 import courses from "./obj_courses.json";
 import drills from "./obj_drills.json";
 import halfguard from "./obj_halfguard.json";
+import guardpassing from "./obj_guardpassing.json";
 import nogi from "./obj_nogi.json";
 import openguard from "./obj_openguard.json";
 import professor from "./obj_professor.json";
@@ -31,6 +32,7 @@ const pt = {
   courses,
   drills,
   halfguard,
+  guardpassing,
   nogi,
   openguard,
   professor,

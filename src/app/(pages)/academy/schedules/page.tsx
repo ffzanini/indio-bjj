@@ -1,7 +1,8 @@
 "use client";
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import useSWR from "swr";
-import { LuCalendar, LuTimer } from "react-icons/lu";
+import { AnimatePresence, motion } from "framer-motion";
+import { LuCalendar, LuMinus, LuPlus, LuTimer } from "react-icons/lu";
 import Link from "next/link";
 
 import {
@@ -20,6 +21,16 @@ import { useTranslation } from "@/context";
 
 export default function Schedule() {
   const { translations: t } = useTranslation();
+  const scheduleSubjects = t.schedules.scheduleSubjects as Record<
+    string,
+    string
+  >;
+  const sessionDetails = t.schedules.sessionDetails as Record<string, string>;
+  const formationLevels = t.schedules.formationLevels as {
+    title: string;
+    subtitle: string;
+    items: { title: string; description: string; navigation: string }[];
+  };
   const { data: holidays = [] } = useSWR("holidays", fetchHolidays, {
     revalidateOnFocus: false,
     revalidateOnReconnect: false,
@@ -29,6 +40,7 @@ export default function Schedule() {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(
     new Date(),
   );
+  const [isFormationOpen, setIsFormationOpen] = useState(false);
 
   const handleSelectDate = (date: Date | undefined) => {
     if (date !== undefined) setSelectedDate(date);
@@ -74,6 +86,9 @@ export default function Schedule() {
   const classesForDay = useHolidaySchedule
     ? weeklyClasses.Holiday
     : weeklyClasses[selectedDayName] || [];
+  const sortedClassesForDay = [...classesForDay].sort((a, b) =>
+    a.startTime.localeCompare(b.startTime),
+  );
 
   const currentYear = new Date().getFullYear();
   const modifiers = {
@@ -83,6 +98,21 @@ export default function Schedule() {
       return holidayDate;
     }),
   };
+  const formationItems: ReactNode = (
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+      {formationLevels.items.map((item) => (
+        <Link
+          key={item.title}
+          href={item.navigation}
+          prefetch={false}
+          className="block rounded-xl border border-foreground/15 bg-background/60 p-4 transition-all hover:bg-primary-ja/30 hover:border-foreground/25 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-ja focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        >
+          <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
+          <p className="text-sm text-foreground/80">{item.description}</p>
+        </Link>
+      ))}
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-linear-to-b from-primary-ja via-primary-ja-opacity to-background dark:bg-background text-foreground">
@@ -91,11 +121,24 @@ export default function Schedule() {
           <h1 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-dark-theme">
             {t.schedules.title}
           </h1>
-          <p className="lg:text-xl text-center text-dark-theme mb-12 lg:mb-20 mx-4 lg:mx-auto">
+          <p className="lg:text-xl text-center text-dark-theme mb-2 lg:mb-8 mx-4 lg:mx-auto">
             {t.schedules.description}
           </p>
-
-          <div className="grid gap-2 lg:gap-8 lg:grid-cols-5 pt-8">
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-4 lg:mb-6">
+            <a
+              href="#horarios"
+              className="inline-flex items-center justify-center px-4 py-2.5 rounded-full text-sm font-semibold bg-white/95 text-dark-theme shadow-md ring-1 ring-black/10 hover:bg-white hover:shadow-lg transition-all dark:bg-card dark:text-foreground dark:ring-border/40 dark:hover:bg-card/90"
+            >
+              {t.schedules.scheduleAnchors.viewSchedule}
+            </a>
+            <a
+              href="#formacao"
+              className="inline-flex items-center justify-center px-4 py-2.5 rounded-full text-sm font-semibold bg-white/95 text-dark-theme shadow-md ring-1 ring-black/10 hover:bg-white hover:shadow-lg transition-all dark:bg-card dark:text-foreground dark:ring-border/40 dark:hover:bg-card/90"
+            >
+              {t.schedules.scheduleAnchors.formationHelp}
+            </a>
+          </div>
+          <div id="horarios" className="grid gap-2 lg:gap-8 lg:grid-cols-5">
             <Card className="rounded-2xl col-span-full lg:col-span-2 border-foreground/10 dark:border-white/5 shadow-none bg-card/95 backdrop-blur-sm m-2 lg:m-0">
               <CardHeader className="rounded-t-2xl border-b border-foreground/10 bg-linear-to-r from-card to-card/90">
                 <CardTitle className="flex items-center gap-2 text-foreground">
@@ -122,7 +165,7 @@ export default function Schedule() {
               </CardContent>
             </Card>
 
-            <div className="col-span-full lg:col-span-3 pb-12 lg:pb-0">
+            <div className="col-span-full lg:col-span-3 ">
               <Card
                 className={
                   selectedHoliday
@@ -190,7 +233,7 @@ export default function Schedule() {
                 <CardContent className="p-6">
                   {classesForDay.length > 0 ? (
                     <div className="space-y-4">
-                      {classesForDay.map((classSession) => (
+                      {sortedClassesForDay.map((classSession) => (
                         <div key={classSession.id}>
                           <Link href={classSession.navigation}>
                             <div
@@ -198,14 +241,15 @@ export default function Schedule() {
                             >
                               <div className="mb-2 sm:mb-0">
                                 <h3 className={`font-semibold text-foreground`}>
-                                  {(
-                                    t.schedules.scheduleSubjects as Record<
-                                      string,
-                                      string
-                                    >
-                                  )[classSession.subject] ||
+                                  {scheduleSubjects[classSession.subject] ||
                                     classSession.subject}
                                 </h3>
+                                {classSession.detailKey &&
+                                  sessionDetails[classSession.detailKey] && (
+                                    <p className="text-xs text-foreground/80 mt-1">
+                                      {sessionDetails[classSession.detailKey]}
+                                    </p>
+                                  )}
                                 <p className="text-sm text-foreground">
                                   {classSession.instructor === "Fabiano Índio"
                                     ? t.schedules.professor
@@ -253,6 +297,64 @@ export default function Schedule() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+          <div id="formacao" className="pt-6 lg:pt-8 pb-12 lg:pb-0">
+            <section className="hidden lg:block mx-2 lg:mx-0 mb-8 lg:mb-10 rounded-2xl border border-foreground/10 bg-card/90 backdrop-blur-sm p-5 lg:p-7">
+              <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
+                {formationLevels.title}
+              </h2>
+              <p className="text-foreground/80 mb-5">
+                {formationLevels.subtitle}
+              </p>
+              {formationItems}
+            </section>
+
+            <section className="block lg:hidden mx-2 lg:mx-0 mb-8 rounded-2xl border border-foreground/10 bg-card/90 backdrop-blur-sm p-3">
+              <button
+                type="button"
+                aria-expanded={isFormationOpen}
+                onClick={() => setIsFormationOpen((prev) => !prev)}
+                className="w-full cursor-pointer select-none rounded-xl px-2 py-2"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <div className="text-left">
+                    <h2 className="text-2xl font-bold text-foreground leading-tight">
+                      {formationLevels.title}
+                    </h2>
+                    <p className="text-sm text-foreground/80 mt-1">
+                      {t.schedules.scheduleAnchors.formationSummary}
+                    </p>
+                  </div>
+                  <span className="inline-flex items-center justify-center p-2 rounded-full border border-foreground/20 text-foreground/80">
+                    {isFormationOpen ? (
+                      <LuMinus className="h-7 w-7" strokeWidth={2.25} />
+                    ) : (
+                      <LuPlus className="h-7 w-7" strokeWidth={2.25} />
+                    )}
+                  </span>
+                </div>
+              </button>
+
+              <AnimatePresence initial={false}>
+                {isFormationOpen && (
+                  <motion.div
+                    key="formation-mobile-content"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.32, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="pt-3 px-2 pb-2">
+                      <p className="text-foreground/80 mb-4">
+                        {formationLevels.subtitle}
+                      </p>
+                      {formationItems}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </section>
           </div>
         </div>
       </main>

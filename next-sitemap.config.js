@@ -74,6 +74,11 @@ const config = {
         priority: 0.8,
         changefreq: "monthly",
       },
+      {
+        ...(await transform(config, "/courses/guardpassing")),
+        priority: 0.8,
+        changefreq: "monthly",
+      },
     ];
   },
 };

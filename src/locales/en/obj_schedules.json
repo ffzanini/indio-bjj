@@ -27,16 +27,68 @@
   "scheduleSubjects": {
     "Treino Livre": "Open Mat",
     "Treino Básico": "Basic Training",
+    "Treino Avançado": "Advanced Training",
     "Treino Competição": "Competition Training",
     "Treino Básico/Intermediário": "Basic/Intermediate Training",
+    "Treino (rola)": "Rolling Training",
     "Treino Infantil": "Kids Training",
     "Treino Corujão": "Night Owl Training",
     "Treino Feminino": "Women's Training",
+    "Treino Baby": "Baby Training",
     "Treino Executivo (Acima de 35 anos)": "Executive Training (35+)",
     "Treino Baby 1": "Baby 1 Training",
     "Treino Baby 2": "Baby 2 Training",
     "Treino Competição NO GI": "NO GI Competition Training",
     "Treino NO GI": "NO GI Training",
     "Tatame aberto": "Open mat"
+  },
+  "sessionDetails": {
+    "basicWhiteUpToThreeStripes": "White belt up to 3 stripes",
+    "advancedFromFourthStripeWhite": "From the 4th stripe on white belt",
+    "executiveOver35": "35+",
+    "sparringOnly": "Only for students who already roll",
+    "corujaoBasicIntermediate": "Group for basic and intermediate students"
+  },
+  "formationLevels": {
+    "title": "Training by level and goal",
+    "subtitle": "Our schedule is organized to respect each stage of your journey on the mat, with focused classes for each profile.",
+    "items": [
+      {
+        "title": "Basic",
+        "description": "White belt up to 3 stripes. Classes focused on fundamentals and building technical confidence.",
+        "navigation": "/academy/programs/iniciante"
+      },
+      {
+        "title": "Advanced",
+        "description": "From the 4th stripe on white belt. Classes to sharpen strategy, details, and high-level execution.",
+        "navigation": "/academy/programs/avancado"
+      },
+      {
+        "title": "Executive",
+        "description": "35+. Classes with adjusted intensity, focused on longevity and steady technical growth.",
+        "navigation": "/academy/programs/executivo"
+      },
+      {
+        "title": "Rolling Training",
+        "description": "Only for students who already roll. Practical application, fight reading, and live pace.",
+        "navigation": "/academy/programs/treino-rolas"
+      },
+      {
+        "title": "Night Owl (10 PM)",
+        "description": "Night group for basic and intermediate students, taught by professor Matheus Pereira.",
+        "navigation": "/academy/programs/corujao"
+      },
+      {
+        "title": "Competition",
+        "description": "Championship preparation: high pace, simulations, and competition strategy. Colored belts only — requires solid fundamentals and fight reading.",
+        "navigation": "/academy/programs/competicao"
+      }
+    ]
+  },
+  "scheduleAnchors": {
+    "viewSchedule": "View schedule",
+    "formationHelp": "How groups work",
+    "formationSummary": "Check levels and class rules whenever you need guidance.",
+    "tapToExpand": "Tap to expand"
   }
 }

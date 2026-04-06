@@ -42,7 +42,7 @@ export const programsDetailPt: ProgramDetailTranslation[] = [
     id: 3,
     title: "Treino Avançado",
     description:
-      "O Treino Avançado é onde a técnica vira arte e a estratégia vira instinto. Pra faixas roxa em diante. Trabalhamos conceitos de alto nível: timing, pressão estratégica, combinações em várias direções e os detalhes que decidem se a finalização entra ou é defendida. Você aprende a adaptar seu jogo na hora ao estilo de quem está na sua frente. Aqui você não só aprende movimentos — aprende a pensar Jiu-Jitsu. Trabalhamos situações complexas, contra-ataques afiados, transições não convencionais e polimos cada detalhe da sua execução. As aulas são intensas e exigentes, com rolas que testam corpo e mente. Você desenvolve um estilo mais definido, aprende a achar e explorar fraquezas do adversário e a criar oportunidades onde parece que não tem. É o treino pra quem busca excelência técnica e aquele nível que impressiona. Você vai ser desafiado — e vai evoluir além do que imaginava.",
+      "O Treino Avançado é onde a técnica vira arte e a estratégia vira instinto. Pra alunos a partir do 4º grau da faixa branca. Trabalhamos conceitos de alto nível: timing, pressão estratégica, combinações em várias direções e os detalhes que decidem se a finalização entra ou é defendida. Você aprende a adaptar seu jogo na hora ao estilo de quem está na sua frente. Aqui você não só aprende movimentos — aprende a pensar Jiu-Jitsu. Trabalhamos situações complexas, contra-ataques afiados, transições não convencionais e polimos cada detalhe da sua execução. As aulas são intensas e exigentes, com rolas que testam corpo e mente. Você desenvolve um estilo mais definido, aprende a achar e explorar fraquezas do adversário e a criar oportunidades onde parece que não tem. É o treino pra quem busca excelência técnica e aquele nível que impressiona. Você vai ser desafiado — e vai evoluir além do que imaginava.",
     quote:
       '"A maior lição que aprendi com o Jiu-Jitsu foi como me conhecer profundamente." – Carlos Gracie.',
     benefits: [
@@ -174,6 +174,21 @@ export const programsDetailPt: ProgramDetailTranslation[] = [
       "Liberdade para explorar o Jiu-Jitsu",
     ],
   },
+  {
+    id: 12,
+    title: "Treino de rolas",
+    description:
+      "O Treino de rolas é onde o Jiu-Jitsu vira luta de verdade no tatame: você rola com parceiros, testa seu jogo sob pressão e desenvolve leitura de luta, ritmo e tomada de decisão no improviso. O foco aqui é combate — aplicar o que já treinou nas aulas técnicas, ajustar detalhes ao vivo e ganhar experiência com corpos e estilos diferentes. Combinamos respeito ao parceiro, acordo de intensidade e segurança, e a postura certa pra treinar forte sem se machucar nem machucar ninguém. É pra quem já rola com regularidade e entende as regras básicas de partida; não substitui o treino de fundamentos — completa sua evolução com volume de luta e confiança no rola.",
+    quote:
+      '"Na rola, o que não foi treinado aparece na hora." – Fabiano Índio.',
+    benefits: [
+      "Luta aplicada e volume de rolas",
+      "Leitura de luta e ritmo",
+      "Adaptação a diferentes parceiros",
+      "Intensidade consciente e segurança",
+      "Confiança sob pressão",
+    ],
+  },
 ];
 
 export const programsDetailEn: ProgramDetailTranslation[] = [
@@ -212,7 +227,7 @@ export const programsDetailEn: ProgramDetailTranslation[] = [
     id: 3,
     title: "Advanced Training",
     description:
-      "Advanced Training is where technique turns into art and strategy becomes second nature. For purple belts and up. We work with high-level ideas: timing, strategic pressure, chained combinations in every direction, and the small details that decide whether a sub lands or gets defended. You'll learn to adapt your game on the fly to whoever's in front of you. Here you don't just learn moves — you learn to think Jiu-Jitsu. We drill complex situations, sharp counters, unconventional transitions, and polish every part of your execution. Classes are intense and demanding, with rolling that tests you physically and mentally. You'll develop a clearer personal style, learn to find and use your opponent's weaknesses, and get better at creating opportunities when there don't seem to be any. This is for anyone chasing technical excellence and that next level. You'll be pushed — and you'll evolve past what you thought was possible.",
+      "Advanced Training is where technique turns into art and strategy becomes second nature. For students from the 4th stripe on white belt and above. We work with high-level ideas: timing, strategic pressure, chained combinations in every direction, and the small details that decide whether a sub lands or gets defended. You'll learn to adapt your game on the fly to whoever's in front of you. Here you don't just learn moves — you learn to think Jiu-Jitsu. We drill complex situations, sharp counters, unconventional transitions, and polish every part of your execution. Classes are intense and demanding, with rolling that tests you physically and mentally. You'll develop a clearer personal style, learn to find and use your opponent's weaknesses, and get better at creating opportunities when there don't seem to be any. This is for anyone chasing technical excellence and that next level. You'll be pushed — and you'll evolve past what you thought was possible.",
     quote:
       '"The greatest lesson I learned from Jiu-Jitsu was how to know myself deeply." – Carlos Gracie.',
     benefits: [
@@ -340,6 +355,21 @@ export const programsDetailEn: ProgramDetailTranslation[] = [
       "Integration between groups",
       "Personal style development",
       "Freedom to explore Jiu-Jitsu",
+    ],
+  },
+  {
+    id: 12,
+    title: "Rolling training",
+    description:
+      "Rolling training is where Jiu-Jitsu becomes live sparring on the mat: you roll with partners, pressure-test your game, and build fight reading, pacing, and decision-making on the fly. The focus here is combat — applying what you drill in technical classes, adjusting details live, and gaining experience against different bodies and styles. We emphasize partner respect, clear agreement on intensity, and the mindset to train hard without hurting yourself or anyone else. It's for students who already roll regularly and understand basic rolling rules; it doesn't replace fundamentals class — it complements your path with more mat time and confidence in live rolls.",
+    quote:
+      '"In rolling, what you didn\'t train shows up fast." – Fabiano Índio.',
+    benefits: [
+      "Applied sparring and rolling volume",
+      "Fight reading and pacing",
+      "Adapting to different partners",
+      "Smart intensity and safety",
+      "Confidence under pressure",
     ],
   },
 ];

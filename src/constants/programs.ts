@@ -100,4 +100,13 @@ export const programItems = [
     icon: GiKimono,
     navigation: "/academy/programs/livre",
   },
+  {
+    id: 12,
+    title: "Treino de rolas",
+    description:
+      "Luta aplicada no tatame: rolas, leitura de luta e ritmo de combate para quem já rola.",
+    header: "/images/programs/intermediario.webp",
+    icon: GiKimono,
+    navigation: "/academy/programs/treino-rolas",
+  },
 ];

@@ -29,6 +29,10 @@
   --color-nogi-theme-light: #e8ff66;
   --color-nogi-theme-dark: #a8cc00;
 
+  --color-guard-passing-theme: #0d9488;
+  --color-guard-passing-theme-light: #2dd4bf;
+  --color-guard-passing-theme-dark: #0f766e;
+
   --color-primary-ja: #d1ff00;
   --color-primary-ja-opacity: rgba(209, 255, 0, 0.5);
 }

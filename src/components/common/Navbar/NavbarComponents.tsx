@@ -93,14 +93,15 @@ export const ProductItem = ({
 }) => {
   return (
     <Link href={href} className="flex space-x-2" onClick={onClick}>
-      <Image
-        src={src}
-        width={140}
-        height={70}
-        alt={title}
-        className="shrink-0 rounded-md shadow-2xl"
-        style={{ height: "auto" }}
-      />
+      <div className="relative h-[140px] w-[140px] shrink-0 overflow-hidden rounded-md shadow-2xl">
+        <Image
+          src={src}
+          alt={title}
+          fill
+          sizes="140px"
+          className="object-cover object-center"
+        />
+      </div>
       <div>
         <h4 className="text-xl font-bold mb-1 text-foreground">{title}</h4>
         <p className="text-foreground/80 text-sm max-w-40">{description}</p>

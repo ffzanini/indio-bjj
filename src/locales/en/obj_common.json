@@ -10,15 +10,18 @@
     "courseOpenGuard": "Open Guard Course",
     "courseDrills": "Sequences Drills Course",
     "courseNogi": "NOGI Finishes Course",
+    "courseGuardPassing": "Guard Passing Course",
     "contact": "Contact",
     "courseHalfGuardTitle": "Half Guard",
     "courseOpenGuardTitle": "Open Guard",
     "courseDrillsTitle": "Sequences Drills",
     "courseNogiTitle": "NOGI Finishes",
+    "courseGuardPassingTitle": "Guard Passing",
     "courseHalfGuardDesc": "Our signature course — level up your half guard like never before.",
     "courseOpenGuardDesc": "Everything you need to make your open guard a real weapon.",
     "courseDrillsDesc": "Drill sequences that actually move the needle on your game.",
-    "courseNogiDesc": "All the NO-GI finishes you need, straight to the point."
+    "courseNogiDesc": "All the NO-GI finishes you need, straight to the point.",
+    "courseGuardPassingDesc": "Full top-control system built around efficient and precise guard passing."
   },
   "footer": {
     "motto": "Honor, morals, respect and loyalty.",

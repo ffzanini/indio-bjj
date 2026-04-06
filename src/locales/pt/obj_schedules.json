@@ -27,16 +27,68 @@
   "scheduleSubjects": {
     "Treino Livre": "Treino Livre",
     "Treino Básico": "Treino Básico",
+    "Treino Avançado": "Treino Avançado",
     "Treino Competição": "Treino Competição",
     "Treino Básico/Intermediário": "Treino Básico/Intermediário",
+    "Treino (rola)": "Treino (rola)",
     "Treino Infantil": "Treino Infantil",
     "Treino Corujão": "Treino Corujão",
     "Treino Feminino": "Treino Feminino",
+    "Treino Baby": "Treino Baby",
     "Treino Executivo (Acima de 35 anos)": "Treino Executivo (Acima de 35 anos)",
     "Treino Baby 1": "Treino Baby 1",
     "Treino Baby 2": "Treino Baby 2",
     "Treino Competição NO GI": "Treino Competição NO GI",
     "Treino NO GI": "Treino NO GI",
     "Tatame aberto": "Tatame aberto"
+  },
+  "sessionDetails": {
+    "basicWhiteUpToThreeStripes": "Faixa branca até III graus",
+    "advancedFromFourthStripeWhite": "A partir do 4º grau da faixa branca",
+    "executiveOver35": "Acima de 35 anos",
+    "sparringOnly": "Somente alunos que já rolam",
+    "corujaoBasicIntermediate": "Turma para alunos básicos e intermediários"
+  },
+  "formationLevels": {
+    "title": "Formação por nível e objetivo",
+    "subtitle": "Nossa grade foi organizada para respeitar cada etapa da jornada no tatame, com foco no que cada grupo precisa para evoluir melhor.",
+    "items": [
+      {
+        "title": "Básico",
+        "description": "Faixa branca até III graus. Turmas voltadas para consolidar fundamentos e desenvolver segurança técnica.",
+        "navigation": "/academy/programs/iniciante"
+      },
+      {
+        "title": "Avançado",
+        "description": "A partir do 4º grau da faixa branca. Turmas para aprofundar estratégia, refinar detalhes e elevar o nível de jogo.",
+        "navigation": "/academy/programs/avancado"
+      },
+      {
+        "title": "Executivo",
+        "description": "Acima de 35 anos. Treino com intensidade ajustada, foco em longevidade e evolução técnica consistente.",
+        "navigation": "/academy/programs/executivo"
+      },
+      {
+        "title": "Treino de rola",
+        "description": "Somente para alunos que já rolam. Foco em aplicação prática, leitura de luta e ritmo de combate.",
+        "navigation": "/academy/programs/treino-rolas"
+      },
+      {
+        "title": "Corujão (22h)",
+        "description": "Turma noturna para alunos dos programas básico e intermediário, com o professor Matheus Pereira.",
+        "navigation": "/academy/programs/corujao"
+      },
+      {
+        "title": "Competição",
+        "description": "Preparação para campeonato: ritmo alto, simulações e estratégia de competição. Somente faixas coloridas — exige base consolidada e leitura de luta.",
+        "navigation": "/academy/programs/competicao"
+      }
+    ]
+  },
+  "scheduleAnchors": {
+    "viewSchedule": "Ver horários",
+    "formationHelp": "Como funcionam as turmas",
+    "formationSummary": "Consulte os níveis e regras por turma quando tiver dúvidas.",
+    "tapToExpand": "Toque para abrir"
   }
 }

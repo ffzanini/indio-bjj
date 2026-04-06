@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "title": "Master guard passing and take full control of the fight",
+    "subtitle": "Build a pressure, precision, and control-based game to shut down any guard and secure top dominance.",
+    "cta": "GET MY SPOT",
+    "students": "+1000 students",
+    "lifetime": "Lifetime access",
+    "guarantee": "7-day guarantee",
+    "satisfaction": "Satisfaction guaranteed",
+    "videoTitle": "Guard Passing Course",
+    "videoDescription": "Learn to pass with real control"
+  },
+  "benefits": {
+    "title": "What you will learn",
+    "subtitle": "A complete guard passing system that works in any scenario and against any style.",
+    "items": [
+      {
+        "icon": "🔗",
+        "title": "Pass-to-offense connection",
+        "description": "Connect your guard pass with back takes and continuous control."
+      },
+      {
+        "icon": "🧭",
+        "title": "Modern guard awareness",
+        "description": "Neutralize Dela Riva, Lasso, 50/50, and other systems without improvising."
+      },
+      {
+        "icon": "⚙️",
+        "title": "Technique over strength",
+        "description": "Apply efficient pressure and proper mechanics to break defensive structure."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Control after sweeps",
+        "description": "Stop resetting the fight: consolidate top control and dictate pace."
+      },
+      {
+        "icon": "📈",
+        "title": "From fundamentals to advanced",
+        "description": "A structured path to improve with clarity, consistency, and confidence."
+      },
+      {
+        "icon": "🎯",
+        "title": "Berimbolo and modern attack defense",
+        "description": "Understand how to shut down entries and keep control against modern games."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Stop getting stuck in guard and take control",
+    "from": "Special offer: from R$ 197.00 for only",
+    "price": "R$ 89.90 one-time",
+    "installments": "or 12x of R$ 9.30",
+    "button": "GET MY SPOT",
+    "lifetime": "Lifetime access",
+    "satisfaction": "Satisfaction guaranteed"
+  },
+  "guarantee": {
+    "title": "7-day satisfaction guarantee",
+    "subtitle": "Try the complete course and, if you're not satisfied, get a full refund.",
+    "seal": "Guarantee",
+    "description": "Watch the lessons, apply in training, and evaluate it with confidence. If it's not for you, request a refund with no bureaucracy.",
+    "noQuestions": "No hassle. Full refund within the guarantee period."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "stillDoubts": "Still have questions?",
+    "description": "Our team is ready to help with anything about the course.",
+    "whatsapp": "Message us on WhatsApp",
+    "items": [
+      {
+        "question": "Is this course for beginners or advanced students?",
+        "answer": "Both. The content goes from fundamentals to advanced with a clear progression."
+      },
+      {
+        "question": "Will I learn to pass modern guards?",
+        "answer": "Yes. The course covers Dela Riva, Lasso, 50/50, berimbolo defense, and modern situations."
+      },
+      {
+        "question": "How long do I keep access?",
+        "answer": "Lifetime access. You can watch anytime and review as often as you want."
+      },
+      {
+        "question": "How does the 7-day guarantee work?",
+        "answer": "You can test the course for 7 days. If you're not satisfied, request a full refund."
+      }
+    ]
+  }
+}

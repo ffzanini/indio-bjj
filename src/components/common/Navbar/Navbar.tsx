@@ -184,6 +184,15 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
                 >
                   {t.common.nav.courseNogi.toUpperCase()}
                 </HoveredLink>
+                <HoveredLink
+                  href="/courses/guardpassing"
+                  onClick={() => {
+                    closeMobile();
+                    setShowCursos(false);
+                  }}
+                >
+                  {t.common.nav.courseGuardPassing.toUpperCase()}
+                </HoveredLink>
               </div>
             )}
             <NavbarLink
@@ -278,6 +287,13 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
                 href="/courses/nogi"
                 src="/images/courses/indio-curso-nogi.webp"
                 description={t.common.nav.courseNogiDesc}
+                onClick={() => setActive("")}
+              />
+              <ProductItem
+                title={t.common.nav.courseGuardPassingTitle}
+                href="/courses/guardpassing"
+                src="/images/courses/indio-curso-pass-open-guard.jpeg"
+                description={t.common.nav.courseGuardPassingDesc}
                 onClick={() => setActive("")}
               />
             </div>

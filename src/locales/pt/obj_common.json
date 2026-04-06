@@ -10,15 +10,18 @@
     "courseOpenGuard": "Curso Guarda Aberta",
     "courseDrills": "Curso Sequências Drills",
     "courseNogi": "Curso Finalizações NOGI",
+    "courseGuardPassing": "Curso Passagens de Guarda",
     "contact": "Contato",
     "courseHalfGuardTitle": "Meia Guarda",
     "courseOpenGuardTitle": "Guarda Aberta",
     "courseDrillsTitle": "Sequências Drills",
     "courseNogiTitle": "Finalizações NOGI",
+    "courseGuardPassingTitle": "Passagens de Guarda",
     "courseHalfGuardDesc": "A especialidade da casa — eleve sua meia guarda como nunca.",
     "courseOpenGuardDesc": "Tudo o que você precisa para transformar sua guarda aberta em arma.",
     "courseDrillsDesc": "Sequências de drills que de fato fazem sua evolução andar.",
-    "courseNogiDesc": "Todas as finalizações NO-GI que você precisa, direto ao ponto."
+    "courseNogiDesc": "Todas as finalizações NO-GI que você precisa, direto ao ponto.",
+    "courseGuardPassingDesc": "Controle total por cima com um sistema completo de passagens de guarda."
   },
   "footer": {
     "motto": "Honra, moral, respeito e lealdade.",

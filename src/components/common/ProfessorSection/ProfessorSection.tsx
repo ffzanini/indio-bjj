@@ -5,7 +5,13 @@ import { RiStarLine } from "react-icons/ri";
 import { useTranslation } from "@/context";
 
 interface ProfessorSectionProps {
-  type?: "halfGuard" | "openGuard" | "drills" | "nogi" | "neutral";
+  type?:
+    | "halfGuard"
+    | "openGuard"
+    | "drills"
+    | "nogi"
+    | "guardPassing"
+    | "neutral";
 }
 
 export function ProfessorSection({ type = "neutral" }: ProfessorSectionProps) {
@@ -26,6 +32,10 @@ export function ProfessorSection({ type = "neutral" }: ProfessorSectionProps) {
     nogi: {
       border: "border-nogi-theme",
       text: "text-nogi-theme",
+    },
+    guardPassing: {
+      border: "border-guard-passing-theme",
+      text: "text-guard-passing-theme",
     },
     neutral: {
       border: "border-muted-foreground",

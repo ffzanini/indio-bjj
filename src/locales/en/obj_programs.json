@@ -56,6 +56,11 @@
       "id": 11,
       "title": "Open mat",
       "description": "Your time on the mat. Drill, experiment, and build your game your way."
+    },
+    {
+      "id": 12,
+      "title": "Rolling training",
+      "description": "Live sparring: rolls, fight reading, and pace — for students who already roll safely."
     }
   ]
 }

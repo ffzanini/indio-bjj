@@ -53,7 +53,7 @@ export const programs: Programs[] = [
     image: "/images/programs/avancado.webp",
     title: "Treino Avançado",
     description:
-      "O Treino Avançado é o ambiente onde a técnica se transforma em arte e a estratégia se torna intuitiva. Voltado para faixas roxa em diante, este programa trabalha com conceitos de alto nível: timing perfeito, pressão estratégica, combinações encadeadas em múltiplas direções, ajustes milimétricos que fazem a diferença entre uma finalização e uma defesa, e a capacidade de adaptar seu jogo instantaneamente ao estilo do oponente. Aqui, você não apenas aprende técnicas — você aprende a pensar o Jiu-Jitsu. Trabalhamos situações complexas de luta, contra-ataques sofisticados, transições não convencionais, e refinamos cada detalhe da sua execução técnica. As aulas são intensas e desafiadoras, com rolas de alto nível que testam sua capacidade física e mental. Você desenvolverá um estilo pessoal mais definido, aprenderá a identificar e explorar fraquezas do adversário, e dominará a arte de criar oportunidades onde aparentemente não existem. Este é o treino para quem busca excelência técnica, eficiência máxima e aquele nível de jogo que impressiona. Prepare-se para ser desafiado constantemente e para evoluir além do que imaginava ser possível.",
+      "O Treino Avançado é o ambiente onde a técnica se transforma em arte e a estratégia se torna intuitiva. Voltado para alunos a partir do 4º grau da faixa branca, este programa trabalha com conceitos de alto nível: timing perfeito, pressão estratégica, combinações encadeadas em múltiplas direções, ajustes milimétricos que fazem a diferença entre uma finalização e uma defesa, e a capacidade de adaptar seu jogo instantaneamente ao estilo do oponente. Aqui, você não apenas aprende técnicas — você aprende a pensar o Jiu-Jitsu. Trabalhamos situações complexas de luta, contra-ataques sofisticados, transições não convencionais, e refinamos cada detalhe da sua execução técnica. As aulas são intensas e desafiadoras, com rolas de alto nível que testam sua capacidade física e mental. Você desenvolverá um estilo pessoal mais definido, aprenderá a identificar e explorar fraquezas do adversário, e dominará a arte de criar oportunidades onde aparentemente não existem. Este é o treino para quem busca excelência técnica, eficiência máxima e aquele nível de jogo que impressiona. Prepare-se para ser desafiado constantemente e para evoluir além do que imaginava ser possível.",
     quote:
       "“A maior lição que aprendi com o Jiu-Jitsu foi como me conhecer profundamente.” – Carlos Gracie.",
     benefits: [
@@ -207,6 +207,24 @@ export const programs: Programs[] = [
       "Integração entre turmas",
       "Desenvolvimento do estilo pessoal",
       "Liberdade para explorar o Jiu-Jitsu",
+    ],
+    professors: "Fabiano Índio",
+  },
+  {
+    id: 12,
+    navigation: "treino-rolas",
+    image: "/images/programs/intermediario.webp",
+    title: "Treino de rolas",
+    description:
+      "O Treino de rolas é o espaço do tatame dedicado à luta em tempo real: rolar com parceiros, testar o que você treina nas aulas técnicas e desenvolver leitura de luta, ritmo e controle sob pressão. Aqui o foco não é aprender posição nova passo a passo — é aplicar o jogo, ajustar detalhes no combate e ganhar experiência com diferentes estilos e corpos. Trabalhamos respeito ao parceiro, comunicação clara sobre intensidade e segurança, e a mentalidade correta para treinar duro sem se machucar nem machucar o outro. É indicado para quem já rola com regularidade e entende regras básicas de partida; não substitui o treino estruturado de fundamentos e técnicas — complementa sua evolução com volume de luta e tomada de decisão no improviso. Venha rolar com método, intensidade consciente e a equipe da JA.",
+    quote:
+      "“Na rola, o que não foi treinado aparece na hora.” – Fabiano Índio.",
+    benefits: [
+      "Aplicação prática do Jiu-Jitsu em luta",
+      "Leitura de luta e ritmo de combate",
+      "Volume de rolas com diferentes parceiros",
+      "Controle de intensidade e segurança",
+      "Confiança e adaptação sob pressão",
     ],
     professors: "Fabiano Índio",
   },

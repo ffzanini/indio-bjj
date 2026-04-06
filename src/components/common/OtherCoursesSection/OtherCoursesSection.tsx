@@ -29,6 +29,13 @@ const COURSES = [
     descKey: "courseNogiDesc" as const,
   },
   {
+    id: "guardpassing" as const,
+    href: "/courses/guardpassing",
+    src: "/images/courses/indio-curso-passagens-guarda.svg",
+    titleKey: "courseGuardPassingTitle" as const,
+    descKey: "courseGuardPassingDesc" as const,
+  },
+  {
     id: "openguard" as const,
     href: "/courses/openguard",
     src: "/images/courses/indio-curso-guarda-aberta.webp",
@@ -60,7 +67,7 @@ export function OtherCoursesSection({
           {t.common.otherCourses.subtitle}
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {otherCourses.map((course) => (
             <motion.div
               key={course.id}
@@ -79,7 +86,7 @@ export function OtherCoursesSection({
                     alt={t.common.nav[course.titleKey]}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
                 <div className="p-4 flex flex-col flex-1">

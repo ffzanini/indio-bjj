@@ -19,7 +19,7 @@ import { fontMontserrat } from "./fonts";
 import "./globals.css";
 
 const defaultDescription =
-  "Academia de Jiu Jitsu em Pelotas. JA Índio Jiu Jitsu: aulas e cursos de Jiu-Jitsu para todas as idades e níveis em Pelotas. Cursos de meia guarda, guarda aberta, nogi e drills com Fabiano Índio. Agende sua aula experimental de Jiu Jitsu em Pelotas.";
+  "Academia de Jiu Jitsu em Pelotas. JA Índio Jiu Jitsu: aulas e cursos de Jiu-Jitsu para todas as idades e níveis em Pelotas. Cursos de meia guarda, guarda aberta, passagens de guarda, nogi e drills com Fabiano Índio. Agende sua aula experimental de Jiu Jitsu em Pelotas.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

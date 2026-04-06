@@ -8,7 +8,7 @@ import {
 
 const title = "Cursos de Jiu Jitsu";
 const description =
-  "Cursos de Jiu Jitsu com Fabiano Índio na JA Pelotas: curso meia guarda, curso guarda aberta, curso nogi (no-gi) e curso drills. Aprenda Jiu Jitsu com o Índio em Pelotas.";
+  "Cursos de Jiu Jitsu com Fabiano Índio na JA Pelotas: curso meia guarda, curso guarda aberta, curso passagens de guarda, curso nogi (no-gi) e curso drills. Aprenda Jiu Jitsu com o Índio em Pelotas.";
 
 export const metadata: Metadata = {
   title,
