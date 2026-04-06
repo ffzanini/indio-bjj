@@ -30,7 +30,7 @@
     "Treino Avançado": "Treino Avançado",
     "Treino Competição": "Treino Competição",
     "Treino Básico/Intermediário": "Treino Básico/Intermediário",
-    "Treino (rola)": "Treino (rola)",
+    "Treino (rola)": "Simulação de Luta (rolas)",
     "Treino Infantil": "Treino Infantil",
     "Treino Corujão": "Treino Corujão",
     "Treino Feminino": "Treino Feminino",
@@ -69,7 +69,7 @@
         "navigation": "/academy/programs/executivo"
       },
       {
-        "title": "Treino de rola",
+        "title": "Simulação de Luta (rolas)",
         "description": "Somente para alunos que já rolam. Foco em aplicação prática, leitura de luta e ritmo de combate.",
         "navigation": "/academy/programs/treino-rolas"
       },

@@ -102,7 +102,7 @@ export const programItems = [
   },
   {
     id: 12,
-    title: "Treino de rolas",
+    title: "Simulação de Luta (rolas)",
     description:
       "Luta aplicada no tatame: rolas, leitura de luta e ritmo de combate para quem já rola.",
     header: "/images/programs/intermediario.webp",

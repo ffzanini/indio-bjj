@@ -30,7 +30,7 @@
     "Treino Avançado": "Advanced Training",
     "Treino Competição": "Competition Training",
     "Treino Básico/Intermediário": "Basic/Intermediate Training",
-    "Treino (rola)": "Rolling Training",
+    "Treino (rola)": "Fight simulation (rolling)",
     "Treino Infantil": "Kids Training",
     "Treino Corujão": "Night Owl Training",
     "Treino Feminino": "Women's Training",
@@ -69,7 +69,7 @@
         "navigation": "/academy/programs/executivo"
       },
       {
-        "title": "Rolling Training",
+        "title": "Fight simulation (rolling)",
         "description": "Only for students who already roll. Practical application, fight reading, and live pace.",
         "navigation": "/academy/programs/treino-rolas"
       },

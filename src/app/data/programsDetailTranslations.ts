@@ -176,9 +176,9 @@ export const programsDetailPt: ProgramDetailTranslation[] = [
   },
   {
     id: 12,
-    title: "Treino de rolas",
+    title: "Simulação de Luta (rolas)",
     description:
-      "O Treino de rolas é onde o Jiu-Jitsu vira luta de verdade no tatame: você rola com parceiros, testa seu jogo sob pressão e desenvolve leitura de luta, ritmo e tomada de decisão no improviso. O foco aqui é combate — aplicar o que já treinou nas aulas técnicas, ajustar detalhes ao vivo e ganhar experiência com corpos e estilos diferentes. Combinamos respeito ao parceiro, acordo de intensidade e segurança, e a postura certa pra treinar forte sem se machucar nem machucar ninguém. É pra quem já rola com regularidade e entende as regras básicas de partida; não substitui o treino de fundamentos — completa sua evolução com volume de luta e confiança no rola.",
+      "A Simulação de Luta (rolas) é onde o Jiu-Jitsu vira luta de verdade no tatame: você rola com parceiros, testa seu jogo sob pressão e desenvolve leitura de luta, ritmo e tomada de decisão no improviso. O foco aqui é combate — aplicar o que já treinou nas aulas técnicas, ajustar detalhes ao vivo e ganhar experiência com corpos e estilos diferentes. Combinamos respeito ao parceiro, acordo de intensidade e segurança, e a postura certa pra treinar forte sem se machucar nem machucar ninguém. É pra quem já rola com regularidade e entende as regras básicas de partida; não substitui o treino de fundamentos — completa sua evolução com volume de luta e confiança no rola.",
     quote:
       '"Na rola, o que não foi treinado aparece na hora." – Fabiano Índio.',
     benefits: [
@@ -359,9 +359,9 @@ export const programsDetailEn: ProgramDetailTranslation[] = [
   },
   {
     id: 12,
-    title: "Rolling training",
+    title: "Fight simulation (rolling)",
     description:
-      "Rolling training is where Jiu-Jitsu becomes live sparring on the mat: you roll with partners, pressure-test your game, and build fight reading, pacing, and decision-making on the fly. The focus here is combat — applying what you drill in technical classes, adjusting details live, and gaining experience against different bodies and styles. We emphasize partner respect, clear agreement on intensity, and the mindset to train hard without hurting yourself or anyone else. It's for students who already roll regularly and understand basic rolling rules; it doesn't replace fundamentals class — it complements your path with more mat time and confidence in live rolls.",
+      "Fight simulation (rolling) is where Jiu-Jitsu becomes live sparring on the mat: you roll with partners, pressure-test your game, and build fight reading, pacing, and decision-making on the fly. The focus here is combat — applying what you drill in technical classes, adjusting details live, and gaining experience against different bodies and styles. We emphasize partner respect, clear agreement on intensity, and the mindset to train hard without hurting yourself or anyone else. It's for students who already roll regularly and understand basic rolling rules; it doesn't replace fundamentals class — it complements your path with more mat time and confidence in live rolls.",
     quote:
       '"In rolling, what you didn\'t train shows up fast." – Fabiano Índio.',
     benefits: [

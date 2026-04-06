@@ -214,9 +214,9 @@ export const programs: Programs[] = [
     id: 12,
     navigation: "treino-rolas",
     image: "/images/programs/intermediario.webp",
-    title: "Treino de rolas",
+    title: "Simulação de Luta (rolas)",
     description:
-      "O Treino de rolas é o espaço do tatame dedicado à luta em tempo real: rolar com parceiros, testar o que você treina nas aulas técnicas e desenvolver leitura de luta, ritmo e controle sob pressão. Aqui o foco não é aprender posição nova passo a passo — é aplicar o jogo, ajustar detalhes no combate e ganhar experiência com diferentes estilos e corpos. Trabalhamos respeito ao parceiro, comunicação clara sobre intensidade e segurança, e a mentalidade correta para treinar duro sem se machucar nem machucar o outro. É indicado para quem já rola com regularidade e entende regras básicas de partida; não substitui o treino estruturado de fundamentos e técnicas — complementa sua evolução com volume de luta e tomada de decisão no improviso. Venha rolar com método, intensidade consciente e a equipe da JA.",
+      "A Simulação de Luta (rolas) é o espaço do tatame dedicado à luta em tempo real: rolar com parceiros, testar o que você treina nas aulas técnicas e desenvolver leitura de luta, ritmo e controle sob pressão. Aqui o foco não é aprender posição nova passo a passo — é aplicar o jogo, ajustar detalhes no combate e ganhar experiência com diferentes estilos e corpos. Trabalhamos respeito ao parceiro, comunicação clara sobre intensidade e segurança, e a mentalidade correta para treinar duro sem se machucar nem machucar o outro. É indicado para quem já rola com regularidade e entende regras básicas de partida; não substitui o treino estruturado de fundamentos e técnicas — complementa sua evolução com volume de luta e tomada de decisão no improviso. Venha rolar com método, intensidade consciente e a equipe da JA.",
     quote:
       "“Na rola, o que não foi treinado aparece na hora.” – Fabiano Índio.",
     benefits: [
