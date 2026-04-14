@@ -320,12 +320,11 @@ export const weeklyClasses: WeeklySchedule = {
     },
     {
       id: 36,
-      subject: "Treino Básico",
+      subject: "Treino Básico/Intermediário",
       startTime: "17:30",
       endTime: "18:30",
       instructor: "Fabiano Índio",
-      navigation: "/academy/programs/iniciante",
-      detailKey: "basicWhiteUpToThreeStripes",
+      navigation: "/academy/programs/intermediario",
     },
     {
       id: 37,
