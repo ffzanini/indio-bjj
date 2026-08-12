@@ -14,6 +14,7 @@
   "instructor": "Instructor: ",
   "professor": "Professor: ",
   "professora": "Instructor: ",
+  "tatame": "Mat",
   "days": {
     "Sunday": "Sunday",
     "Monday": "Monday",
@@ -47,7 +48,8 @@
     "advancedFromFourthStripeWhite": "From the 4th stripe on white belt",
     "executiveOver35": "35+",
     "sparringOnly": "Only for students who already roll",
-    "corujaoBasicIntermediate": "Group for basic and intermediate students"
+    "corujaoBasicIntermediate": "Group for basic and intermediate students",
+    "allBelts": "All belts"
   },
   "formationLevels": {
     "title": "Training by level and goal",

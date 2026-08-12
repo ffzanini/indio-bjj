@@ -14,6 +14,7 @@
   "instructor": "Instrutor: ",
   "professor": "Professor: ",
   "professora": "Professora: ",
+  "tatame": "Tatame",
   "days": {
     "Sunday": "Domingo",
     "Monday": "Segunda-feira",
@@ -47,7 +48,8 @@
     "advancedFromFourthStripeWhite": "A partir do 4º grau da faixa branca",
     "executiveOver35": "Acima de 35 anos",
     "sparringOnly": "Somente alunos que já rolam",
-    "corujaoBasicIntermediate": "Turma para alunos básicos e intermediários"
+    "corujaoBasicIntermediate": "Turma para alunos básicos e intermediários",
+    "allBelts": "Todas as faixas"
   },
   "formationLevels": {
     "title": "Formação por nível e objetivo",

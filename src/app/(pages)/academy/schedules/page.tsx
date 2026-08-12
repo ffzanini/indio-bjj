@@ -86,9 +86,11 @@ export default function Schedule() {
   const classesForDay = useHolidaySchedule
     ? weeklyClasses.Holiday
     : weeklyClasses[selectedDayName] || [];
-  const sortedClassesForDay = [...classesForDay].sort((a, b) =>
-    a.startTime.localeCompare(b.startTime),
-  );
+  const sortedClassesForDay = [...classesForDay].sort((a, b) => {
+    const byTime = a.startTime.localeCompare(b.startTime);
+    if (byTime !== 0) return byTime;
+    return (a.tatame ?? 0) - (b.tatame ?? 0);
+  });
 
   const currentYear = new Date().getFullYear();
   const modifiers = {
@@ -244,6 +246,11 @@ export default function Schedule() {
                                   {scheduleSubjects[classSession.subject] ||
                                     classSession.subject}
                                 </h3>
+                                {classSession.tatame && (
+                                  <p className="text-xs font-medium text-foreground/80 mt-1">
+                                    {t.schedules.tatame} {classSession.tatame}
+                                  </p>
+                                )}
                                 {classSession.detailKey &&
                                   sessionDetails[classSession.detailKey] && (
                                     <p className="text-xs text-foreground/80 mt-1">

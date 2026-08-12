@@ -6,6 +6,7 @@ type ClassSession = {
   instructor: string;
   navigation: string;
   detailKey?: string;
+  tatame?: 1 | 2;
 };
 
 type WeeklySchedule = {
@@ -67,21 +68,23 @@ export const weeklyClasses: WeeklySchedule = {
     },
     {
       id: 7,
-      subject: "Treino Básico",
-      startTime: "19:30",
-      endTime: "20:30",
-      instructor: "Fabiano Índio",
-      navigation: "/academy/programs/iniciante",
-      detailKey: "basicWhiteUpToThreeStripes",
-    },
-    {
-      id: 8,
       subject: "Treino Avançado",
-      startTime: "20:30",
-      endTime: "21:30",
+      startTime: "19:45",
+      endTime: "20:45",
       instructor: "Fabiano Índio",
       navigation: "/academy/programs/avancado",
       detailKey: "advancedFromFourthStripeWhite",
+      tatame: 1,
+    },
+    {
+      id: 8,
+      subject: "Treino Básico",
+      startTime: "19:45",
+      endTime: "20:45",
+      instructor: "Fabiano Índio",
+      navigation: "/academy/programs/iniciante",
+      detailKey: "basicWhiteUpToThreeStripes",
+      tatame: 2,
     },
     {
       id: 9,
@@ -94,14 +97,6 @@ export const weeklyClasses: WeeklySchedule = {
     },
   ],
   Tuesday: [
-    {
-      id: 10,
-      subject: "Treino Feminino",
-      startTime: "11:00",
-      endTime: "12:00",
-      instructor: "Monique Valadão",
-      navigation: "/academy/programs/feminino",
-    },
     {
       id: 11,
       subject: "Treino Competição",
@@ -206,21 +201,23 @@ export const weeklyClasses: WeeklySchedule = {
     },
     {
       id: 23,
-      subject: "Treino Básico",
-      startTime: "19:30",
-      endTime: "20:30",
-      instructor: "Fabiano Índio",
-      navigation: "/academy/programs/iniciante",
-      detailKey: "basicWhiteUpToThreeStripes",
-    },
-    {
-      id: 24,
       subject: "Treino Avançado",
-      startTime: "20:30",
-      endTime: "21:30",
+      startTime: "19:45",
+      endTime: "20:45",
       instructor: "Fabiano Índio",
       navigation: "/academy/programs/avancado",
       detailKey: "advancedFromFourthStripeWhite",
+      tatame: 1,
+    },
+    {
+      id: 24,
+      subject: "Treino Básico",
+      startTime: "19:45",
+      endTime: "20:45",
+      instructor: "Fabiano Índio",
+      navigation: "/academy/programs/iniciante",
+      detailKey: "basicWhiteUpToThreeStripes",
+      tatame: 2,
     },
     {
       id: 25,
@@ -233,14 +230,6 @@ export const weeklyClasses: WeeklySchedule = {
     },
   ],
   Thursday: [
-    {
-      id: 26,
-      subject: "Treino Feminino",
-      startTime: "11:00",
-      endTime: "12:00",
-      instructor: "Monique Valadão",
-      navigation: "/academy/programs/feminino",
-    },
     {
       id: 27,
       subject: "Treino Competição",
@@ -320,11 +309,12 @@ export const weeklyClasses: WeeklySchedule = {
     },
     {
       id: 36,
-      subject: "Treino Básico/Intermediário",
+      subject: "Treino Livre",
       startTime: "17:30",
       endTime: "18:30",
       instructor: "Fabiano Índio",
-      navigation: "/academy/programs/intermediario",
+      navigation: "/academy/programs/livre",
+      detailKey: "allBelts",
     },
     {
       id: 37,
