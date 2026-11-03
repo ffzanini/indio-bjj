@@ -29,11 +29,11 @@ O projeto foi desenvolvido com **Next.js**, **TypeScript** e **Tailwind CSS**, p
 
 ## ✨ Funcionalidades
 
-- **Idiomas:** Português e Inglês (i18n)
+- **Idiomas:** Português e Inglês na URL (`/pt` e `/en`)
 - **Tema:** Alternância entre modo claro e escuro
 - **Academia:** Sobre nós, programas, horários e depoimentos
 - **Cursos online:** Páginas dedicadas (Drills, Guarda Aberta, Meia Guarda, No-Gi)
-- **Contato:** Formulário e integração com WhatsApp
+- **Contato:** WhatsApp, endereço e mapa
 - **SEO:** Sitemap e metadados configurados para indexação
 - **Analytics:** Integração com Vercel Analytics e Speed Insights
 - **Layout responsivo:** Pensado para uso em qualquer dispositivo
@@ -57,15 +57,12 @@ O projeto foi desenvolvido com **Next.js**, **TypeScript** e **Tailwind CSS**, p
 | Tecnologia                                                                                                   | Uso                                            |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------- |
 | [Framer Motion](https://motion.dev/)                                                                         | Animações e transições                         |
-| [React Hook Form](https://react-hook-form.com/)                                                              | Formulários                                    |
 | [React Icons](https://react-icons.github.io/react-icons/)                                                    | Ícones                                         |
 | [next-themes](https://github.com/pacocoursey/next-themes)                                                    | Tema claro/escuro                              |
-| [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)                                              | Geração de sitemap                             |
 | [react-hot-toast](https://react-hot-toast.com/)                                                              | Notificações (toast)                           |
-| [SWR](https://swr.vercel.app/)                                                                               | Requisições e cache de dados                   |
 | [react-medium-image-zoom](https://github.com/rpearce/react-medium-image-zoom)                                | Zoom em imagens                                |
 | [class-variance-authority](https://cva.style/) + [tailwind-merge](https://github.com/dcastil/tailwind-merge) | Variantes de componentes e merge de classes    |
-| [Brasil API](https://brasilapi.com.br/)                                                                      | Integração (ex.: CEP no formulário de contato) |
+| [Brasil API](https://brasilapi.com.br/)                                                                      | Feriados nacionais na grade de horários        |
 
 ---
 
@@ -110,7 +107,7 @@ npm start
 
 ## 📦 Deploy
 
-O projeto está preparado para deploy na **Vercel**: build com `next build`, com `postbuild` gerando o sitemap via `next-sitemap`. Basta conectar o repositório ao projeto na Vercel e configurar variáveis de ambiente, se houver (por exemplo, para integração com Notion ou APIs externas).
+O projeto está preparado para deploy na **Vercel**, na região de São Paulo. O sitemap e o `robots.txt` saem das rotas do App Router (`src/app/sitemap.ts` e `src/app/robots.ts`). Basta conectar o repositório ao projeto na Vercel. O pixel do Facebook usa `NEXT_PUBLIC_FACEBOOK_PIXEL_ID`.
 
 ---
 

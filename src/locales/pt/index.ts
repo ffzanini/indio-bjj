@@ -19,6 +19,7 @@ import guardpassing from "./obj_guardpassing.json";
 import nogi from "./obj_nogi.json";
 import openguard from "./obj_openguard.json";
 import professor from "./obj_professor.json";
+import ui from "./obj_ui.json";
 
 const pt = {
   common,
@@ -36,6 +37,7 @@ const pt = {
   nogi,
   openguard,
   professor,
+  ui,
 };
 
 export default pt;

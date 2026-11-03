@@ -2,7 +2,7 @@
 import { RiArrowRightLine } from "react-icons/ri";
 import { useState, useRef, useId, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/utils/LocaleLink";
 
 interface SlideData {
   title: string;

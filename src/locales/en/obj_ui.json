@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "home_title": "Jiu Jitsu in Pelotas | JA Índio Jiu Jitsu - Pelotas Jiu Jitsu Academy",
+    "home_description": "Jiu Jitsu academy in Pelotas. JA Índio Jiu Jitsu: classes and courses for every age and level. Half guard, open guard, guard passing, no-gi and drills with Fabiano Índio. Book a trial class in Pelotas.",
+    "about_title": "About us",
+    "about_description": "Meet JA Índio Jiu Jitsu in Pelotas. The story, coaches and method behind Índio Jiu Jitsu, a Pelotas academy built on tradition and quality.",
+    "programs_title": "Programs",
+    "programs_description": "Jiu Jitsu programs at JA Índio in Pelotas: beginner, intermediate, advanced, competition, kids, women, no-gi, executive and private lessons. Pick your program.",
+    "schedules_title": "Schedule",
+    "schedules_description": "Class times at JA Índio Jiu Jitsu in Pelotas. See the days and hours for Jiu Jitsu, no-gi and special programs.",
+    "testimonials_title": "Testimonials",
+    "testimonials_description": "What students say about training Jiu Jitsu at JA Índio in Pelotas.",
+    "contact_title": "Contact",
+    "contact_description": "Contact JA Índio Jiu Jitsu in Pelotas. Book a trial class. WhatsApp, address and academy hours.",
+    "courses_title": "Jiu Jitsu courses",
+    "courses_description": "Jiu Jitsu courses with Fabiano Índio: half guard, open guard, guard passing, no-gi and drills. Learn Jiu Jitsu with Índio in Pelotas.",
+    "drills_title": "Jiu Jitsu Drills Course with Fabiano Índio",
+    "drills_description": "Jiu Jitsu drills course with Fabiano Índio. Repetition and fundamentals at JA Índio in Pelotas, built to improve technique and conditioning.",
+    "halfguard_title": "Half Guard Course with Fabiano Índio",
+    "halfguard_description": "Half guard course with Fabiano Índio. Learn half guard for Jiu Jitsu at JA Índio in Pelotas, for every level.",
+    "openguard_title": "Open Guard Course with Fabiano Índio",
+    "openguard_description": "Open guard course with Fabiano Índio. Learn open guard for Jiu Jitsu at JA Índio in Pelotas, for every level.",
+    "nogi_title": "No-Gi Jiu Jitsu Course with Fabiano Índio",
+    "nogi_description": "No-gi Jiu Jitsu course with Fabiano Índio. Learn no-gi at JA Índio in Pelotas, including grappling and MMA.",
+    "guardpassing_title": "Guard Passing Course with Fabiano Índio",
+    "guardpassing_description": "Guard passing course with Fabiano Índio. Learn top control, efficient pressure and how to pass modern guards.",
+    "program_description": "{title} at JA Índio Jiu Jitsu in Pelotas. {summary}"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "This address does not exist on JA Índio Jiu Jitsu.",
+    "home": "Back to home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error happened while loading this page.",
+    "retry": "Try again",
+    "home": "Home"
+  }
+}

@@ -1,2 +1,5 @@
-export { default as pt } from "./pt";
-export { default as en } from "./en";
+export type {
+  Translations,
+  InitialTranslations,
+  ChromeTranslations,
+} from "./load-locale";

@@ -1,12 +1,26 @@
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "@/providers/theme";
+
 import { InternacionalizationProvider } from "@/context/internacionalization-context";
+import { DEFAULT_LOCALE, type Locale } from "@/libs/i18n";
+import type { InitialTranslations } from "@/locales/load-locale";
 
 export function AppProvider({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  initialLocale = DEFAULT_LOCALE,
+  initialTranslations,
+}: Readonly<{
+  children: React.ReactNode;
+  initialLocale?: Locale;
+  initialTranslations: InitialTranslations;
+}>) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark">
-      <InternacionalizationProvider>{children}</InternacionalizationProvider>
+    <ThemeProvider>
+      <InternacionalizationProvider
+        initialLocale={initialLocale}
+        initialTranslations={initialTranslations}
+      >
+        {children}
+      </InternacionalizationProvider>
     </ThemeProvider>
   );
 }

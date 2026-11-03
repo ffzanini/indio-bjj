@@ -1,21 +1,11 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
-import AppProvider from "@/providers/AppProvider";
-import {
-  ClientToaster,
-  Footer,
-  Header,
-  SetInitialLanguage,
-} from "@/components";
-
-import { DEFAULT_KEYWORDS_STRING, SITE_NAME, SITE_URL } from "@/constants/seo";
-
+import { HtmlLang } from "@/components/utils/HtmlLang";
+import { JsonLd } from "@/components/utils/JsonLd";
+import { AnalyticsWrapper } from "@/components/utils/Analytics";
+import { SITE_NAME, SITE_URL } from "@/constants/seo";
 import { fontMontserrat } from "./fonts";
-
 import "./globals.css";
 
 const defaultDescription =
@@ -28,35 +18,30 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME} - Jiu Jitsu Pelotas`,
   },
   description: defaultDescription,
-  keywords: DEFAULT_KEYWORDS_STRING,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
   alternates: {
-    canonical: SITE_URL,
+    canonical: `${SITE_URL}/pt`,
+    languages: {
+      "pt-BR": `${SITE_URL}/pt`,
+      en: `${SITE_URL}/en`,
+    },
   },
   icons: "/favicon.ico",
   openGraph: {
     type: "website",
-    url: SITE_URL,
+    url: `${SITE_URL}/pt`,
     siteName: SITE_NAME,
     locale: "pt_BR",
+    alternateLocale: ["en_US"],
     title: `Jiu Jitsu em Pelotas | ${SITE_NAME} - Academia de Jiu Jitsu Pelotas`,
     description: defaultDescription,
-    images: [
-      {
-        url: `${SITE_URL}/images/visit-card.png`,
-        width: 1120,
-        height: 630,
-        alt: `${SITE_NAME} - Academia de Jiu Jitsu em Pelotas`,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `Jiu Jitsu em Pelotas | ${SITE_NAME} - Academia de Jiu Jitsu Pelotas`,
     description: defaultDescription,
-    images: [`${SITE_URL}/images/visit-card.png`],
   },
   robots: {
     index: true,
@@ -66,40 +51,8 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-  verification: {
-    // Adicione aqui quando tiver: google: "seu-codigo-google-search-console",
-  },
   other: {
     google: "notranslate",
-  },
-};
-
-const jsonLdLocalBusiness = {
-  "@context": "https://schema.org",
-  "@type": "SportsActivityLocation",
-  name: SITE_NAME,
-  description: defaultDescription,
-  url: SITE_URL,
-  image: `${SITE_URL}/images/visit-card.png`,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Pelotas",
-    addressRegion: "RS",
-    addressCountry: "BR",
-  },
-  areaServed: {
-    "@type": "City",
-    name: "Pelotas",
-  },
-  sameAs: [],
-  potentialAction: {
-    "@type": "JoinAction",
-    target: {
-      "@type": "EntryPoint",
-      url: "https://wa.me/5553991886599",
-      actionPlatform: ["http://schema.org/WhatsApp"],
-    },
-    name: "Agendar aula experimental de Jiu Jitsu",
   },
 };
 
@@ -121,13 +74,12 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-5J2TP47Q');`,
         }}
       />
-      <body className={`${fontMontserrat.className} antialiased`}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLdLocalBusiness),
-          }}
-        />
+      <body className={`${fontMontserrat.className} antialiased`} suppressHydrationWarning>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`(function(){try{var t=localStorage.getItem("theme");var d=document.documentElement;d.classList.remove("light","dark");if(t==="light"){d.classList.add("light");d.style.colorScheme="light"}else{d.classList.add("dark");d.style.colorScheme="dark"}}catch(e){}})();`}
+        </Script>
+        <JsonLd />
+        <HtmlLang />
         <noscript
           dangerouslySetInnerHTML={{
             __html: `
@@ -140,15 +92,8 @@ export default function RootLayout({
           `,
           }}
         />
-        <AppProvider>
-          <SetInitialLanguage />
-          <Header />
-          {children}
-          <ClientToaster />
-          <Analytics mode="production" />
-          <SpeedInsights />
-          <Footer />
-        </AppProvider>
+        {children}
+        <AnalyticsWrapper />
       </body>
     </html>
   );

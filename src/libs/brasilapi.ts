@@ -8,37 +8,36 @@ export interface HolidayItem {
 
 export async function fetchHolidays(): Promise<HolidayItem[]> {
   const yearNow = new Date().getFullYear();
-
-  const res = await fetch(
-    `https://brasilapi.com.br/api/feriados/v1/${yearNow}`,
-    {
-      next: { revalidate: false },
-    },
-  );
-
-  if (!res.ok) {
-    throw new Error("Erro ao buscar feriados");
-  }
-
-  const national: HolidayItem[] = (await res.json()).map(
-    (h: { date: string; name: string; type?: string }) => ({
-      date: h.date,
-      name: h.name,
-      type: "national",
-    }),
-  );
-
-  const pelotas = getPelotasHolidays(yearNow).map((h) => ({
-    date: h.date,
-    name: h.name,
-    type: h.type,
+  const pelotas: HolidayItem[] = getPelotasHolidays(yearNow).map((holiday) => ({
+    date: holiday.date,
+    name: holiday.name,
+    type: holiday.type,
   }));
 
-  const byDate = new Map<string, HolidayItem>();
-  national.forEach((h) => byDate.set(h.date, h));
-  pelotas.forEach((h) => byDate.set(h.date, h));
+  try {
+    const res = await fetch(
+      `https://brasilapi.com.br/api/feriados/v1/${yearNow}`,
+      { next: { revalidate: 86400 } },
+    );
 
-  return Array.from(byDate.values()).sort((a, b) =>
-    a.date.localeCompare(b.date),
-  );
+    if (!res.ok) return pelotas;
+
+    const national: HolidayItem[] = (await res.json()).map(
+      (holiday: { date: string; name: string }) => ({
+        date: holiday.date,
+        name: holiday.name,
+        type: "national",
+      }),
+    );
+
+    const byDate = new Map<string, HolidayItem>();
+    national.forEach((holiday) => byDate.set(holiday.date, holiday));
+    pelotas.forEach((holiday) => byDate.set(holiday.date, holiday));
+
+    return Array.from(byDate.values()).sort((a, b) =>
+      a.date.localeCompare(b.date),
+    );
+  } catch {
+    return pelotas;
+  }
 }

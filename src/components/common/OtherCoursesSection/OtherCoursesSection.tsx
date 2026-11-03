@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/utils/LocaleLink";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -57,7 +57,7 @@ export function OtherCoursesSection({
   return (
     <section
       id="outros-cursos"
-      className="py-8 lg:py-16 bg-background border-t border-foreground/10"
+      className="cv-auto py-8 lg:py-16 bg-background border-t border-foreground/10"
     >
       <div className="max-w-6xl mx-4 lg:mx-auto">
         <h2 className="text-3xl text-foreground font-semibold text-center mb-2">

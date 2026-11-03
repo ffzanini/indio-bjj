@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "home_title": "Jiu Jitsu em Pelotas | JA Índio Jiu Jitsu - Academia de Jiu Jitsu Pelotas",
+    "home_description": "Academia de Jiu Jitsu em Pelotas. JA Índio Jiu Jitsu: aulas e cursos de Jiu-Jitsu para todas as idades e níveis em Pelotas. Cursos de meia guarda, guarda aberta, passagens de guarda, nogi e drills com Fabiano Índio. Agende sua aula experimental de Jiu Jitsu em Pelotas.",
+    "about_title": "Quem Somos",
+    "about_description": "Conheça a JA Índio Jiu Jitsu em Pelotas. História do Índio Jiu Jitsu, professores e metodologia. Academia de Jiu Jitsu em Pelotas com tradição e qualidade.",
+    "programs_title": "Programas",
+    "programs_description": "Programas de Jiu Jitsu da JA Índio em Pelotas: iniciante, intermediário, avançado, competição, baby/kids, feminino, nogi, executivo e aulas particulares. Escolha seu programa na melhor academia de Jiu Jitsu em Pelotas.",
+    "schedules_title": "Horários",
+    "schedules_description": "Horários das aulas de Jiu Jitsu da JA Índio em Pelotas. Confira os dias e horários dos treinos de Jiu Jitsu, nogi e programas especiais na academia Índio Jiu Jitsu Pelotas.",
+    "testimonials_title": "Depoimentos",
+    "testimonials_description": "Depoimentos de alunos da JA Índio Jiu Jitsu em Pelotas. Veja o que alunos e alunas falam sobre treinar Jiu Jitsu na academia Índio em Pelotas.",
+    "contact_title": "Contato",
+    "contact_description": "Entre em contato com a JA Índio Jiu Jitsu em Pelotas. Agende sua aula experimental de Jiu Jitsu. WhatsApp, endereço e horários da academia de Jiu Jitsu em Pelotas.",
+    "courses_title": "Cursos de Jiu Jitsu",
+    "courses_description": "Cursos de Jiu Jitsu com Fabiano Índio na JA Pelotas: curso meia guarda, curso guarda aberta, curso passagens de guarda, curso nogi (no-gi) e curso drills. Aprenda Jiu Jitsu com o Índio em Pelotas.",
+    "drills_title": "Curso Drills de Jiu Jitsu com Fabiano Índio",
+    "drills_description": "Curso de drills de Jiu Jitsu com Fabiano Índio. Aprenda repetição e fundamentos na JA Índio em Pelotas. Curso drills para melhorar técnica e condicionamento no Jiu Jitsu.",
+    "halfguard_title": "Curso Meia Guarda com Fabiano Índio",
+    "halfguard_description": "Curso de meia guarda (half guard) com Fabiano Índio. Aprenda técnicas de meia guarda no Jiu Jitsu na JA Índio em Pelotas. Curso de Jiu Jitsu para todos os níveis.",
+    "openguard_title": "Curso Guarda Aberta com Fabiano Índio",
+    "openguard_description": "Curso de guarda aberta (open guard) com Fabiano Índio. Aprenda técnicas de guarda aberta no Jiu Jitsu na JA Índio em Pelotas. Curso de Jiu Jitsu para todos os níveis.",
+    "nogi_title": "Curso Jiu Jitsu No-Gi com Fabiano Índio",
+    "nogi_description": "Curso de Jiu Jitsu nogi (no-gi, sem kimono) com Fabiano Índio. Aprenda nogi na JA Índio em Pelotas. Técnicas de grappling e MMA. Curso nogi Pelotas.",
+    "guardpassing_title": "Curso Passagens de Guarda com Fabiano Índio",
+    "guardpassing_description": "Curso de passagens de guarda com Fabiano Índio. Aprenda controle por cima, pressão eficiente e técnicas para passar guardas modernas no Jiu Jitsu.",
+    "program_description": "{title} na JA Índio Jiu Jitsu em Pelotas. {summary}"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "description": "Esse endereço não existe na JA Índio Jiu Jitsu.",
+    "home": "Voltar ao início"
+  },
+  "error": {
+    "title": "Ops, algo deu errado",
+    "description": "Ocorreu um erro inesperado ao carregar esta página.",
+    "retry": "Tentar novamente",
+    "home": "Início"
+  }
+}

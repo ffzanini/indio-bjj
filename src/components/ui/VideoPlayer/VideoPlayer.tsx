@@ -1,12 +1,13 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
+
 interface VideoPlayerProps {
   thumbnailUrl: string;
   videoUrl: string;
   videoDescription: string;
   videoTitle: string;
-  /** Se true, esconde a thumbnail e mostra o player para autoplay ao entrar na página */
   autoPlay?: boolean;
 }
 
@@ -15,11 +16,9 @@ export function VideoPlayer({
   videoUrl,
   videoDescription,
   videoTitle,
-  autoPlay = false,
 }: Readonly<VideoPlayerProps>) {
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  // Extrai o ID do vídeo se for uma URL completa do YouTube
   const getVideoId = (url: string): string | null => {
     if (url.includes("youtube.com/watch?v=")) {
       return url.split("v=")[1]?.split("&")[0] || null;
@@ -33,59 +32,33 @@ export function VideoPlayer({
     return null;
   };
 
-  // Converte URL para formato embed se necessário
-  const getEmbedUrl = (url: string): string => {
-    // Se já for um embed URL, retorna como está
-    if (url.includes("youtube.com/embed/")) {
-      return url;
+  const embedUrl = (() => {
+    if (!isPlaying) return null;
+    if (videoUrl.includes("youtube.com/embed/")) {
+      const joiner = videoUrl.includes("?") ? "&" : "?";
+      return `${videoUrl}${joiner}autoplay=1&rel=0&modestbranding=1&playsinline=1`;
     }
-    
-    // Tenta extrair o ID e criar o embed URL
-    const videoId = getVideoId(url);
-    if (videoId) {
-      const origin = typeof window !== 'undefined' ? window.location.origin : '';
-      return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${origin}&iv_load_policy=3`;
-    }
-    
-    // Se não conseguir, retorna a URL original
-    return url;
-  };
-
-  const embedUrl = getEmbedUrl(videoUrl);
-  const watchUrl = videoUrl.includes("youtube.com/watch") 
-    ? videoUrl 
-    : `https://www.youtube.com/watch?v=${getVideoId(videoUrl) || ""}`;
-
-  const handlePlayClick = () => {
-    setIsPlaying(true);
-  };
+    const videoId = getVideoId(videoUrl);
+    if (!videoId) return videoUrl;
+    return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+  })();
 
   return (
     <div className="mx-6 lg:mx-0">
       <div className="relative rounded-xl overflow-hidden w-full max-w-3xl aspect-video border-4 border-white/10 shadow-2xl">
-        {/* Iframe sempre renderizado com src correto desde o início - crítico para iOS Safari */}
-        {/* No iOS, o iframe precisa estar sempre visível (mesmo que atrás) para carregar */}
-        <iframe
-          src={embedUrl}
-          title={videoTitle}
-          allow="autoplay; encrypted-media; accelerometer; clipboard-write; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          className="w-full h-full absolute inset-0"
-          style={{ 
-            border: 'none',
-            width: '100%',
-            height: '100%',
-            minHeight: '315px',
-            zIndex: isPlaying ? 50 : 1
-          }}
-          loading="eager"
-          frameBorder="0"
-        />
-        {/* Thumbnail overlay - completamente removido do DOM quando isPlaying é true */}
-        {!isPlaying && (
+        {isPlaying && embedUrl ? (
+          <iframe
+            src={embedUrl}
+            title={videoTitle}
+            allow="autoplay; encrypted-media; accelerometer; clipboard-write; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="absolute inset-0 h-full w-full"
+            loading="lazy"
+          />
+        ) : (
           <button
-            className="absolute inset-0 cursor-pointer z-40 w-full h-full"
-            onClick={handlePlayClick}
+            className="absolute inset-0 z-10 h-full w-full cursor-pointer"
+            onClick={() => setIsPlaying(true)}
             type="button"
             aria-label={`Reproduzir vídeo: ${videoTitle}`}
           >
@@ -93,22 +66,22 @@ export function VideoPlayer({
               src={thumbnailUrl}
               alt={videoTitle}
               width={1800}
-              height={100}
-              className="w-full h-full object-cover"
+              height={1000}
+              className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-secondary rounded-full flex items-center justify-center animate-pulse">
+            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary md:h-20 md:w-20">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="w-8 h-8 md:w-10 md:h-10 text-white ml-1"
+                  className="ml-1 h-8 w-8 text-white md:h-10 md:w-10"
                 >
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </div>
             </div>
-            <div className="absolute bottom-4 left-4 right-4 text-white font-bold text-lg md:text-xl text-center md:text-left text-outline-shadow-black">
+            <div className="text-outline-shadow-black absolute right-4 bottom-4 left-4 text-center text-lg font-bold text-white md:text-left md:text-xl">
               {videoDescription}
             </div>
           </button>

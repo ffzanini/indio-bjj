@@ -5,7 +5,6 @@ export * from "./Card";
 export * from "./Carousel";
 export * from "./ClientToaster";
 export * from "./Grid";
-export * from "./InitialLanguage";
 export * from "./InstagramEmbed";
 export * from "./ScrollToTop";
 export * from "./ThemeToggle";

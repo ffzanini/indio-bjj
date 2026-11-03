@@ -1,16 +1,18 @@
 "use client";
 import React, { ComponentProps } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/utils/LocaleLink";
 import Image from "next/image";
 import { cn } from "@/libs/cn";
+import { stripLocaleFromPath } from "@/libs/i18n";
 
 /** Retorna o segmento "pai" do path para destacar no nav (ex: /academy/programs -> "academy") */
 export function getNavParentPath(pathname: string): string | null {
-  if (pathname === "/" || pathname === "") return "home";
-  if (pathname === "/contact") return "contact";
-  if (pathname.startsWith("/academy")) return "academy";
-  if (pathname.startsWith("/courses")) return "courses";
+  const path = stripLocaleFromPath(pathname);
+  if (path === "/" || path === "") return "home";
+  if (path === "/contact") return "contact";
+  if (path.startsWith("/academy")) return "academy";
+  if (path.startsWith("/courses")) return "courses";
   return null;
 }
 

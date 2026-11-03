@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 import { socialsAcademia, socialsIndio } from "@/constants/socials";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/utils/LocaleLink";
 import { ZoomImage } from "@/components/ui";
 import { useTranslation } from "@/context";
 

@@ -17,11 +17,28 @@ interface InstagramWindow extends Window {
 
 export function InstagramEmbed({ url, width = 400 }: InstagramEmbedProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const scriptId = "instagram-embed-script";
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0]?.isIntersecting) return;
+        setShouldLoad(true);
+        io.disconnect();
+      },
+      { rootMargin: "200px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
+  useEffect(() => {
+    if (!shouldLoad) return;
+
+    const scriptId = "instagram-embed-script";
     if (!document.getElementById(scriptId)) {
       const script = document.createElement("script");
       script.id = scriptId;
@@ -32,18 +49,16 @@ export function InstagramEmbed({ url, width = 400 }: InstagramEmbedProps) {
 
     const process = () => {
       const w = window as InstagramWindow;
-      if (w.instgrm?.Embeds?.process) {
-        w.instgrm.Embeds.process();
-      }
+      w.instgrm?.Embeds?.process();
     };
 
     const timeout = setTimeout(process, 300);
-
+    const node = ref.current;
     const observer = new MutationObserver((mutations) => {
       for (const mutation of mutations) {
         if (
           Array.from(mutation.addedNodes).some(
-            (node) => node.nodeName === "IFRAME",
+            (added) => added.nodeName === "IFRAME",
           )
         ) {
           setIsVisible(true);
@@ -52,29 +67,31 @@ export function InstagramEmbed({ url, width = 400 }: InstagramEmbedProps) {
       }
     });
 
-    if (ref.current) {
-      observer.observe(ref.current, { childList: true, subtree: true });
+    if (node) {
+      observer.observe(node, { childList: true, subtree: true });
     }
 
     return () => {
       clearTimeout(timeout);
       observer.disconnect();
     };
-  }, [url]);
+  }, [shouldLoad, url]);
 
   return (
     <div
       ref={ref}
-      className={`w-full flex justify-center transition-opacity duration-500 ${
+      className={`flex min-h-80 w-full justify-center transition-opacity duration-500 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <blockquote
-        className="instagram-media"
-        data-instgrm-permalink={url}
-        data-instgrm-version="14"
-        style={{ width }}
-      ></blockquote>
+      {shouldLoad && (
+        <blockquote
+          className="instagram-media"
+          data-instgrm-permalink={url}
+          data-instgrm-version="14"
+          style={{ width }}
+        />
+      )}
     </div>
   );
 }
