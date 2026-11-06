@@ -53,9 +53,17 @@ export default function BlackFridayPage() {
           />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black to-transparent lg:inset-y-0 lg:right-auto lg:left-0 lg:h-full lg:w-2/5 lg:bg-gradient-to-r" />
         </div>
-        <div className="relative z-10 mx-auto flex w-full max-w-7xl shrink-0 flex-col px-4 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-6 lg:grid lg:h-full lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center lg:px-10 lg:py-6">
+        <div className="relative z-10 mx-auto flex w-full max-w-7xl shrink-0 flex-col px-4 pt-0 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-6 lg:grid lg:h-full lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center lg:px-10 lg:py-6">
           <div>
-            <p className="mx-auto mb-[clamp(0.35rem,0.8vh,1.25rem)] flex w-fit max-w-full items-center gap-2.5 rounded-full border border-primary-ja/50 px-4 py-2 text-[0.68rem] leading-tight font-semibold tracking-[0.08em] text-primary-ja uppercase sm:px-3 sm:py-[clamp(0.2rem,0.5vh,0.5rem)] sm:text-[clamp(0.62rem,1.4vh,0.85rem)] sm:tracking-[0.12em] lg:mx-0">
+            <Image
+              src="/images/logos/logo.png"
+              alt="Ultra Black do Índio"
+              width={1080}
+              height={1080}
+              priority
+              className="mx-auto -mt-[calc(0.5*clamp(7rem,32vw,11rem))] -mb-[calc(0.26*clamp(7rem,32vw,11rem))] h-auto w-[clamp(7rem,32vw,11rem)] lg:mx-0 lg:mt-0 lg:mb-[clamp(0.15rem,0.5vh,0.6rem)] lg:w-[12.5rem]"
+            />
+            <p className="mx-auto mb-1 flex w-fit max-w-full items-center gap-2.5 rounded-full border border-primary-ja/50 px-4 py-2 text-[0.68rem] leading-tight font-semibold tracking-[0.08em] text-primary-ja uppercase sm:px-3 sm:py-[clamp(0.2rem,0.5vh,0.5rem)] sm:text-[clamp(0.62rem,1.4vh,0.85rem)] sm:tracking-[0.12em] lg:mx-0 lg:mb-[clamp(0.35rem,0.8vh,1.25rem)]">
               <span className="size-1.5 shrink-0 rounded-full bg-primary-ja" />
               <span>
                 <span className="block sm:inline">18 de novembro · 20h</span>

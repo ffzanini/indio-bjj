@@ -34,6 +34,7 @@ export function proxy(req: NextRequest) {
     firstSegment === "_next" ||
     firstSegment === "api" ||
     firstSegment === "blackfriday" ||
+    firstSegment === "obrigado" ||
     (pathname !== "/" && pathname.includes("."))
   ) {
     return NextResponse.next();
@@ -65,5 +66,5 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/((?!pt|en|blackfriday|_next|api|.*\\..*).*)"],
+  matcher: ["/", "/((?!pt|en|blackfriday|obrigado|_next|api|.*\\..*).*)"],
 };

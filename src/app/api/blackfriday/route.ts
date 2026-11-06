@@ -6,6 +6,12 @@ import {
   isValidName,
   normalizePhone,
 } from "@/app/blackfriday/validation";
+import { SITE_URL } from "@/constants/seo";
+import {
+  getClientIp as getRequestIp,
+  readMetaContext,
+  sendConversionEvent,
+} from "@/libs/metaConversions";
 
 const notionApiKey = process.env.NOTION_API_KEY;
 const notionDatabaseId = process.env.NOTION_DATABASE_KEY;
@@ -53,11 +59,7 @@ async function resolveDataSourceId(client: Client, databaseId: string) {
   return dataSourceId;
 }
 
-const getClientIp = (req: Request) => {
-  const forwardedFor = req.headers.get("x-forwarded-for");
-  if (forwardedFor) return forwardedFor.split(",")[0]?.trim() || "unknown";
-  return req.headers.get("x-real-ip") ?? "unknown";
-};
+const getClientIp = getRequestIp;
 
 const isRateLimited = (ip: string) => {
   const now = Date.now();
@@ -265,6 +267,25 @@ export async function POST(req: Request) {
         { ok: false, error: "Unable to create lead" },
         { status: 502 },
       );
+    }
+
+    const meta = readMetaContext(body);
+    if (meta) {
+      const metaResult = await sendConversionEvent({
+        eventName: "Lead",
+        eventId: meta.eventId,
+        eventSourceUrl: meta.eventSourceUrl ?? `${SITE_URL}/blackfriday`,
+        fbp: meta.fbp,
+        fbc: meta.fbc,
+        ip: getClientIp(req),
+        userAgent: req.headers.get("user-agent") ?? undefined,
+        email: parsed.email,
+        phone: parsed.phone,
+        name: parsed.name,
+      });
+      if (metaResult === "failed") {
+        console.error("[blackfriday] Lead saved, Meta event failed");
+      }
     }
 
     return NextResponse.json({ ok: true }, { status: 201 });

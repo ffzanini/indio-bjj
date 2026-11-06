@@ -32,6 +32,9 @@ const nextConfig: NextConfig = {
     return [
       { source: "/pt/blackfriday", destination: "/blackfriday", permanent: true },
       { source: "/en/blackfriday", destination: "/blackfriday", permanent: true },
+      { source: "/obrigado", destination: "/blackfriday/obrigado", permanent: true },
+      { source: "/pt/obrigado", destination: "/blackfriday/obrigado", permanent: true },
+      { source: "/en/obrigado", destination: "/blackfriday/obrigado", permanent: true },
       { source: "/contact", destination: "/pt/contact", permanent: true },
       { source: "/courses", destination: "/pt/courses", permanent: true },
       {

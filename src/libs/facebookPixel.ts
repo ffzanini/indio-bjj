@@ -17,26 +17,37 @@ const STANDARD_EVENTS = new Set([
   "Subscribe",
 ]);
 
-const sendToPixel = (event: string, options: Record<string, unknown>) => {
+const sendToPixel = (
+  event: string,
+  options: Record<string, unknown>,
+  eventId?: string,
+) => {
   if (typeof window.fbq !== "function") return false;
-  window.fbq(STANDARD_EVENTS.has(event) ? "track" : "trackCustom", event, options);
+  const command = STANDARD_EVENTS.has(event) ? "track" : "trackCustom";
+  if (eventId) window.fbq(command, event, options, { eventID: eventId });
+  else window.fbq(command, event, options);
   return true;
 };
 
 export const trackEvent = (
   event: string,
   options: Record<string, unknown> = {},
+  eventId?: string,
 ) => {
   if (typeof window === "undefined") return;
 
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ event, ...options });
+  window.dataLayer.push({
+    event,
+    ...(eventId ? { event_id: eventId } : {}),
+    ...options,
+  });
 
-  if (sendToPixel(event, options)) return;
+  if (sendToPixel(event, options, eventId)) return;
 
   let tries = 0;
   const id = window.setInterval(() => {
     tries += 1;
-    if (sendToPixel(event, options) || tries >= 20) window.clearInterval(id);
+    if (sendToPixel(event, options, eventId) || tries >= 20) window.clearInterval(id);
   }, 300);
 };

@@ -1,14 +1,15 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useState, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
+import { useState, type FormEvent } from "react";
 import { toast, Toaster } from "react-hot-toast";
 
 import { trackEvent } from "@/libs/facebookPixel";
+import { createEventId, readMetaCookies } from "@/libs/metaBrowser";
 
 import { isValidEmail, isValidName, isValidPhone, maskPhone } from "./validation";
 
-const BUTTON_LABEL = "Confirmar presença na Ultra Black Friday";
+const BUTTON_LABEL = "Quero participar da Ultra Black";
 
 const fieldClass = (invalid: boolean) =>
   `bf-field rounded-xl border bg-[#161618] px-4 py-3.5 text-base text-white-theme outline-none placeholder:text-white/30 ${
@@ -27,6 +28,7 @@ const validators: Record<FieldName, (value: string) => string> = {
 };
 
 export function LeadForm() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -36,14 +38,8 @@ export function LeadForm() {
     phone: "",
   });
   const [sending, setSending] = useState(false);
-  const [done, setDone] = useState(false);
 
   const values: Record<FieldName, string> = { email, name, phone };
-
-  useEffect(() => {
-    if (!done) return;
-    document.getElementById("form")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [done]);
 
   const showError = (field: FieldName, value = values[field]) => {
     const message = validators[field](value);
@@ -53,7 +49,7 @@ export function LeadForm() {
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (sending || done) return;
+    if (sending) return;
 
     trackEvent("ButtonClick", { page: "blackfriday", button: "blackfriday_submit" });
 
@@ -83,7 +79,11 @@ export function LeadForm() {
     }
 
     setSending(true);
-    const submit = (async () => {
+    const eventId = createEventId();
+    const cookies = readMetaCookies();
+    const toastId = toast.loading("Entrando na lista...");
+
+    try {
       const response = await fetch("/api/blackfriday", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -91,6 +91,10 @@ export function LeadForm() {
           email: nextEmail,
           name: nextName,
           phone: nextPhone,
+          eventId,
+          eventSourceUrl: window.location.href,
+          fbp: cookies.fbp,
+          fbc: cookies.fbc,
         }),
       });
       const payload = (await response.json().catch(() => null)) as
@@ -103,21 +107,27 @@ export function LeadForm() {
             : "Não foi possível entrar na lista. Confira e-mail, nome e telefone.",
         );
       }
-    })();
-
-    try {
-      await toast.promise(submit, {
-        loading: "Entrando na lista...",
-        success: "Você está na lista.",
-        error: (error: Error) => error.message,
-      });
-      trackEvent("Lead", {
-        page: "blackfriday",
-        content_name: "Ultra Black Friday",
-        content_category: "lead",
-      });
-      setDone(true);
-    } catch {
+      toast.dismiss(toastId);
+      trackEvent(
+        "Lead",
+        {
+          page: "blackfriday",
+          content_name: "Ultra Black Friday",
+          content_category: "lead",
+        },
+        eventId,
+      );
+      const firstName = nextName.trim().split(/\s+/)[0] ?? "";
+      if (firstName) sessionStorage.setItem("ultra-black-lead-name", firstName);
+      else sessionStorage.removeItem("ultra-black-lead-name");
+      router.push("/blackfriday/obrigado");
+    } catch (error) {
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : "Não foi possível entrar na lista. Confira e-mail, nome e telefone.",
+        { id: toastId },
+      );
       setSending(false);
     }
   };
@@ -135,37 +145,7 @@ export function LeadForm() {
           },
         }}
       />
-      {done ? (
-        <div className="text-center">
-          <h2 className="text-3xl font-bold md:text-5xl">
-            Parabéns, você garantiu sua vaga!!
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-            A condição sai no dia{" "}
-            <span className="text-primary-ja">18/11, às 20h</span>, no grupo VIP,
-            não perca!
-          </p>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-            Enquanto nossa equipe está trabalhando pra garantir a todos essa
-            oferta, acesse nosso site abaixo e conheça mais sobre meu trabalho e
-            a nossa academia JA Índio Jiu Jitsu!
-          </p>
-          <Link
-            href="/pt"
-            onClick={() =>
-              trackEvent("ButtonClick", {
-                page: "blackfriday",
-                button: "blackfriday_academy",
-              })
-            }
-            className="mt-8 inline-flex cursor-pointer rounded-full bg-primary-ja px-6 py-4 text-base font-bold text-black transition hover:brightness-110 md:text-lg"
-          >
-            Conhecer a academia
-          </Link>
-        </div>
-      ) : (
-        <>
-          <h2 className="text-3xl font-bold md:text-5xl">
+      <h2 className="text-3xl font-bold md:text-5xl">
             A condição secreta sai no grupo VIP.
           </h2>
           <p className="mx-auto mt-5 mb-8 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
@@ -254,8 +234,6 @@ export function LeadForm() {
             {BUTTON_LABEL}
           </button>
           </form>
-        </>
-      )}
     </>
   );
 }
